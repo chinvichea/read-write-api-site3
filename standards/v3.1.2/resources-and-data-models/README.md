@@ -9,7 +9,7 @@ permalink: standards/v3.1.2/resources-and-data-models
 
 # Open Banking Read-Write API - Resources and Data Models
 
-* [AISP](aisp)
-* [PISP](pisp)
-* [CBPII](cbpii)
-* [Event Notifications](event-notifications)
+* [AISP](./aisp)
+* [PISP](./pisp)
+* [CBPII](./cbpii)
+* [Event Notifications](./event-notifications)

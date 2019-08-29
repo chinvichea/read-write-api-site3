@@ -3,7 +3,7 @@ layout: default
 title: Event Notifications
 parent: Resources and Data Models
 grand_parent: Version 3.1.2
-nav_order: 1
+nav_order: 4
 has_children: true
 permalink: standards/v3.1.2/resources-and-data-models/event-notifications
 ---
