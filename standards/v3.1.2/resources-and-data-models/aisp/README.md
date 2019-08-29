@@ -1,3 +1,12 @@
+---
+layout: default
+title: AISP
+parent: Resources and Data Models
+parent: Version 3.1.2
+nav_order: 1
+has_children: true
+---
+
 # AISP Resources and Data Models - v3.1.2
 
 Resources accessed using the aisp PSD2 role are detailed here:
