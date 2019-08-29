@@ -2,7 +2,7 @@
 layout: default
 title: Profiles
 parent: Version 3.1.2
-nav_order: 1
+nav_order: 3
 has_children: true
 permalink: standards/v3.1.2/profiles
 ---
