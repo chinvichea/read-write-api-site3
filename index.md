@@ -2,7 +2,6 @@
 layout: default
 title: Home
 nav_order: 1
-description: "Just the Docs is a responsive Jekyll theme with built-in search that is easily customizable and hosted on GitHub Pages."
 permalink: /
 ---
 
@@ -30,22 +29,3 @@ The specification must be read in conjunction with the [Known Issues](https://op
 The Swagger Specification for R/W APIs can be downloaded from the following GitHub Repository:
 
 https://github.com/OpenBankingUK/read-write-api-specs
-
-## Authors
-
-### Present
-
-- Arif Khan
-- Chris Wood
-- Freddi  Gyara
-- Nitin Tiwari
-
-### Past
-
-- Claudio Viola
-- [Daniel Johnson](https://github.com/danielcjohnson)
-- Gavin Wong
-- Imran Qureshi
-- Jan Szumiec
-
-### Supporting Cast
