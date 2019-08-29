@@ -1,3 +1,13 @@
+---
+layout: default
+title: CBPII
+parent: Resources and Data Models
+grand_parent: Version 3.1.2
+nav_order: 3
+has_children: true
+permalink: standards/v3.1.2/resources-and-data-models/cbpii
+---
+
 # CBPII Resources and Data Models - v3.1.2
 
 Resources accessed by CBPIIs are detailed here:
