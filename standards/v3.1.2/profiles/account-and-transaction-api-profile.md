@@ -4,7 +4,6 @@ title: Account and Transaction API Profile
 parent: Profiles
 grand_parent: Version 3.1.2
 nav_order: 1
-has_children: true
 permalink: standards/v3.1.2/profiles/account-and-transaction-api-profile
 ---
 
