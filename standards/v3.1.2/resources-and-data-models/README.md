@@ -1,3 +1,10 @@
+---
+layout: default
+title: Resources and Data Models
+parent: Version 3.1.2
+nav_order: 2
+---
+
 # Open Banking Read-Write API - Resources and Data Models
 
 * [AISP](aisp/README.md)
