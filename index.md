@@ -20,7 +20,7 @@ The key difference between the CMA Order and PSD2/RTS requirements relate to whi
 ## Versions
 
 - [Version 3.1.1]
-- [Version 3.1.2](./standards/v3.1.2)
+- [Version 3.1.2](./standards/v3.1.2/README)
 
 ## Known Issues
 The specification must be read in conjunction with the [Known Issues](https://openbanking.atlassian.net/wiki/spaces/DZ/pages/47546479/Known+Specification+Issues).

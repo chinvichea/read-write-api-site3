@@ -3,6 +3,7 @@ layout: default
 title: References
 parent: Version 3.1.2
 nav_order: 3
+permalink: standards/v3.1.2/references
 ---
 
 # References

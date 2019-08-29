@@ -3,6 +3,7 @@ layout: default
 title: Profiles
 parent: Version 3.1.2
 nav_order: 1
+permalink: standards/v3.1.2/profiles
 ---
 
 # Open Banking Read-Write API - Profiles

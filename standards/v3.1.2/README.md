@@ -8,6 +8,6 @@ permalink: standards/v3.1.2/
 
 # OBIE Read/Write API Specifications Version 3.1.2
 
-- [Profiles](./profiles)
-- [References](./references)
-- [Resources and Data Models](./resources-and-data-models)
+- [Profiles](./profiles/README)
+- [References](./references/README)
+- [Resources and Data Models](./resources-and-data-models/README)
