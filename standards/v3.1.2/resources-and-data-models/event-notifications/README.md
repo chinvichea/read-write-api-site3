@@ -1,6 +1,6 @@
 ---
 layout: default
-title: AISP
+title: Event Notifications
 parent: Resources and Data Models
 grand_parent: Version 3.1.2
 nav_order: 1
