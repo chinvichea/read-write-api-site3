@@ -1,3 +1,10 @@
+---
+layout: default
+title: Profiles
+parent: Version 3.1.2
+nav_order: 1
+---
+
 # Open Banking Read-Write API - Profiles
 
 - [Read/Write Data API Profile](read-write-data-api-profile.md)
