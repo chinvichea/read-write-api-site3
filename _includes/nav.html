@@ -4,11 +4,11 @@
 {% assign base_url = page.url | replace: rm %}
 
 <ul>
-{%- for node in site.html_pages | sort:"url" | sort:"nav_order" | where: "parent", nil -%}
+{% for node in site.html_pages | sort:"url" | sort:"nav_order" | where: "parent", nil -%}
   {%- unless node.nav_exclude -%}
     {%- if node.parent == nil -%}
       <li><a href='./{{node.url}}'>{{node.title}} of {{node.parent}}</a></li>
-    {%- if -%}
-  {%- unless -%}
+    {%- endif -%}
+  {%- endunless -%}
 {%- endfor -%}
 </ul>
