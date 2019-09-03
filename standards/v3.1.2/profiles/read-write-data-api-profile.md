@@ -2,8 +2,6 @@
 layout: default
 title: Open Banking Read-Write API Profile - v3.1.2
 parent: Profiles
-grand_parent: Version 3.1.2
-nav_order: 1
 permalink: standards/v3.1.2/profiles/read-write-data-api-profile.md
 ---
 # Open Banking Read-Write API Profile  - v3.1.2
