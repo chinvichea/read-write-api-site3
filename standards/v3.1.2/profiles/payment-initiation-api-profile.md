@@ -1,3 +1,10 @@
+---
+layout: default
+title: Payment Initiation API Profile - v3.1.2
+parent: Profiles
+grand_parent: Version 3.1.2
+permalink: standards/v3.1.2/profiles/payment-initiation-api-profile
+---
 # Payment Initiation API Profile - v3.1.2
 
 1. [Overview](#overview)
@@ -84,9 +91,9 @@ This profile should be read in conjunction with a compatible Read/Write Data API
 This document consists of the following parts:
 
  **Overview:** Provides an overview of the profile.
- 
+
  **Basics:** Identifies the flows, restrictions and release management.
- 
+
  **Security & Access Control:** Specifies the means for PISPs and PSUs to authenticate themselves and provide consent.
 
  **Data Model:** Documents mappings and enumerations that apply to all the end-points.
@@ -136,7 +143,7 @@ The figure below provides a **general** outline of a payment flow for all paymen
 - International payments.
 - International scheduled payments.
 
-The payment-order consent and payment-order resource in the following flow generalises for the different payment-order types. e.g. for a domestic payment, the payment-order consent resource is domestic-payment-consents; and the payment-order resource is domestic-payments. 
+The payment-order consent and payment-order resource in the following flow generalises for the different payment-order types. e.g. for a domestic payment, the payment-order consent resource is domestic-payment-consents; and the payment-order resource is domestic-payments.
 
 ![Payments Flow](./images/PaymentStatusModelTriangle.png)
 
@@ -155,19 +162,19 @@ Step 2: Setup Payment-Order Consent
 Step 3: Authorise Consent
 
 - The PISP requests the PSU to authorise the consent. The ASPSP may carry this out by using a *redirection flow* or a *decoupled flow*.
-  - In a redirection flow, the PISP redirects the PSU to the ASPSP. 
-    - The redirect includes the ConsentId generated in the previous step. 
-    - This allows the ASPSP to correlate the payment order consent that was setup. 
+  - In a redirection flow, the PISP redirects the PSU to the ASPSP.
+    - The redirect includes the ConsentId generated in the previous step.
+    - This allows the ASPSP to correlate the payment order consent that was setup.
     - The ASPSP authenticates the PSU.
     - The PSU selects the debtor account at this stage (if it has not been previously specified in Step 1).
-    - The ASPSP updates the state of the payment order consent resource internally to indicate that the consent has been authorised. 
+    - The ASPSP updates the state of the payment order consent resource internally to indicate that the consent has been authorised.
     - Once the consent has been authorised, the PSU is redirected back to the PISP.
-  - In a decoupled flow, the ASPSP requests the PSU to authorise consent on an  *authentication device* that is separate from the  *consumption device* on which the PSU is interacting with the PISP. 
-    - The decoupled flow is initiated by the PISP calling a back-channel authorisation request. 
-    - The request contains a 'hint' that identifies the PSU paired with the consent to be authorised. 
+  - In a decoupled flow, the ASPSP requests the PSU to authorise consent on an  *authentication device* that is separate from the  *consumption device* on which the PSU is interacting with the PISP.
+    - The decoupled flow is initiated by the PISP calling a back-channel authorisation request.
+    - The request contains a 'hint' that identifies the PSU paired with the consent to be authorised.
     - The ASPSP authenticates the PSU
     - The PSU selects the debtor account at this stage (if it has not been previously specified in Step 1)
-    - The ASPSP updates the state of the payment order consent resource internally to indicate that the consent has been authorised. 
+    - The ASPSP updates the state of the payment order consent resource internally to indicate that the consent has been authorised.
     - Once the consent has been authorised, the ASPSP can make a callback to the PISP to provide an access token.
 
 Step 4: Confirm Funds (Domestic and International Single Immediate Payments Only)
@@ -340,7 +347,7 @@ In this scenario, the behaviour of payment-order execution is explicit to the PI
 - An ASPSP **must** reject the payment-order **consent** if the CutOffDateTime for a specific payment-order type has elapsed.
 - An ASPSP **must** reject an authorization request when the underlying intent object is associated with a CutoffDateTime that has elapsed. The ASPSP **must not** issue an access token in such a situation. The ASPSP **must** set the status of the payment-order consent resource to “Rejected”.
 - An ASPSP **must** reject the payment-order **resource** if the CutOffDateTime for a specific payment-order type, has been established and has elapsed.
-- A PISP **must** ensure that the PSU consent authorisation is completed and the payment-order resource is created before the CutOffDateTime elapses. 
+- A PISP **must** ensure that the PSU consent authorisation is completed and the payment-order resource is created before the CutOffDateTime elapses.
 
 For a payment-order **consent** or a payment-order **resource** that has been rejected due to the elapsed CutoffDateTime, the PISP **may** decide to create a corresponding schedule payment endpoint to create a new payment-order consent. E.g. if a PISP attempts to make a BACS payment after 16:00, it would be rejected. The PISP may use the /domestic-scheduled-payment-consents endpoint to create a consent for the same payment for the next working day.
 
@@ -361,7 +368,7 @@ This section overviews the release management and versioning strategy for the Pa
 
 ##### POST
 
-- A PISP **must not** create a payment-order consent ConsentId on a newer version and use it to create a payment-order resource in a previous version 
+- A PISP **must not** create a payment-order consent ConsentId on a newer version and use it to create a payment-order resource in a previous version
   - E.g., A ConsentId created in v3, must not be used to create a v1 PaymentSubmissionId
 - A PISP **must not** create a payment-order consent ConsentId on a previous version and use it to create a payment-order resource in a newer version
   - E.g., A PaymentId created in v1, must not be used to create a v3 DomesticPaymentId
@@ -399,7 +406,7 @@ This section overviews the release management and versioning strategy for the Pa
 - An ASPSP **must** document the behaviour on the accessibility of a payment-order resource in a newer version on the ASPSP's online Developer Portal.
 - An ASPSP **must** allow access to the payment-order resource created in a previous version on a newer version endpoint (depending on an ASPSP's legal requirement for data retention):
   - E.g., a payment-submission created in v1, must be accessible as a v3 domestic-payment, with sensible defaults for additional fields introduced in v3 (e.g., if an ASPSP must make payment resources available for 7 years).
-- In the case where a payment-order type is the same, but the structure has changed in a newer version, sensible defaults may be used, with the ASPSP's Developer Portal clearly specifying the behaviour. 
+- In the case where a payment-order type is the same, but the structure has changed in a newer version, sensible defaults may be used, with the ASPSP's Developer Portal clearly specifying the behaviour.
   - E.g., a new field StatusUpdateDateTime was introduced in v3, an ASPSPs must populate this with the last status update time (as the StatusUpdateDateTime is a mandatory field).
 
 ## Security & Access Control
@@ -422,7 +429,7 @@ PISPs **must** use a client credentials grant to obtain a token to make GET requ
 
 ### Consent Authorisation
 
-OAuth 2.0 scopes are coarse-grained and the set of available scopes are defined at the point of client registration. There is no standard method for specifying and enforcing fine-grained scopes e.g., a scope to enforce payments of a specified amount on a specified date. 
+OAuth 2.0 scopes are coarse-grained and the set of available scopes are defined at the point of client registration. There is no standard method for specifying and enforcing fine-grained scopes e.g., a scope to enforce payments of a specified amount on a specified date.
 
 A  *consent authorisation* is used to define the fine-grained scope that is granted by the PSU to the PISP.
 
@@ -488,7 +495,7 @@ During the design workshops, ASPSPs articulated a need to perform risk scoring o
 Information for risk scoring and assessment will come via:
 
 - FAPI HTTP headers. These are defined in [Section 6.3](http://openid.net/specs/openid-financial-api-part-1-wd-02.html#client-provisions) of the FAPI specification and in the Headers section above.
-- Additional fields identified by the industry as business logic security concerns which will be passed in the Risk section of the payload in the JSON object. 
+- Additional fields identified by the industry as business logic security concerns which will be passed in the Risk section of the payload in the JSON object.
 
 These are the set of additional fields in the risk section of the payload for v1.0 which will be specified by the PISP:
 

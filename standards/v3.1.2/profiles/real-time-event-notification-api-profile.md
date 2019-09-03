@@ -1,3 +1,10 @@
+---
+layout: default
+title: Real Time Event Notification API Profile - v3.1.2
+parent: Profiles
+grand_parent: Version 3.1.2
+permalink: standards/v3.1.2/profiles/real-time-event-notification-api-profile
+---
 # Real Time Event Notification API Profile - v3.1.2
 
 1. [Overview](#overview)
@@ -37,7 +44,7 @@ Step 1: Send Event Notification
 
 <details>
   <summary>Diagram source</summary>
-  
+
   ```
 participant TPP
 participant ASPSP Authorisation Server
@@ -58,7 +65,7 @@ ASPSP Notification Service -> TPP: POST /event-notifications, EventNotification,
 alt success
 TPP -> ASPSP Notification Service: HTTP 202 Accepted
 else failure
-TPP -> ASPSP Notification Service: HTTP 500/400 
+TPP -> ASPSP Notification Service: HTTP 500/400
 end alt
 end loop
 
@@ -69,7 +76,7 @@ end note
 opt If TPP requires full resource
 
 note right of TPP
-URL for resource contained in the 
+URL for resource contained in the
 EventNotification rlk (resource links) claim
 end note
 
@@ -84,6 +91,6 @@ ASPSP Resource Server -> TPP: HTTP 200 (OK),  Resource
 end opt
 
 option footer=bar
-``` 
- 
+```
+
 </details>
