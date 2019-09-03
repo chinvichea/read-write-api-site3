@@ -1,3 +1,10 @@
+---
+layout: default
+parent: Resources and Data Models
+grand_parent: Version 3.1.2
+permalink: standards/v3.1.2/profiles/aisp/account-access-consents
+---
+
 # Account Access Consents - v3.1.2
 
 1. [Overview](#overview)
@@ -49,7 +56,7 @@ This resource description should be read in conjunction with a compatible Accoun
 | 3 |account-access-consents |DELETE |DELETE /account-access-consents/{ConsentId} |Mandatory |accounts |Client Credentials |No | | | |
 
 ### POST /account-access-consents
- 
+
 The API allows the AISP to ask an ASPSP to create a new account-access-consent resource.
 
 * This API effectively allows the AISP to send a copy of the consent to the ASPSP to authorise access to account and transaction information.
@@ -82,7 +89,7 @@ This is the state diagram for the Status.
 
 ### GET /account-access-consents/{ConsentId}
 
-An AISP may optionally retrieve an account-access-consent resource that they have created to check its status. 
+An AISP may optionally retrieve an account-access-consent resource that they have created to check its status.
 
 Prior to calling the API, the AISP must have an access token issued by the ASPSP using a client credentials grant.
 
@@ -270,7 +277,7 @@ Content-Type: application/json
 
 ### Status - AwaitingAuthorisation
 
-This is an example of a GET request which is made  **before**  the account access consent resource is authorised. 
+This is an example of a GET request which is made  **before**  the account access consent resource is authorised.
 
 #### Get Account Access Consents Request
 

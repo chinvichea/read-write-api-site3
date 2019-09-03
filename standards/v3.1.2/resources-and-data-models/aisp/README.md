@@ -12,7 +12,7 @@ permalink: standards/v3.1.2/resources-and-data-models/aisp
 
 Resources accessed using the aisp PSD2 role are detailed here:
 
-* [Account Access Consents](Account%20Access%20Consents.md)
+* [Account Access Consents](account-acccess-consents.md)
 * [Accounts](Accounts.md)
 * [Balances](Balances.md)
 * [Transactions](Transactions.md)
