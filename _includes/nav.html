@@ -4,7 +4,7 @@
 {% assign base_url = page.url | replace: rm %}
 
 <ul>
-{% for node in site.html_pages | sort:"url" | sort:"nav_order" %}
+{% for node in site.html_pages | sort:"url" | sort:"nav_order" | where: "parent", nil %}
   <li><a href='./{{node.url}}'>{{node.title}}</a></li>
 {% endfor %}
 </ul>
