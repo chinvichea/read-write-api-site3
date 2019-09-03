@@ -17,4 +17,10 @@
       {%- endif -%}
     </li>
   {%- endfor -%}
+
+  <li>-------------</li>
+  {%- if child.has_children -%}
+    {%- assign children_list = site.html_pages | where: "parent", child.title | sort:"nav_order" -%}
+    {% include child-nav.html children_list=children_list %}
+  {%- endif -%}
 </ul>
