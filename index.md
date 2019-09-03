@@ -1,8 +1,7 @@
 ---
 layout: default
-title: Home
+title:  Open Banking Read-Write API
 nav_order: 1
-permalink: /
 ---
 
 # Open Banking Read-Write API
