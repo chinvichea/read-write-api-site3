@@ -12,15 +12,18 @@
             <li class="navigation-list-item {% if page.url == grand_child.url %} active{% endif %}">
               <a href="{{ grand_child.url | absolute_url }}" class="navigation-list-link{% if page.url == grand_child.url %} active{% endif %}">{{ grand_child.title }}</a>
             </li>
+
+            <li>-------------</li>
+            {%- if grand_child.has_children -%}
+              {%- assign gchildren_list = site.html_pages | where: "parent", grand_child.title | sort:"nav_order" -%}
+              {% include child-nav.html children_list=gchildren_list %}
+            {%- endif -%}
+
+
           {%- endfor -%}
         </ul>
       {%- endif -%}
 
-      <li>-------------</li>
-      {%- if grand_child.has_children -%}
-        {%- assign gchildren_list = site.html_pages | where: "parent", grand_child.title | sort:"nav_order" -%}
-        {% include child-nav.html children_list=gchildren_list %}
-      {%- endif -%}
 
 
 
