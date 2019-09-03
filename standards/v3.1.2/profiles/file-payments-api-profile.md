@@ -1,6 +1,5 @@
 ---
 layout: default
-title: File Payments API Profile - v3.1.2
 parent: Profiles
 grand_parent: Version 3.1.2
 permalink: standards/v3.1.2/profiles/file-payments-api-profile

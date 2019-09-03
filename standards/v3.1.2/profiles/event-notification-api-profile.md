@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Event Notification API Profile - v3.1.2
 parent: Profiles
 grand_parent: Version 3.1.2
 permalink: standards/v3.1.2/profiles/event-notification-api-profile
