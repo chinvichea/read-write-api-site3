@@ -1,6 +1,7 @@
 ---
 layout: default
-nav_exclude: true
+parent: Resources and Data Models
+grand_parent: Version 3.1.2
 permalink: standards/v3.1.2/profiles/aisp/Accounts
 ---
 # Accounts - v3.1.2
