@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Account and Transaction API Profile - v3.1.2
-parent: Profiles
-grand_parent: Version 3.1.2
+parent: Open Banking Read-Write API Profile - v3.1.2
+grand_parent: Profiles
 permalink: standards/v3.1.2/profiles/account-and-transaction-api-profile
 ---
 # Account and Transaction API Profile - v3.1.2
