@@ -17,7 +17,7 @@
       {%- endif -%}
 
       <li>-------------</li>
-      {%- if child.has_children -%}
+      {%- if grand_child.has_children -%}
         {%- assign gchildren_list = site.html_pages | where: "parent", child.title | sort:"nav_order" -%}
         {% include child-nav.html children_list=gchildren_list %}
       {%- endif -%}
