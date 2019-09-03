@@ -1,3 +1,10 @@
+---
+layout: default
+title: Open Banking Read-Write API Profile  - v3.1.2
+parent: Profiles
+nav_order: 1
+permalink: standards/v3.1.2/profiles/read-write-data-api-profile.md
+---
 # Open Banking Read-Write API Profile  - v3.1.2
 
 1. [Overview](#overview)
@@ -110,7 +117,7 @@
          1. [Request](#request-1)
          2. [Response](#response)
 
-## Overview 
+## Overview
 
 The Read/Write Data API Profile provides a description of the elements that are common across all the Read/Write Data APIs.
 
