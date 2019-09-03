@@ -1,5 +1,6 @@
 ---
 layout: default
+title: AISP
 parent: Resources and Data Models
 grand_parent: Version 3.1.2
 permalink: standards/v3.1.2/profiles/aisp/account-access-consents
