@@ -7,7 +7,7 @@ has_children: true
 permalink: standards/v3.1.2/profiles
 ---
 
-# Open Banking Read-Write API - Profiles
+# Open Banking Read-Write API - Profiles 
 
 - [Read/Write Data API Profile](read-write-data-api-profile.md)
 - [Account and Transaction API Profile](account-and-transaction-api-profile.md)
