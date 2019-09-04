@@ -1,3 +1,9 @@
+---
+layout: default
+parent: AISP
+grand_parent: Resources and Data Models
+permalink: standards/v3.1.2/resources-and-data-models/pisp/domestic-scheduled-payment-consents
+---
 # Domestic Scheduled Payment Consents  - v3.1.2
 
 1. [Overview](#overview)
@@ -58,7 +64,7 @@ The API endpoint allows the PISP to ask an ASPSP to create a new **domestic-sche
 
 ### GET /domestic-scheduled-payment-consents/{ConsentId}
 
-A PISP can optionally retrieve a payment consent resource that they have created to check its status. 
+A PISP can optionally retrieve a payment consent resource that they have created to check its status.
 
 #### Status
 

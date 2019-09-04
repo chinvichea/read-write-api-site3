@@ -1,3 +1,10 @@
+---
+layout: default
+parent: AISP
+grand_parent: Resources and Data Models
+permalink: standards/v3.1.2/resources-and-data-models/pisp/international-standing-order-consents
+---
+
 # International Standing Order Consents - v3.1.2
 
 1. [Overview](#overview)
@@ -59,7 +66,7 @@ The default Status is "AwaitingAuthorisation" immediately after the internationa
 
 ### GET /international-standing-order-consents/{ConsentId}
 
-A PISP can optionally retrieve a payment consent resource that they have created to check its status. 
+A PISP can optionally retrieve a payment consent resource that they have created to check its status.
 
 #### Status
 
@@ -111,7 +118,7 @@ This section describes the OBInternationalStandingOrder3 class which is reused a
 
 ##### Notes
 
-For the OBInternationalStandingOrder3 Initiation object: 
+For the OBInternationalStandingOrder3 Initiation object:
 
 * All elements in the Initiation payload that are specified by the PISP must not be changed via the ASPSP - as this is part of formal consent from the PSU.
 * If the ASPSP is able to establish a problem with payload or any contextual error during the API call, the ASPSP must reject the international-standing-order-consent request immediately.

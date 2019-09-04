@@ -1,3 +1,9 @@
+---
+layout: default
+parent: AISP
+grand_parent: Resources and Data Models
+permalink: standards/v3.1.2/resources-and-data-models/pisp/file-payments
+---
 # File Payments - v3.1.2
 
 1. [Overview](#overview)
@@ -149,9 +155,9 @@ The OBWriteFile2 object will be used for a call to:
 
 ![OBWriteFile2]( images/OBWriteFile2.gif )
 
-#### Notes 
+#### Notes
 
-The file-payment **request** object contains the: 
+The file-payment **request** object contains the:
 
 * ConsentId.
 * The full Initiation object from the file-payment-consent request.
@@ -178,9 +184,9 @@ The OBWriteFileResponse2 object will be used for a response to a call to:
 
 ![OBWriteFileResponse2]( images/OBWriteFileResponse2.gif )
 
-#### Notes 
+#### Notes
 
-The file-payment **response** object contains the: 
+The file-payment **response** object contains the:
 
 * FilePaymentId.
 * ConsentId.

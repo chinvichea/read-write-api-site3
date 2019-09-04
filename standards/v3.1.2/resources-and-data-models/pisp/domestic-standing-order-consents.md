@@ -1,3 +1,9 @@
+---
+layout: default
+parent: AISP
+grand_parent: Resources and Data Models
+permalink: standards/v3.1.2/resources-and-data-models/pisp/domestic-standing-order-consents
+---
 # Domestic Standing Order Consents - v3.1.2
 
 1. [Overview](#overview)
@@ -62,7 +68,7 @@ The default Status is "AwaitingAuthorisation" immediately after the domestic-sta
 
 ### GET /domestic-standing-order-consents/{ConsentId}
 
-A PISP can optionally retrieve a payment consent resource that they have created to check its status. 
+A PISP can optionally retrieve a payment consent resource that they have created to check its status.
 
 #### Status
 
@@ -114,7 +120,7 @@ This section describes the OBDomesticStandingOrder3 class, which is reused as th
 
 ##### Notes
 
-For the OBDomesticStandingOrder3 Initiation object: 
+For the OBDomesticStandingOrder3 Initiation object:
 
 * All elements in the Initiation payload that are specified by the PISP must not be changed via the ASPSP, as this is part of formal consent from the PSU.
 * If the ASPSP is able to establish a problem with payload or any contextual error during the API call, the ASPSP must reject the domestic-standing-order-consent request immediately.

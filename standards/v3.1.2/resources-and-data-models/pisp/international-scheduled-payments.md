@@ -1,3 +1,10 @@
+---
+layout: default
+parent: AISP
+grand_parent: Resources and Data Models
+permalink: standards/v3.1.2/resources-and-data-models/pisp/international-scheduled-payments
+---
+
 # International Scheduled Payments - v3.1.2
 
 1. [Overview](#overview)
@@ -52,7 +59,7 @@ Once the international-scheduled-payment-consent has been authorised by the PSU,
 
 #### Status
 
-An international-scheduled-payment can only be created if its corresponding international-scheduled-payment-consent resource has the status of "Authorised". 
+An international-scheduled-payment can only be created if its corresponding international-scheduled-payment-consent resource has the status of "Authorised".
 
 The international-scheduled-payment resource that is created successfully must have one of the following Status codes:
 
@@ -165,7 +172,7 @@ The OBWriteInternationalScheduled2 object will be used for a call to:
 
 #### Notes
 
-The international-scheduled-payment **request** object contains the: 
+The international-scheduled-payment **request** object contains the:
 
 * ConsentId.
 * The full Initiation and Risk objects from the international-scheduled-payment-consent request.
@@ -194,7 +201,7 @@ The OBWriteInternationalScheduledResponse3 object will be used for a response to
 
 #### Notes
 
-The international-scheduled-payment **response** object contains the: 
+The international-scheduled-payment **response** object contains the:
 
 * InternationalScheduledPaymentId.
 * ConsentId.

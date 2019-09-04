@@ -1,3 +1,9 @@
+---
+layout: default
+parent: AISP
+grand_parent: Resources and Data Models
+permalink: standards/v3.1.2/resources-and-data-models/pisp/domestic-standing-orders
+---
 # Domestic Standing Orders - v3.1.2
 
 1. [Overview](#overview)
@@ -55,7 +61,7 @@ Once the domestic-standing-order-consent has been authorised by the PSU, the PIS
 
 #### Status
 
-A domestic-standing-order can only be created if its corresponding domestic-standing-order-consent resource has the status of "Authorised". 
+A domestic-standing-order can only be created if its corresponding domestic-standing-order-consent resource has the status of "Authorised".
 
 The domestic-standing-order resource that is created successfully must have one of the following Status codes:
 
@@ -164,7 +170,7 @@ The OBWriteDomesticStandingOrder3 object will be used for a call to:
 
 #### Notes
 
-The domestic-standing-order **request** object contains the: 
+The domestic-standing-order **request** object contains the:
 
 * ConsentId.
 * The full Initiation and Risk objects from the domestic-standing-order-consent request.
@@ -193,7 +199,7 @@ The OBWriteDomesticStandingOrderResponse4 object will be used for a response to 
 
 #### Notes
 
-The domestic-standing-order **response** object contains the: 
+The domestic-standing-order **response** object contains the:
 
 * DomesticStandingOrderId.
 * ConsentId.

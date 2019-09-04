@@ -1,3 +1,9 @@
+---
+layout: default
+parent: AISP
+grand_parent: Resources and Data Models
+permalink: standards/v3.1.2/resources-and-data-models/pisp/international-payments
+---
 # International Payments - v3.1.2
 
 1. [Overview](#overview)
@@ -52,7 +58,7 @@ Once the international-payment-consent has been authorised by the PSU, the PISP 
 
 #### Status
 
-An international-payment can only be created if its corresponding international-payment-consent resource has the status of "Authorised". 
+An international-payment can only be created if its corresponding international-payment-consent resource has the status of "Authorised".
 
 The international-payment resource that is created successfully must have one of the following PaymentStatusCode code-set enumerations:
 
@@ -170,9 +176,9 @@ The OBWriteInternational2 object will be used for a call to:
 
 ![International Payment - Request](images/OBWriteInternational2.gif)
 
-#### Notes 
+#### Notes
 
-The international-payment **request** object contains the: 
+The international-payment **request** object contains the:
 
 * ConsentId.
 * The full Initiation and Risk objects from the international-payment request.
@@ -199,9 +205,9 @@ The OBWriteInternationalResponse3 object will be used for a response to a call t
 
 ![International Payment - Response](images/OBWriteInternationalResponse3.png)
 
-#### Notes 
+#### Notes
 
-The international-payment **response** object contains the: 
+The international-payment **response** object contains the:
 
 * InternationalPaymentId.
 * ConsentId.
