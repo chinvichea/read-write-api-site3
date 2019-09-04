@@ -1,3 +1,9 @@
+---
+layout: default
+parent: AISP
+grand_parent: Resources and Data Models
+permalink: standards/v3.1.2/resources-and-data-models/event-notifications/callback-url
+---
 # Callback URL - v3.1.2
 
 1. [Overview](#overview)

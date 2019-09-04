@@ -1,3 +1,9 @@
+---
+layout: default
+parent: AISP
+grand_parent: Resources and Data Models
+permalink: standards/v3.1.2/resources-and-data-models/event-notifications/event-notifications
+---
 # Event Notifications - v3.1.2
 
 1. [Overview](#overview)
@@ -178,7 +184,7 @@ This section describes the OBEventAccountAccessConsentLinkedAccountUpdate1 class
 
 #### Notes
 
-For the OBEventAccountAccessConsentLinkedAccountUpdate object: 
+For the OBEventAccountAccessConsentLinkedAccountUpdate object:
 
 - The http://openbanking.org.uk/rty claim **must** be populated with "account-access-consent".
 
