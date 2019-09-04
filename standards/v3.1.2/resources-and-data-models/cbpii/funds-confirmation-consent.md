@@ -1,3 +1,10 @@
+---
+layout: default
+parent: AISP
+grand_parent: Resources and Data Models
+permalink: standards/v3.1.2/resources-and-data-models/cbpii/funds-confirmation-consent
+---
+
 # Funds Confirmation Consent - v3.1.2
 
 1. [Overview](#overview)
@@ -78,7 +85,7 @@ This is the state diagram for the Status.
 
 ### GET /funds-confirmation-consents/{ConsentId}
 
-A CBPII may optionally retrieve a **funds-confirmation-consent** resource that they have created to check its status. 
+A CBPII may optionally retrieve a **funds-confirmation-consent** resource that they have created to check its status.
 
 Prior to calling the operation, the CBPII must have an access token issued by the ASPSP using a client credentials grant.
 
