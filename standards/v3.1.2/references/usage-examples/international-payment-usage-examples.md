@@ -1,3 +1,9 @@
+---
+layout: default
+parent: Usage Examples
+grand_parent: References
+permalink: standards/v3.1.2/references/usage-examples/international-payment-usage-examples
+---
 # International Payment Usage Examples - v3.1.2
 
 1. [Debit amount specified; ASPSP provides actual (guaranteed) FX rate, for limited time](#debit-amount-specified-aspsp-provides-actual-guaranteed-fx-rate-for-limited-time)
@@ -327,7 +333,7 @@ Content-Type: application/json
 		"Initiation": {},
 		"ExchangeRateInformation": {
 			"UnitCurrency": "GBP",
-	 		"RateType": "Agreed",	
+	 		"RateType": "Agreed",
 			"ExchangeRate": 1.09,
 			"ContractIdentification": "/tbill/2018/T102993"
 	 	}

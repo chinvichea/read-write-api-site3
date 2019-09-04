@@ -9,12 +9,13 @@ permalink: standards/v3.1.2/references
 
 # References
 
-- [Namespaced Enumerations](Namespaced%20Enumerations.md)
-- [Domestic Payment Message Formats](Domestic%20Payment%20Message%20Formats.md)
+- [Namespaced Enumerations](namespaced-enumerations.md)
+- [Domestic Payment Message Formats](domestic-payment-message-formats.md)
 
 ## Usage Examples
 
-- [Domestic Payments](usage%20examples/Domestic%20Payment%20Usage%20Examples.md)
-- [Domestic Standing Orders](usage%20examples/Domestic%20standing%20Order%20Usage%20Examples.md)
-- [International Payments](usage%20examples/International%20Payment%20Usage%20Examples.md)
-- [International Scheduled Payments](usage%20examples/International%20Scheduled%20Payment%20Usage%20Examples.md)
+- [Domestic Payments](usage-examples/domestic-payments-usage-examples.md)
+- [Domestic Standing Orders](usage-examples/domestic-standing-orders-usage-examples.md)
+- [File Payments](usage-examples/file-payments-usage-examples.md)
+- [International Payments](usage-examples/international-payment-usage-examples.md)
+- [International Scheduled Payments](usage-examples/international-scheduled-payment-usage-examples.md)

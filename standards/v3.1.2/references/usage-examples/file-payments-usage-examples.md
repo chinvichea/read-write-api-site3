@@ -1,3 +1,9 @@
+---
+layout: default
+parent: Usage Examples
+grand_parent: References
+permalink: standards/v3.1.2/references/usage-examples/file-payments-usage-examples
+---
 # File Payment Usage Examples - v3.1.2
 
 1. [Setup File Payment Consent](#setup-file-payment-consent)
@@ -110,7 +116,7 @@ A sample file with 3 transactions is provided below:
 
 <details>
  <summary>File Data Expand source </summary>
-   
+
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
 <Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.08" xmlns:xsi="http://www.w3.org/2001/XMLSchema- instance">
@@ -309,9 +315,9 @@ A sample file with 3 transactions is provided below:
 	</PmtInf>
 </CstmrCdtTrfInitn>
 </Document>
-``` 
+```
 
-</details> 
+</details>
 
 #### Response
 
@@ -498,7 +504,7 @@ A sample file with 3 Domestic Payments - CHAPS, BACS and one unspecified is prov
 		}]
 	}
 }
-``` 
+```
 
 </details>
 

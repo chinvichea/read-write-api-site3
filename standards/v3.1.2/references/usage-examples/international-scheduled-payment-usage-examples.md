@@ -1,3 +1,10 @@
+---
+layout: default
+parent: Usage Examples
+grand_parent: References
+permalink: standards/v3.1.2/references/usage-examples/international-scheduled-payment-usage-examples
+---
+
 # International Scheduled Payment Usage Examples - v3.1.2
 
 1. [Credit amount specified; Future Dated Payment, ASPSP provides actual (guaranteed) FX rate , for limited time](#credit-amount-specified-future-dated-payment-aspsp-provides-actual-guaranteed-fx-rate--for-limited-time)

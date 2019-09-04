@@ -1,3 +1,10 @@
+---
+layout: default
+parent: Usage Examples
+grand_parent: References
+permalink: standards/v3.1.2/references/usage-examples/domestic-standing-orders-usage-examples
+---
+
 # Domestic Standing Order Usage Examples - v3.1.2
 
 1. [Standing Order Initiation](#standing-order-initiation)
