@@ -1,9 +1,10 @@
 ---
 layout: default
-parent: Resources and Data Models
-grand_parent: Version 3.1.2
+parent: AISP
+grand_parent: Resources and Data Models
 permalink: standards/v3.1.2/profiles/aisp/Accounts
 ---
+
 # Accounts - v3.1.2
 
 1. [Overview](#overview)
