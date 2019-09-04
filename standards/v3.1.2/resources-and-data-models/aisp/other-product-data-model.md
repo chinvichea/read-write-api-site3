@@ -1,3 +1,10 @@
+---
+layout: default
+parent: AISP
+grand_parent: Resources and Data Models
+permalink: standards/v3.1.2/profiles/aisp/other-product-data-model
+---
+
 # Other Product Data Model - v3.1.2
 
 1. [Overview](#overview)
@@ -96,7 +103,7 @@ Wherever used, an ASPSP **must** define and document (on their developer portal)
 ### Data Dictionary
 
 * [Other Product Type Data Definition]( productdatafiles/OtherProductInfo.v3.1.2.DD.xlsx )
- 
+
 
 ### Data Payload - Enumerations
 

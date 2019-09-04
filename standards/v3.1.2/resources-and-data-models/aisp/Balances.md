@@ -1,3 +1,9 @@
+---
+layout: default
+parent: AISP
+grand_parent: Resources and Data Models
+permalink: standards/v3.1.2/profiles/aisp/Balances
+---
 # Balances - v3.1.2
 
 1. [Overview](#overview)
@@ -42,7 +48,7 @@ This will retrieve the resources for all authorised accounts linked to the accou
 
 ## Data Model
 
-The OBReadBalance1 object will be used for the call to: 
+The OBReadBalance1 object will be used for the call to:
 
 * GET /accounts/{AccountId}/balances
 * GET /balances
