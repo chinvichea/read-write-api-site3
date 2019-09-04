@@ -2,7 +2,7 @@
 layout: default
 parent: AISP
 grand_parent: Resources and Data Models
-permalink: standards/v3.1.2/profiles/aisp/bca-product-data-model
+permalink: standards/v3.1.2/resources-and-data-models/aisp/bca-product-data-model
 ---
 # BCA Product Data Model - v3.1.2
 

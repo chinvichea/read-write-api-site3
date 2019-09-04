@@ -2,7 +2,7 @@
 layout: default
 parent: AISP
 grand_parent: Resources and Data Models
-permalink: standards/v3.1.2/profiles/aisp/Accounts
+permalink: standards/v3.1.2/resources-and-data-models/aisp/Accounts
 ---
 
 # Accounts - v3.1.2

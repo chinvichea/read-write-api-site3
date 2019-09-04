@@ -2,7 +2,7 @@
 layout: default
 parent: AISP
 grand_parent: Resources and Data Models
-permalink: standards/v3.1.2/profiles/aisp/direct-debits
+permalink: standards/v3.1.2/resources-and-data-models/aisp/direct-debits
 ---
 # Direct Debits - v3.1.2
 
