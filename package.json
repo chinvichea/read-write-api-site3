@@ -6,14 +6,14 @@
   "license": "MIT",
   "bugs": "https://github.com/pmarsceill/just-the-docs/issues",
   "devDependencies": {
-    "stylelint": "^10.0.1",
-    "stylelint-config-primer": "^7.0.1",
-    "stylelint-selector-no-utility": "^4.0.0"
-  },
-  "dependencies": {
-    "@primer/css": "^12.6.0"
+    "markdown-it": "^9.1.0",
+    "markdown-it-footnote": "^3.0.2",
+    "markdown-it-katex": "^2.0.3",
+    "markdown-it-toc": "^1.1.0",
+    "vuepress": "^1.0.4"
   },
   "scripts": {
-    "test": "stylelint '**/*.scss'"
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   }
 }
