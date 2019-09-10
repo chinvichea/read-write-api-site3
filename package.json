@@ -1,10 +1,10 @@
 {
-  "name": "just-the-docs",
-  "version": "0.2.6",
-  "description": "A modern Jekyll theme for documentation",
-  "repository": "pmarsceill/just-the-docs",
+  "name": "read-write-api-site",
+  "version": "v3.1.2",
+  "description": "A github.io site for read-write API specifications",
+  "repository": "git@github.com:OpenBankingUK/read-write-api-site.git",
   "license": "MIT",
-  "bugs": "https://github.com/pmarsceill/just-the-docs/issues",
+  "bugs": "https://github.com/OpenBankingUK/read-write-api-site/issues",
   "devDependencies": {
     "markdown-it": "^9.1.0",
     "markdown-it-footnote": "^3.0.2",
@@ -13,7 +13,7 @@
     "vuepress": "^1.0.4"
   },
   "scripts": {
-    "docs:dev": "vuepress dev docs",
+    "docs:dev": "vuepress dev docs --no-cache",
     "docs:build": "vuepress build docs"
   }
 }
