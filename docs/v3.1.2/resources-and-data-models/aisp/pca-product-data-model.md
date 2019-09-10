@@ -63,14 +63,14 @@ Further analysis required:-
 
 | Product Section |Fields to be included |
 | --- |--- |
-| PCA (We'll rename this "Product" and merge PCA and CoreProduct attributes) |<li>Name <li>Open Data Product ID (Mandatory, if product info is available on Open Data PCA API) <li>ProductType ("PCA") <li>MonthlyMaximumCharge (Mandatory for "front book" products) |
+| PCA (We'll rename this "Product" and merge PCA and CoreProduct attributes) | <ul><li>Name</li><li>Open Data Product ID (Mandatory, if product info is available on Open Data PCA API)</li><li>ProductType ("PCA")</li><li>MonthlyMaximumCharge (Mandatory for "front book" products)</li></ul> |
 | CoreProduct |**None** - Will be merged in to new "Product" section. |
 | PCAMarketingState |**None** - Sections will only include current state information, so this section is not required |
-| CreditInterest |<li>TierBandSet fields (excluding credit interest eligibility). <li>All TierBand fields <br>**Note:** Only current state credit interest information is required. |
-| Overdraft |<li> All TierBandSet fields (including OverdraftFeesAndCharges) <li> All TierBand fields (including OverdraftFeesAndCharges). <br>**Note:** Only current state information is required. |
+| CreditInterest | <ul><li>TierBandSet fields (excluding credit interest eligibility).</li><li>All TierBand fields <br>**Note:** Only current state credit interest information is required.</li></ul> |
+| Overdraft | <ul><li>All TierBandSet fields (including OverdraftFeesAndCharges)</li><li>All TierBand fields (including OverdraftFeesAndCharges).</li></ul><br>**Note:** Only current state information is required. |
 | Eligibility |**None** - Eligibility criteria met when PCA was sold unlikely to be reliable. |
 | FeaturesAndBenefits |**None** - The value of a particular feature and benefit to an accountholder is dependent on their use of that benefit and whether they met eligibility criteria. Certain benefits may be provided by external suppliers making it difficult to provide real time info. Relevant general features &amp; benefits info can be obtained from Open Data API for "front book" products. |
-| OtherFeesAndCharges |<li> Periodic Fee (i.e. the service charge) |
+| OtherFeesAndCharges | <ul><li>Periodic Fee (i.e. the service charge)</li></ul> |
 
 ### Changes from the OpenData Model
 
@@ -86,7 +86,7 @@ Further analysis required:-
 * AER is the only representative rate for CreditInterest for product comparison purposes and therefore has been explicitly captured.
 * The banks often also specify Gross rates. Net is usually determined by removing basic rate tax only, and banks stopped doing this from April 2016. This may still be required for backbook products.
 * It has been ensured that both the calculation and application frequency for credit interest is captured.
-    * The term "Nominal" used by some banks is synonymous with "Gross".
+  * The term "Nominal" used by some banks is synonymous with "Gross".
 * DepositInterestAppliedCoverage refers to which interest rate is applied when interests are tiered. For example, if an account balance is £2k and the interest tiers are:- 0-£500 0.1%, 500-1000 0.2%, 1000-10000 0.5%, then the applicable interest rate could either be 0.5% of the entire balance (since the account balance sits in the top interest tier) or (0.1%*500)+(0.2%*500)+(0.5%*1000). In the 1st situation, the interest should be applied to the "Whole" of the account balance and in the 2nd, this should be "Tiered".
 * Destination refers to whether the Product allows interest to be credited to another account ("PayAway") or only to itself ("SelfCredit").
 

@@ -1,6 +1,5 @@
 ---
 title: Profiles
-sidebar: auto
 ---
 
 # Open Banking Read-Write API - Profiles

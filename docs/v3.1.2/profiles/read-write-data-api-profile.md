@@ -16,9 +16,9 @@
       9. [Status Codes](#status-codes)
       10. [Unique Identifiers (Id Fields)](#unique-identifiers-id-fields)
       11. [Categorisation of Implementation Requirements](#categorisation-of-implementation-requirements)
-         1. [Mandatory](#mandatory)
-         2. [Conditional](#conditional)
-         3. [Optional](#optional)
+          1. [Mandatory](#mandatory)
+          2. [Conditional](#conditional)
+          3. [Optional](#optional)
 2. [Basics](#basics)
    1. [Actors](#actors)
    2. [Character Encoding](#character-encoding)
@@ -51,10 +51,10 @@
          3. [Step 3: Verify the Signature](#step-3-verify-the-signature)
       6. [Sample JOSE Header](#sample-jose-header)
    10. [Message Encryption](#message-encryption-1)
-      1. [Overview](#overview-2)
-      2. [Message Signing and Encryption](#message-signing-and-encryption)
-      3. [Key Stores](#key-stores-1)
-      4. [Encrypting Non-JSON Data](#encrypting-non-json-data)
+       1. [Overview](#overview-2)
+       2. [Message Signing and Encryption](#message-signing-and-encryption)
+       3. [Key Stores](#key-stores-1)
+       4. [Encrypting Non-JSON Data](#encrypting-non-json-data)
    11. [Filtering](#filtering)
    12. [Pagination](#pagination)
    13. [Archiving](#archiving)
@@ -138,9 +138,9 @@ However, the priority is to have an API that is simple to understand and easy to
 
 References:
 
-* The highest level Data Description Language used is the JSON Schema : http://json-schema.org/
-* Best Practice has also been taken from the Data Description Language for APIs; JSON API : http://jsonapi.org/
-* The Interface Description Language used is the Swagger Specification version 2.0 (also known as Open API) : http://swagger.io/ https://github.com/OAI/OpenAPI-Specification
+* The highest level Data Description Language used is the JSON Schema : <http://json-schema.org/>
+* Best Practice has also been taken from the Data Description Language for APIs; JSON API : <http://jsonapi.org/>
+* The Interface Description Language used is the Swagger Specification version 2.0 (also known as Open API) : <http://swagger.io/> <https://github.com/OAI/OpenAPI-Specification>
 
 #### Standards
 
@@ -169,7 +169,7 @@ It is intended that the API flows will be extended to cater for more complex use
 
 #### Idempotency
 
-Idempotency is difficult to implement consistently and leverage consistently. 
+Idempotency is difficult to implement consistently and leverage consistently.
 
 As a result, idempotency is used sparingly in the Open Banking API specifications; with a preference to allow TPPs to simply re-submit a request under failure conditions.
 
@@ -177,7 +177,7 @@ APIs have been defined to be idempotent, where not doing so would cause a poor P
 
 #### Message Signing
 
-Digital signatures will facilitate non-repudiation for Open Banking APIs. 
+Digital signatures will facilitate non-repudiation for Open Banking APIs.
 
 The approach for message signing is documented in [Basics / Message Signing](#message-signing-1).
 
@@ -224,11 +224,13 @@ ASPSPs **must** make documentation available to TPPs (e.g. on their developer
 
 Functionality, endpoints and fields marked as Mandatory are required in all cases for regulatory compliance and/or for the API to function and deliver essential customer outcomes.
 
-For functionalities and endpoints: 
+For functionalities and endpoints:
+
 * An ASPSP **must** implement an endpoint that is marked Mandatory.
 * An ASPSP **must** implement functionality that is marked Mandatory.
 
 For fields:
+
 * A TPP **must** specify the value of a Mandatory field.
 * An ASPSP **must** process a Mandatory field when provided by the TPP in an API request.
 * An ASPSP **must** include meaningful values for Mandatory fields in an API response.
@@ -320,6 +322,7 @@ The path of the URI must follow the structure below (from the OB API Release Man
 * [participant-path-prefix]/open-banking/[version]/[resource-group]/[resource]/[resource-id]/[sub-resource]
 
 This consists of the following elements:
+
 * [participant-path-prefix]<br>An optional ASPSP specific path prefix.
 * open-banking<br>The constant string "open-banking".
 * [version]<br>The version of the APIs expressed as /v[major-version].[minor-version]/.
@@ -331,12 +334,12 @@ An ASPSP must use the same participant-path-prefix and host name for all its res
 
 Examples:
 
-* https://superbank.com/apis/open-banking/v3.1/pisp/domestic-payments
-* https://superbank.com/apis/open-banking/v3.1/aisp/account-access-consents
-* https://superbank.com/apis/open-banking/v3.1/aisp/accounts
-* https://superbank.com/apis/open-banking/v3.1/aisp/accounts/1234
-* https://superbank.com/apis/open-banking/v3.1/aisp/accounts/1234/transactions
-* https://superbank.com/apis/open-banking/v3.1/cbpii/funds-confirmation-consents
+* <https://superbank.com/apis/open-banking/v3.1/pisp/domestic-payments>
+* <https://superbank.com/apis/open-banking/v3.1/aisp/account-access-consents>
+* <https://superbank.com/apis/open-banking/v3.1/aisp/accounts>
+* <https://superbank.com/apis/open-banking/v3.1/aisp/accounts/1234>
+* <https://superbank.com/apis/open-banking/v3.1/aisp/accounts/1234/transactions>
+* <https://superbank.com/apis/open-banking/v3.1/cbpii/funds-confirmation-consents>
 
 For brevity, the APIs are referred to by their resource names in these documents and in all examples.
 
@@ -356,7 +359,6 @@ For brevity, the APIs are referred to by their resource names in these documents
 |x-jws-signature           |Header containing a detached JWS signature of the body of the payload.<br><br>Refer to resource specific documentation on when this header must be specified.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |API specific |API specific|API specific   |Mandatory   |
 |x-customer-user-agent     |The header indicates the user-agent that the PSU is using.<br><br>The TPP **may** populate this field with the user-agent indicated by the PSU.<br><br>If the PSU is using a TPP mobile app, the TPP **must** ensure that the user-agent string is different from browser based user-agent strings.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |Optional     |Optional    |Optional       |Optional    |
 
-
 Whether the PSU is present or not-present is identified via the x-fapi-customer-ip-address header. If the PSU IP address is supplied, it is inferred that the PSU is present during the interaction.
 
 The implications to this are:
@@ -373,7 +375,6 @@ The implications to this are:
 |x-jws-signature           |Header containing a detached JWS signature of the body of the payload.<br><br>Refer to resource specific documentation on when this header **must** be returned. Where a signed response is indicated in the documentation this header **should** be returned for error responses where a response body is returned.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |API specific|
 |x-fapi-interaction-id     |An RFC4122 UID used as a correlation Id.<br><br>The ASPSP **must** set the response header `x-fapi-interaction-id` to the value received from the corresponding fapi client request header or to a [RFC4122](https://tools.ietf.org/html/rfc4122) UUID value if the request header was not provided to track the interaction. The header **must** be returned for both successful and error responses.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |Mandatory   |
 |Retry-After               |Header indicating the time (in seconds) that the TPP should wait before retrying an operation.<br><br>The ASPSP **should** include this header along with responses with the HTTP status code of 429 (Too Many Requests).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |Optional    |
-
 
 ### HTTP Status Codes
 
@@ -393,7 +394,6 @@ The following are the HTTP response codes for the different HTTP methods, across
 |The operation was refused as too many requests have been made within a certain timeframe.|429 Too Many Requests                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |ASPSPs **may** throttle requests when they are made in excess of their fair usage policy.<br><br>ASPSPs **must** document their fair usage policies in their developer portals.<br><br>The ASPSP **must** respond with this status if it throttles the request.<br><br>The ASPSP **should** include a Retry-After header in the response indicating how long the TPP must wait before retrying the operation.|Yes             |Yes            |Yes               |Yes            |
 |Something went wrong on the API gateway or micro-service|500 Internal Server Error                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |The operation failed.|Yes             |Yes            |Yes               |Yes            |
 |Service version deprecation|503 Service Unavailable                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |Where an API is deprecated and no longer operationally supported by an ASPSP, its URI path may still be active and accept API requests. In this context it is recommended that a 503 Service Unavailable be returned so that the TPP is aware of the API version being offline.|Yes             |Yes            |Yes               |Yes            |
-
 
 An ASPSP **MAY** return other standard HTTP status codes (e.g. from gateways and other edge devices) as described in [RFC 7231 - Section 6](https://tools.ietf.org/html/rfc7231#section-6).
 
@@ -422,7 +422,6 @@ The table below illustrates some examples of expected behaviour:
 |A TPP attempts to retrieve a resource that is in the specification, but not implemented by the ASPSP. e.g., an ASPSP has chosen not to implement the status API endpoint for domestic-scheduled-payments|GET /domestic-scheduled-payments/1002                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |404 (Not Found)|
 |A TPP attempts to retrieve standing orders for an AccountId that exists, but does not have any standing orders|GET /accounts/1000/standing-orders                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |<pre>200 OK<br>{<br> "Data": {<br>     "StandingOrder": []<br>   },<br>   "Links": {<br>     "Self": "https://api.alphabank.com/open-banking/v3.1/aisp/accounts/1000/standing-orders/"<br>   },<br>   "Meta": {<br>     "TotalPages": 1<br>   }<br>}</pre>|
 
-
 #### 403 (Forbidden)
 
 When a TPP tries to access a resource that it does not have permission to access, the ASPSP **must** return a 403 (Forbidden) with an optional body with Error Response.
@@ -449,12 +448,12 @@ This error can potentially be remedied by asking the PSU to re-authenticate or a
 
 #### 429 (Too Many Requests)
 
-When a TPP tries to access a resource too frequently the ASPSP **may** return a 429 (Too Many Requests).  This is a non functional requirement and is down to individual ASPSPs to decide throttling limits. 
+When a TPP tries to access a resource too frequently the ASPSP **may** return a 429 (Too Many Requests).  This is a non functional requirement and is down to individual ASPSPs to decide throttling limits.
 
 This situation could arise when:
 
 * A TPP decides to implement "Real Time Payment Status" functionality for its users and implements this badly by polling a GET endpoint or an Idempotent POST endpoint in excess of the ASPSP's fair usage policy to provide pseudo "real-time" Status updates to the user.
-* A TPP decides to use the Single Immediate Payment endpoint as if it were a batch payment facility and sends a large number of payment requests in a very short space of time such that it exceeds the ASPSP's fair usage policy. 
+* A TPP decides to use the Single Immediate Payment endpoint as if it were a batch payment facility and sends a large number of payment requests in a very short space of time such that it exceeds the ASPSP's fair usage policy.
 
 ### Pre-Conditions
 
@@ -477,13 +476,13 @@ The following pre-conditions must be satisfied in order to use these APIs:
 
 ### Idempotency
 
-An idempotency key is used to guard against the creation of duplicate resources when using the **POST** API endpoints (where indicated). 
+An idempotency key is used to guard against the creation of duplicate resources when using the **POST** API endpoints (where indicated).
 
 If an idempotency key is required for an API endpoint:
 
 * The x-idempotency-key provided in the header **must** be at most 40 characters in size. If a larger x-idempotency-key length is provided, the ASPSP **must** reject the request with a status code is 400 (Bad Request).
 * The TPP **must not** change the request body while using the same x-idempotency-key. If the TPP changes the request body, the ASPSP **must not** modify the end resource. The ASPSP **may** treat this as a fraudulent action.
-* The ASPSP **must** treat a request as idempotent if it had received the first request with the same x-idempotency-key from the same TPP in the **preceding 24 hours**. 
+* The ASPSP **must** treat a request as idempotent if it had received the first request with the same x-idempotency-key from the same TPP in the **preceding 24 hours**.
 * The ASPSP **must not** create a new resource for a POST request if it is determined to be an idempotent request.
 * The ASPSP **must** respond to the request with the current status of the resource (or a status which is at least as current as what is available on existing online channels) and a HTTP status code of 201 (Created).
 * The TPP **must not** use the idempotent behaviour to poll the status of resources.
@@ -513,7 +512,7 @@ Not all API requests and responses are signed. Whether message signing is mandat
 
 #### Key Stores
 
-A Trust Anchor that is trusted by the ASPSPs and TPPs is responsible for providing a store of public keys for each of the parties. 
+A Trust Anchor that is trusted by the ASPSPs and TPPs is responsible for providing a store of public keys for each of the parties.
 
 The Trust Anchor could be a centralised directory (such as the Open Banking Directory) that hosts the public part of a key pair generated any of the parties.
 
@@ -549,13 +548,13 @@ The JOSE header for the signature must contain the following fields
 
 | Claim                           | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `alg`                           | The algorithm that will be used for signing the JWS.<br><br>The list of valid algorithms is here https://tools.ietf.org/html/rfc7518#section-3.1.<br><br>This value must be `PS256`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `alg`                           | The algorithm that will be used for signing the JWS.<br><br>The list of valid algorithms is here <https://tools.ietf.org/html/rfc7518#section-3.1>.<br><br>This value must be `PS256`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | `typ`                           | This is an optional claim.<br><br>If it is specified, it must be set to the value `JOSE`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | `cty`                           | This is an optional claim for JSON payloads<br><br>If it is specified, it must be set to the value `json` or `application/json` for json payloads.<br><br>For non-json payloads (e.g. for PDF files), the mime type of the payload must be specified in this claim.                                                                                                                                                                                                                                                                                                                                                                                                      |
 | `kid`                           | This is a mandatory claim.<br><br>It must match a value that can be used to look up the key in a key store hosted by the Trust Anchor.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | `b64`                           | This **must** have the boolean value false.<br><br>This indicates that the message payload is not base64 url encoded.<br><br>(See [RFC 7797 - The "b64" header Parameter](https://tools.ietf.org/html/rfc7797#section-3))                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | `http://openbanking.org.uk/iat` | This **must** be a JSON number representing the number of seconds from 1970-01-01T0:0:0Z as measured in GMT until the date/time. <br><br>This is a private header parameter name. (See [RFC 7515 - Private Header Parameter Names](https://tools.ietf.org/html/rfc7515#section-4.3))                                                                                                                                                                                                                                                                                                                                                                                 |
-| `http://openbanking.org.uk/iss` | This **must** be a string that identifies the PSP.<br><br>If the issuer is using a certificate this value **must** match the **subject** of the signing certificate.<br><br>If the issuer is using a signing key lodged with a Trust Anchor, the value is defined by the Trust Anchor and should uniquely identify the PSP.<br><br>For example, when using the Open Banking Directory, the value must be:<br><br><li>When issued by a TPP, of the form {{orgi-id}}/{{software-statement-id}},<li>When issued by an ASPSP of the form {{org-id}}<br><br>Where:<li>org-id is the open-banking issued organization id<li>software-statement-id is the open-banking issued software-statement-id |
+| `http://openbanking.org.uk/iss` | This **must** be a string that identifies the PSP.<br>If the issuer is using a certificate this value **must** match the **subject** of the signing certificate.<br><br>If the issuer is using a signing key lodged with a Trust Anchor, the value is defined by the Trust Anchor and should uniquely identify the PSP.<br><br>For example, when using the Open Banking Directory, the value must be:<br><ul><li>When issued by a TPP, of the form <code v-pre>{{orgi-id}}/{{software-statement-id}}</code>,</li><li>When issued by an ASPSP of the form <code v-pre>{{org-id}}</code></li></ul><br>Where:<ul><li>org-id is the open-banking issued organization id<ul><li>software-statement-id is the open-banking issued software-statement-id</li></ul></li></ul> |
 | `http://openbanking.org.uk/tan` | This **must** be a string that consists of a domain name that is registered to and identifies the Trust Anchor that hosts the public counter-part of the key used for signing.<br><br>For example, when using the Open Banking Directory, the value must be `openbanking.org.uk`                                                                                                                                                                                                                                                                                                                                                                                     |
 | `crit`                          | This **must** be a string array consisting of the values `b64`, `http://openbanking.org.uk/iat`, `http://openbanking.org.uk/iss`, `http://openbanking.org.uk/tan`<br><br>This indicates that the JWS signature validator must understand and process the three additional claims.                                                                                                                                                                                                                                                                                                                                                                                    |
 
@@ -564,15 +563,15 @@ The JOSE header for the signature must contain the following fields
 The signer must compute the signature as a detached JWS as defined in [RFC 7515, Appendix F](https://tools.ietf.org/html/rfc7515)
 
 > "One way to do this is to create a JWS
-   in the normal fashion using a representation of the content as the
-   payload but then delete the payload representation from the JWS and
-   send this modified object to the recipient rather than the JWS."
-   <br>...<br>
-   Note that this method needs no support from JWS libraries, as
-   applications can use this method by modifying the inputs and outputs
-   of standard JWS libraries.
+> in the normal fashion using a representation of the content as the
+> payload but then delete the payload representation from the JWS and
+> send this modified object to the recipient rather than the JWS."
+> <br>...<br>
+> Note that this method needs no support from JWS libraries, as
+> applications can use this method by modifying the inputs and outputs
+> of standard JWS libraries.
 
-##### Step 4: Add the JWS as a HTTP Header 
+##### Step 4: Add the JWS as a HTTP Header
 
 The signer **must** include an HTTP header called **x-jws-signature** with its value set to the signature computed in Step 3.
 
@@ -612,12 +611,12 @@ The verifier **must** ensure that the `crit` claim does not contain additional c
 
 The verifier must verify the signature, as defined in [RFC 7515, Appendix F](https://tools.ietf.org/html/rfc7515#appendix-F).
 
->To use the modified object, the recipient
-   reconstructs the JWS by re-inserting the payload representation into
-   the modified object and uses the resulting JWS in the usual manner.
-   Note that this method needs no support from JWS libraries, as
-   applications can use this method by modifying the inputs and outputs
-   of standard JWS libraries.
+> To use the modified object, the recipient
+> reconstructs the JWS by re-inserting the payload representation into
+> the modified object and uses the resulting JWS in the usual manner.
+> Note that this method needs no support from JWS libraries, as
+> applications can use this method by modifying the inputs and outputs
+> of standard JWS libraries.
 
 #### Sample JOSE Header
 
@@ -781,8 +780,8 @@ The expiry time for issued access tokens and refresh tokens must be deterministi
 
 In order to achieve this:
 
-* The ASPSP **must** indicate the lifetime in seconds of the access token in the `expires_in` field of the JSON object returned by the token end-point. (See https://tools.ietf.org/html/rfc6749#section-4.2.2)
-* If the ASPSP issues a refresh token, the ASPSP **must** indicate the date-time at which the refresh token will expire in a claim named `http://openbanking.org.uk/refresh_token_expires_at` in the Id token (returned by the token end-point or userinfo end-point). Its value MUST be a number containing a NumericDate value, as specified in https://tools.ietf.org/html/rfc7519#section-2
+* The ASPSP **must** indicate the lifetime in seconds of the access token in the `expires_in` field of the JSON object returned by the token end-point. (See <https://tools.ietf.org/html/rfc6749#section-4.2.2>)
+* If the ASPSP issues a refresh token, the ASPSP **must** indicate the date-time at which the refresh token will expire in a claim named `http://openbanking.org.uk/refresh_token_expires_at` in the Id token (returned by the token end-point or userinfo end-point). Its value MUST be a number containing a NumericDate value, as specified in <https://tools.ietf.org/html/rfc7519#section-2>
 * NumericDate is a JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date-time, ignoring leap seconds.
 * If the ASPSP does not issue a refresh token, the ASPSP **must not** populate the `http://openbanking.org.uk/refresh_token_expires_at` claim in the Id token
 * If the ASPSP issues a refresh token that does not expire, the ASPSP **must** populate the claim named `http://openbanking.org.uk/refresh_token_expires_at` in the Id token with a value representing the number of seconds to 03:14:07 UTC on 19 January 2038 (end of UNIX epoch)
@@ -834,6 +833,7 @@ The `id_token` is a signed JWT that consists of a number of claims that identify
 As the `id_token` is signed by the ASPSP and bound to a specific TPP (through the `aud` claim), the `id_token` could be leveraged to *identify* the PSU in subsequent authorisation requests. OIDC caters for this by allowing the `id_token` to be passed into an authorization code grant request as the `id_token_hint` query parameter (as documented [here](https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest)).
 
 #### CIBA
+
 The [Client Initiated Back-channel Authentication flow](https://openid.net/specs/openid-client-initiated-backchannel-authentication-core-1_0.html) is part of the OpenID specifications. A [FAPI Profile of the CIBA specification](https://bitbucket.org/openid/fapi/src/a9e55356b5f233af804227d5001d3c32d23d1a91/Financial_API_WD_CIBA.md?at=master&fileviewer=file-view-default) is available and ASPSPs that implement CIBA **must** adhere to the profile. An ASPSP **may** optionally implement the CIBA flow to allow PSUs to authenticate themselves using a decoupled *authentication device* that is distinct from the *consumption device* on which they consume the TPP application.
 
 ##### Identifying the PSU
@@ -1035,6 +1035,7 @@ The top level response structure for Open Banking Read/Write APIs:
 In line with the principle of RESTful APIs, the full resource must be replayed as part of the response.
 
 Two additional top-level sections are included in the response for:
+
 * Links
 * Meta
 
@@ -1076,7 +1077,6 @@ The error response structure for Open Banking Read/Write APIs:
 |Path                      |0..1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |OBErrorResponse1/Errors/Path|Recommended but optional reference to the JSON Path of the field with error, e.g., Data.Initiation.InstructedAmount.Currency                                            |Max500Text               |     |       |
 |Url                       |0..1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |OBErrorResponse1/Errors/Url|URL to help remediate the problem, or provide more information, or to API Reference, or help etc                                                                        |xs:anyURI                |     |       |
 
-
 #### Optional Fields
 
 In objects where the value for an optional field is not specified, the field **must** be excluded from the JSON payload.
@@ -1094,7 +1094,7 @@ In objects where an array field is defined as having 0..n values, the array fiel
 
 #### Links
 
-The Links section is mandatory and will always contain absolute URIs to related resources, 
+The Links section is mandatory and will always contain absolute URIs to related resources,
 
 The "Self" member is mandatory.
 
@@ -1140,7 +1140,7 @@ This section provides usage examples for some repeating patterns that are used b
 
 ### Pagination Flows
 
-The example below illustrates how an ASPSP may return a paginated response. 
+The example below illustrates how an ASPSP may return a paginated response.
 
 #### Request
 
@@ -1169,16 +1169,17 @@ Content-Type: application/json
   "Links": {
     "Self": "https://api.alphabank.com/open-banking/v3.1/aisp/accounts/22289/transactions/",
     "Last": "https://api.alphabank.com/open-banking/v3.1/aisp/accounts/22289/transactions?pg=20",
-	"First": "https://api.alphabank.com/open-banking/v3.1/aisp/accounts/22289/transactions/",
-	"Next": "https://api.alphabank.com/open-banking/v3.1/aisp/accounts/22289/transactions?pg=2"
+  "First": "https://api.alphabank.com/open-banking/v3.1/aisp/accounts/22289/transactions/",
+  "Next": "https://api.alphabank.com/open-banking/v3.1/aisp/accounts/22289/transactions?pg=2"
   },
   "Meta": {
     "TotalPages": 20,
-	"FirstAvailableDateTime": "2017-05-03T00:00:00+00:00",
-	"LastAvailableDateTime": "2017-12-03T00:00:00+00:00"
+  "FirstAvailableDateTime": "2017-05-03T00:00:00+00:00",
+  "LastAvailableDateTime": "2017-12-03T00:00:00+00:00"
   }
 }
 ```
+
 The TPP may follow the links provided in the Links section of the payload to navigate to the first, last, next and previous pages:
 
 #### Request Next Page of Results
@@ -1208,14 +1209,14 @@ Content-Type: application/json
   "Links": {
     "Self": "https://api.alphabank.com/open-banking/v3.1/aisp/accounts/22289/transactions?pg=2",
     "Last": "https://api.alphabank.com/open-banking/v3.1/aisp/accounts/22289/transactions?pg=20",
-	"First": "https://api.alphabank.com/open-banking/v3.1/aisp/accounts/22289/transactions/",
-	"Next": "https://api.alphabank.com/open-banking/v3.1/aisp/accounts/22289/transactions?pg=3",
-	"Prev": "https://api.alphabank.com/open-banking/v3.1/aisp/accounts/22289/transactions?pg=1"
+  "First": "https://api.alphabank.com/open-banking/v3.1/aisp/accounts/22289/transactions/",
+  "Next": "https://api.alphabank.com/open-banking/v3.1/aisp/accounts/22289/transactions?pg=3",
+  "Prev": "https://api.alphabank.com/open-banking/v3.1/aisp/accounts/22289/transactions?pg=1"
   },
   "Meta": {
     "TotalPages": 20,
-	"FirstAvailableDateTime": "2017-05-03T00:00:00+00:00",
-	"LastAvailableDateTime": "2017-12-03T00:00:00+00:00"
+  "FirstAvailableDateTime": "2017-05-03T00:00:00+00:00",
+  "LastAvailableDateTime": "2017-12-03T00:00:00+00:00"
   }
 }
 ```
@@ -1235,7 +1236,6 @@ This flow assumes that the following Steps have been completed successfully:
 The AISP attempts to provide an expired or missing access token to the ASPSP in an attempt to Request Data
 
 ![](./images/MissingOrExpiredAccessToken.png)
-
 
 <details>
   <summary>Diagram source</summary>
@@ -1290,7 +1290,6 @@ end alt
 ```
 
 </details>
-
 
 #### Missing or Invalid Access Token Scope
 

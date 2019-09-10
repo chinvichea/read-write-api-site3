@@ -40,6 +40,7 @@
 ## Overview
 
 From the analysis:-
+
 * Banks will provide the Open Data Product ID
 * In addition to the "Open Data Product ID" link, we should focus on fields that are provided by price comparison websites today. Although overdraft rates are typically marked as "Negotiable" on PCWs, we feel that it would be useful to provide information about the actual overdraft rate(s) that the accountholder is on, even if this cannot easily be used for comparison with other products.
 * The sections which are most useful for price comparison are: Fee-free periods, Credit Interest and certain sections of eligibilities where other fee charges are dependent on them and periodic fee(s).
@@ -47,20 +48,21 @@ From the analysis:-
 * The eligibility criteria met when the BCA was sold is unlikely to be reliable. Hence eligibility criteria information is optional.
 
 Further analysis required:-
+
 * FeaturesAndBenefits: Further analysis is required to check whether feature and benefits section is needed.
 
 ### Fields to include in BCA Product
 
 | Product Section |Fields to be included |
 | --- |--- |
-| BCA (We'll rename this "Product" and merge BCA and CoreProduct attributes) |<li>Name <li>ProductType ("BCA") <li>Product Segment (e.g. "Startup","Switcher",...) <li>Open Data Product ID (Mandatory, if product info is available on Open Data BCA API) <li>Fee-free period |
+| BCA (We'll rename this "Product" and merge BCA and CoreProduct attributes) | <ul><li>Name</li><li>ProductType ("BCA")</li><li>Product Segment (e.g. "Startup","Switcher",...)</li><li>Open Data Product ID (Mandatory, if product info is available on Open Data BCA API)</li><li>Fee-free period</li></ul> |
 | CoreProduct |**None** - Will be merged in to new "Product" section. |
 | BCAMarketingState |**None** - Sections will only include current state information, so this section is not required. |
-| CreditInterest |<li>TierBandSet fields (excluding credit interest eligibility). <li>All TierBand fields <li>**Note: Only current state credit interest information is required. Where the interest rate(s) have been negotiated, the actual rates applied to the account should be provided.** |
-| Overdraft |<li>All TierBandSet fields (including OverdraftFeesAndCharges) <li>All TierBand fields (including OverdraftFeesAndCharges). <li>**Note: Only current state information is required. Where the overdraft rate(s) have been negotiated, the actual rates applied to the account should be provided.** |
+| CreditInterest | <ul><li>TierBandSet fields (excluding credit interest eligibility).</li><li>All TierBand fields</li><li>**Note: Only current state credit interest information is required. Where the interest rate(s) have been negotiated, the actual rates applied to the account should be provided.**</li></ul> |
+| Overdraft | <ul><li>All TierBandSet fields (including OverdraftFeesAndCharges)</li><li>All TierBand fields (including OverdraftFeesAndCharges).</li><li>**Note: Only current state information is required. Where the overdraft rate(s) have been negotiated, the actual rates applied to the account should be provided.**</li></ul> |
 | Eligibility |**None** - Whether an organisation is eligible for other products cannot be determined by looking at existing product eligibility e.g., criteria for a startup can vary from bank to bank. |
 | FeaturesAndBenefits |**None** - The value of a particular feature and benefit to an accountholder is dependent on their use of that benefit and whether they met the eligibility criteria. Features &amp; benefits are less significant in the BCA market than the PCA. |
-| OtherFeesAndCharges |<li>See Notes below |
+| OtherFeesAndCharges | <ul><li>See Notes below</li></ul> |
 
 #### Notes
 
@@ -285,14 +287,14 @@ Content-Type: application/json
             "AccountId":"22391",
             "ProductType":"BusinessCurrentAccount",
             "ProductName":"Lloyds Business Current Account",
-			"BCA": {
-				"ProductDetails": {
-					"Segment": "General",
-					"FeeFreeLength": "18",
-					"FeeFreeLengthPeriod":"Month",
-					"Notes": ["The customer is no longer in the fee free period."]
-				}
-			}
+            "BCA": {
+               "ProductDetails": {
+                  "Segment": "General",
+                  "FeeFreeLength": "18",
+                  "FeeFreeLengthPeriod":"Month",
+                  "Notes": ["The customer is no longer in the fee free period."]
+               }
+            }
          }
       ]
    },

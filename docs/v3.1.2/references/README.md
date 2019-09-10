@@ -1,6 +1,5 @@
 ---
 title: References
-sidebar: auto
 ---
 
 # References
