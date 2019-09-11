@@ -212,17 +212,7 @@ module.exports = {
   base: '/read-write-api-site2/',
   title: 'OBIE Read/Write API Standards',
   description: 'Read/Write API Standards',
-  head: [
-    [
-      'link',
-      {
-        rel: 'icon',
-        href: '/favicon.ico',
-      }
-    ],
-  ],
   themeConfig: {
-    logo: 'favicon.png',
     lastUpdated: 'Last Updated',
     sidebar: create_sidebar(),
     nav: create_nav(),
