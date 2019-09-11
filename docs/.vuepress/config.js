@@ -10,34 +10,104 @@ const markdown_it_container = require('markdown-it-container');
 const markdown_it_anchor = require('markdown-it-anchor'); // https://github.com/valeriangalliat/markdown-it-anchor
 
 const create_sidebar = () => {
+  // TODO(mbana): collapsable behaviour turned off for now as it is causing issues. Need to investigate further.
+  const collapsable = false;
   return [
     {
       title: 'Version 3.1.2',
       path: '/v3.1.2/profiles/read-write-data-api-profile',
-      collapsable: false,
+      collapsable: collapsable,
       sidebarDepth: 1,
       children: [
         {
-          title: 'Profiles',
-          path: '/v3.1.2/profiles/',
-          collapsable: true,
+          title: 'Account and Transaction API',
+          path: '/v3.1.2/profiles/account-and-transaction-api-profile',
+          collapsable: collapsable,
           sidebarDepth: 1,
           children: [
-            '/v3.1.2/profiles/account-and-transaction-api-profile',
-            '/v3.1.2/profiles/aggregated-polling-api-profile',
-            '/v3.1.2/profiles/callback-url-api-profile',
-            '/v3.1.2/profiles/confirmation-of-funds-api-profile',
-            '/v3.1.2/profiles/event-notification-api-profile',
-            '/v3.1.2/profiles/event-notification-subscription-api-profile',
-            '/v3.1.2/profiles/file-payments-api-profile',
-            '/v3.1.2/profiles/payment-initiation-api-profile',
-            '/v3.1.2/profiles/real-time-event-notification-api-profile',
-          ]
+            {
+              title: 'Account Access Consents',
+              path: '/v3.1.2/resources-and-data-models/aisp/account-access-consents',
+            },
+            {
+              title: 'Accounts',
+              path: '/v3.1.2/resources-and-data-models/aisp/Accounts',
+            },
+          ],
         },
+        {
+          title: 'Payment Initiation API ',
+          path: '/v3.1.2/profiles/payment-initiation-api-profile',
+          collapsable: collapsable,
+          sidebarDepth: 1,
+          children: [
+            {
+              title: 'Domestic Payments Consents',
+              path: '/v3.1.2/resources-and-data-models/pisp/domestic-payment-consents',
+            },
+            {
+              title: 'Domestic Payments',
+              path: '/v3.1.2/resources-and-data-models/pisp/domestic-payments',
+            },
+          ],
+        },
+        {
+          title: 'Confirmation of Funds API Profile',
+          path: '/v3.1.2/profiles/confirmation-of-funds-api-profile',
+          collapsable: collapsable,
+          sidebarDepth: 1,
+          children: [
+            {
+              title: 'Funds Confirmation Consent',
+              path: '/v3.1.2/resources-and-data-models/cbpii/funds-confirmation-consent',
+            },
+            {
+              title: 'Funds Confirmation',
+              path: '/v3.1.2/resources-and-data-models/cbpii/funds-confirmation',
+            },
+          ],
+        },
+        {
+          title: 'Event Notification API',
+          path: '/v3.1.2/profiles/event-notification-api-profile',
+          collapsable: collapsable,
+          sidebarDepth: 1,
+          children: [
+            {
+              title: 'Event Notification Subscription API',
+              path: '/v3.1.2/profiles/event-notification-subscription-api-profile',
+            },
+            {
+              title: 'Callback URL API',
+              path: '/v3.1.2/profiles/callback-url-api-profile',
+            },
+            {
+              title: 'Real Time Event Notification API',
+              path: '/v3.1.2/profiles/real-time-event-notification-api-profile',
+            },
+            {
+              title: 'Aggregated Polling API',
+              path: '/v3.1.2/profiles/aggregated-polling-api-profile',
+            },
+          ],
+        },
+        // {
+        //   title: 'Profiles',
+        //   path: '/v3.1.2/profiles/',
+        //   collapsable: collapsable,
+        //   sidebarDepth: 1,
+        //   children: [
+        //     '/v3.1.2/profiles/aggregated-polling-api-profile',
+        //     '/v3.1.2/profiles/callback-url-api-profile',
+        //     '/v3.1.2/profiles/event-notification-subscription-api-profile',
+        //     '/v3.1.2/profiles/file-payments-api-profile',
+        //     '/v3.1.2/profiles/real-time-event-notification-api-profile',
+        //   ]
+        // },
         {
           title: 'Resources and Data Models',
           path: '/v3.1.2/resources-and-data-models/',
-          collapsable: true,
+          collapsable: collapsable,
           sidebarDepth: 1,
           children: [
             '/v3.1.2/resources-and-data-models/aisp/',
@@ -49,7 +119,7 @@ const create_sidebar = () => {
         {
           title: 'References',
           path: '/v3.1.2/references/',
-          collapsable: true,
+          collapsable: collapsable,
           sidebarDepth: 1,
           children: [
             '/v3.1.2/references/domestic-payment-message-formats',
@@ -57,6 +127,48 @@ const create_sidebar = () => {
           ]
         },
       ]
+      // Old version
+      // children: [
+      //   {
+      //     title: 'Profiles',
+      //     path: '/v3.1.2/profiles/',
+      //     collapsable: true,
+      //     sidebarDepth: 1,
+      //     children: [
+      //       '/v3.1.2/profiles/account-and-transaction-api-profile',
+      //       '/v3.1.2/profiles/aggregated-polling-api-profile',
+      //       '/v3.1.2/profiles/callback-url-api-profile',
+      //       '/v3.1.2/profiles/confirmation-of-funds-api-profile',
+      //       '/v3.1.2/profiles/event-notification-api-profile',
+      //       '/v3.1.2/profiles/event-notification-subscription-api-profile',
+      //       '/v3.1.2/profiles/file-payments-api-profile',
+      //       '/v3.1.2/profiles/payment-initiation-api-profile',
+      //       '/v3.1.2/profiles/real-time-event-notification-api-profile',
+      //     ]
+      //   },
+      //   {
+      //     title: 'Resources and Data Models',
+      //     path: '/v3.1.2/resources-and-data-models/',
+      //     collapsable: true,
+      //     sidebarDepth: 1,
+      //     children: [
+      //       '/v3.1.2/resources-and-data-models/aisp/',
+      //       '/v3.1.2/resources-and-data-models/pisp/',
+      //       '/v3.1.2/resources-and-data-models/cbpii/',
+      //       '/v3.1.2/resources-and-data-models/event-notifications/',
+      //     ]
+      //   },
+      //   {
+      //     title: 'References',
+      //     path: '/v3.1.2/references/',
+      //     collapsable: true,
+      //     sidebarDepth: 1,
+      //     children: [
+      //       '/v3.1.2/references/domestic-payment-message-formats',
+      //       '/v3.1.2/references/namespaced-enumerations',
+      //     ]
+      //   },
+      // ]
     },
   ];
 }
