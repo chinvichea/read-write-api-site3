@@ -195,7 +195,7 @@ Step 6: Get Consent/Payment-Order/Payment-Details Status
 <details>
   <summary>Diagram source</summary>
 
-```
+```plantuml
 participant PSU
 participant PISP
 participant ASPSP Authorisation Server
@@ -796,7 +796,7 @@ Note: this flow has been generalised for all payment-order types.
 <details>
   <summary>Diagram source</summary>
 
-```
+```plantuml
 participant PSU
 participant PISP
 participant ASPSP Authorisation Server
@@ -841,7 +841,7 @@ Note: this flow has been generalised for all payment-order types.
 <details>
   <summary>Diagram source</summary>
 
-```
+```plantuml
 participant PSU
 participant PISP
 participant ASPSP Authorisation Server

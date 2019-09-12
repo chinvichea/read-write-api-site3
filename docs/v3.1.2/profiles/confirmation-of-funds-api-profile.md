@@ -126,7 +126,7 @@ Step 6: Get Funds Confirmation Consent Status
 <details>
   <summary>Diagram source</summary>
 
-```
+```plantuml
 participant PSU
 participant CBPII
 participant ASPSP Authorisation Server

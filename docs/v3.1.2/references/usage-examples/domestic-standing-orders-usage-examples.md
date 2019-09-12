@@ -27,7 +27,7 @@ This set of flows and payload examples are for creating and retrieving a domesti
 <details>
   <summary>Diagram source</summary>
 
-```
+```plantuml
 participant PSU
 participant PISP
 participant ASPSP Authorisation Server

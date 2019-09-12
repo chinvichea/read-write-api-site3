@@ -93,7 +93,7 @@ Step 3: Retrieve/Update/Delete Event Notification Subscription
 <details>
   <summary>Diagram source</summary>
 
-```
+```plantuml
 participant TPP
 participant ASPSP Authorisation Server
 participant ASPSP Resource Server

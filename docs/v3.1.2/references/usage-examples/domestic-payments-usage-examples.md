@@ -69,7 +69,7 @@ In this scenario:
 <details>
   <summary>Diagram source</summary>
 
-```
+```plantuml
 participant PSU
 participant Merchant
 participant PISP
@@ -540,7 +540,7 @@ In this scenario:
 <details>
 <summary>Diagram source</summary>
 
-```
+```plantuml
 participant PSU
 participant PISP
 participant ASPSP Authorisation Server

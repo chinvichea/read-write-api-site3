@@ -58,7 +58,7 @@ Following the initial poll the TPP can then repeatedly poll the ASPSP, acknowled
 <details>
   <summary>Diagram source</summary>
 
-  ```
+```plantuml
 participant TPP
 participant ASPSP Authorisation Server
 participant ASPSP Event Polling Service

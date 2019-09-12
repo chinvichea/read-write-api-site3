@@ -36,11 +36,10 @@ Step 1: Send Event Notification
 
 ![Real Time Event Notification](images/RealTimeEventNotification.png)
 
-
 <details>
   <summary>Diagram source</summary>
 
-  ```
+```plantuml
 participant TPP
 participant ASPSP Authorisation Server
 participant ASPSP Resource Server

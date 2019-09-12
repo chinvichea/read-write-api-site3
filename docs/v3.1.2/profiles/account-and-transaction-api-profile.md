@@ -131,7 +131,7 @@ Step 4: Request Data
 <details>
   <summary>Diagram source</summary>
 
-```
+```plantuml
 participant PSU
 participant AISP
 participant ASPSP Authorisation Server
@@ -225,7 +225,6 @@ The account-access-consent resource is referred to as an account-request resourc
 
 - An AISP **must not** create a Consent on a newer version, and use it on a previous version
   - E.g., A ConsentId for an account-access-consent created in v3, must not be used to access v2 endpoints.
-
 
 ##### GET
 
@@ -590,7 +589,6 @@ Deviations from the camt.052 XML standard are:
 | OBExternalStatementType1Code |Annual |Annual statement report. |
 | OBExternalStatementType1Code |Interim |Adhoc or customised statement period. |
 | OBExternalStatementType1Code |RegularPeriodic |Regular pre-agreed reporting statement. |
-
 
 #### ISO Enumerations
 

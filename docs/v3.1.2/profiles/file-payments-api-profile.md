@@ -73,7 +73,7 @@ Step 5: Get Consent/Payment-Order/Payment-Details Status:
 <details>
    <Summary>Diagram source</Summary>
 
-```
+```plantuml
 participant PSU
 participant PISP
 participant ASPSP Authorisation Server

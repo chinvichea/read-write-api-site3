@@ -1240,7 +1240,7 @@ The AISP attempts to provide an expired or missing access token to the ASPSP in 
 <details>
   <summary>Diagram source</summary>
 
-```
+```plantuml
 participant PSU
 participant AISP
 participant ASPSP Authorisation Server
@@ -1274,7 +1274,7 @@ The AISP provides a malformed request to the ASPSP in an attempt to setup an Acc
 <details>
   <summary>Diagram source</summary>
 
-```
+```plantuml
 participant PSU
 participant AISP
 participant ASPSP Authorisation Server
@@ -1306,7 +1306,7 @@ The AISP provides a (valid) access token which does not have a valid scope (or l
 <details>
   <summary>Diagram source</summary>
 
-```
+```plantuml
 participant PSU
 participant AISP
 participant ASPSP Authorisation Server
@@ -1345,7 +1345,7 @@ The ASPSP may optionally choose to return a 429 Response
 <details>
   <summary>Diagram source</summary>
 
-```
+```plantuml
 participant PSU
 participant AISP
 participant ASPSP Authorisation Server
@@ -1379,7 +1379,7 @@ The Step 3: Authorise Consent Flow fails to succeed due to the PSU providing inv
 <details>
   <summary>Diagram source</summary>
 
-```
+```plantuml
 participant PSU
 participant AISP
 participant ASPSP Authorisation Server
