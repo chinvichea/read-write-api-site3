@@ -1,12 +1,16 @@
-@require './config'
-@require './palette'
-@require './fonts'
+@require './palette.styl';
+@require './fonts.styl';
 
 html body
   font-family: "Metropolis", "Arial", sans-serif;
 
-{$contentClass}:not(.custom)
+.page .page-edit,
+.page .page-nav,
+.page .theme-default-content:not(.custom)
   max-width: 100%;
+
+.page .page-edit .last-updated
+  float: unset;
 
 // More Examples:
 // * https://github.com/vuejs/vuepress/blob/master/packages/docs/docs/.vuepress/styles/index.styl
