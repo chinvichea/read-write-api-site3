@@ -7,6 +7,7 @@
 const create_sidebar = () => {
     // TODO(mbana): collapsable behaviour turned off for now as it is causing issues. Need to investigate further.
     const collapsable = true;
+    const sidebarDepth = 0;
     return [
         {
             title: 'Version 3.1.2',
@@ -23,10 +24,75 @@ const create_sidebar = () => {
                         {
                             title: 'Account Access Consents',
                             path: '/v3.1.2/resources-and-data-models/aisp/account-access-consents',
+                            sidebarDepth,
                         },
                         {
                             title: 'Accounts',
                             path: '/v3.1.2/resources-and-data-models/aisp/Accounts',
+                            sidebarDepth,
+                        },
+                        {
+                            title: 'Balances',
+                            path: '/v3.1.2/resources-and-data-models/aisp/Balances',
+                            sidebarDepth,
+                        },
+                        {
+                            title: 'Transactions',
+                            path: '/v3.1.2/resources-and-data-models/aisp/Transactions',
+                            sidebarDepth,
+                        },
+                        {
+                            title: 'Beneficiaries',
+                            path: '/v3.1.2/resources-and-data-models/aisp/Beneficiaries',
+                            sidebarDepth,
+                        },
+                        {
+                            title: 'Direct Debits',
+                            path: '/v3.1.2/resources-and-data-models/aisp/direct-debits',
+                            sidebarDepth,
+                        },
+                        {
+                            title: 'Products',
+                            path: '/v3.1.2/resources-and-data-models/aisp/Products',
+                            collapsable: collapsable,
+                            sidebarDepth: 1,
+                            children: [
+                                {
+                                    title: 'BCA Product Data Model',
+                                    path: '/v3.1.2/resources-and-data-models/aisp/bca-product-data-model',
+                                    sidebarDepth,
+                                },
+                                {
+                                    title: 'PCA Product Data Model',
+                                    path: '/v3.1.2/resources-and-data-models/aisp/pca-product-data-model',
+                                    sidebarDepth,
+                                },
+                                {
+                                    title: 'Other Product Data Model',
+                                    path: '/v3.1.2/resources-and-data-models/aisp/other-product-data-model',
+                                    sidebarDepth,
+                                },
+                            ],
+                        },
+                        {
+                            title: 'Offers',
+                            path: '/v3.1.2/resources-and-data-models/aisp/Offers',
+                            sidebarDepth,
+                        },
+                        {
+                            title: 'Parties',
+                            path: '/v3.1.2/resources-and-data-models/aisp/Parties',
+                            sidebarDepth,
+                        },
+                        {
+                            title: 'Scheduled Payments',
+                            path: '/v3.1.2/resources-and-data-models/aisp/scheduled-payments',
+                            sidebarDepth,
+                        },
+                        {
+                            title: 'Statements',
+                            path: '/v3.1.2/resources-and-data-models/aisp/Statements',
+                            sidebarDepth,
                         },
                     ],
                 },
@@ -39,10 +105,72 @@ const create_sidebar = () => {
                         {
                             title: 'Domestic Payments Consents',
                             path: '/v3.1.2/resources-and-data-models/pisp/domestic-payment-consents',
+                            sidebarDepth,
                         },
                         {
                             title: 'Domestic Payments',
                             path: '/v3.1.2/resources-and-data-models/pisp/domestic-payments',
+                            sidebarDepth,
+                        },
+                        {
+                            title: 'Domestic Scheduled Payment Consents',
+                            path: '/v3.1.2/resources-and-data-models/pisp/domestic-scheduled-payment-consents',
+                            sidebarDepth,
+                        },
+                        {
+                            title: 'Domestic Scheduled Payment',
+                            path: '/v3.1.2/resources-and-data-models/pisp/domestic-scheduled-payments',
+                            sidebarDepth,
+                        },
+                        {
+                            title: 'Domestic Standing Order Consents',
+                            path: '/v3.1.2/resources-and-data-models/pisp/domestic-standing-order-consents',
+                            sidebarDepth,
+                        },
+                        {
+                            title: 'Domestic Standing Orders',
+                            path: '/v3.1.2/resources-and-data-models/pisp/domestic-standing-orders',
+                            sidebarDepth,
+                        },
+                        {
+                            title: 'International Payment Consents',
+                            path: '/v3.1.2/resources-and-data-models/pisp/international-payment-consents',
+                            sidebarDepth,
+                        },
+                        {
+                            title: 'International Payments',
+                            path: '/v3.1.2/resources-and-data-models/pisp/international-payments',
+                            sidebarDepth,
+                        },
+                        {
+                            title: 'International Scheduled Payment Consents',
+                            path: '/v3.1.2/resources-and-data-models/pisp/international-scheduled-payment-consents',
+                            sidebarDepth,
+                        },
+                        {
+                            title: 'International Scheduled Payments',
+                            path: '/v3.1.2/resources-and-data-models/pisp/international-scheduled-payments',
+                            sidebarDepth,
+                        },
+                        {
+                            title: 'International Standing Order Consents',
+                            path: '/v3.1.2/resources-and-data-models/pisp/international-standing-order-consents',
+                            sidebarDepth,
+                        },
+                        {
+                            title: 'International Standing Orders ',
+                            path: '/v3.1.2/resources-and-data-models/pisp/international-standing-orders',
+                            sidebarDepth,
+                        },
+                        {
+                            title: 'File Payment Consents',
+                            path: '/v3.1.2/resources-and-data-models/pisp/file-payment-consents',
+                            sidebarDepth,
+                        },
+                        {
+                            title: 'File Payments',
+                            path: '/v3.1.2/resources-and-data-models/pisp/file-payments',
+                            sidebarDepth,
                         },
                     ],
                 },
