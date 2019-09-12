@@ -2,16 +2,7 @@
 ---
 # Domestic Payment Message Formats - v3.1.2
 
-1. [ISO 20022](#iso-20022)
-2. [ISO 8583](#iso-8583)
-   1. [Mapping](#mapping)
-   2. [Notes](#notes)
-3. [BACS STD18](#bacs-std18)
-   1. [Mapping](#mapping-1)
-   2. [Notes](#notes-1)
-4. [MT103](#mt103)
-   1. [Mapping](#mapping-2)
-   2. [Notes](#notes-2)
+[[toc]]
 
 ## ISO 20022
 

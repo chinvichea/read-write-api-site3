@@ -195,6 +195,8 @@ module.exports = {
                 5,
                 6,
             ],
+            // If you want to debug this, e.g., to compare it again Confluence, uncomment line below.
+            // 'listType': 'ol',
         },
         // https://vuepress.vuejs.org/plugin/option-api.html#extendmarkdown
         extendMarkdown: (md) => {

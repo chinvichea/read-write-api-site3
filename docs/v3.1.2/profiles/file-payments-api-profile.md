@@ -2,12 +2,7 @@
 ---
 # File Payments API Profile - v3.1.2
 
-1. [Overview](#overview)
-   1. [Document Overview](#document-overview)
-2. [Basics](#basics)
-   1. [Overview](#overview-1)
-      1. [Steps](#steps)
-      2. [Sequence Diagram](#sequence-diagram)
+[[toc]]
 
 ## Overview
 

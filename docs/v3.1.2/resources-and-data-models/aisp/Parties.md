@@ -3,35 +3,7 @@
 
 # Parties - v3.1.2
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [GET /accounts/{AccountId}/parties](#get-accountsaccountidparties)
-   2. [GET /accounts/{AccountId}/party](#get-accountsaccountidparty)
-   3. [GET /party](#get-party)
-3. [Data Model](#data-model)
-   1. [Reused Classes](#reused-classes)
-      1. [OBParty2](#obparty2)
-            1. [UML Diagram](#uml-diagram)
-            2. [Notes](#notes)
-            3. [Data Dictionary](#data-dictionary)
-   2. [OBReadParty2](#obreadparty2)
-      1. [UML Diagram](#uml-diagram-1)
-      2. [Data Dictionary](#data-dictionary-1)
-   3. [OBReadParty3](#obreadparty3)
-      1. [UML Diagram](#uml-diagram-2)
-      2. [Data Dictionary](#data-dictionary-2)
-   4. [Permission Codes](#permission-codes)
-4. [Usage Examples](#usage-examples)
-   1. [All Parties](#all-parties)
-      1. [Get Account Parties Request](#get-account-parties-request)
-      2. [Get Account Parties Response](#get-account-parties-response)
-   2. [All Parties](#all-parties-1)
-      1. [Get Parties Request](#get-parties-request)
-      2. [Get Parties Response](#get-parties-response)
-   3. [Account Owner](#account-owner)
-      1. [Get Account Party Request](#get-account-party-request)
-   4. [Authorised User](#authorised-user)
-      1. [Get Party Request](#get-party-request)
+[[toc]]
 
 ## Overview
 

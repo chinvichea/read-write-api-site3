@@ -3,35 +3,7 @@
 
 # Funds Confirmation Consent - v3.1.2
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [POST /funds-confirmation-consents](#post-funds-confirmation-consents)
-      1. [Funds Confirmation Consent Status](#funds-confirmation-consent-status)
-      2. [Status Flow](#status-flow)
-   2. [GET /funds-confirmation-consents/{ConsentId}](#get-funds-confirmation-consentsconsentid)
-      1. [Funds Confirmation Consent Status](#funds-confirmation-consent-status-1)
-   3. [DELETE /funds-confirmation-consents/{ConsentId}](#delete-funds-confirmation-consentsconsentid)
-3. [Data Model](#data-model)
-   1. [Funds Confirmation Consent - Request](#funds-confirmation-consent---request)
-      1. [UML Diagram](#uml-diagram)
-      2. [Data Dictionary](#data-dictionary)
-   2. [Funds Confirmation Consent - Response](#funds-confirmation-consent---response)
-      1. [UML Diagram](#uml-diagram-1)
-      2. [Data Dictionary](#data-dictionary-1)
-   3. [Data Payload - Enumerations](#data-payload---enumerations)
-4. [Usage Examples](#usage-examples)
-   1. [POST - Funds Confirmation Consent](#post---funds-confirmation-consent)
-      1. [Example with all permitted fields](#example-with-all-permitted-fields)
-         1. [Request](#request)
-         2. [Response](#response)
-   2. [GET - Funds Confirmation Consent](#get---funds-confirmation-consent)
-      1. [Example with all permitted fields](#example-with-all-permitted-fields-1)
-         1. [Request](#request-1)
-         2. [Response](#response-1)
-   3. [DELETE - Funds Confirmation Consent](#delete---funds-confirmation-consent)
-      1. [Example with all permitted fields](#example-with-all-permitted-fields-2)
-         1. [Request](#request-2)
-         2. [Response](#response-2)
+[[toc]]
 
 ## Overview
 

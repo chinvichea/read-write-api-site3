@@ -1,29 +1,8 @@
 ---
-layout: default
-parent: Usage Examples
-grand_parent: References
-permalink: standards/v3.1.2/references/usage-examples/international-payment-usage-examples
 ---
 # International Payment Usage Examples - v3.1.2
 
-1. [Debit amount specified; ASPSP provides actual (guaranteed) FX rate, for limited time](#debit-amount-specified-aspsp-provides-actual-guaranteed-fx-rate-for-limited-time)
-   1. [POST /international-payment-consents request](#post-international-payment-consents-request)
-   2. [POST /international-payment-consents response](#post-international-payment-consents-response)
-2. [Confirm Funds on International Payment Order Consent](#confirm-funds-on-international-payment-order-consent)
-   1. [GET / international-payment-consents/{ConsentId}/funds-confirmation Request](#get--international-payment-consentsconsentidfunds-confirmation-request)
-   2. [GET /international-payment-consents/{ConsentId}/funds-confirmation Response](#get-international-payment-consentsconsentidfunds-confirmation-response)
-3. [Debit amount specified; ASPSP provides indicative FX rate](#debit-amount-specified-aspsp-provides-indicative-fx-rate)
-   1. [POST /international-payment-consents request](#post-international-payment-consents-request-1)
-   2. [POST /international-payment-consents response](#post-international-payment-consents-response-1)
-4. [Debit amount specified; ASPSP provides a pre-booked FX rate](#debit-amount-specified-aspsp-provides-a-pre-booked-fx-rate)
-   1. [POST /international-payment-consents request](#post-international-payment-consents-request-2)
-   2. [POST /international-payment-consents response](#post-international-payment-consents-response-2)
-5. [Credit amount specified; ASPSP provides actual (guaranteed) FX rate, for limited time](#credit-amount-specified-aspsp-provides-actual-guaranteed-fx-rate-for-limited-time)
-   1. [POST /international-payment-consents request](#post-international-payment-consents-request-3)
-   2. [POST /international-payment-consents response](#post-international-payment-consents-response-3)
-6. [International payment with all charges paid by payer](#international-payment-with-all-charges-paid-by-payer)
-   1. [POST /international-payment-consents request](#post-international-payment-consents-request-4)
-   2. [POST /international-payment-consents response](#post-international-payment-consents-response-4)
+[[toc]]
 
 ## Debit amount specified; ASPSP provides actual (guaranteed) FX rate, for limited time
 

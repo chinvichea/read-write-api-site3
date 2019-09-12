@@ -2,37 +2,7 @@
 ---
 # Namespaced Enumerations - v3.1.2
 
-1. [Overview](#overview)
-2. [Basics](#basics)
-   1. [Design Principles](#design-principles)
-   2. [Release Management](#release-management)
-3. [Common Namespaced Enumerations](#common-namespaced-enumerations)
-   1. [OBExternalAccountIdentification4Code](#obexternalaccountidentification4code)
-   2. [OBExternalFinancialInstitutionIdentification4Code](#obexternalfinancialinstitutionidentification4code)
-   3. [OBErrorResponseError1Code](#oberrorresponseerror1code)
-4. [Account and Transaction API Namespaced Enumerations](#account-and-transaction-api-namespaced-enumerations)
-   1. [OBExternalStatementAmountType1Code](#obexternalstatementamounttype1code)
-   2. [OBExternalStatementBenefitType1Code](#obexternalstatementbenefittype1code)
-   3. [OBExternalStatementDateTimeType1Code](#obexternalstatementdatetimetype1code)
-   4. [OBExternalStatementFeeType1Code](#obexternalstatementfeetype1code)
-   5. [OBExternalStatementInterestType1Code](#obexternalstatementinteresttype1code)
-   6. [OBExternalStatementRateType1Code](#obexternalstatementratetype1code)
-   7. [OBExternalStatementValueType1Code](#obexternalstatementvaluetype1code)
-   8. [OBExternalStatementFeeRateType1Code](#obexternalstatementfeeratetype1code)
-   9. [OBExternalStatementFeeFrequency1Code](#obexternalstatementfeefrequency1code)
-   10. [OBExternalStatementInterestRateType1Code](#obexternalstatementinterestratetype1code)
-   11. [OBExternalStatementInterestFrequency1Code](#obexternalstatementinterestfrequency1code)
-   12. [OBExternalLegalStructureType1Code](#obexternallegalstructuretype1code)
-   13. [OBExternalAccountRole1Code](#obexternalaccountrole1code)
-5. [Payment Initiation API Namespaced Enumerations](#payment-initiation-api-namespaced-enumerations)
-   1. [OBExternalLocalInstrument1Code](#obexternallocalinstrument1code)
-   2. [OBExternalPaymentChargeType1Code](#obexternalpaymentchargetype1code)
-   3. [OBExternalFileType1Code](#obexternalfiletype1code)
-6. [Confirmation of Funds API Namespaced Enumerations](#confirmation-of-funds-api-namespaced-enumerations)
-7. [Event Notification API Namespaced Enumerations](#event-notification-api-namespaced-enumerations)
-   1. [OBEventType1Code](#obeventtype1code)
-   2. [OBExternalEventConsentAuthorizationRevokedReason1Code](#obexternaleventconsentauthorizationrevokedreason1code)
-   3. [OBExternalEventAccountAccessConsentLinkedAccountUpdateReason1Code](#obexternaleventaccountaccessconsentlinkedaccountupdatereason1code)
+[[toc]]
 
 ## Overview
 
