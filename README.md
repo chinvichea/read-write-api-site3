@@ -16,8 +16,7 @@ yarn docs:build # Or npm run docs:build
 Manually deploy to the `gh-pages` branch using the script, then delete the `docs/.vuepress/dist` folder:
 
 ```sh
-./deploy.sh
-rm -fr docs/.vuepress/dist
+./deploy.sh && rm -fr docs/.vuepress/dist
 ```
 
 then go to <https://github.com/banaio/read-write-api-site2>.

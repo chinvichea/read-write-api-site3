@@ -3,12 +3,6 @@
  * Documentation: https://vuepress.vuejs.org/config/.
  */
 
-const markdown_it_toc = require('markdown-it-toc');
-const markdown_it_katex = require('markdown-it-katex');
-const markdown_it_footnote = require('markdown-it-footnote');
-const markdown_it_container = require('markdown-it-container');
-const markdown_it_anchor = require('markdown-it-anchor');
-
 // https://vuepress.vuejs.org/theme/default-theme-config.html#sidebar
 const create_sidebar = () => {
     // TODO(mbana): collapsable behaviour turned off for now as it is causing issues. Need to investigate further.
@@ -127,49 +121,7 @@ const create_sidebar = () => {
                         '/v3.1.2/references/namespaced-enumerations',
                     ]
                 },
-            ]
-            // Old version
-            // children: [
-            //   {
-            //     title: 'Profiles',
-            //     path: '/v3.1.2/profiles/',
-            //     collapsable: true,
-            //     sidebarDepth: 1,
-            //     children: [
-            //       '/v3.1.2/profiles/account-and-transaction-api-profile',
-            //       '/v3.1.2/profiles/aggregated-polling-api-profile',
-            //       '/v3.1.2/profiles/callback-url-api-profile',
-            //       '/v3.1.2/profiles/confirmation-of-funds-api-profile',
-            //       '/v3.1.2/profiles/event-notification-api-profile',
-            //       '/v3.1.2/profiles/event-notification-subscription-api-profile',
-            //       '/v3.1.2/profiles/file-payments-api-profile',
-            //       '/v3.1.2/profiles/payment-initiation-api-profile',
-            //       '/v3.1.2/profiles/real-time-event-notification-api-profile',
-            //     ]
-            //   },
-            //   {
-            //     title: 'Resources and Data Models',
-            //     path: '/v3.1.2/resources-and-data-models/',
-            //     collapsable: true,
-            //     sidebarDepth: 1,
-            //     children: [
-            //       '/v3.1.2/resources-and-data-models/aisp/',
-            //       '/v3.1.2/resources-and-data-models/pisp/',
-            //       '/v3.1.2/resources-and-data-models/cbpii/',
-            //       '/v3.1.2/resources-and-data-models/event-notifications/',
-            //     ]
-            //   },
-            //   {
-            //     title: 'References',
-            //     path: '/v3.1.2/references/',
-            //     collapsable: true,
-            //     sidebarDepth: 1,
-            //     children: [
-            //       '/v3.1.2/references/domestic-payment-message-formats',
-            //       '/v3.1.2/references/namespaced-enumerations',
-            //     ]
-            //   },
-            // ]
+            ],
         },
     ];
 }
@@ -226,6 +178,8 @@ module.exports = {
         searchMaxSuggestions: 30,
     },
     markdown: {
+        // https://vuepress.vuejs.org/config/#markdown-linenumbers
+        lineNumbers: true,
         // options for markdown-it-anchor
         anchor: {
             permalink: true,
@@ -233,7 +187,13 @@ module.exports = {
         // options for markdown-it-toc
         toc: {
             includeLevel: [
-                1,
+                // We don't want to include the top-level header, so remove level 1.
+                // 1,
+                2,
+                3,
+                4,
+                5,
+                6,
             ],
         },
         // https://vuepress.vuejs.org/plugin/option-api.html#extendmarkdown
@@ -242,34 +202,11 @@ module.exports = {
 
             // Converts '\n' in paragraphs into <br>
             // md.set({ breaks: true });
-            md.use(markdown_it_toc);
-            md.use(markdown_it_katex);
-            md.use(markdown_it_footnote);
-            md.use(markdown_it_container);
-            md.use(markdown_it_anchor);
         },
-    },
-    // options for markdown-it-toc
-    toc: {
-        includeLevel: [
-            1,
-        ],
-    },
-    // https://vuepress.vuejs.org/plugin/option-api.html#extendmarkdown
-    extendMarkdown: (md) => {
-        // use more markdown-it plugins!
-
-        // Converts '\n' in paragraphs into <br>
-        // md.set({ breaks: true });
-        md.use(markdown_it_toc);
-        md.use(markdown_it_katex);
-        md.use(markdown_it_footnote);
-        md.use(markdown_it_container);
-        md.use(markdown_it_anchor);
-    },
-    // https://vuepress.vuejs.org/plugin/option-api.html#chainmarkdown
-    chainMarkdown: (config) => {
-        return config;
+        // https://vuepress.vuejs.org/plugin/option-api.html#chainmarkdown
+        chainMarkdown: (config) => {
+            return config;
+        },
     },
     plugins: [
         // https://vuepress.vuejs.org/plugin/official/plugin-back-to-top.html
@@ -319,5 +256,5 @@ module.exports = {
     // https://vuepress.vuejs.org/config/#evergreen
     // This will disable ES5 transpilation and polyfills for IE, and result in faster builds and smaller files.
     // Set to true, if we want to support IE.
-    evergreen: false,
+    evergreen: true,
 };
