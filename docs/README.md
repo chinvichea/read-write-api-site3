@@ -1,6 +1,6 @@
 ---
 title:  Open Banking Read-Write API
-sidebarDepth: 5
+sidebarDepth: 4
 ---
 
 # Open Banking Read-Write API
