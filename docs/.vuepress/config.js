@@ -11,13 +11,12 @@ module.exports = {
     base: '/read-write-api-site2/',
     title: 'OBIE Read/Write API Standards',
     description: 'Read/Write API Standards',
+    // https://vuepress.vuejs.org/theme/default-theme-config.html
     themeConfig: {
         lastUpdated: 'Last Updated',
         sidebar,
         nav,
-        sidebarDepth: 1,
-        // https://vuepress.vuejs.org/theme/default-theme-config.html#displaying-header-links-of-all-pages
-        displayAllHeaders: false,
+        sidebarDepth: 0,
         // https://vuepress.vuejs.org/theme/default-theme-config.html#search-box
         searchMaxSuggestions: 30,
     },
@@ -70,7 +69,6 @@ module.exports = {
             },
         ],
     ],
-    cache: false,
     // These settings configures the server that is started when you do `yarn docs:dev`.
     // With the current configuration settings, if you open Google Chrome DevTools after navigating
     // to the site, it will display any compilation warnings/errors related to Markdown amongst other things.
@@ -103,9 +101,10 @@ module.exports = {
     // This will disable ES5 transpilation and polyfills for IE, and result in faster builds and smaller files.
     // Set to true, if we want to support IE.
     evergreen: true,
-    // TODO(mbana): WIP.
-    // extraWatchFiles: [
-    //     require.resolve('./sidebar.js'),
-    //     // or '.vuepress/sidebar.js'
-    // ],
+    // https://vuepress.vuejs.org/config/#extrawatchfiles
+    extraWatchFiles: [
+        '.vuepress/devServer.js',
+        '.vuepress/nav.js',
+        '.vuepress/sidebar.js',
+    ],
 };
