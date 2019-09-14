@@ -1,34 +1,9 @@
+---
+---
+
 # Domestic Scheduled Payments  - v3.1.2
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [POST /domestic-scheduled-payments](#post-domestic-scheduled-payments)
-      1. [Status](#status)
-   2. [GET /domestic-scheduled-payments/{DomesticScheduledPaymentId}](#get-domestic-scheduled-paymentsdomesticscheduledpaymentid)
-      1. [Status](#status-1)
-   3. [GET /domestic-scheduled-payments/{DomesticScheduledPaymentId}/payment-details](#get-domestic-scheduled-paymentsdomesticscheduledpaymentidpayment-details)
-      1. [Status](#status-2)
-   4. [State Model](#state-model)
-      1. [Payment Order](#payment-order)
-         1. [Multiple Authorisation](#multiple-authorisation)
-3. [Data Model](#data-model)
-   1. [Reused Classes](#reused-classes)
-      1. [OBDomesticScheduled2](#obdomesticscheduled2)
-   2. [Domestic Scheduled Payment - Request](#domestic-scheduled-payment---request)
-      1. [UML Diagram](#uml-diagram)
-      2. [Notes](#notes)
-      3. [Data Dictionary](#data-dictionary)
-   3. [Domestic Scheduled Payment - Response](#domestic-scheduled-payment---response)
-      1. [UML Diagram](#uml-diagram-1)
-      2. [Notes](#notes-1)
-      3. [Data Dictionary](#data-dictionary-1)
-   4. [Domestic Schedule Payment Order - Payment Details - Response](#domestic-schedule-payment-order---payment-details---response)
-      1. [UML Diagram](#uml-diagram-2)
-      2. [Data Dictionary](#data-dictionary-2)
-4. [Usage Examples](#usage-examples)
-      1. [Create a Domestic Scheduled Payment](#create-a-domestic-scheduled-payment)
-         1. [POST /domestic-scheduled-payments Request](#post-domestic-scheduled-payments-request)
-         2. [POST /domestic-scheduled-payments Response](#post-domestic-scheduled-payments-response)
+[[toc]]
 
 ## Overview
 
@@ -55,7 +30,7 @@ Once the domestic-scheduled-payment-consent has been authorised by the PSU, the 
 
 #### Status
 
-A domestic-scheduled-payment can only be created if its corresponding domestic-scheduled-payment-consent resource has the status of "Authorised". 
+A domestic-scheduled-payment can only be created if its corresponding domestic-scheduled-payment-consent resource has the status of "Authorised".
 
 The domestic-scheduled-payment resource that is created successfully must have one of the following Status codes:
 
@@ -164,11 +139,11 @@ The OBWriteDomesticScheduled2 object will be used for a call to:
 
 #### Notes
 
-The domestic-scheduled-payment **request** object contains the: 
+The domestic-scheduled-payment **request** object contains the:
 
 * ConsentId.
 * The full Initiation and Risk objects from the domestic-scheduled-payment-consent request.
-  
+
 The **Initiation** and **Risk** sections of the domestic-scheduled-payment request **must** match the **Initiation** and **Risk** sections of the corresponding domestic-scheduled-payment-consent request.
 
 #### Data Dictionary
@@ -194,7 +169,7 @@ The OBWriteDomesticScheduledResponse3 object will be used for a response to a ca
 
 #### Notes
 
-The domestic-scheduled-payment **response** object contains the: 
+The domestic-scheduled-payment **response** object contains the:
 
 * DomesticScheduledPaymentId.
 * ConsentId.

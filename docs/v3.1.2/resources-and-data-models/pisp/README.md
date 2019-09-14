@@ -1,14 +1,9 @@
 ---
-layout: default
-title: PISP
-parent: Resources and Data Models
-grand_parent: Version 3.1.2
-nav_order: 2
-has_children: true
-permalink: standards/v3.1.2/resources-and-data-models/pisp
 ---
 
 # PISP Resources and Data Models - v3.1.2
+
+[[toc]]
 
 Resources accessed using the pisp PSD2 role are detailed here:
 

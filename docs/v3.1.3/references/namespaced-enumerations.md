@@ -1,37 +1,9 @@
+---
+---
+
 # Namespaced Enumerations - v3.1.3
 
-1. [Overview](#overview)
-2. [Basics](#basics)
-   1. [Design Principles](#design-principles)
-   2. [Release Management](#release-management)
-3. [Common Namespaced Enumerations](#common-namespaced-enumerations)
-   1. [OBExternalAccountIdentification4Code](#obexternalaccountidentification4code)
-   2. [OBExternalFinancialInstitutionIdentification4Code](#obexternalfinancialinstitutionidentification4code)
-   3. [OBErrorResponseError1Code](#oberrorresponseerror1code)
-4. [Account and Transaction API Namespaced Enumerations](#account-and-transaction-api-namespaced-enumerations)
-   1. [OBExternalStatementAmountType1Code](#obexternalstatementamounttype1code)
-   2. [OBExternalStatementBenefitType1Code](#obexternalstatementbenefittype1code)
-   3. [OBExternalStatementDateTimeType1Code](#obexternalstatementdatetimetype1code)
-   4. [OBExternalStatementFeeType1Code](#obexternalstatementfeetype1code)
-   5. [OBExternalStatementInterestType1Code](#obexternalstatementinteresttype1code)
-   6. [OBExternalStatementRateType1Code](#obexternalstatementratetype1code)
-   7. [OBExternalStatementValueType1Code](#obexternalstatementvaluetype1code)
-   8. [OBExternalStatementFeeRateType1Code](#obexternalstatementfeeratetype1code)
-   9. [OBExternalStatementFeeFrequency1Code](#obexternalstatementfeefrequency1code)
-   10. [OBExternalStatementInterestRateType1Code](#obexternalstatementinterestratetype1code)
-   11. [OBExternalStatementInterestFrequency1Code](#obexternalstatementinterestfrequency1code)
-   12. [OBExternalLegalStructureType1Code](#obexternallegalstructuretype1code)
-   13. [OBExternalAccountRole1Code](#obexternalaccountrole1code)
-   14. [OBExternalDirectDebitFrequency1Code](#obexternaldirectdebitfrequency1code)
-5. [Payment Initiation API Namespaced Enumerations](#payment-initiation-api-namespaced-enumerations)
-   1. [OBExternalLocalInstrument1Code](#obexternallocalinstrument1code)
-   2. [OBExternalPaymentChargeType1Code](#obexternalpaymentchargetype1code)
-   3. [OBExternalFileType1Code](#obexternalfiletype1code)
-6. [Confirmation of Funds API Namespaced Enumerations](#confirmation-of-funds-api-namespaced-enumerations)
-7. [Event Notification API Namespaced Enumerations](#event-notification-api-namespaced-enumerations)
-   1. [OBEventType1Code](#obeventtype1code)
-   2. [OBExternalEventConsentAuthorizationRevokedReason1Code](#obexternaleventconsentauthorizationrevokedreason1code)
-   3. [OBExternalEventAccountAccessConsentLinkedAccountUpdateReason1Code](#obexternaleventaccountaccessconsentlinkedaccountupdatereason1code)
+[[toc]]
 
 ## Overview
 
@@ -59,7 +31,7 @@ When extending a namespaced enumeration:
 
 ### Release Management
 
-Usage of non-namespaced values may be discontinued in a future version of this standard. 
+Usage of non-namespaced values may be discontinued in a future version of this standard.
 
 As a special case and in order to minimise disruption between versions of the standard, a TPP **may** specify previous non-namespaces values, e.g. IBAN instead of UK.OBIE.IBAN.
 
@@ -84,7 +56,7 @@ This is Data Type for Account/SchemeName and used to identify the type of Identi
 
 ### OBExternalFinancialInstitutionIdentification4Code
 
-This is the Data Type for Agent/SchemeName and used to identify the type of Identification used to identify an agent. 
+This is the Data Type for Agent/SchemeName and used to identify the type of Identification used to identify an agent.
 
 | Code |Description |
 | --- |--- |
@@ -131,7 +103,7 @@ This is Data Type gives a low level textual error code to help categorise an err
 
 </details>
 
-## Account and Transaction API Namespaced Enumerations 
+## Account and Transaction API Namespaced Enumerations
 
 ### OBExternalStatementAmountType1Code
 
@@ -435,7 +407,7 @@ This enumeration consists of a subset of the fees and charges identified in the 
 
 <details><summary>Show</summary>
 
-This field is used to indicate the file-type that is being submitted as part of a file-payment payload. 
+This field is used to indicate the file-type that is being submitted as part of a file-payment payload.
 
 | Code |Description |
 | --- |--- |

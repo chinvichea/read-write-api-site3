@@ -1,37 +1,9 @@
+---
+---
+
 # File Payment Consents - v3.1.2
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-	1. [POST /file-payment-consents](#post-file-payment-consents)
-		1. [Status](#status)
-	2. [POST /file-payment-consents/{ConsentId}/file](#post-file-payment-consentsconsentidfile)
-		1. [Status](#status-1)
-	3. [GET /file-payment-consents/{ConsentId}](#get-file-payment-consentsconsentid)
-		1. [Status](#status-2)
-	4. [GET /file-payment-consents/{ConsentId}/file](#get-file-payment-consentsconsentidfile)
-	5. [State Model](#state-model)
-		1. [Payment Order Consent](#payment-order-consent)
-3. [Data Model](#data-model)
-	1. [Reused Classes](#reused-classes)
-		1. [OBFile2](#obfile2)
-			1. [UML Diagram](#uml-diagram)
-			2. [Notes](#notes)
-			3. [Data Dictionary](#data-dictionary)
-	2. [File Payment Consent - Request](#file-payment-consent---request)
-		1. [UML Diagram](#uml-diagram-1)
-		2. [Notes](#notes-1)
-		3. [Data Dictionary](#data-dictionary-1)
-	3. [File Payment Consent - Response](#file-payment-consent---response)
-		1. [UML Diagram](#uml-diagram-2)
-		2. [Notes](#notes-2)
-		3. [Data Dictionary](#data-dictionary-2)
-4. [Usage Examples](#usage-examples)
-	1. [POST /file-payment-consents](#post-file-payment-consents-1)
-		1. [Request](#request)
-		2. [Response](#response)
-	2. [POST /file-payment-consents/{ConsentId}/file](#post-file-payment-consentsconsentidfile-1)
-		1. [Request](#request-1)
-		2. [Response](#response-1)
+[[toc]]
 
 ## Overview
 
@@ -48,7 +20,7 @@ This resource description should be read in conjunction with a compatible Paymen
 | file-payment-consents |GET |GET /file-payment-consents/{ConsentId} |Mandatory (if resource POST implemented) |payments |Client Credentials |Signed Response |No |NA |OBWriteFileConsentResponse3 |
 | file-payment-consents |GET |GET /file-payment-consents/{ConsentId}/file |Conditional |payments |Client Credentials |Signed Response |No |NA |File |
 
-### POST /file-payment-consents 
+### POST /file-payment-consents
 
 The API endpoint allows the PISP to ask an ASPSP to create a new **file-payment-consent** resource.
 
@@ -88,7 +60,7 @@ The default Status is "AwaitingAuthorisation" immediately after the file has bee
 
 ### GET /file-payment-consents/{ConsentId}
 
-A PISP can optionally retrieve a payment consent resource that they have created to check its status. 
+A PISP can optionally retrieve a payment consent resource that they have created to check its status.
 
 #### Status
 
@@ -147,9 +119,9 @@ This section describes the OBFile2 class, which is reused as the Initiation obje
 
 ![OBFile2]( images/OBFile2.gif )
 
-##### Notes 
+##### Notes
 
-For the OBFile2 Initiation object: 
+For the OBFile2 Initiation object:
 
 * All elements in the Initiation payload that are specified by the PISP must not be changed via the ASPSP, as this is part of formal consent from the PSU.
 * If the ASPSP is able to establish a problem with payload or any contextual error during the API call, the ASPSP must reject the file-payment-consent request immediately.
@@ -191,7 +163,7 @@ The OBWriteFileConsent3 object will be used for the call to:
 
 ![OBWriteFileConsent3]( images/OBWriteFileConsent3.gif )
 
-#### Notes 
+#### Notes
 
 The file-payment-consent **request** contains these objects:
 
@@ -199,7 +171,7 @@ The file-payment-consent **request** contains these objects:
 * Authorisation
 * SCASupportData
 
-For the file-payment-consent request object: 
+For the file-payment-consent request object:
 
 * There is no Risk section in the OBWriteFileConsent3 object - as this is not relevant for a file payment.
 
@@ -224,7 +196,7 @@ The OBWriteFileConsentResponse3 object will be used for a response to a call to:
 
 ![OBWriteFileConsentResponse3]( images/OBWriteFileConsentResponse3.gif )
 
-#### Notes 
+#### Notes
 
 The file-payment-consent **response** contains the full **original** payload from the file-payment-consent **request** with these additional elements:
 
@@ -335,7 +307,7 @@ A sample file with 3 transactions is provided below:
 
 <details>
  <summary>File Data Expand source </summary>
-   
+
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
 <Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.08" xmlns:xsi="http://www.w3.org/2001/XMLSchema- instance">
@@ -534,9 +506,9 @@ A sample file with 3 transactions is provided below:
 	</PmtInf>
 </CstmrCdtTrfInitn>
 </Document>
-``` 
+```
 
-</details> 
+</details>
 
 #### Response
 

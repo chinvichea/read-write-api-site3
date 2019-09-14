@@ -1,25 +1,13 @@
+---
+---
+
 # Direct Debits - v3.1.3
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [GET /accounts/{AccountId}/direct-debits](#get-accountsaccountiddirect-debits)
-   2. [GET /direct-debits](#get-direct-debits)
-3. [Data Model](#data-model)
-   1. [Resource Definition](#resource-definition)
-   2. [UML Diagram](#uml-diagram)
-   3. [Permission Codes](#permission-codes)
-   4. [Data Dictionary](#data-dictionary)
-4. [Usage Examples](#usage-examples)
-   1. [Specific Account](#specific-account)
-      1. [Get Accounts Direct Debits Request](#get-accounts-direct-debits-request)
-      2. [Get Accounts Direct Debits Response](#get-accounts-direct-debits-response)
-   2. [Bulk](#bulk)
-      1. [Get Direct Debits Request](#get-direct-debits-request)
-      2. [Get Direct Debits Response](#get-direct-debits-response)
+[[toc]]
 
 ## Overview
 
-The direct-debits resource is used by an AISP to retrieve the direct debits for a specific account identified by AccountId or to retrieve direct debits for all accounts that the PSU has consented to. 
+The direct-debits resource is used by an AISP to retrieve the direct debits for a specific account identified by AccountId or to retrieve direct debits for all accounts that the PSU has consented to.
 
 This resource description should be read in conjunction with a compatible Account Information Services API Profile.
 

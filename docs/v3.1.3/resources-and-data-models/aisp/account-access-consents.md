@@ -1,38 +1,9 @@
+---
+---
+
 # Account Access Consents - v3.1.3
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [POST /account-access-consents](#post-account-access-consents)
-      1. [Account Access Consent Status](#account-access-consent-status)
-      2. [Status Flow](#status-flow)
-   2. [GET /account-access-consents/{ConsentId}](#get-account-access-consentsconsentid)
-      1. [Account Access Consent Status](#account-access-consent-status-1)
-   3. [DELETE /account-access-consents/{ConsentId}](#delete-account-access-consentsconsentid)
-3. [Data Model](#data-model)
-   1. [Account Access Consents - Request](#account-access-consents---request)
-      1. [UML Diagram](#uml-diagram)
-      2. [Notes](#notes)
-      3. [Data Dictionary](#data-dictionary)
-   2. [Account Access Consents - Response](#account-access-consents---response)
-      1. [UML Diagram](#uml-diagram-1)
-      2. [Notes](#notes-1)
-      3. [Data Dictionary](#data-dictionary-1)
-4. [Usage Examples](#usage-examples)
-   1. [Setup Account Access Consent - All Permissions Granted](#setup-account-access-consent---all-permissions-granted)
-      1. [Post Account Access Consents Request](#post-account-access-consents-request)
-      2. [Post Account Access Consents Response](#post-account-access-consents-response)
-   2. [Status - AwaitingAuthorisation](#status---awaitingauthorisation)
-      1. [Get Account Access Consents Request](#get-account-access-consents-request)
-      2. [Get Account Access Consents Response](#get-account-access-consents-response)
-   3. [Status - Authorised](#status---authorised)
-      1. [Get Account Access Consents Request](#get-account-access-consents-request-1)
-      2. [Get Account Access Consents Response](#get-account-access-consents-response-1)
-   4. [Delete Account Access Consent](#delete-account-access-consent)
-      1. [Delete Account Access Consents Request](#delete-account-access-consents-request)
-      2. [Delete Account Access Consents Response](#delete-account-access-consents-response)
-   5. [Setup Account Access Consent with Limited Permissions](#setup-account-access-consent-with-limited-permissions)
-      1. [Post Account Access Consent Request](#post-account-access-consent-request)
-      2. [Post Account Access Consent Response](#post-account-access-consent-response)
+[[toc]]
 
 ## Overview
 
@@ -49,7 +20,7 @@ This resource description should be read in conjunction with a compatible Accoun
 | 3 |account-access-consents |DELETE |DELETE /account-access-consents/{ConsentId} |Mandatory |accounts |Client Credentials |No | | | |
 
 ### POST /account-access-consents
- 
+
 The API allows the AISP to ask an ASPSP to create a new account-access-consent resource.
 
 * This API effectively allows the AISP to send a copy of the consent to the ASPSP to authorise access to account and transaction information.
@@ -82,7 +53,7 @@ This is the state diagram for the Status.
 
 ### GET /account-access-consents/{ConsentId}
 
-An AISP may optionally retrieve an account-access-consent resource that they have created to check its status. 
+An AISP may optionally retrieve an account-access-consent resource that they have created to check its status.
 
 Prior to calling the API, the AISP must have an access token issued by the ASPSP using a client credentials grant.
 
@@ -270,7 +241,7 @@ Content-Type: application/json
 
 ### Status - AwaitingAuthorisation
 
-This is an example of a GET request which is made  **before**  the account access consent resource is authorised. 
+This is an example of a GET request which is made  **before**  the account access consent resource is authorised.
 
 #### Get Account Access Consents Request
 

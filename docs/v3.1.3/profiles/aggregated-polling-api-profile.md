@@ -1,18 +1,16 @@
+---
+---
+
 # Aggregated Polling API Profile - v3.1.2
 
-1. [Overview](#overview)
-2. [Basics](#basics)
-   1. [Overview](#overview-1)
-      1. [Steps](#steps)
-      2. [Sequence Diagram](#sequence-diagram)
-      3. [Grants Types](#grants-types)
+[[toc]]
 
 ## Overview
 
 The Aggregated Polling API Profile describes the flows and common functionality for the Aggregated Polling API, which allows a ASPSPs to deliver multiple signed event notifications to TPPs though the use of polling. It is intended as an alternative or complement to Real Time Notification in that:
 
 * It can be used as the sole method to collect event notifications by a TPP.
-* It offers a means to catch-up following a period where the TPP's Real Time Notification endpoint has been offline. 
+* It offers a means to catch-up following a period where the TPP's Real Time Notification endpoint has been offline.
 
 Implementation of the Aggregated Polling API is **optional** for ASPSPs.
 
@@ -55,7 +53,7 @@ Following the initial poll the TPP can then repeatedly poll the ASPSP, acknowled
 
 <details>
   <summary>Diagram source</summary>
-  
+
   ```
 participant TPP
 participant ASPSP Authorisation Server
@@ -97,7 +95,7 @@ ASPSP Event Polling Service -> TPP: HTTP 200 (Zero or more events)
 
 option footer=bar
 ```
- 
+
 </details>
 
 ### Acknowledgement by the TPP

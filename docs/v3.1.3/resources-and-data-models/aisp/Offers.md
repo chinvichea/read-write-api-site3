@@ -1,26 +1,13 @@
+---
+---
+
 # Offers - v3.1.2
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [GET /accounts/{AccountId}/offers](#get-accountsaccountidoffers)
-   2. [GET /offers](#get-offers)
-3. [Data Model](#data-model)
-   1. [Resource Definition](#resource-definition)
-   2. [UML Diagram](#uml-diagram)
-   3. [Notes](#notes)
-   4. [Permission Codes](#permission-codes)
-   5. [Data Dictionary](#data-dictionary)
-4. [Usage Examples](#usage-examples)
-   1. [Specific Account](#specific-account)
-      1. [Get Offers Request](#get-offers-request)
-      2. [Response: Get Offers Response](#response-get-offers-response)
-   2. [Bulk](#bulk)
-      1. [Request: Get Offers Request](#request-get-offers-request)
-      2. [Response: Get Offers Response](#response-get-offers-response-1)
+[[toc]]
 
 ## Overview
 
-The offers resource is used by an AISP to retrieve the offers available for a specific AccountId or to retrieve the offers detail in bulk for all accounts that the PSU has consented to. 
+The offers resource is used by an AISP to retrieve the offers available for a specific AccountId or to retrieve the offers detail in bulk for all accounts that the PSU has consented to.
 
 This resource description should be read in conjunction with a compatible Account Information Services API Profile.
 
@@ -39,12 +26,12 @@ An AISP  **may**  retrieve the offers resource for a specific AccountId (which i
 
 ### GET /offers
 
-If an ASPSP has implemented the bulk retrieval endpoints, an AISP  **may**  optionally retrieve the offers in bulk. 
+If an ASPSP has implemented the bulk retrieval endpoints, an AISP  **may**  optionally retrieve the offers in bulk.
 This will retrieve the resources for all authorised accounts linked to the account-request.
 
 ## Data Model
 
-The OBReadOffer1 object will be used for the call to: 
+The OBReadOffer1 object will be used for the call to:
 
 * GET /accounts/{AccountId}/offers
 * GET /offers
@@ -140,7 +127,7 @@ Content-Type: application/json
           "Amount": "2000.00",
           "Currency": "GBP"
         }
-      }      
+      }
     ]
   },
   "Links": {
@@ -206,7 +193,7 @@ Content-Type: application/json
           "Amount": "50000.00",
           "Currency": "GBP"
         }
-      }   
+      }
     ]
   },
   "Links": {
@@ -216,4 +203,4 @@ Content-Type: application/json
     "TotalPages": 1
   }
 }
-``` 
+```

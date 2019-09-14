@@ -1,31 +1,13 @@
+---
+---
+
 # Statements - v3.1.2
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [GET /accounts/{AccountId}/statements](#get-accountsaccountidstatements)
-   2. [GET /accounts/{AccountId}/statements/{StatementId}](#get-accountsaccountidstatementsstatementid)
-   3. [GET /accounts/{AccountId}/statements/{StatementId}/file](#get-accountsaccountidstatementsstatementidfile)
-   4. [GET /accounts/{AccountId}/statements/{StatementId}/transactions](#get-accountsaccountidstatementsstatementidtransactions)
-   5. [GET /statements](#get-statements)
-3. [Data Model](#data-model)
-   1. [Resource Definition](#resource-definition)
-   2. [UML Diagram](#uml-diagram)
-   3. [Notes](#notes)
-   4. [Filtering](#filtering)
-      1. [Filtering Examples](#filtering-examples)
-   5. [Permission Codes](#permission-codes)
-   6. [Data Dictionary](#data-dictionary)
-4. [Usage Examples](#usage-examples)
-   1. [Specific Account](#specific-account)
-      1. [Get Account Statements Request](#get-account-statements-request)
-      2. [Get Account Statements Response](#get-account-statements-response)
-   2. [Bulk](#bulk)
-      1. [Get Statements Request](#get-statements-request)
-      2. [Get Statements Response](#get-statements-response)
+[[toc]]
 
 ## Overview
 
-The statements resource is used by an AISP to retrieve the 
+The statements resource is used by an AISP to retrieve the
 
 * statements information
 * statement information for a StatementId in json and non-json(file) format.
@@ -127,10 +109,10 @@ In the above situations, the ASPSP must return statements where the StartDateTim
 ```
 // All statements from 1st Jan, 2015
 GET /statements?fromStatementDateTime=2015-01-01T00:00:00
- 
+
 // All statements in 2016
 GET /statements?fromStatementDateTime=2016-01-01T00:00:00&amp;toStatementDateTime=2016-12-31T23:59:59
- 
+
 // All statements in a specific account up to 31-Mar-2017
 GET /accounts/1/statements?toStatementDateTime=2017-03-31T23:59:59
 ```
@@ -143,15 +125,15 @@ The resource differs depending on the permissions (ReadStatementsBasic and ReadS
 * OBReadStatement2/Data/Statement/StatementAmount
 * Calls to GET /accounts/{AccountId}/statements/{StatementId}/file
 
-* If the **ReadStatementsDetail** is granted by the PSU: 
+* If the **ReadStatementsDetail** is granted by the PSU:
     * OBReadStatement2/Data/Statement/StatementAmount **may** be returned if applicable to the statement and ASPSP (0..n)
 
 For the call toGET /accounts/{AccountId}/statements/{StatementId}/transactions:
 
 * The **ReadTransactionsBasic or** **ReadTransactionsDetail** (in addition to the appropriate **ReadTransactionsCredits** and/or **ReadTransactionsDebits** ) permission codes will be required. The ASPSP must apply the same access to GET /accounts/{AccountId}/statements/{StatementId}/transactions as GET /accounts/{AccountId}/transactions
-* If the ReadPAN permission is granted by the PSU - the ASPSP may choose to populate the unmasked PAN - if the PAN is being populated in the response for these fields: 
-    * OBReadTransaction3/Data/Transaction/CreditorAgent/Identification 
-    * OBReadTransaction3/Data/Transaction/DebtorAccount/Identification 
+* If the ReadPAN permission is granted by the PSU - the ASPSP may choose to populate the unmasked PAN - if the PAN is being populated in the response for these fields:
+    * OBReadTransaction3/Data/Transaction/CreditorAgent/Identification
+    * OBReadTransaction3/Data/Transaction/DebtorAccount/Identification
     * OBReadTransaction3/Data/Transaction/CardInstrument/Identification
 
 
@@ -253,9 +235,9 @@ Content-Type: application/json
           "Amount": "400.00",
           "Currency": "GBP"
         },
-		"CreditDebitIndicator": "Credit",        
-		"Type": "ClosingBalance"        
-      }, 
+		"CreditDebitIndicator": "Credit",
+		"Type": "ClosingBalance"
+      },
       {
         "Amount": {
           "Amount": "600.00",
@@ -265,7 +247,7 @@ Content-Type: application/json
         "Type": "PreviousClosingBalance"
       }
       ]
-    }, 
+    },
     {
       "AccountId": "22289",
       "StatementId": "34hj24u-324h33-31i3p4",
@@ -344,9 +326,9 @@ Content-Type: application/json
           "Amount": "400.00",
           "Currency": "GBP"
         },
-		"CreditDebitIndicator": "Credit",        
-		"Type": "ClosingBalance"        
-      }, 
+		"CreditDebitIndicator": "Credit",
+		"Type": "ClosingBalance"
+      },
       {
         "Amount": {
           "Amount": "600.00",
@@ -356,7 +338,7 @@ Content-Type: application/json
         "Type": "PreviousClosingBalance"
       }
       ]
-    }, 
+    },
     {
       "AccountId": "22289",
       "StatementId": "34hj24u-324h33-31i3p4",
@@ -372,9 +354,9 @@ Content-Type: application/json
           "Amount": "200.00",
           "Currency": "GBP"
         },
-		"CreditDebitIndicator": "Credit",        
-		"Type": "ClosingBalance"        
-      }, 
+		"CreditDebitIndicator": "Credit",
+		"Type": "ClosingBalance"
+      },
       {
         "Amount": {
           "Amount": "400.00",
@@ -384,7 +366,7 @@ Content-Type: application/json
         "Type": "PreviousClosingBalance"
       }
       ]
-    }, 
+    },
     {
       "AccountId": "32389",
       "StatementId": "9034ee-4ewa4e-342er6",
@@ -399,9 +381,9 @@ Content-Type: application/json
           "Amount": "2700.00",
           "Currency": "GBP"
         },
-		"CreditDebitIndicator": "Credit",        
-		"Type": "ClosingBalance"        
-      }, 
+		"CreditDebitIndicator": "Credit",
+		"Type": "ClosingBalance"
+      },
       {
         "Amount": {
           "Amount": "4060.00",

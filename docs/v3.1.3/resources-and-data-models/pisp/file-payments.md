@@ -1,33 +1,9 @@
+---
+---
+
 # File Payments - v3.1.2
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [GET /file-payments/{FilePaymentId}](#get-file-paymentsfilepaymentid)
-      1. [Status](#status)
-   2. [GET /file-payments/{FilePaymentId}/report-file](#get-file-paymentsfilepaymentidreport-file)
-   3. [GET /file-payments/{FilePaymentId}/payment-details](#get-file-paymentsfilepaymentidpayment-details)
-      1. [Status](#status-1)
-   4. [State Model](#state-model)
-      1. [Payment Order](#payment-order)
-      2. [Multiple Authorisation](#multiple-authorisation)
-3. [Data Model](#data-model)
-   1. [Reused Classes](#reused-classes)
-      1. [OBFile2](#obfile2)
-   2. [File Payment - Request](#file-payment---request)
-      1. [UML Diagram](#uml-diagram)
-      2. [Notes](#notes)
-      3. [Data Dictionary](#data-dictionary)
-   3. [File Payment - Response](#file-payment---response)
-      1. [UML Diagram](#uml-diagram-1)
-      2. [Notes](#notes-1)
-      3. [Data Dictionary](#data-dictionary-1)
-   4. [File Payment - Payment Details - Response](#file-payment---payment-details---response)
-      1. [UML Diagram](#uml-diagram-2)
-      2. [Data Dictionary](#data-dictionary-2)
-4. [Usage Examples](#usage-examples)
-   1. [POST /file-payments](#post-file-payments)
-      1. [Request](#request)
-      2. [Response](#response)
+[[toc]]
 
 ## Overview
 
@@ -149,9 +125,9 @@ The OBWriteFile2 object will be used for a call to:
 
 ![OBWriteFile2]( images/OBWriteFile2.gif )
 
-#### Notes 
+#### Notes
 
-The file-payment **request** object contains the: 
+The file-payment **request** object contains the:
 
 * ConsentId.
 * The full Initiation object from the file-payment-consent request.
@@ -178,9 +154,9 @@ The OBWriteFileResponse2 object will be used for a response to a call to:
 
 ![OBWriteFileResponse2]( images/OBWriteFileResponse2.gif )
 
-#### Notes 
+#### Notes
 
-The file-payment **response** object contains the: 
+The file-payment **response** object contains the:
 
 * FilePaymentId.
 * ConsentId.

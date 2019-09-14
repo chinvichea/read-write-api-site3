@@ -1,43 +1,18 @@
+---
+---
+
 # Parties - v3.1.2
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [GET /accounts/{AccountId}/parties](#get-accountsaccountidparties)
-   2. [GET /accounts/{AccountId}/party](#get-accountsaccountidparty)
-   3. [GET /party](#get-party)
-3. [Data Model](#data-model)
-   1. [Reused Classes](#reused-classes)
-      1. [OBParty2](#obparty2)
-            1. [UML Diagram](#uml-diagram)
-            2. [Notes](#notes)
-            3. [Data Dictionary](#data-dictionary)
-   2. [OBReadParty2](#obreadparty2)
-      1. [UML Diagram](#uml-diagram-1)
-      2. [Data Dictionary](#data-dictionary-1)
-   3. [OBReadParty3](#obreadparty3)
-      1. [UML Diagram](#uml-diagram-2)
-      2. [Data Dictionary](#data-dictionary-2)
-   4. [Permission Codes](#permission-codes)
-4. [Usage Examples](#usage-examples)
-   1. [All Parties](#all-parties)
-      1. [Get Account Parties Request](#get-account-parties-request)
-      2. [Get Account Parties Response](#get-account-parties-response)
-   2. [All Parties](#all-parties-1)
-      1. [Get Parties Request](#get-parties-request)
-      2. [Get Parties Response](#get-parties-response)
-   3. [Account Owner](#account-owner)
-      1. [Get Account Party Request](#get-account-party-request)
-   4. [Authorised User](#authorised-user)
-      1. [Get Party Request](#get-party-request)
+[[toc]]
 
 ## Overview
 
-The parties resource is used by an AISP to retrieve the details on the account owner(s)/holder(s) and operator(s) for a specific account identified by AccountId. 
+The parties resource is used by an AISP to retrieve the details on the account owner(s)/holder(s) and operator(s) for a specific account identified by AccountId.
 
 The party resource is used by an AISP to retrieve the details on the account owner/holder for a specific account identified by AccountId:
 
 * In the case of a business, this will be the details of the business
-* In the case of a joint account, this will be the party that has given authorisation to the AISP to view the account.  
+* In the case of a joint account, this will be the party that has given authorisation to the AISP to view the account.
 
 This resource description should be read in conjunction with a compatible Account Information Services API Profile.
 
@@ -120,7 +95,7 @@ The Party resource contains a set of elements that describes a party. The party 
 
 ### OBReadParty2
 
-The OBReadParty2 object will be used for the call to: 
+The OBReadParty2 object will be used for the call to:
 
 * GET /accounts/{AccountId}/party
 * GET /party
@@ -142,7 +117,7 @@ The response to GET /accounts/{AccountId}/party and GET /party (if available)  *
 
 ### OBReadParty3
 
-The OBReadParty3 object will be used for the call to: 
+The OBReadParty3 object will be used for the call to:
 
 * GET /accounts/{AccountId}/parties
 

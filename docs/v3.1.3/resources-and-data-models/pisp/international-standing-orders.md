@@ -1,34 +1,9 @@
+---
+---
+
 # International Standing Orders - v3.1.3
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [POST /international-standing-orders](#post-international-standing-orders)
-      1. [Status](#status)
-   2. [GET /international-standing-orders/{InternationalStandingOrderPaymentId}](#get-international-standing-ordersinternationalstandingorderpaymentid)
-      1. [Status](#status-1)
-   3. [GET /international-standing-orders/{InternationalStandingOrderPaymentId}/payment-details](#get-international-standing-ordersinternationalstandingorderpaymentidpayment-details)
-      1. [Status](#status-2)
-   4. [State Model](#state-model)
-      1. [Payment Order](#payment-order)
-         1. [Multiple Authorisation](#multiple-authorisation)
-3. [Data Model](#data-model)
-   1. [Reused Classes](#reused-classes)
-      1. [OBInternationalStandingOrder4](#obinternationalstandingorder4)
-   2. [International Standing Order - Request](#international-standing-order---request)
-      1. [UML Diagram](#uml-diagram)
-      2. [Notes](#notes)
-      3. [Data Dictionary](#data-dictionary)
-   3. [International Standing Order - Response](#international-standing-order---response)
-      1. [UML Diagram](#uml-diagram-1)
-      2. [Notes](#notes-1)
-      3. [Data Dictionary](#data-dictionary-1)
-   4. [International Standing Order - Payment Details - Response](#international-standing-order---payment-details---response)
-      1. [UML Diagram](#uml-diagram-2)
-      2. [Data Dictionary](#data-dictionary-2)
-4. [Usage Examples](#usage-examples)
-   1. [POST /international-standing-orders](#post-international-standing-orders-1)
-      1. [Request](#request)
-      2. [Response](#response)
+[[toc]]
 
 ## Overview
 
@@ -55,7 +30,7 @@ Once the international-standing-order-consent has been authorised by the PSU, th
 
 #### Status
 
-An international-standing-orders can only be created if its corresponding international-standing-order-consent resource has the status of "Authorised". 
+An international-standing-orders can only be created if its corresponding international-standing-order-consent resource has the status of "Authorised".
 
 The international-standing-orders resource that is created successfully must have one of the following Status codes:
 
@@ -165,7 +140,7 @@ The OBWriteInternationalStandingOrder4 object will be used for a call to:
 
 #### Notes
 
-The international-standing-orders **request** object contains the: 
+The international-standing-orders **request** object contains the:
 
 * ConsentId.
 * The full Initiation and Risk objects from the international-standing-order-consent request.
@@ -193,9 +168,9 @@ The OBWriteInternationalStandingOrderResponse5 object will be used for a respons
 
 ![ OBWriteInternationalStandingOrderResponse5.gif ]( images/OBWriteInternationalStandingOrderResponse5.gif )
 
-#### Notes 
+#### Notes
 
-The international-standing-orders **response** object contains the: 
+The international-standing-orders **response** object contains the:
 
 * InternationalStandingOrderPaymentId.
 * ConsentId.

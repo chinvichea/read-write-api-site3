@@ -1,30 +1,9 @@
+---
+---
+
 # Event Subscription - v3.1.2
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [Endpoints](#endpoints-1)
-      1. [POST /event-subscriptions](#post-event-subscriptions)
-      2. [GET /event-subscriptions](#get-event-subscriptions)
-      3. [PUT /event-subscriptions/{EventSubscriptionId}](#put-event-subscriptionseventsubscriptionid)
-      4. [DELETE /event-subscriptions/{EventSubscriptionId}](#delete-event-subscriptionseventsubscriptionid)
-3. [Data Model](#data-model)
-   1. [Event Subscription - Request](#event-subscription---request)
-      1. [UML Diagram](#uml-diagram)
-      2. [Notes](#notes)
-      3. [Data Dictionary](#data-dictionary)
-   2. [Event Subscription - Response](#event-subscription---response)
-      1. [UML](#uml)
-      2. [Data Dictionary](#data-dictionary-1)
-   3. [Event Subscriptions - Response](#event-subscriptions---response)
-      1. [UML](#uml-1)
-      2. [Data Dictionary](#data-dictionary-2)
-4. [Usage Examples](#usage-examples)
-   1. [Create Event Subscription](#create-event-subscription)
-      1. [POST Event Subscription Request](#post-event-subscription-request)
-      2. [POST Event Subscription Response](#post-event-subscription-response)
-   2. [Get Event Subscriptions](#get-event-subscriptions)
-      1. [GET Event Subscription Request](#get-event-subscription-request)
-      2. [GET Event Subscription Response](#get-event-subscription-response)
+[[toc]]
 
 ## Overview
 
@@ -46,7 +25,7 @@ A TPP will set up and maintain its event subscription details (URL, event types 
 | event-subscription |DELETE |DELETE /event-subscriptions/{EventSubscriptionId} |Mandatory (if resource POST implemented) |accounts<br>payments<br>fundsconfirmations |Client Credentials |n/a |No |n/a |n/a |
 
 
-#### POST /event-subscriptions 
+#### POST /event-subscriptions
 
 The API endpoint allows the TPP to ask an ASPSP to create a new **event-subscription** resource.
 

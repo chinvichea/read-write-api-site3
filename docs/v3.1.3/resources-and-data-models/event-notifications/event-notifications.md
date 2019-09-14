@@ -1,40 +1,9 @@
+---
+---
+
 # Event Notifications - v3.1.2
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [Endpoints](#endpoints-1)
-      1. [POST /event-notifications](#post-event-notifications)
-   2. [Transport Level Security](#transport-level-security)
-3. [Data Model](#data-model)
-   1. [Event Notification - Request](#event-notification---request)
-      1. [UML Diagram](#uml-diagram)
-      2. [Notes](#notes)
-      3. [Data Dictionary](#data-dictionary)
-   2. [OBEventSubject1](#obeventsubject1)
-      1. [UML Diagram](#uml-diagram-1)
-      2. [Notes](#notes-1)
-      3. [Data Dictionary](#data-dictionary-1)
-   3. [OBEventResourceUpdate2](#obeventresourceupdate2)
-      1. [UML Diagram](#uml-diagram-2)
-      2. [Data Dictionary](#data-dictionary-2)
-   4. [OBEventConsentAuthorizationRevoked1](#obeventconsentauthorizationrevoked1)
-      1. [UML Diagram](#uml-diagram-3)
-      2. [Notes](#notes-2)
-      3. [Data Dictionary](#data-dictionary-3)
-   5. [OBEventAccountAccessConsentLinkedAccountUpdate1](#obeventaccountaccessconsentlinkedaccountupdate1)
-      1. [UML Diagram](#uml-diagram-4)
-      2. [Notes](#notes-3)
-      3. [Data Dictionary](#data-dictionary-4)
-4. [Event Notification Retry Policy](#event-notification-retry-policy)
-   1. [ASPSP](#aspsp)
-   2. [TPP](#tpp)
-5. [Usage Examples](#usage-examples)
-   1. [Send Event Notification - Resource Update](#send-event-notification---resource-update)
-      1. [POST Event Notification Request](#post-event-notification-request)
-      2. [POST Event Notification Response](#post-event-notification-response)
-   2. [Send Event Notification - Consent Authorisation Revoked](#send-event-notification---consent-authorisation-revoked)
-      1. [POST Event Notification Request](#post-event-notification-request-1)
-      2. [POST Event Notification Response](#post-event-notification-response-1)
+[[toc]]
 
 ## Overview
 
@@ -156,7 +125,7 @@ This section describes the OBEventConsentAuthorizationRevoked1 class which is us
 
 #### Notes
 
-For the OBEventConsentAuthorizationRevoked1 object:  
+For the OBEventConsentAuthorizationRevoked1 object:
 
 - The subject claim **must** be populated if the Event Notification does not include a `urn:uk:org:openbanking:events:resource-update` event.
 
@@ -178,7 +147,7 @@ This section describes the OBEventAccountAccessConsentLinkedAccountUpdate1 class
 
 #### Notes
 
-For the OBEventAccountAccessConsentLinkedAccountUpdate object: 
+For the OBEventAccountAccessConsentLinkedAccountUpdate object:
 
 - The http://openbanking.org.uk/rty claim **must** be populated with "account-access-consent".
 

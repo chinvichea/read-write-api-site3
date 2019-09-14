@@ -1,35 +1,9 @@
+---
+---
+
 # Domestic Standing Order Consents - v3.1.2
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [POST /domestic-standing-order-consents](#post-domestic-standing-order-consents)
-      1. [Status](#status)
-   2. [GET /domestic-standing-order-consents/{ConsentId}](#get-domestic-standing-order-consentsconsentid)
-      1. [Status](#status-1)
-   3. [State Model](#state-model)
-      1. [Payment Order Consent](#payment-order-consent)
-3. [Data Model](#data-model)
-   1. [Reused Classes](#reused-classes)
-      1. [OBDomesticStandingOrder3](#obdomesticstandingorder3)
-         1. [UML Diagram](#uml-diagram)
-         2. [Notes](#notes)
-            1. [Frequency Examples](#frequency-examples)
-         3. [Data Dictionary](#data-dictionary)
-   2. [Domestic Standing Order Consent - Request](#domestic-standing-order-consent---request)
-      1. [UML Diagram](#uml-diagram-1)
-      2. [Notes](#notes-1)
-      3. [Data Dictionary](#data-dictionary-1)
-   3. [Domestic Standing Order Consent - Response](#domestic-standing-order-consent---response)
-      1. [UML Diagram](#uml-diagram-2)
-      2. [Notes](#notes-2)
-      3. [Data Dictionary](#data-dictionary-2)
-4. [Usage Examples](#usage-examples)
-      1. [Create Domestic Standing Order Consent](#create-domestic-standing-order-consent)
-         1. [POST /domestic-standing-order-consents](#post-domestic-standing-order-consents-1)
-         2. [POST /domestic-standing-order-consents response](#post-domestic-standing-order-consents-response)
-   1. [Get a Domestic Standing Order Consent](#get-a-domestic-standing-order-consent)
-      1. [GET /domestic-standing-order-consents/{ConsentId}](#get-domestic-standing-order-consentsconsentid-1)
-      2. [GET /domestic-standing-order-consents response](#get-domestic-standing-order-consents-response)
+[[toc]]
 
 ## Overview
 
@@ -62,7 +36,7 @@ The default Status is "AwaitingAuthorisation" immediately after the domestic-sta
 
 ### GET /domestic-standing-order-consents/{ConsentId}
 
-A PISP can optionally retrieve a payment consent resource that they have created to check its status. 
+A PISP can optionally retrieve a payment consent resource that they have created to check its status.
 
 #### Status
 
@@ -114,7 +88,7 @@ This section describes the OBDomesticStandingOrder3 class, which is reused as th
 
 ##### Notes
 
-For the OBDomesticStandingOrder3 Initiation object: 
+For the OBDomesticStandingOrder3 Initiation object:
 
 * All elements in the Initiation payload that are specified by the PISP must not be changed via the ASPSP, as this is part of formal consent from the PSU.
 * If the ASPSP is able to establish a problem with payload or any contextual error during the API call, the ASPSP must reject the domestic-standing-order-consent request immediately.

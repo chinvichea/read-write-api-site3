@@ -1,51 +1,13 @@
+---
+---
+
 # PCA Product Data Model - v3.1.2
 
-1. [Overview](#overview)
-   1. [Fields to include in PCA Product](#fields-to-include-in-pca-product)
-   2. [Changes from the OpenData Model](#changes-from-the-opendata-model)
-      1. [No Eligibility and FeaturesAndBenefits](#no-eligibility-and-featuresandbenefits)
-      2. [Credit Interest Model](#credit-interest-model)
-      3. [Overdraft](#overdraft)
-      4. [OverdraftFeeCharges](#overdraftfeecharges)
-      5. [OtherFeeCharges](#otherfeecharges)
-2. [Data Model](#data-model)
-   1. [Data Payload](#data-payload)
-      1. [PCA](#pca)
-         1. [UML Class Diagram](#uml-class-diagram)
-         2. [Data Dictionary](#data-dictionary)
-   2. [Data Payload - Enumerations](#data-payload---enumerations)
-3. [Usage Examples](#usage-examples)
-   1. [Publish Open Data Standard PCA Product](#publish-open-data-standard-pca-product)
-      1. [Get Accounts Product Request](#get-accounts-product-request)
-      2. [Get Accounts Product Response](#get-accounts-product-response)
-   2. [Publish Open Data Standard PCA Product, along with new other fee charges](#publish-open-data-standard-pca-product-along-with-new-other-fee-charges)
-      1. [Get Accounts Product Request](#get-accounts-product-request-1)
-      2. [Get Accounts Product Response](#get-accounts-product-response-1)
-   3. [Publish Open Data Standard PCA Product along with Marketing State ID](#publish-open-data-standard-pca-product-along-with-marketing-state-id)
-      1. [Get Accounts Product Request](#get-accounts-product-request-2)
-      2. [Get Accounts Product Response](#get-accounts-product-response-2)
-   4. [Publish Back Book product along with MMC](#publish-back-book-product-along-with-mmc)
-      1. [Get Accounts Product Request](#get-accounts-product-request-3)
-      2. [Get Accounts Product Response](#get-accounts-product-response-3)
-   5. [Showing tiered interest rates (Example for back book prod)](#showing-tiered-interest-rates-example-for-back-book-prod)
-      1. [Get Accounts Product Request](#get-accounts-product-request-4)
-      2. [Get Accounts Product Response](#get-accounts-product-response-4)
-   6. [Showing whole interest rates](#showing-whole-interest-rates)
-      1. [Get Accounts Product Request](#get-accounts-product-request-5)
-      2. [Get Accounts Product Response](#get-accounts-product-response-5)
-   7. [Represent graduate overdraft limits](#represent-graduate-overdraft-limits)
-      1. [Get Accounts Product Request](#get-accounts-product-request-6)
-      2. [Get Accounts Product Response](#get-accounts-product-response-6)
-   8. [Represent overdrafts with periodic &amp; per item fees with caps](#represent-overdrafts-with-periodic-amp-per-item-fees-with-caps)
-      1. [Get Accounts Product Request](#get-accounts-product-request-7)
-      2. [Get Accounts Product Response](#get-accounts-product-response-7)
-   9. [Represent overdrafts with periodic &amp; per item fees with caps, another example](#represent-overdrafts-with-periodic-amp-per-item-fees-with-caps-another-example)
-      1. [Get Accounts Product Request](#get-accounts-product-request-8)
-      2. [Get Accounts Product Response](#get-accounts-product-response-8)
+[[toc]]
 
 ## Overview
 
-From the analysis:- 
+From the analysis:-
 
 * Most banks (other than CMA9) simply have to supply the MMC for their PCA products (on-sale, negotiated or back book).
 * The MMC is the CMA's attempt to come up with a core fee/charge that can be used for PCA product comparison purposes.
@@ -53,7 +15,7 @@ From the analysis:-
 * PCA Marketing state information is not required.
 * Eligibility criteria met when the PCA was sold is unlikely to be reliable. Hence eligibility criteria information is not required.
 
-Further analysis required:- 
+Further analysis required:-
 
 * FeaturesAndBenefits: Further analysis is required to check whether the features and benefits section is needed.
 
@@ -83,7 +45,7 @@ Further analysis required:-
 
 * AER is the only representative rate for CreditInterest for product comparison purposes and therefore has been explicitly captured.
 * The banks often also specify Gross rates. Net is usually determined by removing basic rate tax only, and banks stopped doing this from April 2016. This may still be required for backbook products.
-* It has been ensured that both the calculation and application frequency for credit interest is captured. 
+* It has been ensured that both the calculation and application frequency for credit interest is captured.
     * The term "Nominal" used by some banks is synonymous with "Gross".
 * DepositInterestAppliedCoverage refers to which interest rate is applied when interests are tiered. For example, if an account balance is £2k and the interest tiers are:- 0-£500 0.1%, 500-1000 0.2%, 1000-10000 0.5%, then the applicable interest rate could either be 0.5% of the entire balance (since the account balance sits in the top interest tier) or (0.1%*500)+(0.2%*500)+(0.5%*1000). In the 1st situation, the interest should be applied to the "Whole" of the account balance and in the 2nd, this should be "Tiered".
 * Destination refers to whether the Product allows interest to be credited to another account ("PayAway") or only to itself ("SelfCredit").
@@ -498,7 +460,7 @@ Content-Type: application/json
 
 If you've graduated within the last 3 years, you can apply for an overdraft of upto £3,000 (subject to status).
 This is the breakdown of the fee free amounts available based on how long ago you graduated. The maximum overdraft you can apply for this account is £3,000.
-1st year after graduation: Up to £3,000 
+1st year after graduation: Up to £3,000
 2nd year after graduation: Up to £2,000
 3rd year after graduation: Up to £1,000
 

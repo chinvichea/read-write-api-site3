@@ -1,21 +1,9 @@
+---
+---
+
 # File Payment Usage Examples - v3.1.2
 
-1. [Setup File Payment Consent](#setup-file-payment-consent)
-	1. [POST /file-payment-consents](#post-file-payment-consents)
-		1. [Request](#request)
-		2. [Response](#response)
-2. [Upload File to for the File Payment Consent](#upload-file-to-for-the-file-payment-consent)
-	1. [POST /file-payment-consents/{ConsentId}/file](#post-file-payment-consentsconsentidfile)
-		1. [Request](#request-1)
-		2. [Response](#response-1)
-3. [Submit the File Payment after Authorisation](#submit-the-file-payment-after-authorisation)
-	1. [POST /file-payments](#post-file-payments)
-		1. [Request](#request-2)
-		2. [Response](#response-2)
-4. [Upload File in the UK.OBIE.PaymentInitiation.4.0 format to the File Payment Consent](#upload-file-in-the-ukobiepaymentinitiation40-format-to-the-file-payment-consent)
-	1. [POST /file-payment-consents/{ConsentId}/file](#post-file-payment-consentsconsentidfile-1)
-		1. [Request](#request-3)
-		2. [Response](#response-3)
+[[toc]]
 
 ## Setup File Payment Consent
 
@@ -110,7 +98,7 @@ A sample file with 3 transactions is provided below:
 
 <details>
  <summary>File Data Expand source </summary>
-   
+
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
 <Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.08" xmlns:xsi="http://www.w3.org/2001/XMLSchema- instance">
@@ -309,9 +297,9 @@ A sample file with 3 transactions is provided below:
 	</PmtInf>
 </CstmrCdtTrfInitn>
 </Document>
-``` 
+```
 
-</details> 
+</details>
 
 #### Response
 
@@ -498,7 +486,7 @@ A sample file with 3 Domestic Payments - CHAPS, BACS and one unspecified is prov
 		}]
 	}
 }
-``` 
+```
 
 </details>
 

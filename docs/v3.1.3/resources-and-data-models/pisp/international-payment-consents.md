@@ -1,41 +1,9 @@
+---
+---
+
 # International Payment Consents - v3.1.3
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [POST /international-payment-consents](#post-international-payment-consents)
-      1. [Status](#status)
-3. [GET /international-payment-consents/{ConsentId}](#get-international-payment-consentsconsentid)
-      1. [Status](#status-1)
-   1. [GET /international-payment-consents/{ConsentId}/funds-confirmation](#get-international-payment-consentsconsentidfunds-confirmation)
-   2. [State Model](#state-model)
-      1. [Payment Order Consent](#payment-order-consent)
-4. [Data Model](#data-model)
-   1. [Reused Classes](#reused-classes)
-      1. [OBInternational3](#obinternational3)
-         1. [UML Diagram](#uml-diagram)
-         2. [Notes](#notes)
-         3. [Data Dictionary](#data-dictionary)
-      2. [OBExchangeRate2](#obexchangerate2)
-         1. [Data Dictionary](#data-dictionary-1)
-   2. [International Payment Consent - Request](#international-payment-consent---request)
-      1. [UML Diagram](#uml-diagram-1)
-      2. [Notes](#notes-1)
-      3. [Data Dictionary](#data-dictionary-2)
-   3. [International Payment Consent - Response](#international-payment-consent---response)
-      1. [UML Diagram](#uml-diagram-2)
-      2. [Notes](#notes-2)
-      3. [Data Dictionary](#data-dictionary-3)
-   4. [International Payment Consent Confirmation of Funds - Response](#international-payment-consent-confirmation-of-funds---response)
-      1. [UML Diagram](#uml-diagram-3)
-      2. [Notes](#notes-3)
-      3. [Data Dictionary](#data-dictionary-4)
-5. [Usage Examples](#usage-examples)
-   1. [POST /international-payment-consents](#post-international-payment-consents-1)
-      1. [Request](#request)
-      2. [Response](#response)
-   2. [GET / international-payment-consents/{ConsentId}/funds-confirmation](#get--international-payment-consentsconsentidfunds-confirmation)
-      1. [Request](#request-1)
-      2. [Response](#response-1)
+[[toc]]
 
 ## Overview
 
@@ -51,7 +19,7 @@ This resource description should be read in conjunction with a compatible Paymen
 | international-payment-consents |GET |GET /international-payment-consents/{ConsentId} |Mandatory (if resource POST implemented) |payments |Client Credentials |Signed Response |No |NA |OBWriteInternationalConsentResponse4 |
 | international-payment-consents |GET |GET /international-payment-consents/{ConsentId}/funds-confirmation |Mandatory (if resource POST implemented) |payments |Authorization Code |Signed Response |No |NA |OBWriteFundsConfirmationResponse1 |
 
-### POST /international-payment-consents 
+### POST /international-payment-consents
 
 The API endpoint allows the PISP to ask an ASPSP to create a new **international-payment-consent** resource.
 
@@ -69,7 +37,7 @@ The default Status is "AwaitingAuthorisation" immediately after the internationa
 
 ## GET /international-payment-consents/{ConsentId}
 
-A PISP can optionally retrieve a payment consent resource that they have created to check its status. 
+A PISP can optionally retrieve a payment consent resource that they have created to check its status.
 
 #### Status
 
@@ -128,7 +96,7 @@ This section describes the OBInternational3 class which is reused as the Initiat
 
 ##### Notes
 
-For the OBInternational3 Initiation object: 
+For the OBInternational3 Initiation object:
 
 * All elements in the Initiation payload that are specified by the PISP, must not be changed via the ASPSP as this is part of formal consent from the PSU.
 * If the ASPSP is able to establish a problem with payload or any contextual error during the API call, the ASPSP must reject the international-payment-consent request immediately.
@@ -148,7 +116,7 @@ For the OBInternational3 Initiation object:
 The OBInternational3/ExchangeRateInformation object must conform to these behaviours:
 
 * A PISP must specify the DebtorAccount currency in the UnitCurrency field if the PISP is requesting a specific RateType so the ASPSP can respond with an exchange rate quote prior to PSU authorisation.
-* A PISP may indicate an exchange rate request using the RateType with these enumerations: 
+* A PISP may indicate an exchange rate request using the RateType with these enumerations:
   * Actual.
   * Agreed.
   * Indicative.
@@ -250,7 +218,7 @@ The OBWriteInternationalConsent4 object will be used for the call to:
 
 ![International Payment Consent - Request](images/OBWriteInternationalConsent4.gif)
 
-#### Notes 
+#### Notes
 
 The international-payment-consent **request** contains these objects:
 
@@ -261,9 +229,9 @@ The international-payment-consent **request** contains these objects:
 
 Exchange rate behaviour:
 
-* An ASPSP **must** respond to an **Agreed** RateType request. 
-* An ASPSP **may** respond to an **Actual** RateType request or **may** reject the request. 
-* An ASPSP **may** respond to an **Indicative** RateType request or **may** reject the request. 
+* An ASPSP **must** respond to an **Agreed** RateType request.
+* An ASPSP **may** respond to an **Actual** RateType request or **may** reject the request.
+* An ASPSP **may** respond to an **Indicative** RateType request or **may** reject the request.
 * An ASPSP **must** reject the international-payment-consent request if the specified Initiation/ExchangeRateInformation cannot be fulfilled.
 
 #### Data Dictionary
@@ -288,7 +256,7 @@ The OBWriteInternationalConsentResponse4 object will be used for a response to a
 
 ![International Payment Consent - Response](images/OBWriteInternationalConsentResponse4.gif)
 
-#### Notes 
+#### Notes
 
 The international-payment-consent **response** contains the full **original** payload from the international-payment-consent **request** with the additional elements below:
 
@@ -346,7 +314,7 @@ The OBWriteFundsConfirmationResponse1 object will be used for a response to a ca
 
 ![International Payment Consent Confirmation of Funds - Response](images/OBWriteConfirmFundsResponse1.gif)
 
-#### Notes 
+#### Notes
 
 The confirmation of funds response contains the result of a funds availability check, or SupplementaryData.
 

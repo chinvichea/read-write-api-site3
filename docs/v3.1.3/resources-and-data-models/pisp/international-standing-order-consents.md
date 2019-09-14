@@ -1,31 +1,9 @@
+---
+---
+
 # International Standing Order Consents - v3.1.3
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [POST /international-standing-order-consents](#post-international-standing-order-consents)
-      1. [Status](#status)
-   2. [GET /international-standing-order-consents/{ConsentId}](#get-international-standing-order-consentsconsentid)
-      1. [Status](#status-1)
-   3. [State Model](#state-model)
-      1. [Payment Order Consent](#payment-order-consent)
-3. [Data Model](#data-model)
-   1. [Reused Classes](#reused-classes)
-      1. [OBInternationalStandingOrder4](#obinternationalstandingorder4)
-         1. [UML Diagram](#uml-diagram)
-         2. [Notes](#notes)
-         3. [Data Dictionary](#data-dictionary)
-   2. [International Standing Order Consent - Request](#international-standing-order-consent---request)
-      1. [UML Diagram](#uml-diagram-1)
-      2. [Notes](#notes-1)
-      3. [Data Dictionary](#data-dictionary-1)
-   3. [International Standing Order Consent - Response](#international-standing-order-consent---response)
-      1. [UML Diagram](#uml-diagram-2)
-      2. [Notes](#notes-2)
-      3. [Data Dictionary](#data-dictionary-2)
-4. [Usage Examples](#usage-examples)
-      1. [POST /international-standing-order-consents](#post-international-standing-order-consents-1)
-         1. [Request](#request)
-         2. [Response](#response)
+[[toc]]
 
 ## Overview
 
@@ -59,7 +37,7 @@ The default Status is "AwaitingAuthorisation" immediately after the internationa
 
 ### GET /international-standing-order-consents/{ConsentId}
 
-A PISP can optionally retrieve a payment consent resource that they have created to check its status. 
+A PISP can optionally retrieve a payment consent resource that they have created to check its status.
 
 #### Status
 
@@ -111,7 +89,7 @@ This section describes the OBInternationalStandingOrder4 class which is reused a
 
 ##### Notes
 
-For the OBInternationalStandingOrder4 Initiation object: 
+For the OBInternationalStandingOrder4 Initiation object:
 
 * All elements in the Initiation payload that are specified by the PISP must not be changed via the ASPSP - as this is part of formal consent from the PSU.
 * If the ASPSP is able to establish a problem with payload or any contextual error during the API call, the ASPSP must reject the international-standing-order-consent request immediately.

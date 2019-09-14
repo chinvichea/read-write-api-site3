@@ -1,22 +1,9 @@
+---
+---
+
 # Balances - v3.1.2
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [GET /accounts/{AccountId}/balances](#get-accountsaccountidbalances)
-   2. [GET /balances](#get-balances)
-3. [Data Model](#data-model)
-   1. [Resource Definition](#resource-definition)
-   2. [UML Diagram](#uml-diagram)
-   3. [Notes](#notes)
-   4. [Permission Codes](#permission-codes)
-   5. [Data Dictionary](#data-dictionary)
-4. [Usage Examples](#usage-examples)
-   1. [Specific Account](#specific-account)
-      1. [Get Account Balances Request](#get-account-balances-request)
-      2. [Get Account Balances Response](#get-account-balances-response)
-   2. [Bulk](#bulk)
-      1. [Get Balances Request](#get-balances-request)
-      2. [Get Balances Response](#get-balances-response)
+[[toc]]
 
 ## Overview
 
@@ -42,7 +29,7 @@ This will retrieve the resources for all authorised accounts linked to the accou
 
 ## Data Model
 
-The OBReadBalance1 object will be used for the call to: 
+The OBReadBalance1 object will be used for the call to:
 
 * GET /accounts/{AccountId}/balances
 * GET /balances

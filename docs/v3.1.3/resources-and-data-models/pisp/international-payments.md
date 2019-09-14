@@ -1,31 +1,9 @@
+---
+---
+
 # International Payments - v3.1.3
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [POST /international-payments](#post-international-payments)
-      1. [Status](#status)
-   2. [GET /international-payments/{InternationalPaymentId}](#get-international-paymentsinternationalpaymentid)
-      1. [Status](#status-1)
-   3. [GET /international-payments/{InternationalPaymentId}/payment-details](#get-international-paymentsinternationalpaymentidpayment-details)
-      1. [Status](#status-2)
-   4. [State Model](#state-model)
-      1. [Payment Order](#payment-order)
-         1. [Multiple Authorisation](#multiple-authorisation)
-3. [Data Model](#data-model)
-   1. [Reused Classes](#reused-classes)
-      1. [OBInternational3](#obinternational3)
-      2. [OBExchangeRate2](#obexchangerate2)
-   2. [International Payment - Request](#international-payment---request)
-      1. [UML Diagram](#uml-diagram)
-      2. [Notes](#notes)
-      3. [Data Dictionary](#data-dictionary)
-   3. [International Payment - Response](#international-payment---response)
-      1. [UML Diagram](#uml-diagram-1)
-      2. [Notes](#notes-1)
-      3. [Data Dictionary](#data-dictionary-1)
-   4. [International Payment Order - Payment Details - Response](#international-payment-order---payment-details---response)
-      1. [UML Diagram](#uml-diagram-2)
-      2. [Data Dictionary](#data-dictionary-2)
+[[toc]]
 
 ## Overview
 
@@ -52,7 +30,7 @@ Once the international-payment-consent has been authorised by the PSU, the PISP 
 
 #### Status
 
-An international-payment can only be created if its corresponding international-payment-consent resource has the status of "Authorised". 
+An international-payment can only be created if its corresponding international-payment-consent resource has the status of "Authorised".
 
 The international-payment resource that is created successfully must have one of the following PaymentStatusCode code-set enumerations:
 
@@ -170,9 +148,9 @@ The OBWriteInternational3 object will be used for a call to:
 
 ![International Payment - Request](images/OBWriteInternational3.gif)
 
-#### Notes 
+#### Notes
 
-The international-payment **request** object contains the: 
+The international-payment **request** object contains the:
 
 * ConsentId.
 * The full Initiation and Risk objects from the international-payment request.
@@ -199,9 +177,9 @@ The OBWriteInternationalResponse4 object will be used for a response to a call t
 
 ![International Payment - Response](images/OBWriteInternationalResponse4.gif)
 
-#### Notes 
+#### Notes
 
-The international-payment **response** object contains the: 
+The international-payment **response** object contains the:
 
 * InternationalPaymentId.
 * ConsentId.

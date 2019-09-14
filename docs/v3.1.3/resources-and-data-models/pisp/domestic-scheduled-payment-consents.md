@@ -1,31 +1,9 @@
+---
+---
+
 # Domestic Scheduled Payment Consents  - v3.1.2
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [POST /domestic-scheduled-payment-consents](#post-domestic-scheduled-payment-consents)
-      1. [Status](#status)
-   2. [GET /domestic-scheduled-payment-consents/{ConsentId}](#get-domestic-scheduled-payment-consentsconsentid)
-      1. [Status](#status-1)
-   3. [State Model](#state-model)
-      1. [Payment Order Consent](#payment-order-consent)
-3. [Data Model](#data-model)
-   1. [Reused Classes](#reused-classes)
-      1. [OBDomesticScheduled2](#obdomesticscheduled2)
-         1. [UML Diagram](#uml-diagram)
-         2. [Notes](#notes)
-         3. [Data Dictionary](#data-dictionary)
-   2. [Domestic Scheduled Payment Consent - Request](#domestic-scheduled-payment-consent---request)
-      1. [UML Diagram](#uml-diagram-1)
-      2. [Notes](#notes-1)
-      3. [Data Dictionary](#data-dictionary-1)
-   3. [Domestic Scheduled Payment Consent - Response](#domestic-scheduled-payment-consent---response)
-      1. [UML Diagram](#uml-diagram-2)
-      2. [Notes](#notes-2)
-      3. [Data Dictionary](#data-dictionary-2)
-4. [Usage Examples](#usage-examples)
-      1. [Create a Domestic Scheduled Payment Consent](#create-a-domestic-scheduled-payment-consent)
-         1. [POST /domestic-scheduled-payment-consents Request](#post-domestic-scheduled-payment-consents-request)
-         2. [POST /domestic-scheduled-payment-consents Response](#post-domestic-scheduled-payment-consents-response)
+[[toc]]
 
 ## Overview
 
@@ -58,7 +36,7 @@ The API endpoint allows the PISP to ask an ASPSP to create a new **domestic-sche
 
 ### GET /domestic-scheduled-payment-consents/{ConsentId}
 
-A PISP can optionally retrieve a payment consent resource that they have created to check its status. 
+A PISP can optionally retrieve a payment consent resource that they have created to check its status.
 
 #### Status
 
@@ -110,7 +88,7 @@ This section describes the OBDomesticScheduled2 class which is reused as the Ini
 
 ##### Notes
 
-For the OBDomesticScheduled2 Initiation object:  
+For the OBDomesticScheduled2 Initiation object:
 
 * All elements in the Initiation payload that are specified by the PISP must not be changed via the ASPSP, as this is part of formal consent from the PSU.
 * If the ASPSP is able to establish a problem with payload or any contextual error during the API call, the ASPSP must reject the domestic-scheduled-payment-consent consent request immediately.

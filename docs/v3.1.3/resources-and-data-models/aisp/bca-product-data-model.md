@@ -1,39 +1,9 @@
+---
+---
+
 # BCA Product Data Model - v3.1.2
 
-1. [Overview](#overview)
-   1. [Fields to include in BCA Product](#fields-to-include-in-bca-product)
-      1. [Notes](#notes)
-   2. [Changes from the OpenData Model](#changes-from-the-opendata-model)
-      1. [No Eligibility and FeaturesAndBenefits](#no-eligibility-and-featuresandbenefits)
-      2. [CreditInterest Model](#creditinterest-model)
-      3. [Overdraft](#overdraft)
-      4. [OverdraftFeeCharges](#overdraftfeecharges)
-      5. [OtherFeesCharges](#otherfeescharges)
-2. [Data Model](#data-model)
-   1. [Data Payload](#data-payload)
-      1. [BCA](#bca)
-            1. [UML Class Diagram](#uml-class-diagram)
-   2. [Data Dictionary](#data-dictionary)
-   3. [Data Payload - Enumerations](#data-payload---enumerations)
-3. [Usage Examples](#usage-examples)
-   1. [Publish Open Data Standard BCA Product](#publish-open-data-standard-bca-product)
-      1. [Get Accounts Product Request](#get-accounts-product-request)
-      2. [Get Accounts Product Response](#get-accounts-product-response)
-   2. [Publish Open Data Standard BCA Product along with new other fee charges](#publish-open-data-standard-bca-product-along-with-new-other-fee-charges)
-      1. [Request: Get Accounts Product Request](#request-get-accounts-product-request)
-      2. [Response: Get Accounts Product Response](#response-get-accounts-product-response)
-   3. [Publish Back Book product](#publish-back-book-product)
-      1. [Get Accounts Product Request](#get-accounts-product-request-1)
-      2. [Get Accounts Product Response](#get-accounts-product-response-1)
-   4. [Represent a business overdraft fees](#represent-a-business-overdraft-fees)
-      1. [Get Accounts Product Request](#get-accounts-product-request-2)
-      2. [Get Accounts Product Response](#get-accounts-product-response-2)
-   5. [Show whole interest rates](#show-whole-interest-rates)
-      1. [Get Accounts Product Request](#get-accounts-product-request-3)
-      2. [Get Accounts Product Response](#get-accounts-product-response-3)
-   6. [Represent Tariffs and "Other Fees And Charges"](#represent-tariffs-and-other-fees-and-charges)
-      1. [Get Accounts Product Request](#get-accounts-product-request-4)
-      2. [Get Accounts Product Response](#get-accounts-product-response-4)
+[[toc]]
 
 ## Overview
 
@@ -87,7 +57,7 @@ Further analysis required:-
 
 * AER is the only representative rate for CreditInterest for product comparison purposes and therefore has been explicitly captured.
 * The banks often also specify Gross rates. Net is usually determined by removing basic rate tax only, and banks stopped doing this from April 2016. This may still be required for backbook products.
-* It has been ensured that both the calculation and application frequency for credit interest is captured. 
+* It has been ensured that both the calculation and application frequency for credit interest is captured.
 * The term "Nominal" used by some banks is synonymous with "Gross".
 * DepositInterestAppliedCoverage refers to which interest rate is applied when interests are tiered. For example, if an account balance is £2k and the interest tiers are:- 0-£500 0.1%, 500-1000 0.2%, 1000-10000 0.5%, then the applicable interest rate could either be 0.5% of the entire balance (since the account balance sits in the top interest tier) or (0.1%*500)+(0.2%*500)+(0.5%*1000). In the 1st situation, the interest should be applied to the "Whole" of the account balance, and in the 2nd this should be "Tiered".
 * Destination refers to whether the BCA allows interest to be credited to another account ("PayAway") or only to the BCA itself ("SelfCredit").
