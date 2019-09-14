@@ -1,9 +1,13 @@
+---
+---
+
 # Account and Transaction API Specification * v3.1.2
+
 ## Overview
 
 This specification describes the Account Information and Transaction API flows and payloads.
-The API endpoints described here allow an Account Information Service Provider ('AISP') to: 
-* Register an intent to retrieve account information by creating an "account access consent". This registers the data "permissions", expiration and historical period allowed for transactions / statements * that the customer (PSU) has consented to provide to the AISP; and 
+The API endpoints described here allow an Account Information Service Provider ('AISP') to:
+* Register an intent to retrieve account information by creating an "account access consent". This registers the data "permissions", expiration and historical period allowed for transactions / statements * that the customer (PSU) has consented to provide to the AISP; and
 * Subsequently, retrieve account and transaction data.
 
 This specification should be read in conjunction with Read/Write Data API Specification  which provides a description of the elements that are common across all the Read/Write Data APIs.
@@ -19,11 +23,12 @@ This document consists of the following parts:
  **Swagger Specifications:**  Provides links to the swagger specifications for the APIs.
 
 ## Basics
+
 ### Overview
 
 The figure below provides a general outline of an account information request and flow using the Account Info APIs.
 
-![ accountsapiv1.gif ]( images/AccountAndTransaction/accountsapiv1.gif )
+![accountsapiv1.gif](./AccountAndTransaction/accountsapiv1.gif)
 
 ####  Steps
 
@@ -36,7 +41,7 @@ Step 2: Setup Account Access Consent
     * Permissions - a list of data clusters that have been consented for access.
     * Expiration Date - an optional expiration for when the AISP will no longer have access to the PSU's data.
     * Transaction Validity Period - the From/To date range which specifies a historical period for transactions and statements which may be accessed by the AISP.
-* An AISP may be a broker for data to other parties, and so it is valid for a PSU to have multiple account-access-consents for the same accounts,  **with different consent/authorisation parameters agreed** . 
+* An AISP may be a broker for data to other parties, and so it is valid for a PSU to have multiple account-access-consents for the same accounts,  **with different consent/authorisation parameters agreed** .
 
 Step 3: Authorise Consent
 * The AISP requests the PSU to authorise the consent. The ASPSP may carry this out by using a  *redirection flow  or a  decoupled flow* .
@@ -56,24 +61,25 @@ Step 3: Authorise Consent
 
 Step 4: Request Data
 * This is carried out by making a  **GET**  request the relevant  **resource** .
-* The unique AccountId(s) that are valid for the account-access-consent will be returned with a call to GET /accounts.  **This will always be the first call once an AISP has a valid access token.** 
+* The unique AccountId(s) that are valid for the account-access-consent will be returned with a call to GET /accounts.  **This will always be the first call once an AISP has a valid access token.**
 
-####  Sequence Diagram 
-![ AccountsOverviewwithCIBA.png ]( images/AccountAndTransaction/AccountsOverviewwithCIBA.png )
+####  Sequence Diagram
 
- 
+![AccountsOverviewwithCIBA.png](./AccountAndTransaction/AccountsOverviewwithCIBA.png)
+
 #### Account Info  High Level Flow
-```
+
+```plantuml
 participant PSU
 participant AISP
 participant ASPSP Authorisation Server
 participant ASPSP Resource Server
-   
+
 note over PSU, ASPSP Resource Server
     Step 1: Request account information
 end note
 PSU -> AISP: Get account/transaction information
-  
+
 note over PSU, ASPSP Resource Server
     Step 2: Setup account access consent
 end note
@@ -84,7 +90,7 @@ AISP <-> ASPSP Resource Server: Establish TLS 1.2 MA
 AISP -> ASPSP Resource Server: POST /account-access-consents
 state over ASPSP Resource Server: Consent Status: AwaitingAuthorisation
 ASPSP Resource Server -> AISP: HTTP 201 (Created), ConsentId
-  
+
 note over PSU, ASPSP Resource Server
 Step 3: Authorise consent
 end note
@@ -103,7 +109,7 @@ alt Redirection (Using Authorization Code Grant)
     else Decoupled (Using CIBA)
         AISP -> ASPSP Authorisation Server: POST /bc-authorize (login_hint_token)
         ASPSP Authorisation Server -> AISP: OK
-        
+
         PSU -> ASPSP Authorisation Server: Authorise (Consent Id)
         PSU <-> ASPSP Authorisation Server: authenticate
         PSU <-> ASPSP Authorisation Server: SCA if required
@@ -128,12 +134,12 @@ end note
 AISP <-> ASPSP Resource Server: Establish TLS 1.2 MA
 AISP -> ASPSP Resource Server: GET /accounts
 ASPSP Resource Server -> AISP: HTTP 200 (OK), List of accounts containing AccountId(s)
-   
-   
+
+
 AISP -> ASPSP Resource Server: GET /accounts/{AccountId}/transactions
 ASPSP Resource Server -> AISP: HTTP 200 (OK), List of transactions
 option footer=bar
-``` 
+```
 
 ### Idempotency
 
@@ -170,7 +176,7 @@ The account-access-consent resource is referred to as an account-request resourc
     * E.g., An account-access-consent is created in v3, and request DELETE on v2.
 * An ASPSP  **must**  support deleting a Consent from a previous version via a newer version:
     * E.g., An account-request is created in v2, and request DELETE on v3.
-    
+
 #### Account Information Resources
 
 ##### GET
@@ -241,7 +247,7 @@ The Account Access Consent resource consists of the following fields, which toge
 
 ##### Permissions
 
-Permissions codes will be used to limit the data that is returned in response to a resource request. 
+Permissions codes will be used to limit the data that is returned in response to a resource request.
 
 When a permission is granted for a "Detail" permission code (e.g., ReadAccountsDetail) it implies that access is also granted to the corresponding "Basic" permission code (e.g., ReadAccountsBasic).
 
@@ -258,7 +264,6 @@ The following combinations of permissions are not allowed, and the ASPSP  **must
 * Account Access Consents with a Permissions array that contains  **ReadTransactionsCredits**  but does not contain at least one of  **ReadTransactionsBasic**  and  **ReadTransactionsDetail** .
 * Account Access Consents with a Permissions array that contains  **ReadTransactionsDebits**  but does not contain at least one of  **ReadTransactionsBasic**  and  **ReadTransactionsDetail** .
 
-
 | Permissions |Endpoints |Business Logic |Data Cluster Description |
 | --- |--- |--- |--- |
 | ReadAccounts**Basic** |/accounts /accounts/{AccountId} | |Ability to read basic account information |
@@ -269,10 +274,10 @@ The following combinations of permissions are not allowed, and the ASPSP  **must
 | ReadDirectDebits |/direct-debits /accounts/{AccountId}/direct-debits | |Ability to read **all** direct debit information |
 | ReadStandingOrders**Basic** |/standing-orders /accounts/{AccountId}/standing-orders | |Ability to read basic standing order information |
 | ReadStandingOrders**Detail** |/standing-orders /accounts/{AccountId}/standing-orders |Access to additional elements in the payload |Ability to read account identification details for beneficiary of the standing order |
-| ReadTransactions**Basic** |/transactions /accounts/{AccountId}/transactions /accounts/{AccountId}/statements/{StatementId}/transactions |Permissions must also include at least one of: <br><br><li>ReadTransactions**Credits** <li>ReadTransactions**Debits** |Ability to read basic transaction information |
-| ReadTransactions**Detail** |/transactions /accounts/{AccountId}/transactions /accounts/{AccountId}/statements/{StatementId}/transactions |Access to additional elements in the payload Permissions must also include at least one of <br><br><li>ReadTransactions**Credits** <li>ReadTransactions**Debits** |Ability to read transaction data elements which may hold silent party details |
-| ReadTransactions**Credits** |/transactions /accounts/{AccountId}/transactions /accounts/{AccountId}/statements/{StatementId}/transactions |Access to credit transactions. Permissions must also include one of: <br><br><li>ReadTransactionsBasic <li>ReadTransactionsDetail |Ability to read **only** credit transactions |
-| ReadTransactions**Debits** |/transactions /accounts/{AccountId}/transactions /accounts/{AccountId}/statements/{StatementId}/transactions |Access to debit transactions. Permissions must also include one of: <br><br><li>ReadTransactionsBasic <li>ReadTransactionsDetail |Ability to read **only** debit transactions |
+| ReadTransactions**Basic** |/transactions /accounts/{AccountId}/transactions /accounts/{AccountId}/statements/{StatementId}/transactions |Permissions must also include at least one of: <br><br><ul><li>ReadTransactions**Credits**</li><li>ReadTransactions**Debits**</li></ul> |Ability to read basic transaction information |
+| ReadTransactions**Detail** |/transactions /accounts/{AccountId}/transactions /accounts/{AccountId}/statements/{StatementId}/transactions |Access to additional elements in the payload Permissions must also include at least one of <br><br><ul><li>ReadTransactions**Credits**</li><li>ReadTransactions**Debits**</li></ul> |Ability to read transaction data elements which may hold silent party details |
+| ReadTransactions**Credits** |/transactions /accounts/{AccountId}/transactions /accounts/{AccountId}/statements/{StatementId}/transactions |Access to credit transactions. Permissions must also include one of: <br><br><ul><li>ReadTransactionsBasic</li><li>ReadTransactionsDetail</li></ul> |Ability to read **only** credit transactions |
+| ReadTransactions**Debits** |/transactions /accounts/{AccountId}/transactions /accounts/{AccountId}/statements/{StatementId}/transactions |Access to debit transactions. Permissions must also include one of: <br><br><ul><li>ReadTransactionsBasic</li><li>ReadTransactionsDetail</li></ul> |Ability to read **only** debit transactions |
 | ReadStatements**Basic** |/statements /accounts/{AccountId}/statements | |Ability to read basic statement details |
 | ReadStatements**Detail** |/statements /accounts/{AccountId}/statements /accounts/{AccountId}/statements/{StatementId}/file |Access to additional elements in the payload Access to download the statement file (if the ASPSP makes this available). |Ability to read statement data elements which may leak other information about the account |
 | ReadProducts |/products /accounts/{AccountId}/product | |Ability to read **all** product information relating to the account |
@@ -281,13 +286,13 @@ The following combinations of permissions are not allowed, and the ASPSP  **must
 | ReadParty**PSU** |/party | |Ability to read party information on the PSU logged in. |
 | ReadScheduledPayments**Basic** |/scheduled-payments /accounts/{AccountId}/scheduled-payments | |Ability to read basic statement details |
 | ReadScheduledPayments**Detail** |/scheduled-payments /accounts/{AccountId}/scheduled-payments |Access to additional elements in the payload | |
-| ReadPAN |All API endpoints where **PAN** is available as a structured field |Request to access to PAN in the clear |Request to access PAN in the clear across the available endpoints. If this permission code is not in the account-access-consent, the AISP will receive a masked PAN. While an AISP may request to access PAN in the clear, an ASPSP may still respond with a masked PAN if: <br><br><li>The ASPSP does not display PAN in the clear in existing online channels <li>The ASPSP takes a legal view to respond with only the masked PAN |
+| ReadPAN |All API endpoints where **PAN** is available as a structured field |Request to access to PAN in the clear |Request to access PAN in the clear across the available endpoints. If this permission code is not in the account-access-consent, the AISP will receive a masked PAN. While an AISP may request to access PAN in the clear, an ASPSP may still respond with a masked PAN if: <br><br><ul><li>The ASPSP does not display PAN in the clear in existing online channels</li><li>The ASPSP takes a legal view to respond with only the masked PAN</li></ul> |
 
 ###### Detail Permissions
 
 The additional elements that are granted for "Detail" permissions are listed in this section.
 
-All other fields (other than these fields listed) are available with the "Basic" Permission access. 
+All other fields (other than these fields listed) are available with the "Basic" Permission access.
 
 | Permission - Detail Codes |Data Element Name |Occurrence |XPath |
 | --- |--- |--- |--- |
@@ -312,7 +317,7 @@ In addition the ReadStatementsDetail is required to access the statement file do
 
 Example behaviour of the Permissions for the ReadAccountsBasic and ReadAccountsDetail codes is as follows:
 
-![ ReadAccounts.png ]( images/AccountAndTransaction/ReadAccounts.png )
+![ReadAccounts.png](./AccountAndTransaction/ReadAccounts.png)
 
 ###### Reversing Entries
 
@@ -348,14 +353,13 @@ The Account Access Consent resource may have one of the following status codes a
 | 2 |Rejected |The account access consent has been rejected. |
 | 3 |Revoked |The account access consent has been revoked via the ASPSP interface. |
 
-
 #### Consent Re-authentication
 
 Account Access Consents are long-lived consents.
 
 A PSU can re-authenticate an Account Access Consent if:
 
-* The account-access-consent has a status of `Authorised` and 
+* The account-access-consent has a status of `Authorised` and
 * The `ExpirationDateTime` of the account-access-consent, if specified, has not elapsed.
 
 The accounts bound to the account-access-consent are selected in the ASPSP domain.
@@ -366,7 +370,7 @@ An ASPSP  **may**  allow the PSU to change the selected accounts during consent 
 
 A PSU may revoke consent for accessing account information at any point in time.
 
-A PSU  **may**  revoke authorisation directly with the ASPSP. The mechanisms for this are in the competitive space and are up to each ASPSP to implement in the ASPSP's banking interface. If the PSU revokes authorisation with the ASPSP, the Status of the  **account-access-consent**  resource must be set to  *Revoked*. 
+A PSU  **may**  revoke authorisation directly with the ASPSP. The mechanisms for this are in the competitive space and are up to each ASPSP to implement in the ASPSP's banking interface. If the PSU revokes authorisation with the ASPSP, the Status of the  **account-access-consent**  resource must be set to  *Revoked*.
 
 The PSU may request the AISP to revoke consent that it has authorised. If consent is revoked with the AISP:
 
@@ -392,7 +396,7 @@ In these scenarios, only the affected account is removed from the list of select
 
 Information for risk scoring and assessment will come via:
 * FAPI HTTP headers. These are defined in [Section 6.3](http://openid.net/specs/openid-financial-api-part-1-wd-02.html#client-provisions) of the FAPI specification and in the Headers section above.
-* Additional fields identified by the industry as business logic security concerns * which will be passed in the Risk section of the payload in the JSON object. 
+* Additional fields identified by the industry as business logic security concerns * which will be passed in the Risk section of the payload in the JSON object.
 
 No fields for business logic security concerns have been identified for the Account Info APIs.
 
@@ -420,7 +424,7 @@ Example Meta
 
 ### Mapping to Schemes &amp; Standards
 
-The Account Info API resources, where possible, have been borrowed from the ISO 20022 camt.052 XML standard. However, has been adapted for APIs based as per our design principles. 
+The Account Info API resources, where possible, have been borrowed from the ISO 20022 camt.052 XML standard. However, has been adapted for APIs based as per our design principles.
 
 Deviations from the camt.052 XML standard are:
 
@@ -439,7 +443,7 @@ Deviations from the camt.052 XML standard are:
     * scheduled-payments
 * New payloads have been designed for beneficiaries, direct-debits, standing-orders, and products resources as these are not in the ISO 20022 standard (or the camt.052 message).
 * A DateTime element has been used instead of a complex choice element of Date and DateTime (across all API endpoints). Where time elements do not exist in ASPSP systems, the expectation is the time portion of the DateTime element will be defaulted to 00:00:00+00:00.
-* Variations for the accounts structure include: 
+* Variations for the accounts structure include:
     * Standardised inline with the Payment API account structures.
     * Contains elements to identify an account Nickname, SecondaryIdentification.
 * Variations for the balances structure include:
@@ -540,7 +544,6 @@ Each of the Account and Transaction API resources are documented in sub-pages of
 | OBExternalStatementType1Code |Interim |Adhoc or customised statement period. |
 | OBExternalStatementType1Code |RegularPeriodic |Regular pre-agreed reporting statement. |
 
-
 #### ISO Enumerations
 
 These following ISO Enumerations are used in the Accounts APIs.
@@ -551,7 +554,6 @@ These following ISO Enumerations are used in the Accounts APIs.
 | CountryCode |Country |https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements |
 | ExternalBankTransactionFamily1Code |BankTransactionCode/Code |https://www.iso20022.org/external_code_list.page |
 | ExternalBankTransactionSubFamily1Code |BankTransactionCode/SubCode |https://www.iso20022.org/external_code_list.page |
-
 
 #### Namespaced Enumerations
 

@@ -69,7 +69,7 @@ The API endpoint allows the PISP to ask an ASPSP to confirm funds on an **intern
 
 The state model for the international-scheduled-payment-consent resource follows the generic consent state model. However, does not use the "Revoked" status, as the consent for an international-scheduled-payment is not a long-lived consent.
 
-![image2018-5-18_10-24-21.png](images/image2018-5-18_10-24-21.png)
+![image2018-5-18_10-24-21.png](./images/image2018-5-18_10-24-21.png)
 
 The definitions for the Status:
 
@@ -92,7 +92,7 @@ This section describes the OBInternationalScheduled3 class which is reused as th
 
 ##### UML Diagram
 
-![OBInternationalScheduled3.gif](images/OBInternationalScheduled3.gif)
+![OBInternationalScheduled3.gif](./images/OBInternationalScheduled3.gif)
 
 ##### Notes
 
@@ -203,7 +203,7 @@ The ExchangeRateInformation object must conform to these behaviours:
 
 This section describes the OBExchangeRate2 class which is reused in the response payloads in the international-scheduled-payment-consent resource.
 
-![OBExchangeRate2.gif](images/OBExchangeRate2.gif)
+![OBExchangeRate2.gif](./images/OBExchangeRate2.gif)
 
 ##### Data Dictionary
 
@@ -224,7 +224,7 @@ The OBWriteInternationalScheduledConsent4 object will be used for the call to:
 
 #### UML Diagram
 
-![OBWriteInternationalScheduledConsent4.gif]( images/OBWriteInternationalScheduledConsent4.gif )
+![OBWriteInternationalScheduledConsent4.gif](./images/OBWriteInternationalScheduledConsent4.gif)
 
 #### Notes
 
@@ -263,7 +263,7 @@ The OBWriteInternationalScheduledConsentResponse4 object will be used for a resp
 
 #### UML Diagram
 
-![ OBWriteInternationalScheduledConsentResponse4.gif ]( images/OBWriteInternationalScheduledConsentResponse4.gif )
+![OBWriteInternationalScheduledConsentResponse4.gif](./images/OBWriteInternationalScheduledConsentResponse4.gif)
 
 ####  Notes
 
@@ -323,7 +323,7 @@ The OBWriteFundsConfirmationResponse1 object will be used for a response to a ca
 
 #### UML Diagram
 
-![ OBWriteConfirmFundsResponse1.gif ]( images/OBWriteConfirmFundsResponse1.gif )
+![OBWriteConfirmFundsResponse1.gif](./images/OBWriteConfirmFundsResponse1.gif)
 
 ####  Notes
 

@@ -47,7 +47,7 @@ An account (AccountId) may have no offers available, or may have multiple offers
 
 ### UML Diagram
 
-![ OBReadOffer1.gif ]( images/Offers/OBReadOffer1.gif )
+![OBReadOffer1.gif](./images/Offers/OBReadOffer1.gif)
 
 ### Notes
 

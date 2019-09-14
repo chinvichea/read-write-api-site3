@@ -96,7 +96,7 @@ The domestic-payment - payment-details must have one of the following PaymentSta
 
 The state model for the domestic-payment resource follows the behaviour and definitions for the ISO 20022 PaymentStatusCode code-set.
 
-![Payment Order Status](images/PaymentStatusLifeCycle.png)
+![Payment Order Status](./images/PaymentStatusLifeCycle.png)
 
 The definitions for the status:
 
@@ -113,7 +113,7 @@ The definitions for the status:
 
 If the payment-order requires multiple authorisations - the Status of the multiple authorisations will be updated in the MultiAuthorisation object.
 
-![Multi Authorisation Status](images/image2018-6-29_16-36-34.png)
+![Multi Authorisation Status](./images/image2018-6-29_16-36-34.png)
 
 The definitions for the status:
 
@@ -141,7 +141,7 @@ The OBWriteDomestic2 object will be used for a call to:
 
 #### UML Diagram
 
-![OBWriteDomestic2](images/OBWriteDomestic2.gif)
+![OBWriteDomestic2](./images/OBWriteDomestic2.gif)
 
 #### Notes
 
@@ -171,7 +171,7 @@ The **Initiation** and **Risk** sections of the domestic-payment request **must*
 
 #### UML Diagram
 
- ![OBWriteDataDomesticResponse3](images/OBWriteDataDomesticResponse3.png)
+ ![OBWriteDataDomesticResponse3](./images/OBWriteDataDomesticResponse3.png)
 
 #### Notes
 
@@ -212,7 +212,7 @@ The OBWritePaymentDetailsResponse1 object will be used for a response to a call 
 
 #### UML Diagram
 
-![OBWritePaymentDetailsResponse1](images/OBWritePaymentDetailsResponse1.png)
+![OBWritePaymentDetailsResponse1](./images/OBWritePaymentDetailsResponse1.png)
 
 #### Data Dictionary
 

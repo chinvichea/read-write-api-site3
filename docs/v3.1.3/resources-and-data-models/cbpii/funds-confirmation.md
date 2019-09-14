@@ -12,6 +12,7 @@ The Funds Confirmation resource is used by an CBPII to request to confirm funds 
 This resource description should be read in conjunction with a compatible Confirmation of Funds API Profile.
 
 ## Endpoints
+
 | Resource |HTTP Operation |Endpoint |Mandatory ? |Scope |Grant Type |Message Signing |Idempotency Key |Request Object |Response Object |
 | --- |--- |--- |--- |--- |--- |--- |--- |--- |--- |
 | funds-confirmation |POST |POST /funds-confirmations |Mandatory |fundsconfirmations |Authorization Code |No |No |OBFundsConfirmation1 |OBFundsConfirmationResponse1 |
@@ -37,7 +38,7 @@ The OBFundsConfirmation1 object will be used for the following:
 
 #### UML Diagram
 
-![OBFundsConfirmation1](images/OBFundsConfirmation1.gif)
+![OBFundsConfirmation1](./images/OBFundsConfirmation1.gif)
 
 Notes:
 
@@ -64,7 +65,7 @@ The OBFundsConfirmationResponse1 object will be used for the following:
 
 #### UML Diagram
 
-![OBFundsConfirmationResponse1](images/OBFundsConfirmationResponse1.gif)
+![OBFundsConfirmationResponse1](./images/OBFundsConfirmationResponse1.gif)
 
 Notes:
 
@@ -75,6 +76,7 @@ The OBFundsConfirmationResponse1 object contains the same information as the OBF
 * CreationDateTime - to indicate when the resource was created.
 
 #### Data Dictionary
+
 | Name |Occurrence |XPath |EnhancedDefinition |Class |Codes |Pattern |
 | --- |--- |--- |--- |--- |--- |--- |
 | OBFundsConfirmationResponse1 | |OBFundsConfirmationResponse1 | |OBFundsConfirmationResponse1 | | |

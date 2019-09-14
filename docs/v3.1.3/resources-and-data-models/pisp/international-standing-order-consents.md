@@ -34,7 +34,6 @@ The default Status is "AwaitingAuthorisation" immediately after the internationa
 | --- |
 | AwaitingAuthorisation |
 
-
 ### GET /international-standing-order-consents/{ConsentId}
 
 A PISP can optionally retrieve a payment consent resource that they have created to check its status.
@@ -62,7 +61,7 @@ The available Status codes for the international-standing-order-consent resource
 
 The state model for the international-standing-order-consent resource follows the generic consent state model. However, does not use the "Revoked" status, as the consent for an international-standing-order is not a long-lived consent.
 
-![ image2018-5-18_10-24-21.png ]( images/image2018-5-18_10-24-21.png )
+![image2018-5-18_10-24-21.png](./images/image2018-5-18_10-24-21.png)
 
 The definitions for the Status:
 
@@ -85,7 +84,7 @@ This section describes the OBInternationalStandingOrder4 class which is reused a
 
 ##### UML Diagram
 
-![ OBInternationalStandingOrder4.gif ]( images/OBInternationalStandingOrder4.gif )
+![OBInternationalStandingOrder4.gif](./images/OBInternationalStandingOrder4.gif)
 
 ##### Notes
 
@@ -175,7 +174,7 @@ The OBWriteInternationalStandingOrderConsent5 object will be used for the call t
 
 #### UML Diagram
 
-![ OBWriteInternationalStandingOrderConsent5.gif ]( images/OBWriteInternationalStandingOrderConsent5.gif )
+![OBWriteInternationalStandingOrderConsent5.gif](./images/OBWriteInternationalStandingOrderConsent5.gif)
 
 #### Notes
 
@@ -198,7 +197,6 @@ The international-standing-order-consent **request** contains these objects:
 | SCASupportData |0..1 |OBWriteInternationalStandingOrderConsent5/Data/SCASupportData |Supporting Data provided by TPP, when requesting SCA Exemption. |OBSCASupportData1 | | |
 | Risk |1..1 |OBWriteInternationalStandingOrderConsent5/Risk |The Risk section is sent by the initiating party to the ASPSP. It is used to specify additional details for risk scoring for Payments. |OBRisk1 | | |
 
-
 ### International Standing Order Consent - Response
 
 The OBWriteInternationalStandingOrderConsentResponse5 object will be used for a response to a call to:
@@ -208,7 +206,7 @@ The OBWriteInternationalStandingOrderConsentResponse5 object will be used for a 
 
 #### UML Diagram
 
-![ OBWriteInternationalStandingOrderConsentResponse5.gif ]( images/OBWriteInternationalStandingOrderConsentResponse5.gif )
+![OBWriteInternationalStandingOrderConsentResponse5.gif](./images/OBWriteInternationalStandingOrderConsentResponse5.gif)
 
 #### Notes
 

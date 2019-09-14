@@ -1,5 +1,6 @@
 ---
 ---
+
 # Event Notifications - v3.1.2
 
 [[toc]]
@@ -19,7 +20,6 @@ An ASPSP will send event notifications to a TPP using the event-notification res
 | Resource |HTTP Operation |Endpoint |Mandatory ? |Scope |Grant Type |Message Signing |Idempotency Key |Request Object |Response Object |
 | --- |--- |--- |--- |--- |--- |--- |--- |--- |--- |
 | event-notification |POST |POST /event-notifications |Optional |n/a |n/a |Signed Request |No |OBEventNotification1 | |
-
 
 Notes:
 

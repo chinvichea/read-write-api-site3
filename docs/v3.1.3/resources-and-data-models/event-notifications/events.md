@@ -1,44 +1,9 @@
+---
+---
+
 # Events - v3.1.2
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [POST /events](#post-events)
-3. [Data Model](#data-model)
-   1. [Aggregated Polling - Request](#aggregated-polling---request)
-      1. [UML Diagram](#uml-diagram)
-      2. [Data Dictionary](#data-dictionary)
-   2. [Aggregated Polling - Response](#aggregated-polling---response)
-      1. [UML Diagram](#uml-diagram-1)
-      2. [Data Dictionary](#data-dictionary-1)
-   3. [OBEventNotification2](#obeventnotification2)
-      1. [UML Diagram](#uml-diagram-2)
-      2. [Notes](#notes)
-      3. [Data Dictionary](#data-dictionary-2)
-   4. [OBEventSubject1](#obeventsubject1)
-      1. [UML Diagram](#uml-diagram-3)
-      2. [Notes](#notes-1)
-      3. [Data Dictionary](#data-dictionary-3)
-   5. [OBEventResourceUpdate2](#obeventresourceupdate2)
-      1. [UML Diagram](#uml-diagram-4)
-      2. [Data Dictionary](#data-dictionary-4)
-   6. [OBEventConsentAuthorizationRevoked1](#obeventconsentauthorizationrevoked1)
-      1. [UML Diagram](#uml-diagram-5)
-      2. [Notes](#notes-2)
-      3. [Data Dictionary](#data-dictionary-5)
-   7. [OBEventAccountAccessConsentLinkedAccountUpdate1](#obeventaccountaccessconsentlinkedaccountupdate1)
-      1. [UML Diagram](#uml-diagram-6)
-      2. [Notes](#notes-3)
-      3. [Data Dictionary](#data-dictionary-6)
-4. [Usage Examples](#usage-examples)
-   1. [Poll Only](#poll-only)
-      1. [POST Events Request](#post-events-request)
-      2. [POST Events Response](#post-events-response)
-   2. [Acknowledge Only](#acknowledge-only)
-      1. [POST Events Request](#post-events-request-1)
-      2. [POST Events Response](#post-events-response-1)
-   3. [Poll and Acknowledge With Errors](#poll-and-acknowledge-with-errors)
-      1. [POST Events Request](#post-events-request-2)
-      2. [POST Events Response](#post-events-response-2)
+[[toc]]
 
 ## Overview
 
@@ -47,6 +12,7 @@ The Events resource is used by a TPP to retrieve multiple signed event notificat
 This resource description should be read in conjunction with a compatible Aggregated Polling Profile.
 
 ## Endpoints
+
 | Resource |HTTP Operation |Endpoint |Mandatory? |Scope |Grant Type |Message Signing |Idempotency Key |Request Object |Response Object |
 | --- |--- |--- |--- |--- |--- |--- |--- |--- |--- |
 | events |POST |POST /events |Optional |eventpolling |Client Credentials |N/A |No |OBEventPolling1 |OBEventPollingResponse1 |
@@ -68,7 +34,7 @@ The `OBEventPolling1` will be used as the request payload for:
 
 #### UML Diagram
 
-![OBEventPolling1](images/OBEventPolling1.gif)
+![OBEventPolling1](./images/OBEventPolling1.gif)
 
 #### Data Dictionary
 
@@ -83,7 +49,6 @@ The `OBEventPolling1` will be used as the request payload for:
 | err |1..1 |`OBEventPolling1/setErrs/<jti>/err` |A value from the IANA "Security Event Token Delivery Error Codes" registry that identifies the error as defined [here](https://tools.ietf.org/id/draft-ietf-secevent-http-push-03.html#error_codes) |Max40Text | | |
 | description |1..1 |`OBEventPolling1/setErrs/<jti>/description` |A human-readable string that provides additional diagnostic information |Max256Text | | |
 
-
 ### Aggregated Polling - Response
 
 The `OBEventPollingResponse1` will be used as the response payload for:
@@ -92,7 +57,7 @@ The `OBEventPollingResponse1` will be used as the response payload for:
 
 #### UML Diagram
 
-![OBEventPollingResponse1](images/OBEventPollingResponse1.gif)
+![OBEventPollingResponse1](./images/OBEventPollingResponse1.gif)
 
 #### Data Dictionary
 
@@ -185,7 +150,7 @@ This section describes the OBEventConsentAuthorizationRevoked1 class which is us
 
 #### Notes
 
-For the OBEventConsentAuthorizationRevoked1 object:  
+For the OBEventConsentAuthorizationRevoked1 object:
 
 - The subject claim **must** be populated if the Event Notification does not include a `urn:uk:org:openbanking:events:resource-update` event.
 
@@ -207,7 +172,7 @@ This section describes the OBEventAccountAccessConsentLinkedAccountUpdate1 class
 
 #### Notes
 
-For the OBEventAccountAccessConsentLinkedAccountUpdate object: 
+For the OBEventAccountAccessConsentLinkedAccountUpdate object:
 
 - The http://openbanking.org.uk/rty claim **must** be populated with "account-access-consent".
 
@@ -235,7 +200,7 @@ Content-Type: application/json
 x-fapi-interaction-id: 1af4c0e6b5da49f6b1aebf439e87c199
 ```
 
-```json 
+```json
 {
   "returnImmediately": true
 }
@@ -271,7 +236,7 @@ POST /event HTTP/1.1
 Authorization: Bearer 7b99f6c331e841dab811176e25d57ca7
 Content-Type: application/json
 x-fapi-interaction-id: 295f6c6c7b2045b2a3e91e4f1c31d681
- 
+
 {
   "maxEvents": 0,
   "ack": [ "b6a68c1db7fc4c178fd7d8a41b9ef85c" ]

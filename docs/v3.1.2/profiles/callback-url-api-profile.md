@@ -38,7 +38,7 @@ Step 3: Retrieve/Update/Delete Event Notification Configuration
 
 #### Sequence Diagram
 
-![Event Notification Overview](images/EventNotificationOverview.png)
+![Event Notification Overview](./images/EventNotificationOverview.png)
 
 <details>
   <summary>Diagram source</summary>
@@ -124,7 +124,7 @@ TPPs must register a URL for TPP hosted services to receive event notifications 
 
 For example:
 
-* URL: https://tpp.com/open-banking/v3.1/event-notifications
+* URL: <https://tpp.com/open-banking/v3.1/event-notifications>
 
 ### Release Management
 

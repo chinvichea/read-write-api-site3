@@ -44,7 +44,7 @@ For a specific date range, an account (AccountId) may have no transactions booke
 
 ### UML Diagram
 
-![ OBReadTransaction5.png ]( images/Transactions/OBReadTransaction5.png )
+![OBReadTransaction5.png](./images/Transactions/OBReadTransaction5.png)
 
 #### Notes
 
@@ -53,8 +53,8 @@ For a specific date range, an account (AccountId) may have no transactions booke
 * The BookingDateTime has been set to mandatory as all ASPSPs must provide this field for pagination and filtering. The BookingDateTime is the date the transaction is booked (or posted) and becomes immutable, which is not the date the transaction took place.
 * Either the BankTransactionCode (which is the ISO transaction code list), **or** ProprietaryBankTransactionCode, **or** **both** may be populated. While the expectation is that at least one of BankTransactionCode. or ProprietaryBankTransactionCode are populated, we have decided not to enforce this behaviour in the payload structure as this would require nesting elements and introducing complex choice elements.
 * The BankTransactionCode (ISO) code-list is documented on the ISO20022 website: https://www.iso20022.org/external_code_list.page; and External Code Sets spreadsheet.
-    * The ISO 20022 BankTransactionCode Code and SubCode are specified as 4 letter codes. However, the principle we have applied for the code lists is to have longer more descriptive codes.
-    * The BankTransactionCode Code and SubCode will be populated with the long form description of the ISO 20022 code, with delimiters removed. E.g., the Family Code "CNTR" has a description of "Counter Transactions" which is populated as "CounterTransactions"
+  * The ISO 20022 BankTransactionCode Code and SubCode are specified as 4 letter codes. However, the principle we have applied for the code lists is to have longer more descriptive codes.
+  * The BankTransactionCode Code and SubCode will be populated with the long form description of the ISO 20022 code, with delimiters removed. E.g., the Family Code "CNTR" has a description of "Counter Transactions" which is populated as "CounterTransactions"
 * ASPSPs must have the ability to provide transactions through APIs for a period that at least equals the period provided through their online channels.
 
 ### Filtering

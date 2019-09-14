@@ -49,7 +49,7 @@ After consent has been agreed the **funds-confirmation-consent** resource may ha
 
 This is the state diagram for the Status.
 
-![CoFStateFlow](images/CoFStateFlow.png)
+![CoFStateFlow](./images/CoFStateFlow.png)
 
 ### GET /funds-confirmation-consents/{ConsentId}
 
@@ -70,7 +70,6 @@ The available Status code-list enumerations for the **funds-confirmation-consent
 | 3 |Authorised |The Funds Confirmation Consent has been successfully agreed. |
 | 4 |Revoked |The Funds Confirmation Consent has been revoked via the ASPSP interface. |
 
-
 ### DELETE /funds-confirmation-consents/{ConsentId}
 
 If the PSU revokes consent to confirm funds with the CBPII, the CBPII **must** delete the **funds-confirmation-consent** resource.
@@ -90,7 +89,7 @@ The OBFundsConfirmationConsent1 object will be used for the following:
 
 #### UML Diagram
 
-![OBFundsConfirmationConsent1](images/OBFundsConfirmationConsent1.gif)
+![OBFundsConfirmationConsent1](./images/OBFundsConfirmationConsent1.gif)
 
 #### Data Dictionary
 
@@ -114,7 +113,7 @@ The OBFundsConfirmationConsentResponse1 object will be used for the following:
 
 #### UML Diagram
 
-![OBFundsConfirmationConsentResponse1](images/OBFundsConfirmationConsentResponse1.gif)
+![OBFundsConfirmationConsentResponse1](./images/OBFundsConfirmationConsentResponse1.gif)
 
 Notes:
 

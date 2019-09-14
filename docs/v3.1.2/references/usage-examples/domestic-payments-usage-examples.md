@@ -16,7 +16,7 @@ In this scenario:
 
 ### Sequence Diagram
 
-![Sequence Diagram](images/MerchantDomesticPaymentUsageExample-3.png)
+![Sequence Diagram](./images/MerchantDomesticPaymentUsageExample-3.png)
 
 <details>
   <summary>Diagram source</summary>
@@ -487,7 +487,7 @@ In this scenario:
 
 ### Sequence Diagram
 
-![P2P Payment](images/P2PDomesticPaymentExample.png)
+![P2P Payment](./images/P2PDomesticPaymentExample.png)
 
 <details>
 <summary>Diagram source</summary>
@@ -1096,6 +1096,7 @@ Content-Type: application/json
 ```
 
 ## Balance Transfer
+
 Below in an example illustrating a balance transfer offer available on a Card A.
 
 To facilitate a Balance Transfer, a PISP can initiate a Payment from Card B to Card A with LocalInstrument as UK.OBIE.BalanceTransfer, Account SchemeName as UK.OBIE.PAN and if there is an Offer Code/Id provided by Issuer of the Card A, then it can be supplied in the field: RemittanceInformation.Reference.
@@ -1216,6 +1217,7 @@ x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d
 Content-Type: application/json
 Accept: application/json
 ```
+
 ```json
 {
     "Data": {
@@ -1257,6 +1259,7 @@ x-jws-signature: V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K
 x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d
 Content-Type: application/json
 ```
+
 ```json
 {
     "Data": {

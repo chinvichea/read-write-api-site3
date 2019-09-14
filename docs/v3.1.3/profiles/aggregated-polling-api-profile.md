@@ -49,12 +49,12 @@ Following the initial poll the TPP can then repeatedly poll the ASPSP, acknowled
 
 #### Sequence Diagram
 
-![Aggregated Polling](images/AggregatedPolling.png)
+![AggregatedPolling.png](./images/AggregatedPolling.png)
 
 <details>
   <summary>Diagram source</summary>
 
-  ```
+```plantuml
 participant TPP
 participant ASPSP Authorisation Server
 participant ASPSP Event Polling Service

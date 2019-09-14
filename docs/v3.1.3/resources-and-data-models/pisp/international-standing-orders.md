@@ -92,7 +92,7 @@ The international-standing-orders - payment-details must have one of the followi
 
 The state model for the international-standing-orders resource describes the initiation status only. I.e., not the subsequent execution of the international-standing-orders.
 
-![ DomesticScheduledStatusModel.png ]( images/DomesticScheduledStatusModel.png )
+![DomesticScheduledStatusModel.png](./images/DomesticScheduledStatusModel.png)
 
 The definitions for the Status:
 
@@ -107,7 +107,7 @@ The definitions for the Status:
 
 If the payment-order requires multiple authorisations, the Status of the multiple authorisations will be updated in the MultiAuthorisation object.
 
-![ image2018-6-29_16-36-34.png ]( images/image2018-6-29_16-36-34.png )
+![image2018-6-29_16-36-34.png](./images/image2018-6-29_16-36-34.png)
 
 The definitions for the Status:
 
@@ -116,7 +116,6 @@ The definitions for the Status:
 | 1 |AwaitingFurtherAuthorisation |The payment-order resource is awaiting further authorisation. |
 | 2 |Rejected |The payment-order resource has been rejected by an authoriser. |
 | 3 |Authorised |The payment-order resource has been successfully authorised by all required authorisers. |
-
 
 ## Data Model
 
@@ -136,7 +135,7 @@ The OBWriteInternationalStandingOrder4 object will be used for a call to:
 
 #### UML Diagram
 
-![ OBWriteInternationalStandingOrder4.gif ]( images/OBWriteInternationalStandingOrder4.gif )
+![OBWriteInternationalStandingOrder4.gif](./images/OBWriteInternationalStandingOrder4.gif)
 
 #### Notes
 
@@ -166,7 +165,7 @@ The OBWriteInternationalStandingOrderResponse5 object will be used for a respons
 
 #### UML Diagram
 
-![ OBWriteInternationalStandingOrderResponse5.gif ]( images/OBWriteInternationalStandingOrderResponse5.gif )
+![OBWriteInternationalStandingOrderResponse5.gif](./images/OBWriteInternationalStandingOrderResponse5.gif)
 
 #### Notes
 
@@ -203,7 +202,7 @@ The OBWritePaymentDetailsResponse1 object will be used for a response to a call 
 
 #### UML Diagram
 
-![ OBWritePaymentDetailsResponse1.png ]( images/OBWritePaymentDetailsResponse1.png )
+![OBWritePaymentDetailsResponse1.png](./images/OBWritePaymentDetailsResponse1.png)
 
 #### Data Dictionary
 

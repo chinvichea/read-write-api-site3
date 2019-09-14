@@ -52,21 +52,21 @@ An account (AccountId) must only have a single product.
 
 ### UML Diagram
 
-![ OBReadProduct2.png ]( images/Products/OBReadProduct2.png )
+![OBReadProduct2.png](./images/Products/OBReadProduct2.png)
 
 #### Notes
 
 * All PSD2 in-scope accounts are expected to return a response to the product resource. However, the BCA and PCA objects only apply to current account products (which are a CMA Order requirement).
 * Product/ProductIdentifier and Product/SecondaryProductIdentifier are renamed to Product/ProductId and Product/SecondaryProductId respectively.
 * The APIs are split in to 2 broad groups based on respective security requirements:-
-    * Open Data includes an API which provides **Marketed** PCA/BCA/Other Information.
-    * Read-Write (aka "Closed Data") includes an API which provides **Operated** PCA/BCA/Other Information.
+  * Open Data includes an API which provides **Marketed** PCA/BCA/Other Information.
+  * Read-Write (aka "Closed Data") includes an API which provides **Operated** PCA/BCA/Other Information.
 * Open Data Product information covers:- Core Product, Eligibility, Credit Interest, Overdraft, Features &amp; Benefits and Other Fees &amp; Charges.
 * In July 2017, as part of Open Data-Account Information design workshop, it was agreed that the Products endpoint should contain a reference to Open Data AND subset of Open Data model (Decision [039](https://openbanking.atlassian.net/wiki/spaces/WOR/pages/3654377/039) - option 4).
 * Approach to supplying product information via the Account and Transaction Information API for v2.x:
-    * An optional "Open Data Product ID" link to the Open Data APIs should be retained, so that marketed product information is made available (where this is available). This could be more than "Front book" if a bank has decided to retain marketed product information for "Back book" products on the Open Data API.
-    * In addition to the "Open Data Product ID" link, we should focus on fields that are provided by price comparison websites today. Although overdraft rates are typically marked as "Negotiable" on PCWs, we feel that it would be useful to provide information about the actual overdraft rate(s) that the account holder is on, even if this cannot easily be used for comparison with other products.
-    * If there is a reference to "Open Data Product ID", then the TPP may lookup product features from Open Data. If any element/fields of the products endpoint are populated, then this should override the default in Open Data (Decision
+  * An optional "Open Data Product ID" link to the Open Data APIs should be retained, so that marketed product information is made available (where this is available). This could be more than "Front book" if a bank has decided to retain marketed product information for "Back book" products on the Open Data API.
+  * In addition to the "Open Data Product ID" link, we should focus on fields that are provided by price comparison websites today. Although overdraft rates are typically marked as "Negotiable" on PCWs, we feel that it would be useful to provide information about the actual overdraft rate(s) that the account holder is on, even if this cannot easily be used for comparison with other products.
+  * If there is a reference to "Open Data Product ID", then the TPP may lookup product features from Open Data. If any element/fields of the products endpoint are populated, then this should override the default in Open Data (Decision
 [039](https://openbanking.atlassian.net/wiki/spaces/WOR/pages/3654377/039) &amp; [100](https://openbanking.atlassian.net/wiki/spaces/WOR/pages/32376202/100)).
     * The "Open Data Product ID" should be populated by the ASPSP in the **products** resource if there is a corresponding entry in the Open Data APIs.
     * Information supplied in the Account and Transaction Information API v2.x product section must come from account operating platforms.
@@ -107,7 +107,6 @@ Data Dictionary for Common Payload between PCA, BCA and other product types.
 [PCA Product Data Model v3.1.2](./PCA Product Data Model.md)
 
 [Other Product Data Model v3.1.2](./Other Product Data Model.md)
-
 
 ## Usage Examples
 

@@ -68,7 +68,7 @@ The API endpoint allows the PISP to ask an ASPSP to confirm funds on a **domesti
 
 The state model for the domestic-payment-consent resource follows the generic consent state model. However, does not use the Revoked status, as the consent for a domestic-payment is not a long-lived consent.
 
-!["Payment Order Consent Status"](images/image2018-5-18_10-24-21.png)
+!["Payment Order Consent Status"](./images/image2018-5-18_10-24-21.png)
 
 The definitions for the Status:
 
@@ -91,7 +91,7 @@ This section describes the OBDomestic2 class which is reused as the Initiation o
 
 ##### UML Diagram
 
-![OBDomestic2](images/OBDomestic2.gif)
+![OBDomestic2](./images/OBDomestic2.gif)
 
 ##### Notes
 
@@ -158,7 +158,7 @@ The OBWriteDomesticConsent3 object will be used for the call to:
 
 #### UML Diagram
 
-![OBWriteDomesticConsent3](images/OBWriteDomesticConsent3.gif)
+![OBWriteDomesticConsent3](./images/OBWriteDomesticConsent3.gif)
 
 #### Notes
 
@@ -188,7 +188,7 @@ The OBWriteDomesticConsentResponse3 object will be used for a response to a call
 
 #### UML Diagram
 
-![OBWriteDomesticConsentResponse3](images/OBWriteDomesticConsentResponse3.gif)
+![OBWriteDomesticConsentResponse3](./images/OBWriteDomesticConsentResponse3.gif)
 
 #### Notes
 
@@ -229,7 +229,7 @@ The OBWriteFundsConfirmationResponse1 object will be used for a response to a ca
 
 #### UML Diagram
 
-![OBWriteConfirmFundsResponse1](images/OBWriteConfirmFundsResponse1.gif)
+![OBWriteConfirmFundsResponse1](./images/OBWriteConfirmFundsResponse1.gif)
 
 #### Notes
 

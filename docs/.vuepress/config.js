@@ -9,8 +9,8 @@ const devServer = require('./devServer.js');
 
 module.exports = {
     base: '/read-write-api-site2/',
-    title: 'OBIE Read/Write API Standards',
-    description: 'Read/Write API Standards',
+    title: 'Read/Write API',
+    description: 'OBIE Read/Write API Standards',
     // https://vuepress.vuejs.org/theme/default-theme-config.html
     themeConfig: {
         lastUpdated: 'Last Updated',
@@ -22,7 +22,7 @@ module.exports = {
     },
     markdown: {
         // https://vuepress.vuejs.org/config/#markdown-linenumbers
-        lineNumbers: true,
+        lineNumbers: false,
         // options for markdown-it-anchor
         anchor: {
             permalink: true,
@@ -38,7 +38,9 @@ module.exports = {
                 5,
                 6,
             ],
-            // If you want to debug this, e.g., to compare it again Confluence, uncomment line below.
+            // If you want to debug this, e.g., to compare it again Confluence, uncomment line below
+            // and the table of contents will be numbered (ol=ordered list) instead of being
+            // un-numbered (ul=unordered list).
             // 'listType': 'ol',
         },
         // https://vuepress.vuejs.org/plugin/option-api.html#extendmarkdown

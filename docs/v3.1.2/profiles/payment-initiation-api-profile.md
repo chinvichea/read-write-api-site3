@@ -809,12 +809,12 @@ option footer=bar
 
 ### Multi-Auth Payment Order Consent
 
-![](./images/Multi-Auth-Payment-Order-Consent.png)
+![Multi-Auth-Payment-Order-Consent.png](./images/Multi-Auth-Payment-Order-Consent.png)
 
 <details>
   <summary>Diagram source</summary>
 
-```
+```plantuml
 autonumber
 
 participant PSU Initial Authoriser
@@ -886,18 +886,19 @@ state over ASPSP Resource Server: Payment Status: AcceptedSettlementComplete
 
 option footer=bar
 ```
+
 </details>
 
 ### Reject the Payment Order Consent Creation After CutOffDateTime
 
 This example illustrates a scenario where an ASPSP choses to Reject the Payment-Order consent/resource request, after the CutoffTime. We have a CHAPS payment-order consent created after the CutOffDateTime, and ASPSP rejects the Consent, and the PISP chooses to place a Scheduled Payment-Order consent.
 
-![](./images/CHAPS-SIP-AfterCutoffTime.png)
+![CHAPS-SIP-AfterCutoffTime.png](./images/CHAPS-SIP-AfterCutoffTime.png)
 
 <details>
   <summary>Diagram source</summary>
 
-```
+```plantuml
 autonumber
 participant PSU
 participant PISP
@@ -948,12 +949,12 @@ option footer=bar
 
 This example illustrates a scenario where an ASPSP choses to Reject the Payment-Order consent/resource request, after the CutoffTime. We have a CHAPS payment-order Consent created and the Authorisation completed before the CutOffDateTime, but the Payment-Order submission happened after the CutOffDateTime, so the ASPSP has rejected it.
 
-![](./images/CHAPS-SIPO-AfterCutoffTime-2.png)
+![CHAPS-SIPO-AfterCutoffTime-2.png](./images/CHAPS-SIPO-AfterCutoffTime-2.png)
 
 <details>
   <summary>Diagram source</summary>
 
-```
+```plantuml
 autonumber
 participant PSU
 participant PISP

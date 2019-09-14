@@ -33,7 +33,7 @@ This document consists of the following parts:
 
 ### Resources
 
-Each of the Payment Initiation API resources are documented in the  [Resources and Data Models  /  PISP](../resources%20and%20data%20models/pisp) area of the specification. Each resource is documented with:
+Each of the Payment Initiation API resources are documented in the  [Resources and Data Models  /  PISP](../resources-and-data-models/pisp) area of the specification. Each resource is documented with:
 
 - Endpoints
   - The API endpoints available for the resource.
@@ -126,12 +126,12 @@ Step 6: Get Consent/Payment-Order/Payment-Details Status
 
 #### Sequence Diagram
 
-![](./images/Payments-Flow.png)
+![Payments-Flow.png](./images/Payments-Flow.png)
 
 <details>
   <summary>Diagram source</summary>
 
-```
+```plantuml
 participant PSU
 participant PISP
 participant ASPSP Authorisation Server
@@ -271,7 +271,7 @@ Two strategies for handling behaviour are:
 - Reject the payment-order (and steps associated with the creation of payment-order) if received after the applicable CutOffDateTime
 - Accept the payment-order (and steps associated with the creation of payment-order) if received after the applicable CutOffDateTime
 
-#####  Reject the Payment-Order
+##### Reject the Payment-Order
 
 In this scenario, the behaviour of payment-order execution is explicit to the PISP and PSU.
 
@@ -457,7 +457,7 @@ This section describes the Risk1 class which is reused in the payment-order cons
 
 ##### UML Diagram
 
-![](./images/OBRisk1.gif)
+![OBRisk1.gif](./images/OBRisk1.gif)
 
 ##### Data Dictionary
 
@@ -482,7 +482,7 @@ This section describes the OBCharge2 class - which is reused in the response pay
 
 ##### UML Diagram
 
-![](./images/OBCharge2.png)
+![OBCharge2.png](./images/OBCharge2.png)
 
 ##### Data Dictionary
 
@@ -501,7 +501,7 @@ This section describes the OBAuthorisation1 class which is used in the payment-o
 
 ##### UML Diagram
 
-![](./images/OBAuthorisation1.gif)
+![OBAuthorisation1.gif](./images/OBAuthorisation1.gif)
 
 ##### Data Dictionary
 
@@ -517,7 +517,7 @@ This section describes the OBMultiAuthorisation1 class which used in the respons
 
 ##### UML Diagram
 
-![](./images/OBMultiAuthorisation1.gif)
+![OBMultiAuthorisation1.gif](./images/OBMultiAuthorisation1.gif)
 
 ##### Data Dictionary
 
@@ -536,7 +536,7 @@ This section describes the OBWritePaymentDetails1 class which used in the respon
 
 ##### UML Diagram
 
-![](./images/OBWritePaymentDetails1.png)
+![OBWritePaymentDetails1.png](./images/OBWritePaymentDetails1.png)
 
 ##### Data Dictionary
 
@@ -558,7 +558,7 @@ This section describes the OBSCASupportData1 class, which is used across all  _p
 
 ##### UML Diagram
 
-![](./images/OBSCASupportData1.gif)
+![OBSCASupportData1.gif](./images/OBSCASupportData1.gif)
 
 ##### Data Dictionary
 
@@ -712,9 +712,9 @@ These following ISO Enumerations are used in the Payment APIs.
 
 | ISO Data Type |Fields |ISO Enumeration Values URL |
 | --- |--- |--- |
-| Min3Max4Text |MerchantCategoryCode |https://www.iso.org/standard/33365.html |
-| ActiveOrHistoricCurrencyCode |Currency |https://www.iso20022.org/external_code_list.page |
-| CountryCode |Country |https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements |
+| Min3Max4Text |MerchantCategoryCode | <https://www.iso.org/standard/33365.html> |
+| ActiveOrHistoricCurrencyCode |Currency | <https://www.iso20022.org/external_code_list.page> |
+| CountryCode |Country | <https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements> |
 
 #### Namespaced Enumerations
 
@@ -726,12 +726,12 @@ The enumerated values specified by Open Banking are documented in Swagger specif
 
 Note: this flow has been generalised for all payment-order types.
 
-![](./images/Idempotent-Payment-Order-Consent.png)
+![Idempotent-Payment-Order-Consent.png](./images/Idempotent-Payment-Order-Consent.png)
 
 <details>
   <summary>Diagram source</summary>
 
-```
+```plantuml
 participant PSU
 participant PISP
 participant ASPSP Authorisation Server
@@ -771,12 +771,12 @@ option footer=bar
 
 Note: this flow has been generalised for all payment-order types.
 
-![](./images/IdempotentPaymentOrder.png)
+![IdempotentPaymentOrder.png](./images/IdempotentPaymentOrder.png)
 
 <details>
   <summary>Diagram source</summary>
 
-```
+```plantuml
 participant PSU
 participant PISP
 participant ASPSP Authorisation Server
@@ -809,12 +809,12 @@ option footer=bar
 
 ### Multi-Auth Payment Order Consent
 
-![](./images/Multi-Auth-Payment-Order-Consent.png)
+![Multi-Auth-Payment-Order-Consent.png](./images/Multi-Auth-Payment-Order-Consent.png)
 
 <details>
   <summary>Diagram source</summary>
 
-```
+```plantuml
 autonumber
 
 participant PSU Initial Authoriser
@@ -886,6 +886,7 @@ state over ASPSP Resource Server: Payment Status: AcceptedSettlementComplete
 
 option footer=bar
 ```
+
 </details>
 
 ### Reject the Payment Order Consent Creation After CutOffDateTime
@@ -897,7 +898,7 @@ This example illustrates a scenario where an ASPSP choses to Reject the Payment-
 <details>
   <summary>Diagram source</summary>
 
-```
+```plantuml
 autonumber
 participant PSU
 participant PISP
@@ -953,7 +954,7 @@ This example illustrates a scenario where an ASPSP choses to Reject the Payment-
 <details>
   <summary>Diagram source</summary>
 
-```
+```plantuml
 autonumber
 participant PSU
 participant PISP

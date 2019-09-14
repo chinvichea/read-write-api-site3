@@ -1,8 +1,9 @@
 ---
-title: Event Notifications
 ---
 
 # Event Notifications Resources and Data Models - v3.1.2
+
+[[toc]]
 
 Resources for Event Notifications are detailed here:
 

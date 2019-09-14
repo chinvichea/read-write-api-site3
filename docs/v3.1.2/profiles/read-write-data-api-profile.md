@@ -71,7 +71,7 @@ APIs have been defined to be idempotent, where not doing so would cause a poor P
 
 Digital signatures will facilitate non-repudiation for Open Banking APIs.
 
-The approach for message signing is documented in [Basics / Message Signing](#message-signing-1).
+The approach for message signing is documented in [Basics / Message Signing](./#message-signing-1).
 
 The applicability of signatures to individual requests and responses is documented on the page for each of the resources. However, implementers of the standards can **optionally** add signatures to all response and request payloads.
 
@@ -79,7 +79,7 @@ The applicability of signatures to individual requests and responses is document
 
 Message Encryption is an **optional** feature of the Open Banking APIs to facilitate additional protection of inflight data.
 
-The approach for message encryption is documented in [Basics / Message Encryption](#message-encryption-1).
+The approach for message encryption is documented in [Basics / Message Encryption](./#message-encryption-1).
 
 Applicability to individual requests and responses is not defined in the standards. Application will be based on agreement between implementors of the standards.
 
@@ -95,7 +95,7 @@ We will provide further mapping guidance to ensure that differences are understo
 
 The API uses two status codes that serve two different purposes:
 
-* The HTTP Status Code reflects the outcome of the API call (the HTTP operation on the resource). Granular Functional Error Codes are specified as part of API [Error Response Structure](#error-response-structure), after consultation with Security and Fraud Working Group.
+* The HTTP Status Code reflects the outcome of the API call (the HTTP operation on the resource). Granular Functional Error Codes are specified as part of API [Error Response Structure](./#error-response-structure), after consultation with Security and Fraud Working Group.
 * A Status field in some of the resource payloads reflects the status of resources.
 
 #### Unique Identifiers (Id Fields)
@@ -291,7 +291,7 @@ An ASPSP **MAY** return other standard HTTP status codes (e.g. from gateways a
 
 ASPSPs **must** respond with error response in the OAuth/OIDC flow with mandatory alignment of the error codes to those specified in OpenID Connect Core Specification [Section 3.1.2.6](https://openid.net/specs/openid-connect-core-1_0.html#AuthError).
 
-ASPSPs **must** respond with Open Banking [Error Response Structure](#error-response-structure) for all errors during API Calls.
+ASPSPs **must** respond with Open Banking [Error Response Structure](./#error-response-structure) for all errors during API Calls.
 
 #### 400 (Bad Request) v/s 404 (Not Found)
 
@@ -479,7 +479,7 @@ The verifier **must** extract and decode the JOSE header and signature from the 
 
 ##### Step 2: Validate the JOSE Header and Certificate
 
-The verifier **must** validate the JOSE header to ensure that it is a valid JSON object with only the claims specified in [Process for Signing a Payload](#process-for-signing-a-payload) - Step 2.
+The verifier **must** validate the JOSE header to ensure that it is a valid JSON object with only the claims specified in [Process for Signing a Payload](./#process-for-signing-a-payload) - Step 2.
 
 The verifier **must** validate that the `typ` header if specified has the value JOSE.
 
@@ -953,7 +953,7 @@ The error response structure for Open Banking Read/Write APIs:
 
 ##### UML Diagram
 
-![](./images/OBErrorResponse1.gif)
+![OBErrorResponse1.gif](./images/OBErrorResponse1.gif)
 
 ##### Data Dictionary
 
@@ -1127,7 +1127,7 @@ This flow assumes that the following Steps have been completed successfully:
 
 The AISP attempts to provide an expired or missing access token to the ASPSP in an attempt to Request Data
 
-![](./images/MissingOrExpiredAccessToken.png)
+![MissingOrExpiredAccessToken.png](./images/MissingOrExpiredAccessToken.png)
 
 <details>
   <summary>Diagram source</summary>
@@ -1161,7 +1161,7 @@ This flow assumes that the following Steps have been completed successfully:
 
 The AISP provides a malformed request to the ASPSP in an attempt to setup an Account Request.
 
-![](./images/IncompleteOrMalformedRequestPayload.png)
+![IncompleteOrMalformedRequestPayload.png](./images/IncompleteOrMalformedRequestPayload.png)
 
 <details>
   <summary>Diagram source</summary>
@@ -1193,7 +1193,7 @@ This flow assumes that the following Steps have been completed successfully:
 
 The AISP provides a (valid) access token which does not have a valid scope (or link to the correct Permissions) to Request Data
 
-![](./images/MissingOrInvalidAccessTokenScope.png)
+![MissingOrInvalidAccessTokenScope.png](./images/MissingOrInvalidAccessTokenScope.png)
 
 <details>
   <summary>Diagram source</summary>
@@ -1232,7 +1232,7 @@ The AISP provides a (valid) access token which is used to generate a burst of mu
 
 The ASPSP may optionally choose to return a 429 Response
 
-![](./images/TooManyRequests.png)
+![TooManyRequests.png](./images/TooManyRequests.png)
 
 <details>
   <summary>Diagram source</summary>
@@ -1266,7 +1266,7 @@ This flow assumes that the following Steps have been completed successfully:
 
 The Step 3: Authorise Consent Flow fails to succeed due to the PSU providing invalid credentials to the ASPSP, resulting in no Authorization Code being generated.
 
-![](./images/FailedAuthorisationConsent.png)
+![FailedAuthorisationConsent.png](./images/FailedAuthorisationConsent.png)
 
 <details>
   <summary>Diagram source</summary>

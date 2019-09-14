@@ -49,7 +49,7 @@ After authorisation has taken place the account-access-consent resource may have
 
 This is the state diagram for the Status.
 
-![ Consent Authorisation.jpg ]( images/AccountAccessConsents/ConsentAuthorisation.jpg )
+![Consent Authorisation.jpg](./images/AccountAccessConsents/ConsentAuthorisation.jpg)
 
 ### GET /account-access-consents/{ConsentId}
 
@@ -72,7 +72,6 @@ The available Status code-list enumerations for the account-access-consent resou
 | 3 |Authorised |The account access consent has been successfully authorised. |
 | 4 |Revoked |The account access consent has been revoked via the ASPSP interface. |
 
-
 ### DELETE /account-access-consents/{ConsentId}
 
 If the PSU revokes consent to data access with the AISP, the AISP  **must**  delete the account-access-consent resource with the ASPSP before confirming consent revocation with the PSU.
@@ -90,7 +89,7 @@ The OBReadConsent1 object will be used for the call to:
 
 #### UML Diagram
 
-![ OBReadConsent1.gif ]( images/AccountAccessConsents/OBReadConsent1.gif )
+![OBReadConsent1.gif](./images/AccountAccessConsents/OBReadConsent1.gif)
 
 #### Notes
 
@@ -121,15 +120,15 @@ And response to:
 
 #### UML Diagram
 
-![ OBReadConsentResponse1.gif ]( images/AccountAccessConsents/OBReadConsentResponse1.gif )
+![OBReadConsentResponse1.gif](./images/AccountAccessConsents/OBReadConsentResponse1.gif)
 
 #### Notes
 
 * The OBReadConsentResponse1 object contains the same information as the OBReadConsent1, but with additional fields:
-    * ConsentId - to uniquely identify the account-access-consent resource.
-    * Status.
-    * CreationDateTime.
-    * StatusUpdateDateTime.
+  * ConsentId - to uniquely identify the account-access-consent resource.
+  * Status.
+  * CreationDateTime.
+  * StatusUpdateDateTime.
 * No fields have been identified for the Risk section.
 
 #### Data Dictionary
@@ -261,6 +260,7 @@ HTTP/1.1 200 OK
 x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d
 Content-Type: application/json
 ```
+
 ```json
 {
   "Data": {
@@ -321,6 +321,7 @@ HTTP/1.1 200 OK
 x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d
 Content-Type: application/json
 ```
+
 ```json
 {
   "Data": {
@@ -418,6 +419,7 @@ HTTP/1.1 201 Created
 x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d
 Content-Type: application/json
 ```
+
 ```json
 {
   "Data": {

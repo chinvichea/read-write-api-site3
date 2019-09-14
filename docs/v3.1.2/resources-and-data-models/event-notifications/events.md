@@ -1,5 +1,6 @@
 ---
 ---
+
 # Events - v3.1.2
 
 [[toc]]
@@ -33,7 +34,7 @@ The `OBEventPolling1` will be used as the request payload for:
 
 #### UML Diagram
 
-![OBEventPolling1](images/OBEventPolling1.gif)
+![OBEventPolling1](./images/OBEventPolling1.gif)
 
 #### Data Dictionary
 
@@ -48,7 +49,6 @@ The `OBEventPolling1` will be used as the request payload for:
 | err |1..1 |`OBEventPolling1/setErrs/<jti>/err` |A value from the IANA "Security Event Token Delivery Error Codes" registry that identifies the error as defined [here](https://tools.ietf.org/id/draft-ietf-secevent-http-push-03.html#error_codes) |Max40Text | | |
 | description |1..1 |`OBEventPolling1/setErrs/<jti>/description` |A human-readable string that provides additional diagnostic information |Max256Text | | |
 
-
 ### Aggregated Polling - Response
 
 The `OBEventPollingResponse1` will be used as the response payload for:
@@ -57,7 +57,7 @@ The `OBEventPollingResponse1` will be used as the response payload for:
 
 #### UML Diagram
 
-![OBEventPollingResponse1](images/OBEventPollingResponse1.gif)
+![OBEventPollingResponse1](./images/OBEventPollingResponse1.gif)
 
 #### Data Dictionary
 

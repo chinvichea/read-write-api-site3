@@ -21,14 +21,14 @@ Further analysis required:-
 
 | Product Section |Fields to be included |
 | --- |--- |
-| BCA (We'll rename this "Product" and merge BCA and CoreProduct attributes) |<li>Name <li>ProductType ("BCA") <li>Product Segment (e.g. "Startup","Switcher",...) <li>Open Data Product ID (Mandatory, if product info is available on Open Data BCA API) <li>Fee-free period |
-| CoreProduct |**None** - Will be merged in to new "Product" section. |
-| BCAMarketingState |**None** - Sections will only include current state information, so this section is not required. |
-| CreditInterest |<li>TierBandSet fields (excluding credit interest eligibility). <li>All TierBand fields <li>**Note: Only current state credit interest information is required. Where the interest rate(s) have been negotiated, the actual rates applied to the account should be provided.** |
-| Overdraft |<li>All TierBandSet fields (including OverdraftFeesAndCharges) <li>All TierBand fields (including OverdraftFeesAndCharges). <li>**Note: Only current state information is required. Where the overdraft rate(s) have been negotiated, the actual rates applied to the account should be provided.** |
-| Eligibility |**None** - Whether an organisation is eligible for other products cannot be determined by looking at existing product eligibility e.g., criteria for a startup can vary from bank to bank. |
-| FeaturesAndBenefits |**None** - The value of a particular feature and benefit to an accountholder is dependent on their use of that benefit and whether they met the eligibility criteria. Features &amp; benefits are less significant in the BCA market than the PCA. |
-| OtherFeesAndCharges |<li>See Notes below |
+| BCA (We'll rename this "Product" and merge BCA and CoreProduct attributes) | <ul><li>Name</li><li>ProductType ("BCA")</li><li>Product Segment (e.g. "Startup","Switcher",...)</li><li>Open Data Product ID (Mandatory, if product info is available on Open Data BCA API)</li><li>Fee-free period</li></ul> |
+| CoreProduct | **None** - Will be merged in to new "Product" section. |
+| BCAMarketingState | **None** - Sections will only include current state information, so this section is not required. |
+| CreditInterest | <ul><li>TierBandSet fields (excluding credit interest eligibility).</li><li>All TierBand fields</li><li>**Note: Only current state credit interest information is required. Where the interest rate(s) have been negotiated, the actual rates applied to the account should be provided.**</li></ul> |
+| Overdraft | <ul><li>All TierBandSet fields (including OverdraftFeesAndCharges)</li><li>All TierBand fields (including OverdraftFeesAndCharges).</li><li>**Note: Only current state information is required. Where the overdraft rate(s) have been negotiated, the actual rates applied to the account should be provided.**</li></ul> |
+| Eligibility | **None** - Whether an organisation is eligible for other products cannot be determined by looking at existing product eligibility e.g., criteria for a startup can vary from bank to bank. |
+| FeaturesAndBenefits | **None** - The value of a particular feature and benefit to an accountholder is dependent on their use of that benefit and whether they met the eligibility criteria. Features &amp; benefits are less significant in the BCA market than the PCA. |
+| OtherFeesAndCharges | <ul><li>See Notes below</li></ul> |
 
 #### Notes
 
@@ -51,7 +51,7 @@ Further analysis required:-
 * Eligibility and FeaturesAndBenefits sections are removed from the Account Info section as information related to them might not be easily available.
 * **Unlike PCA, there is no requirement to publish a MaximumMonthlyCharge , so Monthly Charge field has been omitted. In the BCA On Sale Product Data API, There were two fields MonthlyCharge and IncludedInMonthlyChargeIndicator( OtherFeesAndCharges section). Both of these fields have been removed from this specification.**
 
-![ BCATopLevel.ClassDiagram.png ]( images/BCA/BCATopLevel.ClassDiagram.png )
+![BCATopLevel.ClassDiagram.png](./images/BCA/BCATopLevel.ClassDiagram.png)
 
 #### CreditInterest Model
 
@@ -62,7 +62,7 @@ Further analysis required:-
 * DepositInterestAppliedCoverage refers to which interest rate is applied when interests are tiered. For example, if an account balance is £2k and the interest tiers are:- 0-£500 0.1%, 500-1000 0.2%, 1000-10000 0.5%, then the applicable interest rate could either be 0.5% of the entire balance (since the account balance sits in the top interest tier) or (0.1%*500)+(0.2%*500)+(0.5%*1000). In the 1st situation, the interest should be applied to the "Whole" of the account balance, and in the 2nd this should be "Tiered".
 * Destination refers to whether the BCA allows interest to be credited to another account ("PayAway") or only to the BCA itself ("SelfCredit").
 
-![ BCAProductInfoCreditIntrstClassDiagram.png ]( images/BCA/BCAProductInfoCreditIntrstClassDiagram.png )
+![BCAProductInfoCreditIntrstClassDiagram.png](./images/BCA/BCAProductInfoCreditIntrstClassDiagram.png)
 
 #### Overdraft
 
@@ -84,14 +84,14 @@ Further analysis required:-
 * Setup/arrangement and renewal fees are common for business overdrafts, and therefore need to be included in the OB_BCAOverdraftFeeType1Codelist.
 * Fees/charges are often negotiable, so a NegotiableIndicator has been added to OverdraftFeeChargeDetail.
 
-![ BCAAccountInfoOverdraftt.ClassDiagram.png ]( images/BCA/BCAAccountInfoOverdraftt.ClassDiagram.png )
+![BCAAccountInfoOverdraftt.ClassDiagram.png](./images/BCA/BCAAccountInfoOverdraftt.ClassDiagram.png)
 
 #### OtherFeesCharges
 
 * OtherFeesCharges is a lot more important for companies who have not opened a startup or switcher account.
 * Fees/charges are often negotiable for BCA, so a NegotiableIndicator has been added to FeeChargeDetail.
 
-![ AINFOBCA.2.2.0.OtherFeesCharges.png ]( images/BCA/AINFOBCA.2.2.0.OtherFeesCharges.png )
+![AINFOBCA.2.2.0.OtherFeesCharges.png](./images/BCA/AINFOBCA.2.2.0.OtherFeesCharges.png)
 
 ## Data Model
 
@@ -105,7 +105,7 @@ Further analysis required:-
 * Other Fee Charges: Only Periodic Fee(service charge) has been included in the Code List.
 * We have taken Open Data BCA Segments for BCA Account Info as well.
 
-![ AINFOBCA.2.2.0.ClassDiagram.png ]( images/BCA/AINFOBCA.2.2.0.ClassDiagram.png )
+![AINFOBCA.2.2.0.ClassDiagram.png](./images/BCA/AINFOBCA.2.2.0.ClassDiagram.png)
 
 ### Data Dictionary
 

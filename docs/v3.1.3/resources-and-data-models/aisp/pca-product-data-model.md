@@ -23,14 +23,14 @@ Further analysis required:-
 
 | Product Section |Fields to be included |
 | --- |--- |
-| PCA (We'll rename this "Product" and merge PCA and CoreProduct attributes) |<li>Name <li>Open Data Product ID (Mandatory, if product info is available on Open Data PCA API) <li>ProductType ("PCA") <li>MonthlyMaximumCharge (Mandatory for "front book" products) |
-| CoreProduct |**None** - Will be merged in to new "Product" section. |
-| PCAMarketingState |**None** - Sections will only include current state information, so this section is not required |
-| CreditInterest |<li>TierBandSet fields (excluding credit interest eligibility). <li>All TierBand fields <br>**Note:** Only current state credit interest information is required. |
-| Overdraft |<li> All TierBandSet fields (including OverdraftFeesAndCharges) <li> All TierBand fields (including OverdraftFeesAndCharges). <br>**Note:** Only current state information is required. |
-| Eligibility |**None** - Eligibility criteria met when PCA was sold unlikely to be reliable. |
-| FeaturesAndBenefits |**None** - The value of a particular feature and benefit to an accountholder is dependent on their use of that benefit and whether they met eligibility criteria. Certain benefits may be provided by external suppliers making it difficult to provide real time info. Relevant general features &amp; benefits info can be obtained from Open Data API for "front book" products. |
-| OtherFeesAndCharges |<li> Periodic Fee (i.e. the service charge) |
+| PCA (We'll rename this "Product" and merge PCA and CoreProduct attributes) | <ul><li>Name</li><li>Open Data Product ID (Mandatory, if product info is available on Open Data PCA API)</li><li>ProductType ("PCA")</li><li>MonthlyMaximumCharge (Mandatory for "front book" products)</li></ul> |
+| CoreProduct | **None** - Will be merged in to new "Product" section. |
+| PCAMarketingState | **None** - Sections will only include current state information, so this section is not required |
+| CreditInterest | <ul><li>TierBandSet fields (excluding credit interest eligibility).</li><li>All TierBand fields <br>**Note:** Only current state credit interest information is required.</li></ul> |
+| Overdraft | <ul><li>All TierBandSet fields (including OverdraftFeesAndCharges)</li><li>All TierBand fields (including OverdraftFeesAndCharges). <br>**Note:** Only current state information is required.</li></ul> |
+| Eligibility | **None** - Eligibility criteria met when PCA was sold unlikely to be reliable. |
+| FeaturesAndBenefits | **None** - The value of a particular feature and benefit to an accountholder is dependent on their use of that benefit and whether they met eligibility criteria. Certain benefits may be provided by external suppliers making it difficult to provide real time info. Relevant general features &amp; benefits info can be obtained from Open Data API for "front book" products. |
+| OtherFeesAndCharges | <ul><li> Periodic Fee (i.e. the service charge)</li></ul> |
 
 ### Changes from the OpenData Model
 
@@ -39,7 +39,7 @@ Further analysis required:-
 * Eligibility and FeaturesAndBenefits section are removed from Product as information related to them might not be easily available. May be looked into, in future releases.
 * Monthly maximum charge (MMC): covering all unarranged overdraft charges (including debit interest)
 
-![ PCAHighLevel.ClassDiagram.png ]( images/PCA/PCAHighLevel.ClassDiagram.png )
+![PCAHighLevel.ClassDiagram.png](./images/PCA/PCAHighLevel.ClassDiagram.png)
 
 #### Credit Interest Model
 
@@ -50,7 +50,7 @@ Further analysis required:-
 * DepositInterestAppliedCoverage refers to which interest rate is applied when interests are tiered. For example, if an account balance is £2k and the interest tiers are:- 0-£500 0.1%, 500-1000 0.2%, 1000-10000 0.5%, then the applicable interest rate could either be 0.5% of the entire balance (since the account balance sits in the top interest tier) or (0.1%*500)+(0.2%*500)+(0.5%*1000). In the 1st situation, the interest should be applied to the "Whole" of the account balance and in the 2nd, this should be "Tiered".
 * Destination refers to whether the Product allows interest to be credited to another account ("PayAway") or only to itself ("SelfCredit").
 
-![ images/PCA/PCACreditInterestClassDiagram.png ]( images/PCA/PCACreditInterestClassDiagram.png )
+![images/PCA/PCACreditInterestClassDiagram.png](./images/PCA/PCACreditInterestClassDiagram.png)
 
 #### Overdraft
 
@@ -58,7 +58,7 @@ Further analysis required:-
 * Student Account: Can it be negotiated or back book product?
 * OverdraftFeeCharges are defined at TierBandSet level for fees/charges that are not tiered and at the TierBand level for those that are.
 
-![ PCAOverdraftClassDiagram.png ]( images/PCA/PCAOverdraftClassDiagram.png )
+![PCAOverdraftClassDiagram.png](./images/PCA/PCAOverdraftClassDiagram.png)
 
 #### OverdraftFeeCharges
 
@@ -72,7 +72,7 @@ Further analysis required:-
 
 * Other fee charges such as Service charge, Monthly Account Maintenance Fee or Service Charge - Account Fee.
 
-![ ainfopca.2.2.0.OtherFeesCharges.png ]( images/PCA/ainfopca.2.2.0.OtherFeesCharges.png )
+![ainfopca.2.2.0.OtherFeesCharges.png](./images/PCA/ainfopca.2.2.0.OtherFeesCharges.png)
 
 ## Data Model
 
@@ -86,7 +86,7 @@ Further analysis required:-
 * Other Fee Charges: Only Periodic Fee(service charge) has been included in the Code List.
 * We have taken Open Data PCA Segments for PCA Account Info as well.
 
-![ ainfopca.2.2.0.ClassDiagram.png ]( images/PCA/ainfopca.2.2.0.ClassDiagram.png )
+![ainfopca.2.2.0.ClassDiagram.png](./images/PCA/ainfopca.2.2.0.ClassDiagram.png)
 
 ##### Data Dictionary
 
@@ -482,6 +482,7 @@ HTTP/1.1 200 OK
 x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d
 Content-Type: application/json
 ```
+
 ```json
 {
    "Data":{

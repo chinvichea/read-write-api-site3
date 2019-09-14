@@ -30,7 +30,7 @@ Step 1: Send Event Notification
 
 #### Sequence Diagram
 
-![Real Time Event Notification](images/RealTimeEventNotification.png)
+![Real Time Event Notification](./images/RealTimeEventNotification.png)
 
 <details>
   <summary>Diagram source</summary>

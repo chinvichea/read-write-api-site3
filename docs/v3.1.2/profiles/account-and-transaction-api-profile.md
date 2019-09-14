@@ -88,7 +88,7 @@ Step 4: Request Data
 
 #### Sequence Diagram
 
-![](./images/AccountsOverviewwithCIBA.png)
+![AccountsOverviewwithCIBA.png](./images/AccountsOverviewwithCIBA.png)
 
 <details>
   <summary>Diagram source</summary>

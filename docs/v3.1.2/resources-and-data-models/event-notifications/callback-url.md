@@ -1,5 +1,6 @@
 ---
 ---
+
 # Callback URL - v3.1.2
 
 [[toc]]
@@ -20,7 +21,6 @@ A TPP will set up and maintain its call back details (URL and version number) us
 | callback-url |GET |GET /callback-urls |Mandatory (if resource POST implemented) |accounts<br>payments<br>fundsconfirmations |Client Credentials |Signed Response |No |n/a |OBCallbackUrlsResponse1 |
 | callback-url |PUT |PUT /callback-urls/{CallbackUrlId} |Mandatory (if resource POST implemented) |accounts<br>payments<br>fundsconfirmations |Client Credentials |Signed Request<br><br>Signed Response |No |OBCallbackUrlResponse1 |OBCallbackUrlResponse1 |
 | callback-url |DELETE |DELETE /callback-urls/{CallbackUrlId} |Mandatory (if resource POST implemented) |accounts<br>payments<br>fundsconfirmations |Client Credentials |n/a |No |n/a |n/a |
-
 
 #### POST /callback-urls
 
@@ -59,7 +59,7 @@ The OBCallbackurl1 object will be used for the call to:
 
 #### UML Diagram
 
-![OBCallbackUrl1](images/OBCallbackUrl1.gif)
+![OBCallbackUrl1](./images/OBCallbackUrl1.gif)
 
 #### Data Dictionary
 
@@ -83,7 +83,7 @@ The OBCallbackUrlResponse1 object will also be used for the call to:
 
 #### UML
 
-![OBCallbackUrlResponse1](images/OBCallbackUrlResponse1.gif)
+![OBCallbackUrlResponse1](./images/OBCallbackUrlResponse1.gif)
 
 #### Data Dictionary
 
@@ -105,7 +105,7 @@ The OBCallbackUrlsResponse1 object will be used for a response to a call to:
 
 #### UML
 
-![OBCallbackUrlsResponse1](images/OBCallbackUrlsResponse1.gif)
+![OBCallbackUrlsResponse1](./images/OBCallbackUrlsResponse1.gif)
 
 #### Data Dictionary
 

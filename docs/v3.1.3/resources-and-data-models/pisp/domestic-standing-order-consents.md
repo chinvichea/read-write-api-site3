@@ -61,7 +61,7 @@ The available Status codes for the domestic-standing-order-consent resource are:
 
 The state model for the domestic-standing-order-consent resource follows the generic consent state model. However, does not use the "Revoked" status, as the consent for a domestic-standing-order is not a long-lived consent.
 
-![Payment Order Consent](images/image2018-5-18_10-24-21.png)
+![Payment Order Consent](./images/image2018-5-18_10-24-21.png)
 
 The definitions for the Status:
 
@@ -84,7 +84,7 @@ This section describes the OBDomesticStandingOrder3 class, which is reused as th
 
 ##### UML Diagram
 
-![Domestic Standing Order](images/OBDomesticStandingOrder3.png)
+![Domestic Standing Order](./images/OBDomesticStandingOrder3.png)
 
 ##### Notes
 
@@ -158,7 +158,7 @@ The OBWriteDomesticStandingOrderConsent4 object will be used for the call to:
 
 #### UML Diagram
 
-![Domestic Standing Order Consent - Request](images/OBWriteDomesticStandingOrderConsent4.gif)
+![Domestic Standing Order Consent - Request](./images/OBWriteDomesticStandingOrderConsent4.gif)
 
 #### Notes
 
@@ -190,7 +190,7 @@ The OBWriteDomesticStandingOrderConsentResponse4 object will be used for a respo
 
 #### UML Diagram
 
-![Domestic Standing Order Consent - Response](images/OBWriteDomesticStandingOrderConsentResponse4.gif)
+![Domestic Standing Order Consent - Response](./images/OBWriteDomesticStandingOrderConsentResponse4.gif)
 
 #### Notes
 

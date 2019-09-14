@@ -24,7 +24,7 @@ Implementation of Event Notifications is **optional** for both ASPSPs and TPPs.
 
 #### Security Event Token Alignment
 
-Event notifications are aligned with the Security Event Token standard, a proposed IETF standard for exchanging information about security events. See https://tools.ietf.org/html/rfc8417. An event notification is structured as a JWT, indicating an event has occurred through a set of claims.
+Event notifications are aligned with the Security Event Token standard, a proposed IETF standard for exchanging information about security events. See <https://tools.ietf.org/html/rfc8417>. An event notification is structured as a JWT, indicating an event has occurred through a set of claims.
 
 A resource-update event (`urn:uk:org:openbanking:events:resource-update`) is used to communicate that a specific resource has been updated. It contains identifiers for the resource and links to retrieve it.
 
@@ -36,7 +36,7 @@ Event Notifications are signed for non-repudiation using the approach defined in
 
 #### SET Aggregation Alignment
 
-Aggregated polling of Security Event Tokens is aligned with the draft "Poll-Based Security Event Token (SET) Delivery Using HTTP" standard (draft-ietf-secevent-http-poll-01) as defined here: https://datatracker.ietf.org/doc/draft-ietf-secevent-http-poll/.
+Aggregated polling of Security Event Tokens is aligned with the draft "Poll-Based Security Event Token (SET) Delivery Using HTTP" standard (draft-ietf-secevent-http-poll-01) as defined here: <https://datatracker.ietf.org/doc/draft-ietf-secevent-http-poll/>.
 
 draft-ietf-secevent-http-poll-01 imposes the following constraints on the underlying SETs:
 
@@ -79,12 +79,12 @@ Step 3: Retrieve/Update/Delete Event Notification Subscription
 
 #### Sequence Diagram
 
-![](./images/EventNotifications(Full).png)
+![./images/EventNotifications(Full).png](./images/EventNotifications(Full).png)
 
 <details>
   <summary>Diagram source</summary>
 
-```
+```plantuml
 participant TPP
 participant ASPSP Authorisation Server
 participant ASPSP Resource Server

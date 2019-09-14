@@ -57,7 +57,7 @@ The Party resource contains a set of elements that describes a party. The party 
 
 ###### UML Diagram
 
-![ OBParty2.gif ]( images/Parties/OBParty2.gif )
+![OBParty2.gif](./images/Parties/OBParty2.gif)
 
 ###### Notes
 
@@ -104,7 +104,7 @@ The response to GET /accounts/{AccountId}/party and GET /party (if available)  *
 
 #### UML Diagram
 
-![ OBReadParty2.gif ]( images/Parties/OBReadParty2.gif )
+![OBReadParty2.gif](./images/Parties/OBReadParty2.gif)
 
 #### Data Dictionary
 
@@ -113,7 +113,6 @@ The response to GET /accounts/{AccountId}/party and GET /party (if available)  *
 | OBReadParty2 | |OBReadParty2 | |OBReadParty2 | | |
 | Data |1..1 |OBReadParty2/Data | |OBReadDataParty2 | | |
 | Party |0..1 |OBReadParty2/Data/Party | |OBParty2 | | |
-
 
 ### OBReadParty3
 
@@ -125,7 +124,7 @@ The response to GET /accounts/{AccountId}/parties  **may**  contain multiple par
 
 #### UML Diagram
 
-![ OBReadParty3.gif ]( images/Parties/OBReadParty3.gif )
+![OBReadParty3.gif](./images/Parties/OBReadParty3.gif)
 
 #### Data Dictionary
 
@@ -328,7 +327,7 @@ x-fapi-interaction-id: 7f570e68-c7f0-44e2-a934-a854d2ca8cca
 Accept: application/json
 ```
 
- #### Get Account Party Response
+#### Get Account Party Response
 
 ```
 HTTP/1.1 200 OK
@@ -376,7 +375,7 @@ x-fapi-interaction-id: 7903ae4f-bbdf-4291-bb23-bd44daf7bc24
 Accept: application/json
 ```
 
- #### Get Party Response
+#### Get Party Response
 
 ```
 HTTP/1.1 200 OK

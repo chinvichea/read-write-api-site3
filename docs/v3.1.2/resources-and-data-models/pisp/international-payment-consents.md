@@ -69,7 +69,7 @@ The API endpoint allows the PISP to ask an ASPSP to confirm funds on an **intern
 
 The state model for the international-payment-consent resource follows the generic consent state model. However, does not use the "Revoked" status, as the consent for an international-payment is not a long-lived consent.
 
-![Payment Order Consent State Model](images/image2018-5-18_10-24-21.png)
+![Payment Order Consent State Model](./images/image2018-5-18_10-24-21.png)
 
 The definitions for the Status:
 
@@ -92,7 +92,7 @@ This section describes the OBInternational2 class which is reused as the Initiat
 
 ##### UML Diagram
 
-![OB International Reusable class](images/OBInternational2.gif)
+![OB International Reusable class](./images/OBInternational2.gif)
 
 ##### Notes
 
@@ -193,7 +193,7 @@ The OBInternational2/ExchangeRateInformation object must conform to these behavi
 
 This section describes the OBExchangeRate2 class, which is used in the response payloads in the international-payment-consent resource.
 
-![Exchange Rate Model](images/OBExchangeRate2.gif)
+![Exchange Rate Model](./images/OBExchangeRate2.gif)
 
 ##### Data Dictionary
 
@@ -214,7 +214,7 @@ The OBWriteInternationalConsent3 object will be used for the call to:
 
 #### UML Diagram
 
-![International Payment Consent - Request](images/OBWriteInternationalConsent3.gif)
+![International Payment Consent - Request](./images/OBWriteInternationalConsent3.gif)
 
 #### Notes
 
@@ -252,7 +252,7 @@ The OBWriteInternationalConsentResponse3 object will be used for a response to a
 
 #### UML Diagram
 
-![International Payment Consent - Response](images/OBWriteInternationalConsentResponse3.gif)
+![International Payment Consent - Response](./images/OBWriteInternationalConsentResponse3.gif)
 
 #### Notes
 
@@ -310,7 +310,7 @@ The OBWriteFundsConfirmationResponse1 object will be used for a response to a ca
 
 #### UML Diagram
 
-![International Payment Consent Confirmation of Funds - Response](images/OBWriteConfirmFundsResponse1.gif)
+![International Payment Consent Confirmation of Funds - Response](./images/OBWriteConfirmFundsResponse1.gif)
 
 #### Notes
 

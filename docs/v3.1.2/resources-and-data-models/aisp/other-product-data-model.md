@@ -21,7 +21,7 @@ Further analysis required:-
 
 | Product Section |Fields to be included |
 | --- |--- |
-| ProductDetails |<ul><li>Name</li><li>Segmeent</li><li>Notes to capture other details</li></ul> |
+| ProductDetails | <ul><li>Name</li><li>Segmeent</li><li>Notes to capture other details</li></ul> |
 | CreditInterest | <ul><li>TierBandSet fields (excluding credit interest eligibility).</li><li>All TierBand fields</li></ul> |
 | LoanInterest | <ul><li>TierBandSet fields. <li>All TierBand fields</li></ul> |
 | Repayment | <ul><li>Repayment Charges <li>Repayment holiday</li></ul> |
@@ -30,13 +30,13 @@ Further analysis required:-
 
 ### Data Model
 
-![ OtherProductInfoMainPage.png ]( images/OtherProduct/OtherProductInfoMainPage.png )
+![OtherProductInfoMainPage.png](./images/OtherProduct/OtherProductInfoMainPage.png)
 
 #### CreditInterest Model
 
 * A generic data model to publish the Credit Interest functionality if applicable to Other Product Type.
 
-![ OtherProductInfoCreditInterest.png ]( images/OtherProduct/OtherProductInfoCreditInterest.png )
+![OtherProductInfoCreditInterest.png](./images/OtherProduct/OtherProductInfoCreditInterest.png)
 
 #### Overdraft
 
@@ -46,45 +46,44 @@ Further analysis required:-
 
 * A generic structure for Overdraft Fee Charges published only if applicable to Other Product Type .
 
-![ OtherProductInfoOverdraft.png ]( images/OtherProduct/OtherProductInfoOverdraft.png )
+![OtherProductInfoOverdraft.png](./images/OtherProduct/OtherProductInfoOverdraft.png)
 
 #### LoanInterest
 
 * A generic structure for Loan Interest published only if applicable to Other Product Type .
 
-![ OtherProductInfoLoanInterest.png ]( images/OtherProduct/OtherProductInfoLoanInterest.png )
+![OtherProductInfoLoanInterest.png](./images/OtherProduct/OtherProductInfoLoanInterest.png)
 
 #### Repayment
 
 * A generic structure for Loan Repayment along with Fee Charges published only if applicable to Other Product Type.
 
-![ OtherProductInfoRepayment.png ]( images/OtherProduct/OtherProductInfoRepayment.png )
+![OtherProductInfoRepayment.png](./images/OtherProduct/OtherProductInfoRepayment.png)
 
 #### OtherFeesCharges
 
 * A generic structure for Other Fee Charges published only if applicable to Other Product Type.
 
-![ OtherProductInfoOtherFeesCharges.png ]( images/OtherProduct/OtherProductInfoOtherFeesCharges.png )
+![OtherProductInfoOtherFeesCharges.png](./images/OtherProduct/OtherProductInfoOtherFeesCharges.png)
 
 #### SupplementaryData
 
 SupplementaryData allows to publish features or functionality that is not catered for by other sections of the data model.
 The Supplementary Data section is defined as an empty JSON object in the specification.
 Wherever used, an ASPSP **must** define and document (on their developer portal) their own structure, usage and (mandatory/optional) requirements for Supplementary Data.
-![ OtherProductInfoSupplementaryData.png ]( images/OtherProduct/OtherProductInfoSupplementaryData.png )
+![OtherProductInfoSupplementaryData.png](./images/OtherProduct/OtherProductInfoSupplementaryData.png)
 
 ### Data Payload
 
-![ OtherProductInfo.png ]( images/OtherProduct/OtherProductInfo.png )
+![OtherProductInfo.png](./images/OtherProduct/OtherProductInfo.png)
 
 ### Data Dictionary
 
-* [Other Product Type Data Definition]( productdatafiles/OtherProductInfo.v3.1.2.DD.xlsx )
-
+* [Other Product Type Data Definition](productdatafiles/OtherProductInfo.v3.1.2.DD.xlsx)
 
 ### Data Payload - Enumerations
 
-* [Other Product Type Code List]( productdatafiles/OtherProduct.v3.1.2.CodeList.xlsx )
+* [Other Product Type Code List](productdatafiles/OtherProduct.v3.1.2.CodeList.xlsx)
 
 ## Usage Examples
 

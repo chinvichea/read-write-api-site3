@@ -9,12 +9,12 @@
 
 This set of flows and payload examples are for creating and retrieving a domestic standing order through a PISP:
 
-![Domestic Standing Order - Sequence Diagram](images/DomesticStandingOrder.png)
+![Domestic Standing Order - Sequence Diagram](./images/DomesticStandingOrder.png)
 
 <details>
   <summary>Diagram source</summary>
 
-```
+```plantuml
 participant PSU
 participant PISP
 participant ASPSP Authorisation Server
@@ -64,6 +64,7 @@ PISP &lt;-> ASPSP Resource Server: Establish TLS 1.2 MA
 PISP -> ASPSP Resource Server: POST /domestic-standing-orders
 ASPSP Resource Server -> PISP: HTTP 201 (Created), DomesticStandingOrder resource
 ```
+
 </details>
 
 ### Create Domestic Standing Order Consent
@@ -177,6 +178,7 @@ Content-Type: application/json
 }
 
 ```
+
 ### Create a Domestic Standing Order
 
 #### POST /domestic-standing-orders request

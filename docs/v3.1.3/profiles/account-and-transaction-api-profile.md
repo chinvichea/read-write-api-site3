@@ -30,7 +30,7 @@ This document consists of the following parts:
 
 ### Resources
 
-Each of the Account and Transaction API resources are documented in the  [*Resources and Data Models*  /  *AISP*](../resources%20and%20data%20models/aisp) area of the specification. Each resource is documented with:
+Each of the Account and Transaction API resources are documented in the  [*Resources and Data Models*  /  *AISP*](../resources-and-data-models/aisp) area of the specification. Each resource is documented with:
 
 - Endpoints
   - The API endpoints available for the resource.
@@ -88,12 +88,12 @@ Step 4: Request Data
 
 #### Sequence Diagram
 
-![](./images/AccountsOverviewwithCIBA.png)
+![AccountsOverviewwithCIBA.png](./images/AccountsOverviewwithCIBA.png)
 
 <details>
   <summary>Diagram source</summary>
 
-```
+```plantuml
 participant PSU
 participant AISP
 participant ASPSP Authorisation Server
@@ -167,6 +167,7 @@ ASPSP Resource Server -> AISP: HTTP 200 (OK), List of transactions
 option footer=bar
 
 ```
+
 </details>
 
 ### Idempotency
@@ -187,7 +188,6 @@ The account-access-consent resource is referred to as an account-request resourc
 
 - An AISP **must not** create a Consent on a newer version, and use it on a previous version
   - E.g., A ConsentId for an account-access-consent created in v3, must not be used to access v2 endpoints.
-
 
 ##### GET
 
@@ -333,7 +333,7 @@ In addition the ReadStatementsDetail is required to access the statement file do
 
 Example behaviour of the Permissions for the ReadAccountsBasic and ReadAccountsDetail codes is as follows:
 
-![](./images/ReadAccounts.png)
+![ReadAccounts.png](./images/ReadAccounts.png)
 
 ###### Reversing Entries
 
@@ -551,18 +551,17 @@ Deviations from the camt.052 XML standard are:
 | OBExternalStatementType1Code |Interim |Adhoc or customised statement period. |
 | OBExternalStatementType1Code |RegularPeriodic |Regular pre-agreed reporting statement. |
 
-
 #### ISO Enumerations
 
 These following ISO Enumerations are used in the Accounts APIs.
 
 | ISO Data Type |Fields |ISO Enumeration Values URL |
 | --- |--- |--- |
-| Min3Max4Text |MerchantCategoryCode |https://www.iso.org/standard/33365.html |
-| ActiveOrHistoricCurrencyCode |Currency |https://www.iso20022.org/external_code_list.page |
-| CountryCode |Country |https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements |
-| ExternalBankTransactionFamily1Code |BankTransactionCode/Code |https://www.iso20022.org/external_code_list.page |
-| ExternalBankTransactionSubFamily1Code |BankTransactionCode/SubCode |https://www.iso20022.org/external_code_list.page |
+| Min3Max4Text |MerchantCategoryCode |<https://www.iso.org/standard/33365.html> |
+| ActiveOrHistoricCurrencyCode |Currency |<https://www.iso20022.org/external_code_list.page> |
+| CountryCode |Country |<https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements> |
+| ExternalBankTransactionFamily1Code |BankTransactionCode/Code |<https://www.iso20022.org/external_code_list.page> |
+| ExternalBankTransactionSubFamily1Code |BankTransactionCode/SubCode |<https://www.iso20022.org/external_code_list.page> |
 
 #### Namespaced Enumerations
 

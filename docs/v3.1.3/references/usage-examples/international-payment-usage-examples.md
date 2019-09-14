@@ -185,7 +185,6 @@ Accept: application/json
 }
 ```
 
-
 #### Response
 
 ```

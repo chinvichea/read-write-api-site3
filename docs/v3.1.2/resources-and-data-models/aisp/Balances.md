@@ -1,5 +1,6 @@
 ---
 ---
+
 # Balances - v3.1.2
 
 [[toc]]
@@ -41,7 +42,7 @@ An account (AccountId) may have multiple balance types (these follow the standar
 
 ### UML Diagram
 
-![ OBReadBalance1.gif ]( images/Balances/OBReadBalance1.gif )
+![OBReadBalance1.gif](./images/Balances/OBReadBalance1.gif)
 
 ### Notes
 
@@ -79,7 +80,6 @@ The resource requires the ReadBalances permission. The resource response payload
 ### Specific Account
 
 #### Get Account Balances Request
-
 
 ```
 GET /accounts/22289/balances HTTP/1.1

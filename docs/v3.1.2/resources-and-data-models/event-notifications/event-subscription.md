@@ -1,5 +1,6 @@
 ---
 ---
+
 # Event Subscription - v3.1.2
 
 [[toc]]
@@ -22,7 +23,6 @@ A TPP will set up and maintain its event subscription details (URL, event types 
 | event-subscription |GET |GET /event-subscriptions |Mandatory (if resource POST implemented) |accounts<br>payments<br>fundsconfirmations |Client Credentials |Signed Response |No |n/a |OBEventSubscriptionsResponse1 |
 | event-subscription |PUT |PUT /event-subscriptions/{EventSubscriptionId} |Mandatory (if resource POST implemented) |accounts<br>payments<br>fundsconfirmations |Client Credentials |Signed Request<br><br>Signed Response |No |OBEventSubscriptionResponse1 |OBEventSubscriptionResponse1 |
 | event-subscription |DELETE |DELETE /event-subscriptions/{EventSubscriptionId} |Mandatory (if resource POST implemented) |accounts<br>payments<br>fundsconfirmations |Client Credentials |n/a |No |n/a |n/a |
-
 
 #### POST /event-subscriptions
 
@@ -61,7 +61,7 @@ The OBEventSubscription1 object will be used for the call to:
 
 #### UML Diagram
 
-![OBEventSubscription1](images/OBEventSubscription1.gif)
+![OBEventSubscription1](./images/OBEventSubscription1.gif)
 
 #### Notes
 
@@ -96,7 +96,7 @@ The OBEventSubscriptionResponse1 object will also be used for the call to:
 
 #### UML
 
-![OBEventSubscriptionResponse1](images/OBEventSubscriptionResponse1.gif)
+![OBEventSubscriptionResponse1](./images/OBEventSubscriptionResponse1.gif)
 
 #### Data Dictionary
 
@@ -117,7 +117,7 @@ The OBEventSubscriptionsResponse1 object will be used for a response to a call t
 
 #### UML
 
-![OBEventSubscriptionsResponse1](images/OBEventSubscriptionsResponse1.gif)
+![OBEventSubscriptionsResponse1](./images/OBEventSubscriptionsResponse1.gif)
 
 #### Data Dictionary
 
@@ -130,7 +130,6 @@ The OBEventSubscriptionsResponse1 object will be used for a response to a call t
 | Url |0..1 |OBEventSubscriptionsResponse1/Data/EventSubscription/Url |Callback URL for a TPP hosted service. Will be used by ASPSPs, in conjunction with the resource name, to construct a URL to send event notifications to. |xs:anyURI | | |
 | Version |1..1 |OBEventSubscriptionsResponse1/Data/EventSubscription/Version |Version for the event notification. |Max10Text | | |
 | EventTypes |0..n |OBEventSubscriptionsResponse1/Data/EventSubscription/EventTypes |Array of event types the subscription applies to. |OBEventType1Code | | |
-
 
 ## Usage Examples
 

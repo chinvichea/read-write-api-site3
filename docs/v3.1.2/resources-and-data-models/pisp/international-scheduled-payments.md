@@ -92,7 +92,7 @@ The international-scheduled-payments - payment-details must have one of the foll
 
 The state model for the international-scheduled-payment resource describes the initiation status only. I.e., not the subsequent execution of the international-scheduled-payment.
 
-![ ScheduledPaymentOrderStatus.png ]( images/ScheduledPaymentOrderStatus.png )
+![ScheduledPaymentOrderStatus.png](./images/ScheduledPaymentOrderStatus.png)
 
 The definitions for the Status:
 
@@ -107,7 +107,7 @@ The definitions for the Status:
 
 If the payment-order requires multiple authorisations, the Status of the multiple authorisations will be updated in the MultiAuthorisation object.
 
-![ image2018-6-29_16-36-34.png ]( images/image2018-6-29_16-36-34.png )
+![image2018-6-29_16-36-34.png](./images/image2018-6-29_16-36-34.png)
 
 The definitions for the Status:
 
@@ -139,7 +139,7 @@ The OBWriteInternationalScheduled2 object will be used for a call to:
 
 #### UML Diagram
 
-![ OBWriteInternationalSchedule2.png ]( images/OBWriteInternationalSchedule2.png )
+![OBWriteInternationalSchedule2.png](./images/OBWriteInternationalSchedule2.png)
 
 #### Notes
 
@@ -168,7 +168,7 @@ The OBWriteInternationalScheduledResponse3 object will be used for a response to
 
 #### UML Diagram
 
-![ OBWriteInternationalScheduledResponse3.png ]( images/OBWriteInternationalScheduledResponse3.png )
+![OBWriteInternationalScheduledResponse3.png](./images/OBWriteInternationalScheduledResponse3.png)
 
 #### Notes
 
@@ -210,7 +210,7 @@ The OBWritePaymentDetailsResponse1 object will be used for a response to a call 
 
 #### UML Diagram
 
-![OBWritePaymentDetailsResponse1.png](images/OBWritePaymentDetailsResponse1.png)
+![OBWritePaymentDetailsResponse1.png](./images/OBWritePaymentDetailsResponse1.png)
 
 #### Data Dictionary
 

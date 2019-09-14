@@ -34,12 +34,12 @@ Step 2: Retrieve/Update/Delete Event Notification Subscription
 
 #### Sequence Diagram
 
-![Event Subscriptions](images/EventSubscriptions.png)
+![Event Subscriptions](./images/EventSubscriptions.png)
 
 <details>
   <summary>Diagram source</summary>
 
-  ```
+```plantuml
 participant TPP
 participant ASPSP Authorisation Server
 participant ASPSP Resource Server
@@ -91,7 +91,7 @@ The CallbackUrl **must** end with the Event Notification API specification versi
 
 For example:
 
-* URL: https://tpp.com/open-banking/v3.1/event-notifications
+* URL: <https://tpp.com/open-banking/v3.1/event-notifications>
 
 #### Aggregated Polling
 
