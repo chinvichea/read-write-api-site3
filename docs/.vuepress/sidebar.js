@@ -414,11 +414,11 @@ module.exports = [
     // v3.1.1
     {
         title: 'Version 3.1.1',
-        path: 'https://standards.openbanking.xyz/api-specifications/read-write-specs/v3-1-1/',
+        path: 'https://standards.openbanking.org.uk/api-specifications/read-write-specs/v3-1-1/',
     },
     // v3.1
     {
         title: 'Version 3.1',
-        path: 'https://standards.openbanking.xyz/api-specifications/read-write-specs/v3-1/',
+        path: 'https://standards.openbanking.org.uk/api-specifications/read-write-specs/v3-1/',
     },
 ];
