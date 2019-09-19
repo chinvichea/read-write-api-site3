@@ -2,6 +2,10 @@
 
 Fork of <https://github.com/OpenBankingUK/read-write-api-site2>.
 
+## Status
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d523b90e-cb71-41eb-984b-ae31ac9353e6/deploy-status)](https://app.netlify.com/sites/banaio-read-write-api-site2/deploys)
+
 ## Build
 
 ```sh
