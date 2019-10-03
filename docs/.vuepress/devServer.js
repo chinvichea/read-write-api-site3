@@ -11,8 +11,8 @@ module.exports = {
         warnings: false,
         errors: false,
     },
-    // https://webpack.js.org/configuration/dev-server/#devserveropen
-    open: 'Google Chrome',
+    // // https://webpack.js.org/configuration/dev-server/#devserveropen
+    // open: 'Google Chrome',
     // https://webpack.js.org/configuration/dev-server/#devserverwatchcontentbase
     watchContentBase: true,
 };

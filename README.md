@@ -2,6 +2,11 @@
 
 Fork of <https://github.com/OpenBankingUK/read-write-api-site2>.
 
+## Live
+
+* <https://banaio-read-write-api-site2.netlify.com/>.
+* <https://github.com/banaio/read-write-api-site2>.
+
 ## Status
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d523b90e-cb71-41eb-984b-ae31ac9353e6/deploy-status)](https://app.netlify.com/sites/banaio-read-write-api-site2/deploys)
@@ -29,6 +34,18 @@ yarn lint-md
 
 ## Deploy
 
+### Netlify
+
+The [Netlify](https://www.netlify.com/) is automatically deployed to <https://banaio-read-write-api-site2.netlify.com/> when a commit is pushed to `master`:
+
+> Auto publishing is on. Deploys from master are published automatically.
+
+See <https://app.netlify.com/sites/banaio-read-write-api-site2/deploys> for all the deploys.
+
+### GitHub Pages
+
+The [GitHub Pages](https://pages.github.com/) needs a manual deploy.
+
 Manually deploy to the `gh-pages` branch using the script, then delete the `docs/.vuepress/dist` folder:
 
 ```sh
@@ -39,26 +56,4 @@ then go to <https://github.com/banaio/read-write-api-site2>.
 
 ## IFrame
 
-Code for how to embed the page in an IFrame:
-
-```html
-<!DOCTYPE html>
-<html lang="en-US" style='width: 100%; height: 100%'>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <style>
-    </style>
-</head>
-
-<body style='width: 100%; height: 100%'>
-    <iframe allowfullscreen='true' style='width: 100%; height: 100%'
-        src="https://banaio.github.io/read-write-api-site2/index.html">
-        <p>Your browser does not support iframes.</p>
-    </iframe>
-
-</body>
-
-</html>
-```
+See [./examples/EXAMPLES.md](./examples/EXAMPLES.md).
