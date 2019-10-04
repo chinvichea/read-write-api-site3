@@ -32,7 +32,7 @@
     "textlint-rule-stop-words": "^1.0.17",
     "textlint-rule-terminology": "^1.1.30",
     "textlint-rule-write-good": "^1.6.2",
-    "vuepress": "^1.0.4"
+    "vuepress": "^1.1.0"
   },
   "scripts": {
     "docs:dev:no-cache": "vuepress dev docs --no-clear-screen --no-cache --debug",

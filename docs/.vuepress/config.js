@@ -5,21 +5,33 @@
 
 const sidebar = require('./sidebar.js');
 const nav = require('./nav.js');
+const head = require('./head.js');
 const devServer = require('./devServer.js');
 const markdown = require('./markdown.js');
 
 module.exports = {
     base: '/read-write-api-site2/',
-    title: 'Read/Write API',
+    // title: 'Read/Write API',
     description: 'OBIE Read/Write API Standards',
+    // https://vuepress.vuejs.org/config/#head
+    head,
     // https://vuepress.vuejs.org/theme/default-theme-config.html
     themeConfig: {
-        lastUpdated: 'Last Updated',
+        // search: false,
+        logo: '/assets/img/logo-dark.svg',
+        // logo: '/assets/img/OBIE_logotype_blue_RGB.jpg',
         sidebar,
         nav,
         sidebarDepth: 0,
         // https://vuepress.vuejs.org/theme/default-theme-config.html#search-box
         searchMaxSuggestions: 20,
+        // https://vuepress.vuejs.org/theme/default-theme-config.html#smooth-scrolling
+        smoothScroll: true,
+        // https://vuepress.vuejs.org/theme/default-theme-config.html#last-updated
+        lastUpdated: 'Last Updated',
+        // https://vuepress.vuejs.org/theme/default-theme-config.html#git-repository-and-edit-links
+        // repo: 'banaio/read-write-api-site2',
+        // editLinks: true,
     },
     markdown,
     extendMarkdown: (md) => {
@@ -44,6 +56,20 @@ module.exports = {
                 // searchMaxSuggestions: Number.MAX_SAFE_INTEGER,
             },
         ],
+        // [
+        //     (pluginOptions, context) => {
+        //         const name = 'read-write-api-site-plugin-header';
+        //         console.log('plugins[%s] - md=', name, pluginOptions);
+        //         console.log('plugins[%s] - context=', name, context);
+        //         return {
+        //             name,
+        //             globalUIComponents: [
+        //                 // 'Component-1',
+        //                 // 'Component-2'
+        //             ]
+        //         };
+        //     },
+        // ]
     ],
     // These settings configures the server that is started when you do `yarn docs:dev`.
     // With the current configuration settings, if you open Google Chrome DevTools after navigating
@@ -65,7 +91,7 @@ module.exports = {
         // * https://cli.vuejs.org/guide/webpack.html#replacing-loaders-of-a-rule
         // * https://github.com/vuejs/vue-cli/issues/3215
 
-        console.log('chainWebpack: isServer=', isServer);
+        // console.log('chainWebpack: isServer=', isServer);
 
         // config.module.rule('fonts').use('url-loader').tap((opts) => {
         //     const options = Object.assign(opts, { limit: 0 });
@@ -86,6 +112,9 @@ module.exports = {
     // https://vuepress.vuejs.org/config/#extrawatchfiles
     extraWatchFiles: [
         '.vuepress/devServer.js',
+        '.vuepress/enhanceApp.js',
+        '.vuepress/head.js',
+        '.vuepress/markdown.js',
         '.vuepress/nav.js',
         '.vuepress/sidebar.js',
         '.vuepress/public/iframe_live.html',
