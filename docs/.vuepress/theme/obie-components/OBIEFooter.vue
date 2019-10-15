@@ -52,6 +52,10 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: stretch;
+
+  font-family: 'Equip', 'equip', sans-serif;
+  word-spacing: 0;
+  font-weight: 300;
 }
 
 .footer-navigation {

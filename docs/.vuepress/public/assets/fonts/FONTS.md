@@ -1,5 +1,9 @@
 # `FONTS`
 
+## Equip
+
+<http://nickthetailor.com/fonts/equip/>.
+
 ## Open Sans
 
 There are two options for using, [Open Sans](https://fonts.google.com/specimen/Open+Sans), this font:
