@@ -147,23 +147,30 @@ export default {
       margin-bottom -2px
       border-bottom 2px solid lighten($accentColor, 8%)
 
-.nav-item {
-  color: #283973;
-  font-weight: bold;
-  font-style: normal;
-  text-transform: none;
-  text-decoration: none;
+.nav-links {
+  a {
+    color: #283973;
+    font-weight: bold;
+    font-style: normal;
+    text-transform: none;
+    text-decoration: none;
+    font-weight: 700;
+  }
 }
 
 @media not all and (min-width: $MQMobile){
-  .nav-item {
-    font-size: 14px;
+  .nav-links {
+    a {
+      font-size: 14px;
+    }
   }
 }
 
 @media not all and (max-width: $MQMobile) {
-  .nav-item {
-    font-size: 14px;
+  .nav-links {
+    a {
+      font-size: 14px;
+    }
   }
 }
 </style>
