@@ -20,7 +20,7 @@ git commit -m 'deploy'
 # if you are deploying to https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
-# if you are deploying to https://banaio.github.io/read-write-api-site2 or https://banaio.github.io/read-write-api-site2/
-git push -f git@github.com:banaio/read-write-api-site2.git master:gh-pages
+# if you are deploying to https://banaio.github.io/read-write-api-site3 or https://banaio.github.io/read-write-api-site3/
+git push -f git@github.com:banaio/read-write-api-site3.git master:gh-pages
 
 cd -

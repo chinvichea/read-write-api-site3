@@ -19,7 +19,7 @@
 # PER-DEPLOY.
 
 [[redirects]]
-  from = "/read-write-api-site2/*"
+  from = "/read-write-api-site3/*"
   to = "/:splat"
   status = 200
   force = true

@@ -10,7 +10,7 @@ const devServer = require('./devServer.js');
 const markdown = require('./markdown.js');
 
 module.exports = {
-    base: '/read-write-api-site2/',
+    base: '/read-write-api-site3/',
     // title: 'Read/Write API',
     description: 'OBIE Read/Write API Standards',
     // https://vuepress.vuejs.org/config/#head
@@ -30,7 +30,7 @@ module.exports = {
         // https://vuepress.vuejs.org/theme/default-theme-config.html#last-updated
         lastUpdated: 'Last Updated',
         // https://vuepress.vuejs.org/theme/default-theme-config.html#git-repository-and-edit-links
-        // repo: 'banaio/read-write-api-site2',
+        // repo: 'banaio/read-write-api-site3',
         // editLinks: true,
     },
     markdown,
@@ -117,8 +117,5 @@ module.exports = {
         '.vuepress/markdown.js',
         '.vuepress/nav.js',
         '.vuepress/sidebar.js',
-        '.vuepress/public/iframe_live.html',
-        '.vuepress/public/iframe_localhost.html',
-        '.vuepress/public/iframe_original.html',
     ],
 };
