@@ -30,7 +30,7 @@ module.exports = {
         // https://vuepress.vuejs.org/theme/default-theme-config.html#last-updated
         lastUpdated: 'Last Updated',
         // https://vuepress.vuejs.org/theme/default-theme-config.html#git-repository-and-edit-links
-        // repo: 'banaio/read-write-api-site3',
+        // repo: 'OpenBankingUK/read-write-api-site3',
         // editLinks: true,
     },
     markdown,
