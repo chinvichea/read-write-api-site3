@@ -1,4 +1,4 @@
-# BCA Product Data Model - v3.1.4
+# BCA Product Data Model - v3.1.4 <!-- omit in toc -->
 
 1. [Overview](#overview)
    1. [Fields to include in BCA Product](#fields-to-include-in-bca-product)
@@ -51,14 +51,14 @@ Further analysis required:-
 
 | Product Section |Fields to be included |
 | --- |--- |
-| BCA (We'll rename this "Product" and merge BCA and CoreProduct attributes) |<li>Name <li>ProductType ("BCA") <li>Product Segment (e.g. "Startup","Switcher",...) <li>Open Data Product ID (Mandatory, if product info is available on Open Data BCA API) <li>Fee-free period |
+| BCA (We'll rename this "Product" and merge BCA and CoreProduct attributes) |<ul><li>Name</li> <li>ProductType ("BCA") </li><li>Product Segment (e.g. "Startup","Switcher",...) </li><li>Open Data Product ID (Mandatory, if product info is available on Open Data BCA API) </li><li>Fee-free period</li></ul> |
 | CoreProduct |**None** - Will be merged in to new "Product" section. |
 | BCAMarketingState |**None** - Sections will only include current state information, so this section is not required. |
-| CreditInterest |<li>TierBandSet fields (excluding credit interest eligibility). <li>All TierBand fields <li>**Note: Only current state credit interest information is required. Where the interest rate(s) have been negotiated, the actual rates applied to the account should be provided.** |
-| Overdraft |<li>All TierBandSet fields (including OverdraftFeesAndCharges) <li>All TierBand fields (including OverdraftFeesAndCharges). <li>**Note: Only current state information is required. Where the overdraft rate(s) have been negotiated, the actual rates applied to the account should be provided.** |
+| CreditInterest |<ul><li>TierBandSet fields (excluding credit interest eligibility). </li><li>All TierBand fields </li><li>**Note: Only current state credit interest information is required. Where the interest rate(s) have been negotiated, the actual rates applied to the account should be provided.**</li></ul> |
+| Overdraft |<ul><li>All TierBandSet fields (including OverdraftFeesAndCharges) </li><li>All TierBand fields (including OverdraftFeesAndCharges). </li><li>**Note: Only current state information is required. Where the overdraft rate(s) have been negotiated, the actual rates applied to the account should be provided.** </li></ul>|
 | Eligibility |**None** - Whether an organisation is eligible for other products cannot be determined by looking at existing product eligibility e.g., criteria for a startup can vary from bank to bank. |
 | FeaturesAndBenefits |**None** - The value of a particular feature and benefit to an accountholder is dependent on their use of that benefit and whether they met the eligibility criteria. Features &amp; benefits are less significant in the BCA market than the PCA. |
-| OtherFeesAndCharges |<li>See Notes below |
+| OtherFeesAndCharges |<ul><li>See Notes below</li></ul> |
 
 #### Notes
 
@@ -87,7 +87,7 @@ Further analysis required:-
 
 * AER is the only representative rate for CreditInterest for product comparison purposes and therefore has been explicitly captured.
 * The banks often also specify Gross rates. Net is usually determined by removing basic rate tax only, and banks stopped doing this from April 2016. This may still be required for backbook products.
-* It has been ensured that both the calculation and application frequency for credit interest is captured.
+* It has been ensured that both the calculation and application frequency for credit interest is captured. 
 * The term "Nominal" used by some banks is synonymous with "Gross".
 * DepositInterestAppliedCoverage refers to which interest rate is applied when interests are tiered. For example, if an account balance is £2k and the interest tiers are:- 0-£500 0.1%, 500-1000 0.2%, 1000-10000 0.5%, then the applicable interest rate could either be 0.5% of the entire balance (since the account balance sits in the top interest tier) or (0.1%*500)+(0.2%*500)+(0.5%*1000). In the 1st situation, the interest should be applied to the "Whole" of the account balance, and in the 2nd this should be "Tiered".
 * Destination refers to whether the BCA allows interest to be credited to another account ("PayAway") or only to the BCA itself ("SelfCredit").

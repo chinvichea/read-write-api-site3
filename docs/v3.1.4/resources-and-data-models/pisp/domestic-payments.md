@@ -1,37 +1,38 @@
-# Domestic Payments - v3.1.4
+# Domestic Payments - v3.1.2
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [POST /domestic-payments](#post-domestic-payments)
-      1. [Status](#status)
-   2. [GET /domestic-payments/{DomesticPaymentId}](#get-domestic-paymentsdomesticpaymentid)
-      1. [Status](#status-1)
-   3. [GET /domestic-payments/{DomesticPaymentId}/payment-details](#get-domestic-paymentsdomesticpaymentidpayment-details)
-      1. [Status](#status-2)
-   4. [State Model](#state-model)
-      1. [Payment Order](#payment-order)
-         1. [Multiple Authorisation](#multiple-authorisation)
-3. [Data Model](#data-model)
-   1. [Reused Classes](#reused-classes)
-      1. [OBDomestic2](#obdomestic2)
-   2. [Domestic Payment - Request](#domestic-payment---request)
-      1. [UML Diagram](#uml-diagram)
-      2. [Notes](#notes)
-      3. [Data Dictionary](#data-dictionary)
-   3. [Domestic Payment - Response](#domestic-payment---response)
-      1. [UML Diagram](#uml-diagram-1)
-      2. [Notes](#notes-1)
-      3. [Data Dictionary](#data-dictionary-1)
-   4. [Domestic Payment Order - Payment Details - Response](#domestic-payment-order---payment-details---response)
-      1. [UML Diagram](#uml-diagram-2)
-      2. [Data Dictionary](#data-dictionary-2)
-4. [Usage Examples](#usage-examples)
-   1. [POST /domestic-payments](#post-domestic-payments-1)
-      1. [Request](#request)
-      2. [Response](#response)
-   2. [GET /domestic-payments/{DomesticPaymentId}](#get-domestic-paymentsdomesticpaymentid-1)
-      1. [Request](#request-1)
-      2. [Response](#response-1)
+1. [Domestic Payments - v3.1.2](#domestic-payments---v312)
+   1. [Overview](#overview)
+   2. [Endpoints](#endpoints)
+      1. [POST /domestic-payments](#post-domestic-payments)
+         1. [Status](#status)
+      2. [GET /domestic-payments/{DomesticPaymentId}](#get-domestic-paymentsdomesticpaymentid)
+         1. [Status](#status-1)
+      3. [GET /domestic-payments/{DomesticPaymentId}/payment-details](#get-domestic-paymentsdomesticpaymentidpayment-details)
+         1. [Status](#status-2)
+      4. [State Model](#state-model)
+         1. [Payment Order](#payment-order)
+            1. [Multiple Authorisation](#multiple-authorisation)
+   3. [Data Model](#data-model)
+      1. [Reused Classes](#reused-classes)
+         1. [OBDomestic2](#obdomestic2)
+      2. [Domestic Payment - Request](#domestic-payment---request)
+         1. [UML Diagram](#uml-diagram)
+         2. [Notes](#notes)
+         3. [Data Dictionary](#data-dictionary)
+      3. [Domestic Payment - Response](#domestic-payment---response)
+         1. [UML Diagram](#uml-diagram-1)
+         2. [Notes](#notes-1)
+         3. [Data Dictionary](#data-dictionary-1)
+      4. [Domestic Payment Order - Payment Details - Response](#domestic-payment-order---payment-details---response)
+         1. [UML Diagram](#uml-diagram-2)
+         2. [Data Dictionary](#data-dictionary-2)
+   4. [Usage Examples](#usage-examples)
+      1. [POST /domestic-payments](#post-domestic-payments-1)
+         1. [Request](#request)
+         2. [Response](#response)
+      2. [GET /domestic-payments/{DomesticPaymentId}](#get-domestic-paymentsdomesticpaymentid-1)
+         1. [Request](#request-1)
+         2. [Response](#response-1)
 
 ## Overview
 
@@ -58,7 +59,7 @@ Once the domestic-payment-consent has been authorised by the PSU, the PISP can p
 
 #### Status
 
-A domestic-payment can only be created if its corresponding domestic-payment-consent resource has the status of "Authorised".
+A domestic-payment can only be created if its corresponding domestic-payment-consent resource has the status of "Authorised". 
 
 The domestic-payment resource that is created successfully must have one of the following PaymentStatusCode code-set enumerations:
 
@@ -193,17 +194,17 @@ The **Initiation** and **Risk** sections of the domestic-payment request **must*
 
 ### Domestic Payment - Response
 
- The OBWriteDomesticResponse4 object will be used for a response to a call to:
+The OBWriteDomesticResponse4 object will be used for a response to a call to:
 
  * POST /domestic-payments
  * GET /domestic-payments/{DomesticPaymentId}
 
 #### UML Diagram
 
- ![OBWriteDomesticResponse4](images/OBWriteDomesticResponse4.png)
+![OBWriteDomesticResponse4](images/OBWriteDomesticResponse4.png)
 
 #### Notes
-
+ 
 The domestic-payment **response** object contains the:
 
 * DomesticPaymentId.
