@@ -1,31 +1,9 @@
-# International Scheduled Payments - v3.1.4
+---
+---
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-	1. [POST /international-scheduled-payments](#post-international-scheduled-payments)
-		1. [Status](#status)
-	2. [GET /international-scheduled-payments/{InternationalScheduledPaymentId}](#get-international-scheduled-paymentsinternationalscheduledpaymentid)
-		1. [Status](#status-1)
-	3. [GET /international-scheduled-payments/{InternationalScheduledPaymentId}/payment-details](#get-international-scheduled-paymentsinternationalscheduledpaymentidpayment-details)
-		1. [Status](#status-2)
-	4. [State Model](#state-model)
-		1. [Payment Order](#payment-order)
-			1. [Multiple Authorisation](#multiple-authorisation)
-3. [Data Model](#data-model)
-	1. [Reused Classes](#reused-classes)
-		1. [OBInternationalScheduled3](#obinternationalscheduled3)
-		2. [OBExchangeRate2](#obexchangerate2)
-	2. [International Scheduled Payment - Request](#international-scheduled-payment---request)
-		1. [UML Diagram](#uml-diagram)
-		2. [Notes](#notes)
-		3. [Data Dictionary](#data-dictionary)
-	3. [International Scheduled Payment - Response](#international-scheduled-payment---response)
-		1. [UML Diagram](#uml-diagram-1)
-		2. [Notes](#notes-1)
-		3. [Data Dictionary](#data-dictionary-1)
-	4. [International Schedule Payment Order - Payment Details - Response](#international-schedule-payment-order---payment-details---response)
-		1. [UML Diagram](#uml-diagram-2)
-		2. [Data Dictionary](#data-dictionary-2)
+# International Scheduled Payments - v3.1.4-draft4
+
+[[toc]]
 
 ## Overview
 

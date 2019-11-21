@@ -1,34 +1,9 @@
-# Domestic Scheduled Payments  - v3.1.4
+---
+---
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [POST /domestic-scheduled-payments](#post-domestic-scheduled-payments)
-      1. [Status](#status)
-   2. [GET /domestic-scheduled-payments/{DomesticScheduledPaymentId}](#get-domestic-scheduled-paymentsdomesticscheduledpaymentid)
-      1. [Status](#status-1)
-   3. [GET /domestic-scheduled-payments/{DomesticScheduledPaymentId}/payment-details](#get-domestic-scheduled-paymentsdomesticscheduledpaymentidpayment-details)
-      1. [Status](#status-2)
-   4. [State Model](#state-model)
-      1. [Payment Order](#payment-order)
-         1. [Multiple Authorisation](#multiple-authorisation)
-3. [Data Model](#data-model)
-   1. [Reused Classes](#reused-classes)
-      1. [OBDomesticScheduled2](#obdomesticscheduled2)
-   2. [Domestic Scheduled Payment - Request](#domestic-scheduled-payment---request)
-      1. [UML Diagram](#uml-diagram)
-      2. [Notes](#notes)
-      3. [Data Dictionary](#data-dictionary)
-   3. [Domestic Scheduled Payment - Response](#domestic-scheduled-payment---response)
-      1. [UML Diagram](#uml-diagram-1)
-      2. [Notes](#notes-1)
-      3. [Data Dictionary](#data-dictionary-1)
-   4. [Domestic Schedule Payment Order - Payment Details - Response](#domestic-schedule-payment-order---payment-details---response)
-      1. [UML Diagram](#uml-diagram-2)
-      2. [Data Dictionary](#data-dictionary-2)
-4. [Usage Examples](#usage-examples)
-      1. [Create a Domestic Scheduled Payment](#create-a-domestic-scheduled-payment)
-         1. [POST /domestic-scheduled-payments Request](#post-domestic-scheduled-payments-request)
-         2. [POST /domestic-scheduled-payments Response](#post-domestic-scheduled-payments-response)
+# Domestic Scheduled Payments  - v3.1.4-draft4
+
+[[toc]]
 
 ## Overview
 
@@ -249,7 +224,7 @@ The OBWritePaymentDetailsResponse1 object will be used for a response to a call 
 
 ##### POST /domestic-scheduled-payments Request
 
-```text
+```
 POST /domestic-scheduled-payments HTTP/1.1
 Authorization: Bearer 2YotnFZFEjr1zCsicMWpAA
 x-idempotency-key: FRESNO.1317.GFX.22
@@ -296,7 +271,7 @@ Accept: application/json
 
 ##### POST /domestic-scheduled-payments Response
 
-```text
+```
 HTTP/1.1 201 Created
 x-jws-signature: V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K
 x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d

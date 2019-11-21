@@ -1,18 +1,9 @@
-# Callback URL API Profile - v3.1.4
+---
+---
 
-1. [Overview](#overview)
-2. [Basics](#basics)
-   1. [Overview](#overview-1)
-      1. [Steps](#steps)
-      2. [Sequence Diagram](#sequence-diagram)
-   2. [Callback URL](#callback-url)
-   3. [Release Management](#release-management)
-      1. [Callback-URL Resource](#callback-url-resource)
-         1. [POST](#post)
-         2. [GET](#get)
-         3. [PUT](#put)
-         4. [DELETE](#delete)
-   4. [Callback-URL per TPP](#callback-url-per-tpp)
+# Callback URL API Profile - v3.1.4-draft4
+
+[[toc]]
 
 ## Overview
 

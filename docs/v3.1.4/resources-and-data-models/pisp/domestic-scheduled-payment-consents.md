@@ -1,31 +1,9 @@
-# Domestic Scheduled Payment Consents  - v3.1.4
+---
+---
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [POST /domestic-scheduled-payment-consents](#post-domestic-scheduled-payment-consents)
-      1. [Status](#status)
-   2. [GET /domestic-scheduled-payment-consents/{ConsentId}](#get-domestic-scheduled-payment-consentsconsentid)
-      1. [Status](#status-1)
-   3. [State Model](#state-model)
-      1. [Payment Order Consent](#payment-order-consent)
-3. [Data Model](#data-model)
-   1. [Reused Classes](#reused-classes)
-      1. [OBDomesticScheduled2](#obdomesticscheduled2)
-         1. [UML Diagram](#uml-diagram)
-         2. [Notes](#notes)
-         3. [Data Dictionary](#data-dictionary)
-   2. [Domestic Scheduled Payment Consent - Request](#domestic-scheduled-payment-consent---request)
-      1. [UML Diagram](#uml-diagram-1)
-      2. [Notes](#notes-1)
-      3. [Data Dictionary](#data-dictionary-1)
-   3. [Domestic Scheduled Payment Consent - Response](#domestic-scheduled-payment-consent---response)
-      1. [UML Diagram](#uml-diagram-2)
-      2. [Notes](#notes-2)
-      3. [Data Dictionary](#data-dictionary-2)
-4. [Usage Examples](#usage-examples)
-      1. [Create a Domestic Scheduled Payment Consent](#create-a-domestic-scheduled-payment-consent)
-         1. [POST /domestic-scheduled-payment-consents Request](#post-domestic-scheduled-payment-consents-request)
-         2. [POST /domestic-scheduled-payment-consents Response](#post-domestic-scheduled-payment-consents-response)
+# Domestic Scheduled Payment Consents  - v3.1.4-draft4
+
+[[toc]]
 
 ## Overview
 
@@ -247,7 +225,7 @@ The domestic-scheduled-payment-consent **response** contains the full **original
 
 ##### POST /domestic-scheduled-payment-consents Request
 
-```text
+```
 POST /domestic-scheduled-payment-consents HTTP/1.1
 Authorization: Bearer 2YotnFZFEjr1zCsicMWpAA
 x-idempotency-key: FRESCO.21302.GFX.20
@@ -296,7 +274,7 @@ Accept: application/json
 
 ##### POST /domestic-scheduled-payment-consents Response
 
-```text
+```
 HTTP/1.1 201 Created
 x-jws-signature: V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K
 x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d

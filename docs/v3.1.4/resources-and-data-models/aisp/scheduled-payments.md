@@ -1,22 +1,9 @@
-# Scheduled Payments - v3.1.4
+---
+---
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [GET /accounts/{AccountId}/scheduled-payments](#get-accountsaccountidscheduled-payments)
-   2. [GET /scheduled-payments](#get-scheduled-payments)
-3. [Data Model](#data-model)
-   1. [Resource Definition](#resource-definition)
-   2. [UML Diagram](#uml-diagram)
-      1. [Notes](#notes)
-   3. [Permission Codes](#permission-codes)
-   4. [Data Dictionary](#data-dictionary)
-4. [Usage Examples](#usage-examples)
-   1. [Specific Account](#specific-account)
-      1. [Get Account Specific Scheduled Payments Request](#get-account-specific-scheduled-payments-request)
-      2. [Response: Get Accounts Specific Scheduled Payments Response](#response-get-accounts-specific-scheduled-payments-response)
-   2. [Bulk](#bulk)
-      1. [Get Bulk Scheduled Payments Request](#get-bulk-scheduled-payments-request)
-      2. [Get Bulk Scheduled Payments Response](#get-bulk-scheduled-payments-response)
+# Scheduled Payments - v3.1.4-draft4
+
+[[toc]]
 
 ## Overview
 

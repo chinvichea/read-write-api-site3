@@ -1,21 +1,9 @@
-# Beneficiaries - v3.1.4
+---
+---
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [GET/accounts/{AccountId}/beneficiaries](#getaccountsaccountidbeneficiaries)
-   2. [GET /beneficiaries](#get-beneficiaries)
-3. [Data Model](#data-model)
-   1. [Resource Definition](#resource-definition)
-   2. [UML Diagram](#uml-diagram)
-   3. [Notes](#notes)
-   4. [Permission Codes](#permission-codes)
-   5. [Data Dictionary](#data-dictionary)
-4. [Usage Examples](#usage-examples)
-   1. [Specific Account](#specific-account)
-      1. [Get Account Beneficiaries Request](#get-account-beneficiaries-request)
-   2. [Bulk](#bulk)
-      1. [Get Beneficiaries Request](#get-beneficiaries-request)
-      2. [Get Beneficiaries Response](#get-beneficiaries-response)
+# Beneficiaries - v3.1.4-draft4
+
+[[toc]]
 
 ## Overview
 

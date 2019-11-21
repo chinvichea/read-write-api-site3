@@ -1,39 +1,9 @@
-# Domestic Payments Consents - v3.1.4
+---
+---
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [POST /domestic-payment-consents](#post-domestic-payment-consents)
-      1. [Status](#status)
-   2. [GET /domestic-payment-consents/{ConsentId}](#get-domestic-payment-consentsconsentid)
-      1. [Status](#status-1)
-   3. [GET /domestic-payment-consents/{ConsentId}/funds-confirmation](#get-domestic-payment-consentsconsentidfunds-confirmation)
-   4. [State Model](#state-model)
-      1. [Payment Order Consent](#payment-order-consent)
-3. [Data Model](#data-model)
-   1. [Reused Classes](#reused-classes)
-      1. [OBDomestic2](#obdomestic2)
-         1. [UML Diagram](#uml-diagram)
-         2. [Notes](#notes)
-         3. [Data Dictionary](#data-dictionary)
-   2. [Domestic Payment Consent - Request](#domestic-payment-consent---request)
-      1. [UML Diagram](#uml-diagram-1)
-      2. [Notes](#notes-1)
-      3. [Data Dictionary](#data-dictionary-1)
-   3. [Domestic Payment Consent - Response](#domestic-payment-consent---response)
-      1. [UML Diagram](#uml-diagram-2)
-      2. [Notes](#notes-2)
-      3. [Data Dictionary](#data-dictionary-2)
-   4. [Domestic Payment Consent Confirmation of Funds - Response](#domestic-payment-consent-confirmation-of-funds---response)
-      1. [UML Diagram](#uml-diagram-3)
-      2. [Notes](#notes-3)
-      3. [Data Dictionary](#data-dictionary-3)
-4. [Usage Examples](#usage-examples)
-   1. [POST /domestic-payment-consents](#post-domestic-payment-consents-1)
-      1. [Request](#request)
-      2. [Response](#response)
-   2. [GET /domestic-payment-consents/{ConsentId}](#get-domestic-payment-consentsconsentid-1)
-      1. [Request](#request-1)
-      2. [Response](#response-1)
+# Domestic Payments Consents - v3.1.4-draft4
+
+[[toc]]
 
 ## Overview
 
@@ -287,7 +257,7 @@ Note, further usage examples are available [here](../../references/usage%20examp
 
 #### Request
 
-```text
+```
 POST /domestic-payment-consents HTTP/1.1
 Authorization: Bearer 2YotnFZFEjr1zCsicMWpAA
 x-idempotency-key: FRESCO.21302.GFX.20
@@ -346,7 +316,7 @@ Accept: application/json
 
 #### Response
 
-```text
+```
 HTTP/1.1 201 Created
 x-jws-signature: V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K
 x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d
@@ -410,7 +380,7 @@ Content-Type: application/json
 
 #### Request
 
-```text
+```
 GET /domestic-payment-consents/58923 HTTP/1.1
 Authorization: Bearer Jhingapulaav
 x-fapi-auth-date: Sun, 10 Sep 2017 19:43:31 GMT
@@ -421,7 +391,7 @@ Accept: application/json
 
 #### Response
 
-```text
+```
 HTTP/1.1 200 OK
 x-jws-signature: V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K
 x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d

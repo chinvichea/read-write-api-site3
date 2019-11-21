@@ -1,50 +1,9 @@
-# Domestic Payment Usage Examples - v3.1.4
+---
+---
 
-1. [Merchant Initiation via PISP](#merchant-initiation-via-pisp)
-   1. [Sequence Diagram](#sequence-diagram)
-   2. [Illustrative Interactions](#illustrative-interactions)
-      1. [Create Domestic Payment Order Consent](#create-domestic-payment-order-consent)
-         1. [POST /domestic-payment-consents request](#post-domestic-payment-consents-request)
-         2. [POST /domestic-payment-consents response](#post-domestic-payment-consents-response)
-      2. [Confirm Funds on Domestic Payment Order Consent](#confirm-funds-on-domestic-payment-order-consent)
-         1. [GET /domestic-payment-consents/{ConsentId}/funds-confirmation Request](#get-domestic-payment-consentsconsentidfunds-confirmation-request)
-         2. [GET /domestic-payment-consents/{ConsentId}/funds-confirmation Response](#get-domestic-payment-consentsconsentidfunds-confirmation-response)
-      3. [Create Domestic Payment Order](#create-domestic-payment-order)
-         1. [POST /domestic-payments Request](#post-domestic-payments-request)
-         2. [POST /domestic-payments Response](#post-domestic-payments-response)
-      4. [Get Domestic Payment Order Consent](#get-domestic-payment-order-consent)
-         1. [GET /domestic-payment-consents/{ConsentId} Request](#get-domestic-payment-consentsconsentid-request)
-         2. [GET /domestic-payment-consents/{ConsentId} Response](#get-domestic-payment-consentsconsentid-response)
-      5. [Get Domestic Payment Order](#get-domestic-payment-order)
-         1. [GET /domestic-payments/{DomesticPaymentId} Request](#get-domestic-paymentsdomesticpaymentid-request)
-         2. [GET /domestic-payments/{DomesticPaymentId} Response](#get-domestic-paymentsdomesticpaymentid-response)
-2. [Person To Person Initiation via PISP](#person-to-person-initiation-via-pisp)
-   1. [Sequence Diagram](#sequence-diagram-1)
-   2. [Illustrative Interactions](#illustrative-interactions-1)
-      1. [Create Domestic Payment Order Consent](#create-domestic-payment-order-consent-1)
-         1. [POST /domestic-payment-consents request](#post-domestic-payment-consents-request-1)
-         2. [POST /domestic-payment-consents response](#post-domestic-payment-consents-response-1)
-      2. [Create Domestic Payment Order](#create-domestic-payment-order-1)
-         1. [POST /domestic-payments request](#post-domestic-payments-request)
-         2. [POST /domestic-payments response](#post-domestic-payments-response)
-      3. [Get Domestic Payment Order Consent](#get-domestic-payment-order-consent-1)
-         1. [GET /domestic-payment-consents/{ConsentId} request](#get-domestic-payment-consentsconsentid-request)
-         2. [GET /domestic-payment-consents/{ConsentId} response](#get-domestic-payment-consentsconsentid-response)
-      4. [Get Domestic Payment Order](#get-domestic-payment-order-1)
-         1. [GET /domestic-payments/{DomesticPaymentId} request](#get-domestic-paymentsdomesticpaymentid-request)
-         2. [GET /domestic-payments/{DomesticPaymentId} response](#get-domestic-paymentsdomesticpaymentid-response)
-3. [BACS Payment Order Consent](#bacs-payment-order-consent)
-   1. [POST /domestic-payment-consents request](#post-domestic-payment-consents-request-2)
-   2. [POST /domestic-payment-consents response](#post-domestic-payment-consents-response-2)
-4. [CHAPS Payment Order Consent](#chaps-payment-order-consent)
-   1. [POST /domestic-payment-consents request](#post-domestic-payment-consents-request-3)
-   2. [POST /domestic-payment-consents response](#post-domestic-payment-consents-response-3)
-5. [Balance Transfer](#balance-transfer)
-   1. [POST /domestic-payment-consents request](#post-domestic-payment-consents-request-4)
-   2. [POST /domestic-payment-consents response](#post-domestic-payment-consents-response-4)
-6. [Money Transfer](#money-transfer)
-   1. [POST /domestic-payment-consents request](#post-domestic-payment-consents-request-5)
-   2. [POST /domestic-payment-consents response](#post-domestic-payment-consents-response-5)
+# Domestic Payment Usage Examples - v3.1.4-draft4
+
+[[toc]]
 
 ## Merchant Initiation via PISP
 
@@ -128,7 +87,7 @@ Notes:
 
 ##### POST /domestic-payment-consents request
 
-```text
+```
 POST /domestic-payment-consents HTTP/1.1
 Authorization: Bearer 2YotnFZFEjr1zCsicMWpAA
 x-idempotency-key: FRESCO.21302.GFX.20
@@ -186,7 +145,7 @@ Accept: application/json
 
 ##### POST  /domestic-payment-consents response
 
-```text
+```
 HTTP/1.1 201 Created
 x-jws-signature: V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K
 x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d
@@ -249,7 +208,7 @@ Content-Type: application/json
 
 ##### GET /domestic-payment-consents/{ConsentId}/funds-confirmation Request
 
-```text
+```
 GET /domestic-payment-consents/58923/funds-confirmation HTTP/1.1
 Authorization: Bearer Jhingapulaav
 x-fapi-auth-date: Sun, 10 Sep 2017 19:43:31 GMT
@@ -260,7 +219,7 @@ Accept: application/json
 
 ##### GET /domestic-payment-consents/{ConsentId}/funds-confirmation Response
 
-```text
+```
 HTTP/1.1 200 OK
 x-jws-signature: V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K
 x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d
@@ -286,7 +245,7 @@ Content-Type: application/json
 
 ##### POST /domestic-payments Request
 
-```text
+```
 POST /domestic-payments HTTP/1.1
 Authorization: Bearer Jhingapulaav
 x-idempotency-key: FRESNO.1317.GFX.22
@@ -345,7 +304,7 @@ Accept: application/json
 
 ##### POST /domestic-payments Response
 
-```text
+```
 HTTP/1.1 201 Created
 x-jws-signature: V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K
 x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d
@@ -390,7 +349,7 @@ Content-Type: application/json
 
 ##### GET /domestic-payment-consents/{ConsentId} Request
 
-```text
+```
 GET /domestic-payment-consents/58923 HTTP/1.1
 Authorization: Bearer Jhingapulaav
 x-fapi-auth-date: Sun, 10 Sep 2017 19:43:31 GMT
@@ -401,7 +360,7 @@ Accept: application/json
 
 ##### GET /domestic-payment-consents/{ConsentId} Response
 
-```text
+```
 HTTP/1.1 200 OK
 x-jws-signature: V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K
 x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d
@@ -465,7 +424,7 @@ Content-Type: application/json
 
 ##### GET /domestic-payments/{DomesticPaymentId} Request
 
-```text
+```
 GET /domestic-payments/58923-001 HTTP/1.1
 Authorization: Bearer 2YotnFZFEjr1zCsicMWpAA
 x-fapi-auth-date:  Sun, 10 Sep 2017 19:43:31 GMT
@@ -476,7 +435,7 @@ Accept: application/json
 
 ##### GET /domestic-payments/{DomesticPaymentId} Response
 
-```text
+```
 HTTP/1.1 200 OK
 x-jws-signature: V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K
 x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d
@@ -595,7 +554,7 @@ end opt
 
 ##### POST /domestic-payment-consents request
 
-```text
+```
 POST /domestic-payment-consents HTTP/1.1
 Authorization: Bearer 2YotnFZFEjr1zCsicMWpAA
 x-idempotency-key: FRESCO.21302.GFX.20
@@ -641,7 +600,7 @@ Accept: application/json
 
 ##### POST /domestic-payment-consents response
 
-```text
+```
 HTTP/1.1 201 Created
 x-jws-signature: V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K
 x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d
@@ -692,7 +651,7 @@ Content-Type: application/json
 
 ##### POST /domestic-payments request
 
-```text
+```
 POST /domestic-payments HTTP/1.1
 Authorization: Bearer 2YotnFZFEjr1zCsicMWpAA
 x-idempotency-key: FRESNO.1317.GFX.22
@@ -739,7 +698,7 @@ Accept: application/json
 
 ##### POST /domestic-payments response
 
-```text
+```
 HTTP/1.1 201 Created
 x-jws-signature: V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K
 x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d
@@ -788,7 +747,7 @@ Content-Type: application/json
 
 ##### GET /domestic-payment-consents/{ConsentId} request
 
-```text
+```
 GET /domestic-payment-consents/7290 HTTP/1.1
 Authorization: Bearer 2YotnFZFEjr1zCsicMWpAA
 x-fapi-auth-date:  Sun, 10 Sep 2017 19:43:31 GMT
@@ -799,7 +758,7 @@ Accept: application/json
 
 ##### GET /domestic-payment-consents/{ConsentId} response
 
-```text
+```
 HTTP/1.1 200 OK
 x-jws-signature: V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K
 x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d
@@ -850,7 +809,7 @@ Content-Type: application/json
 
 ##### GET /domestic-payments/{DomesticPaymentId} request
 
-```text
+```
 GET /domestic-payments/7290-003 HTTP/1.1
 Authorization: Bearer 2YotnFZFEjr1zCsicMWpAA
 x-fapi-auth-date:  Sun, 10 Sep 2017 19:43:31 GMT
@@ -861,7 +820,7 @@ Accept: application/json
 
 ##### GET /domestic-payments/{DomesticPaymentId} response
 
-```text
+```
 HTTP/1.1 200 OK
 x-jws-signature: V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K
 x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d
@@ -912,7 +871,7 @@ Use of LocalInstrument and CutOffDateTime.
 
 ### POST /domestic-payment-consents request
 
-```text
+```
 POST /domestic-payment-consents HTTP/1.1
 Authorization: Bearer 2YotnFZFEjr1zCsicMWpAA
 x-idempotency-key: FRESCO.21302.GFX.20
@@ -959,7 +918,7 @@ Accept: application/json
 
 ### POST /domestic-payment-consents response
 
-```text
+```
 HTTP/1.1 201 Created
 x-jws-signature: V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K
 x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d
@@ -1014,7 +973,7 @@ Use of LocalInstrument, CreditorPostalAddress, CutOffDateTime and Charges.
 
 ### POST /domestic-payment-consents request
 
-```text
+```
 POST /domestic-payment-consents HTTP/1.1
 Authorization: Bearer 2YotnFZFEjr1zCsicMWpAA
 x-idempotency-key: FRESCO.21302.GFX.20
@@ -1069,7 +1028,7 @@ Accept: application/json
 
 ### POST /domestic-payment-consents response
 
-```text
+```
 HTTP/1.1 201 Created
 x-jws-signature: V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K
 x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d
@@ -1144,7 +1103,7 @@ Example below:
 
 ### POST /domestic-payment-consents request
 
-```text
+```
 POST /domestic-payment-consents HTTP/1.1
 Authorization: Bearer 2YotnFZFEjr1zCsicMWpAA
 x-idempotency-key: FRESCO.21302.GFX.20
@@ -1191,7 +1150,7 @@ Accept: application/json
 
 ### POST /domestic-payment-consents response
 
-```text
+```
 HTTP/1.1 201 Created
 x-jws-signature: V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K
 x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d
@@ -1246,7 +1205,7 @@ Below in an example illustrating Money transfer from a card account to a bank ac
 
 ### POST /domestic-payment-consents request
 
-```text
+```
 POST /domestic-payment-consents HTTP/1.1
 Authorization: Bearer 2YotnFZFEjr1zCsicMWpAA
 x-idempotency-key: FRESCO.21302.GFX.20
@@ -1292,7 +1251,7 @@ Accept: application/json
 
 ### POST /domestic-payment-consents response
 
-```text
+```
 HTTP/1.1 201 Created
 x-jws-signature: V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K
 x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d

@@ -221,7 +221,7 @@ The domestic-scheduled-payment-consent **response** contains the full **original
 
 ##### POST /domestic-scheduled-payment-consents Request
 
-```text
+```
 POST /domestic-scheduled-payment-consents HTTP/1.1
 Authorization: Bearer 2YotnFZFEjr1zCsicMWpAA
 x-idempotency-key: FRESCO.21302.GFX.20
@@ -269,7 +269,7 @@ Accept: application/json
 
 ##### POST /domestic-scheduled-payment-consents Response
 
-```text
+```
 HTTP/1.1 201 Created
 x-jws-signature: V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K
 x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d

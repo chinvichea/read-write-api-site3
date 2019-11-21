@@ -1,37 +1,9 @@
-# Domestic Payments - v3.1.4
+---
+---
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [POST /domestic-payments](#post-domestic-payments)
-      1. [Status](#status)
-   2. [GET /domestic-payments/{DomesticPaymentId}](#get-domestic-paymentsdomesticpaymentid)
-      1. [Status](#status-1)
-   3. [GET /domestic-payments/{DomesticPaymentId}/payment-details](#get-domestic-paymentsdomesticpaymentidpayment-details)
-      1. [Status](#status-2)
-   4. [State Model](#state-model)
-      1. [Payment Order](#payment-order)
-         1. [Multiple Authorisation](#multiple-authorisation)
-3. [Data Model](#data-model)
-   1. [Reused Classes](#reused-classes)
-      1. [OBDomestic2](#obdomestic2)
-   2. [Domestic Payment - Request](#domestic-payment---request)
-      1. [UML Diagram](#uml-diagram)
-      2. [Notes](#notes)
-      3. [Data Dictionary](#data-dictionary)
-   3. [Domestic Payment - Response](#domestic-payment---response)
-      1. [UML Diagram](#uml-diagram-1)
-      2. [Notes](#notes-1)
-      3. [Data Dictionary](#data-dictionary-1)
-   4. [Domestic Payment Order - Payment Details - Response](#domestic-payment-order---payment-details---response)
-      1. [UML Diagram](#uml-diagram-2)
-      2. [Data Dictionary](#data-dictionary-2)
-4. [Usage Examples](#usage-examples)
-   1. [POST /domestic-payments](#post-domestic-payments-1)
-      1. [Request](#request)
-      2. [Response](#response)
-   2. [GET /domestic-payments/{DomesticPaymentId}](#get-domestic-paymentsdomesticpaymentid-1)
-      1. [Request](#request-1)
-      2. [Response](#response-1)
+# Domestic Payments - v3.1.4-draft4
+
+[[toc]]
 
 ## Overview
 
@@ -261,7 +233,7 @@ Note, further usage examples are available [here](../../references/usage%20examp
 
 #### Request
 
-```text
+```
 POST /domestic-payments HTTP/1.1
 Authorization: Bearer Jhingapulaav
 x-idempotency-key: FRESNO.1317.GFX.22
@@ -320,7 +292,7 @@ Accept: application/json
 
 #### Response
 
-```text
+```
 HTTP/1.1 201 Created
 x-jws-signature: V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K
 x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d
@@ -371,7 +343,7 @@ Content-Type: application/json
 
 #### Request
 
-```text
+```
 GET /domestic-payments/58923-001 HTTP/1.1
 Authorization: Bearer 2YotnFZFEjr1zCsicMWpAA
 x-fapi-auth-date:  Sun, 10 Sep 2017 19:43:31 GMT
@@ -382,7 +354,7 @@ Accept: application/json
 
 #### Response
 
-```text
+```
 HTTP/1.1 200 OK
 x-jws-signature: V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K
 x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d

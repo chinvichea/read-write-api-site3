@@ -1,25 +1,9 @@
-# Accounts - v3.1.4
+---
+---
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [GET /accounts](#get-accounts)
-   2. [GET /accounts/{AccountId}](#get-accountsaccountid)
-3. [Data Model](#data-model)
-   1. [Resource Definition](#resource-definition)
-   2. [UML Diagram](#uml-diagram)
-   3. [Notes](#notes)
-   4. [Permission Codes](#permission-codes)
-   5. [Data Dictionary](#data-dictionary)
-4. [Usage Examples](#usage-examples)
-   1. [Bulk - Detail Permission](#bulk---detail-permission)
-      1. [Get Accounts Request](#get-accounts-request)
-      2. [Get Accounts Response](#get-accounts-response)
-   2. [Specific Account - Detail Permission](#specific-account---detail-permission)
-      1. [Get Accounts Request](#get-accounts-request-1)
-      2. [Get Accounts Response](#get-accounts-response-1)
-   3. [Bulk - Basic Permission](#bulk---basic-permission)
-      1. [Get Accounts Request](#get-accounts-request-2)
-      2. [Get Accounts Response](#get-accounts-response-2)
+# Accounts - v3.1.4-draft4
+
+[[toc]]
 
 ## Overview
 

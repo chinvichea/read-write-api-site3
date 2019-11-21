@@ -1,16 +1,9 @@
-# Event Notification API Profile - v3.1.4
+---
+---
 
-1. [Overview](#overview)
-   1. [Design Principles](#design-principles)
-      1. [Security Event Token Alignment](#security-event-token-alignment)
-      2. [Event Notification Message Signing](#event-notification-message-signing)
-      3. [SET Aggregation Alignment](#set-aggregation-alignment)
-2. [Basics](#basics)
-   1. [Overview](#overview-1)
-      1. [Steps](#steps)
-      2. [Sequence Diagram](#sequence-diagram)
-   2. [Event Types and Extensibility](#event-types-and-extensibility)
-   3. [Event-Notification Backwards Compatibility](#event-notification-backwards-compatibility)
+# Event Notification API Profile - v3.1.4-draft4
+
+[[toc]]
 
 ## Overview
 
