@@ -6,7 +6,7 @@ const sidebarDepth = 0;
 module.exports = [
      // v3.1.4
      {
-        title: 'Version 3.1.4',
+        title: 'Version 3.1.4-draft4',
         path: '/v3.1.4/profiles/read-write-data-api-profile',
         collapsable: collapsable,
         sidebarDepth,
