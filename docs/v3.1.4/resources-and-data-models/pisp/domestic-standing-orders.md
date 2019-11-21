@@ -1,4 +1,4 @@
-# Domestic Standing Orders - v3.1.2
+# Domestic Standing Orders - v3.1.4
 
 1. [Overview](#overview)
 2. [Endpoints](#endpoints)
@@ -55,7 +55,7 @@ Once the domestic-standing-order-consent has been authorised by the PSU, the PIS
 
 #### Status
 
-A domestic-standing-order can only be created if its corresponding domestic-standing-order-consent resource has the status of "Authorised". 
+A domestic-standing-order can only be created if its corresponding domestic-standing-order-consent resource has the status of "Authorised".
 
 The domestic-standing-order resource that is created successfully must have one of the following Status codes:
 
@@ -117,7 +117,7 @@ The domestic-standing-orders - payment-details must have one of the following Pa
 
 The state model for the domestic-standing-order resource describes the initiation status only. I.e., not the subsequent execution of the domestic-standing-order.
 
-![Payment Order](images/DomesticScheduledStatusModel.png)
+![Payment Order](./images/DomesticScheduledStatusModel.png)
 
 The definitions for the Status:
 
@@ -132,7 +132,7 @@ The definitions for the Status:
 
 If the payment-order requires multiple authorisations, the Status of the multiple authorisations will be updated in the MultiAuthorisation object.
 
-![Multiple Authorisation](images/image2018-6-29_16-36-34.png)
+![Multiple Authorisation](./images/image2018-6-29_16-36-34.png)
 
 The definitions for the Status:
 
@@ -160,11 +160,11 @@ The OBWriteDomesticStandingOrder3 object will be used for a call to:
 
 #### UML Diagram
 
-![Domestic Standing Order - Request](images/OBWriteDomesticStandingOrder3.png)
+![Domestic Standing Order - Request](./images/OBWriteDomesticStandingOrder3.png)
 
 #### Notes
 
-The domestic-standing-order **request** object contains the: 
+The domestic-standing-order **request** object contains the:
 
 * ConsentId.
 * The full Initiation and Risk objects from the domestic-standing-order-consent request.
@@ -189,11 +189,11 @@ The OBWriteDomesticStandingOrderResponse5 object will be used for a response to 
 
 #### UML Diagram
 
-![Domestic Standing Order - Response](images/OBWriteDomesticStandingOrderResponse5.png)
+![Domestic Standing Order - Response](./images/OBWriteDomesticStandingOrderResponse5.png)
 
 #### Notes
 
-The domestic-standing-order **response** object contains the: 
+The domestic-standing-order **response** object contains the:
 
 * DomesticStandingOrderId.
 * ConsentId.
@@ -228,7 +228,7 @@ The OBWritePaymentDetailsResponse1 object will be used for a response to a call 
 
 #### UML Diagram
 
-![Domestic Standing Order - Payment Details - Response](images/OBWritePaymentDetailsResponse1.png)
+![Domestic Standing Order - Payment Details - Response](./images/OBWritePaymentDetailsResponse1.png)
 
 #### Data Dictionary
 

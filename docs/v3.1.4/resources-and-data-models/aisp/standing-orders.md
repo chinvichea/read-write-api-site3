@@ -21,7 +21,7 @@
 
 ## Overview
 
-The standing-orders resource is used by an AISP to retrieve the standing orders for a specific AccountId or to retrieve the standing orders in bulk for all the accounts that the PSU has consented to. 
+The standing-orders resource is used by an AISP to retrieve the standing orders for a specific AccountId or to retrieve the standing orders in bulk for all the accounts that the PSU has consented to.
 
 This resource description should be read in conjunction with a compatible Account Information Services API Profile.
 
@@ -57,7 +57,7 @@ An account (AccountId) may have no standing orders set up, or may have multiple 
 
 ### UML Diagram
 
-![ OBReadStandingOrder6.png ]( images/StandingOrders/OBReadStandingOrder6.png )
+![ OBReadStandingOrder6.png ](./images/StandingOrders/OBReadStandingOrder6.png )
 
 ### Notes
 

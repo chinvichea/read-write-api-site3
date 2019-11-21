@@ -1,4 +1,4 @@
-# International Standing Orders - v3.1.3
+# International Standing Orders - v3.1.4
 
 1. [Overview](#overview)
 2. [Endpoints](#endpoints)
@@ -55,7 +55,7 @@ Once the international-standing-order-consent has been authorised by the PSU, th
 
 #### Status
 
-An international-standing-orders can only be created if its corresponding international-standing-order-consent resource has the status of "Authorised". 
+An international-standing-orders can only be created if its corresponding international-standing-order-consent resource has the status of "Authorised".
 
 The international-standing-orders resource that is created successfully must have one of the following Status codes:
 
@@ -117,7 +117,7 @@ The international-standing-orders - payment-details must have one of the followi
 
 The state model for the international-standing-orders resource describes the initiation status only. I.e., not the subsequent execution of the international-standing-orders.
 
-![ DomesticScheduledStatusModel.png ]( images/DomesticScheduledStatusModel.png )
+![ DomesticScheduledStatusModel.png ](./images/DomesticScheduledStatusModel.png )
 
 The definitions for the Status:
 
@@ -132,7 +132,7 @@ The definitions for the Status:
 
 If the payment-order requires multiple authorisations, the Status of the multiple authorisations will be updated in the MultiAuthorisation object.
 
-![ image2018-6-29_16-36-34.png ]( images/image2018-6-29_16-36-34.png )
+![ image2018-6-29_16-36-34.png ](./images/image2018-6-29_16-36-34.png )
 
 The definitions for the Status:
 
@@ -161,11 +161,11 @@ The OBWriteInternationalStandingOrder4 object will be used for a call to:
 
 #### UML Diagram
 
-![ OBWriteInternationalStandingOrder4.gif ]( images/OBWriteInternationalStandingOrder4.gif )
+![ OBWriteInternationalStandingOrder4.gif ](./images/OBWriteInternationalStandingOrder4.gif )
 
 #### Notes
 
-The international-standing-orders **request** object contains the: 
+The international-standing-orders **request** object contains the:
 
 * ConsentId.
 * The full Initiation and Risk objects from the international-standing-order-consent request.
@@ -191,11 +191,11 @@ The OBWriteInternationalStandingOrderResponse6 object will be used for a respons
 
 #### UML Diagram
 
-![ OBWriteInternationalStandingOrderResponse6.png ]( images/OBWriteInternationalStandingOrderResponse6.png )
+![ OBWriteInternationalStandingOrderResponse6.png ](./images/OBWriteInternationalStandingOrderResponse6.png )
 
-#### Notes 
+#### Notes
 
-The international-standing-orders **response** object contains the: 
+The international-standing-orders **response** object contains the:
 
 * InternationalStandingOrderPaymentId.
 * ConsentId.
@@ -230,7 +230,7 @@ The OBWritePaymentDetailsResponse1 object will be used for a response to a call 
 
 #### UML Diagram
 
-![ OBWritePaymentDetailsResponse1.png ]( images/OBWritePaymentDetailsResponse1.png )
+![ OBWritePaymentDetailsResponse1.png ](./images/OBWritePaymentDetailsResponse1.png )
 
 #### Data Dictionary
 

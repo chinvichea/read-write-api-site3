@@ -1,4 +1,4 @@
-# Event Subscription - v3.1.2
+# Event Subscription - v3.1.4
 
 1. [Overview](#overview)
 2. [Endpoints](#endpoints)
@@ -46,7 +46,7 @@ A TPP will set up and maintain its event subscription details (URL, event types 
 | event-subscription |DELETE |DELETE /event-subscriptions/{EventSubscriptionId} |Mandatory (if resource POST implemented) |accounts<br>payments<br>fundsconfirmations |Client Credentials |n/a |No |n/a |n/a |
 
 
-#### POST /event-subscriptions 
+#### POST /event-subscriptions
 
 The API endpoint allows the TPP to ask an ASPSP to create a new **event-subscription** resource.
 
@@ -83,7 +83,7 @@ The OBEventSubscription1 object will be used for the call to:
 
 #### UML Diagram
 
-![OBEventSubscription1](images/OBEventSubscription1.gif)
+![OBEventSubscription1](./images/OBEventSubscription1.gif)
 
 #### Notes
 
@@ -118,7 +118,7 @@ The OBEventSubscriptionResponse1 object will also be used for the call to:
 
 #### UML
 
-![OBEventSubscriptionResponse1](images/OBEventSubscriptionResponse1.gif)
+![OBEventSubscriptionResponse1](./images/OBEventSubscriptionResponse1.gif)
 
 #### Data Dictionary
 
@@ -139,7 +139,7 @@ The OBEventSubscriptionsResponse1 object will be used for a response to a call t
 
 #### UML
 
-![OBEventSubscriptionsResponse1](images/OBEventSubscriptionsResponse1.gif)
+![OBEventSubscriptionsResponse1](./images/OBEventSubscriptionsResponse1.gif)
 
 #### Data Dictionary
 

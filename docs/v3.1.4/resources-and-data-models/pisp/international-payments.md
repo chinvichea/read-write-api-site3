@@ -1,4 +1,4 @@
-# International Payments - v3.1.3
+# International Payments - v3.1.4
 
 1. [Overview](#overview)
 2. [Endpoints](#endpoints)
@@ -52,7 +52,7 @@ Once the international-payment-consent has been authorised by the PSU, the PISP 
 
 #### Status
 
-An international-payment can only be created if its corresponding international-payment-consent resource has the status of "Authorised". 
+An international-payment can only be created if its corresponding international-payment-consent resource has the status of "Authorised".
 
 The international-payment resource that is created successfully must have one of the following PaymentStatusCode code-set enumerations:
 
@@ -119,7 +119,7 @@ The international-payments - payment-details must have one of the following Paym
 
 The state model for the international-payment resource follows the behaviour and definitions for the ISO 20022 PaymentStatusCode code-set.
 
-![Payment Order Status Lifecycle](images/PaymentStatusLifeCycle.png)
+![Payment Order Status Lifecycle](./images/PaymentStatusLifeCycle.png)
 
 The definitions for the Status:
 
@@ -136,7 +136,7 @@ The definitions for the Status:
 
 If the payment-order requires multiple authorisations, the Status of the multiple authorisations will be updated in the MultiAuthorisation object.
 
-![Multiple Authorisation Statss](images/image2018-6-29_16-36-34.png)
+![Multiple Authorisation Statss](./images/image2018-6-29_16-36-34.png)
 
 The definitions for the Status:
 
@@ -168,11 +168,11 @@ The OBWriteInternational3 object will be used for a call to:
 
 #### UML Diagram
 
-![International Payment - Request](images/OBWriteInternational3.gif)
+![International Payment - Request](./images/OBWriteInternational3.gif)
 
-#### Notes 
+#### Notes
 
-The international-payment **request** object contains the: 
+The international-payment **request** object contains the:
 
 * ConsentId.
 * The full Initiation and Risk objects from the international-payment request.
@@ -197,11 +197,11 @@ The OBWriteInternationalResponse4 object will be used for a response to a call t
 
 #### UML Diagram
 
-![International Payment - Response](images/OBWriteInternationalResponse4.png)
+![International Payment - Response](./images/OBWriteInternationalResponse4.png)
 
-#### Notes 
+#### Notes
 
-The international-payment **response** object contains the: 
+The international-payment **response** object contains the:
 
 * InternationalPaymentId.
 * ConsentId.
@@ -241,7 +241,7 @@ The OBWritePaymentDetailsResponse1 object will be used for a response to a call 
 
 #### UML Diagram
 
-![International Payment Order - Payment Details - Response](images/OBWritePaymentDetailsResponse1.png)
+![International Payment Order - Payment Details - Response](./images/OBWritePaymentDetailsResponse1.png)
 
 #### Data Dictionary
 
@@ -250,4 +250,3 @@ The OBWritePaymentDetailsResponse1 object will be used for a response to a call 
 | OBWritePaymentDetailsResponse1 | |OBWritePaymentDetailsResponse1 | |OBWritePaymentDetailsResponse1 | | |
 | Data |1..1 |OBWritePaymentDetailsResponse1/Data | |OBWriteDataPaymentOrderStatusResponse1 | | |
 | PaymentStatus |0..unbounded |OBWritePaymentDetailsResponse1/Data/PaymentStatus |Payment status details. |OBWritePaymentDetails1 | | |
-

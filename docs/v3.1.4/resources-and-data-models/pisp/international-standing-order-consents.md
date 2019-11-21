@@ -1,4 +1,4 @@
-# International Standing Order Consents - v3.1.3
+# International Standing Order Consents - v3.1.4
 
 1. [Overview](#overview)
 2. [Endpoints](#endpoints)
@@ -59,7 +59,7 @@ The default Status is "AwaitingAuthorisation" immediately after the internationa
 
 ### GET /international-standing-order-consents/{ConsentId}
 
-A PISP can optionally retrieve a payment consent resource that they have created to check its status. 
+A PISP can optionally retrieve a payment consent resource that they have created to check its status.
 
 #### Status
 
@@ -84,7 +84,7 @@ The available Status codes for the international-standing-order-consent resource
 
 The state model for the international-standing-order-consent resource follows the generic consent state model. However, does not use the "Revoked" status, as the consent for an international-standing-order is not a long-lived consent.
 
-![ image2018-5-18_10-24-21.png ]( images/image2018-5-18_10-24-21.png )
+![ image2018-5-18_10-24-21.png ](./images/image2018-5-18_10-24-21.png )
 
 The definitions for the Status:
 
@@ -107,11 +107,11 @@ This section describes the OBInternationalStandingOrder4 class which is reused a
 
 ##### UML Diagram
 
-![ OBInternationalStandingOrder4.gif ]( images/OBInternationalStandingOrder4.gif )
+![ OBInternationalStandingOrder4.gif ](./images/OBInternationalStandingOrder4.gif )
 
 ##### Notes
 
-For the OBInternationalStandingOrder4 Initiation object: 
+For the OBInternationalStandingOrder4 Initiation object:
 
 * All elements in the Initiation payload that are specified by the PISP must not be changed via the ASPSP - as this is part of formal consent from the PSU.
 * If the ASPSP is able to establish a problem with payload or any contextual error during the API call, the ASPSP must reject the international-standing-order-consent request immediately.
@@ -197,7 +197,7 @@ The OBWriteInternationalStandingOrderConsent6 object will be used for the call t
 
 #### UML Diagram
 
-![ OBWriteInternationalStandingOrderConsent6.png ]( images/OBWriteInternationalStandingOrderConsent6.png )
+![ OBWriteInternationalStandingOrderConsent6.png ](./images/OBWriteInternationalStandingOrderConsent6.png )
 
 #### Notes
 
@@ -231,7 +231,7 @@ The OBWriteInternationalStandingOrderConsentResponse6 object will be used for a 
 
 #### UML Diagram
 
-![ OBWriteInternationalStandingOrderConsentResponse6.png ]( images/OBWriteInternationalStandingOrderConsentResponse6.png )
+![ OBWriteInternationalStandingOrderConsentResponse6.png ](./images/OBWriteInternationalStandingOrderConsentResponse6.png )
 
 #### Notes
 

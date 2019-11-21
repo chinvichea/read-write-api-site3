@@ -1,4 +1,4 @@
-# Domestic Scheduled Payments  - v3.1.2
+# Domestic Scheduled Payments  - v3.1.4
 
 1. [Overview](#overview)
 2. [Endpoints](#endpoints)
@@ -55,7 +55,7 @@ Once the domestic-scheduled-payment-consent has been authorised by the PSU, the 
 
 #### Status
 
-A domestic-scheduled-payment can only be created if its corresponding domestic-scheduled-payment-consent resource has the status of "Authorised". 
+A domestic-scheduled-payment can only be created if its corresponding domestic-scheduled-payment-consent resource has the status of "Authorised".
 
 The domestic-scheduled-payment resource that is created successfully must have one of the following Status codes:
 
@@ -117,7 +117,7 @@ The domestic-scheduled-payments - payment-details must have one of the following
 
 The state model for the domestic-scheduled-payment resource describes the initiation status only. I.e., not the subsequent execution of the domestic-scheduled-payment.
 
-![Payment Order](images/DomesticScheduledStatusModel.png)
+![Payment Order](./images/DomesticScheduledStatusModel.png)
 
 The definitions for the Status:
 
@@ -132,7 +132,7 @@ The definitions for the Status:
 
 If the payment-order requires multiple authorisations, the Status of the multiple authorisations will be updated in the MultiAuthorisation object.
 
-![Multi Authorisation](images/image2018-6-29_16-36-34.png)
+![Multi Authorisation](./images/image2018-6-29_16-36-34.png)
 
 The definitions for the Status:
 
@@ -160,15 +160,15 @@ The OBWriteDomesticScheduled2 object will be used for a call to:
 
 #### UML Diagram
 
-![Domestic Scheduled Payment - Request](images/OBWriteDomesticScheduled2.gif)
+![Domestic Scheduled Payment - Request](./images/OBWriteDomesticScheduled2.gif)
 
 #### Notes
 
-The domestic-scheduled-payment **request** object contains the: 
+The domestic-scheduled-payment **request** object contains the:
 
 * ConsentId.
 * The full Initiation and Risk objects from the domestic-scheduled-payment-consent request.
-  
+
 The **Initiation** and **Risk** sections of the domestic-scheduled-payment request **must** match the **Initiation** and **Risk** sections of the corresponding domestic-scheduled-payment-consent request.
 
 #### Data Dictionary
@@ -190,11 +190,11 @@ The OBWriteDomesticScheduledResponse4 object will be used for a response to a ca
 
 #### UML Diagram
 
-![Domestic Scheduled Payment - Response](images/OBWriteDomesticScheduledResponse4.png)
+![Domestic Scheduled Payment - Response](./images/OBWriteDomesticScheduledResponse4.png)
 
 #### Notes
 
-The domestic-scheduled-payment **response** object contains the: 
+The domestic-scheduled-payment **response** object contains the:
 
 * DomesticScheduledPaymentId.
 * ConsentId.
@@ -233,7 +233,7 @@ The OBWritePaymentDetailsResponse1 object will be used for a response to a call 
 
 #### UML Diagram
 
-![Domestic Schedule Payment Order - Payment Details - Response](images/OBWritePaymentDetailsResponse1.png)
+![Domestic Schedule Payment Order - Payment Details - Response](./images/OBWritePaymentDetailsResponse1.png)
 
 #### Data Dictionary
 

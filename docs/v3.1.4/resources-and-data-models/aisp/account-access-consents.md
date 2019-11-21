@@ -49,7 +49,7 @@ This resource description should be read in conjunction with a compatible Accoun
 | 3 |account-access-consents |DELETE |DELETE /account-access-consents/{ConsentId} |Mandatory |accounts |Client Credentials |No | | | |
 
 ### POST /account-access-consents
- 
+
 The API allows the AISP to ask an ASPSP to create a new account-access-consent resource.
 
 * This API effectively allows the AISP to send a copy of the consent to the ASPSP to authorise access to account and transaction information.
@@ -78,11 +78,11 @@ After authorisation has taken place the account-access-consent resource may have
 
 This is the state diagram for the Status.
 
-![ Consent Authorisation.jpg ]( images/AccountAccessConsents/ConsentAuthorisation.jpg )
+![ Consent Authorisation.jpg ](./images/AccountAccessConsents/ConsentAuthorisation.jpg )
 
 ### GET /account-access-consents/{ConsentId}
 
-An AISP may optionally retrieve an account-access-consent resource that they have created to check its status. 
+An AISP may optionally retrieve an account-access-consent resource that they have created to check its status.
 
 Prior to calling the API, the AISP must have an access token issued by the ASPSP using a client credentials grant.
 
@@ -123,7 +123,7 @@ The OBReadConsent1 object will be used for the call to:
 
 #### UML Diagram
 
-![ OBReadConsent1.gif ]( images/AccountAccessConsents/OBReadConsent1.gif )
+![ OBReadConsent1.gif ](./images/AccountAccessConsents/OBReadConsent1.gif )
 
 #### Notes
 
@@ -154,7 +154,7 @@ And response to:
 
 #### UML Diagram
 
-![ OBReadConsentResponse1.gif ]( images/AccountAccessConsents/OBReadConsentResponse1.gif )
+![ OBReadConsentResponse1.gif ](./images/AccountAccessConsents/OBReadConsentResponse1.gif )
 
 #### Notes
 
@@ -274,7 +274,7 @@ Content-Type: application/json
 
 ### Status - AwaitingAuthorisation
 
-This is an example of a GET request which is made  **before**  the account access consent resource is authorised. 
+This is an example of a GET request which is made  **before**  the account access consent resource is authorised.
 
 #### Get Account Access Consents Request
 

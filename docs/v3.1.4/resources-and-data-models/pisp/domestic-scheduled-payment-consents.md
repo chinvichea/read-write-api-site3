@@ -1,4 +1,4 @@
-# Domestic Scheduled Payment Consents  - v3.1.2
+# Domestic Scheduled Payment Consents  - v3.1.4
 
 1. [Overview](#overview)
 2. [Endpoints](#endpoints)
@@ -58,7 +58,7 @@ The API endpoint allows the PISP to ask an ASPSP to create a new **domestic-sche
 
 ### GET /domestic-scheduled-payment-consents/{ConsentId}
 
-A PISP can optionally retrieve a payment consent resource that they have created to check its status. 
+A PISP can optionally retrieve a payment consent resource that they have created to check its status.
 
 #### Status
 
@@ -83,7 +83,7 @@ The available Status codes for the domestic-scheduled-payment-consent resource a
 
 The state model for the domestic-scheduled-payment-consent resource follows the generic consent state model. However, does not use the "Revoked" status, as the consent for a domestic-scheduled-payment is not a long-lived consent.
 
-![Payment Order Consent](images/image2018-5-18_10-24-21.png)
+![Payment Order Consent](./images/image2018-5-18_10-24-21.png)
 
 The definitions for the Status:
 
@@ -106,7 +106,7 @@ This section describes the OBDomesticScheduled2 class which is reused as the Ini
 
 ##### UML Diagram
 
-![OBDomesticScheduled2](images/OBDomesticScheduled2.gif)
+![OBDomesticScheduled2](./images/OBDomesticScheduled2.gif)
 
 ##### Notes
 
@@ -171,7 +171,7 @@ The OBWriteDomesticScheduledConsent4 object will be used for the call to:
 
 #### UML Diagram
 
-![Domestic Scheduled Payment Consent - Request](images/OBWriteDomesticScheduledConsent4.png)
+![Domestic Scheduled Payment Consent - Request](./images/OBWriteDomesticScheduledConsent4.png)
 
 #### Notes
 
@@ -204,7 +204,7 @@ The OBWriteDomesticScheduledConsentResponse4 object will be used for a response 
 
 #### UML Diagram
 
-![Domestic Scheduled Payment Consent - Response](images/OBWriteDomesticScheduledConsentResponse4.png)
+![Domestic Scheduled Payment Consent - Response](./images/OBWriteDomesticScheduledConsentResponse4.png)
 
 #### Notes
 

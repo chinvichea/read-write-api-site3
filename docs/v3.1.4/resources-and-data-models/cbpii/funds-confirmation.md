@@ -1,4 +1,4 @@
-# Funds Confirmation - v3.1.2
+# Funds Confirmation - v3.1.4
 
 1. [Overview](#overview)
 2. [Endpoints](#endpoints)
@@ -51,7 +51,7 @@ The OBFundsConfirmation1 object will be used for the following:
 
 #### UML Diagram
 
-![OBFundsConfirmation1](images/OBFundsConfirmation1.gif)
+![OBFundsConfirmation1](./images/OBFundsConfirmation1.gif)
 
 Notes:
 
@@ -78,7 +78,7 @@ The OBFundsConfirmationResponse1 object will be used for the following:
 
 #### UML Diagram
 
-![OBFundsConfirmationResponse1](images/OBFundsConfirmationResponse1.gif)
+![OBFundsConfirmationResponse1](./images/OBFundsConfirmationResponse1.gif)
 
 Notes:
 

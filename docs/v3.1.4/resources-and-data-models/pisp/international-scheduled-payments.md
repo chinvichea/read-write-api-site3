@@ -1,4 +1,4 @@
-# International Scheduled Payments - v3.1.3
+# International Scheduled Payments - v3.1.4
 
 1. [Overview](#overview)
 2. [Endpoints](#endpoints)
@@ -52,7 +52,7 @@ Once the international-scheduled-payment-consent has been authorised by the PSU,
 
 #### Status
 
-An international-scheduled-payment can only be created if its corresponding international-scheduled-payment-consent resource has the status of "Authorised". 
+An international-scheduled-payment can only be created if its corresponding international-scheduled-payment-consent resource has the status of "Authorised".
 
 The international-scheduled-payment resource that is created successfully must have one of the following Status codes:
 
@@ -114,7 +114,7 @@ The international-scheduled-payments - payment-details must have one of the foll
 
 The state model for the international-scheduled-payment resource describes the initiation status only. I.e., not the subsequent execution of the international-scheduled-payment.
 
-![ ScheduledPaymentOrderStatus.png ]( images/ScheduledPaymentOrderStatus.png )
+![ ScheduledPaymentOrderStatus.png ](./images/ScheduledPaymentOrderStatus.png )
 
 The definitions for the Status:
 
@@ -129,7 +129,7 @@ The definitions for the Status:
 
 If the payment-order requires multiple authorisations, the Status of the multiple authorisations will be updated in the MultiAuthorisation object.
 
-![ image2018-6-29_16-36-34.png ]( images/image2018-6-29_16-36-34.png )
+![ image2018-6-29_16-36-34.png ](./images/image2018-6-29_16-36-34.png )
 
 The definitions for the Status:
 
@@ -161,11 +161,11 @@ The OBWriteInternationalScheduled3 object will be used for a call to:
 
 #### UML Diagram
 
-![ OBWriteInternationalScheduled3.gif ]( images/OBWriteInternationalScheduled3.gif )
+![ OBWriteInternationalScheduled3.gif ](./images/OBWriteInternationalScheduled3.gif )
 
 #### Notes
 
-The international-scheduled-payment **request** object contains the: 
+The international-scheduled-payment **request** object contains the:
 
 * ConsentId.
 * The full Initiation and Risk objects from the international-scheduled-payment-consent request.
@@ -190,11 +190,11 @@ The OBWriteInternationalScheduledResponse5 object will be used for a response to
 
 #### UML Diagram
 
-![ OBWriteInternationalScheduledResponse5.png ]( images/OBWriteInternationalScheduledResponse5.png )
+![ OBWriteInternationalScheduledResponse5.png ](./images/OBWriteInternationalScheduledResponse5.png )
 
 #### Notes
 
-The international-scheduled-payment **response** object contains the: 
+The international-scheduled-payment **response** object contains the:
 
 * InternationalScheduledPaymentId.
 * ConsentId.
@@ -234,7 +234,7 @@ The OBWritePaymentDetailsResponse1 object will be used for a response to a call 
 
 #### UML Diagram
 
-![OBWritePaymentDetailsResponse1.png](images/OBWritePaymentDetailsResponse1.png)
+![OBWritePaymentDetailsResponse1.png](./images/OBWritePaymentDetailsResponse1.png)
 
 #### Data Dictionary
 
@@ -243,4 +243,3 @@ The OBWritePaymentDetailsResponse1 object will be used for a response to a call 
 | OBWritePaymentDetailsResponse1 | |OBWritePaymentDetailsResponse1 | |OBWritePaymentDetailsResponse1 | | |
 | Data |1..1 |OBWritePaymentDetailsResponse1/Data | |OBWriteDataPaymentOrderStatusResponse1 | | |
 | PaymentStatus |0..unbounded |OBWritePaymentDetailsResponse1/Data/PaymentStatus |Payment status details. |OBWritePaymentDetails1 | | |
-

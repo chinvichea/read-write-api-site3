@@ -1,4 +1,4 @@
-# Offers - v3.1.2
+# Offers - v3.1.4
 
 1. [Overview](#overview)
 2. [Endpoints](#endpoints)
@@ -20,7 +20,7 @@
 
 ## Overview
 
-The offers resource is used by an AISP to retrieve the offers available for a specific AccountId or to retrieve the offers detail in bulk for all accounts that the PSU has consented to. 
+The offers resource is used by an AISP to retrieve the offers available for a specific AccountId or to retrieve the offers detail in bulk for all accounts that the PSU has consented to.
 
 This resource description should be read in conjunction with a compatible Account Information Services API Profile.
 
@@ -39,12 +39,12 @@ An AISP  **may**  retrieve the offers resource for a specific AccountId (which i
 
 ### GET /offers
 
-If an ASPSP has implemented the bulk retrieval endpoints, an AISP  **may**  optionally retrieve the offers in bulk. 
+If an ASPSP has implemented the bulk retrieval endpoints, an AISP  **may**  optionally retrieve the offers in bulk.
 This will retrieve the resources for all authorised accounts linked to the account-request.
 
 ## Data Model
 
-The OBReadOffer1 object will be used for the call to: 
+The OBReadOffer1 object will be used for the call to:
 
 * GET /accounts/{AccountId}/offers
 * GET /offers
@@ -60,7 +60,7 @@ An account (AccountId) may have no offers available, or may have multiple offers
 
 ### UML Diagram
 
-![ OBReadOffer1.gif ]( images/Offers/OBReadOffer1.gif )
+![ OBReadOffer1.gif ](./images/Offers/OBReadOffer1.gif )
 
 ### Notes
 
@@ -216,4 +216,4 @@ Content-Type: application/json
     "TotalPages": 1
   }
 }
-``` 
+```

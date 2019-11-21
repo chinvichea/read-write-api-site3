@@ -1,4 +1,4 @@
-# Domestic Standing Order Usage Examples - v3.1.2
+# Domestic Standing Order Usage Examples - v3.1.4
 
 1. [Standing Order Initiation](#standing-order-initiation)
    1. [Create Domestic Standing Order Consent](#create-domestic-standing-order-consent)
@@ -15,7 +15,7 @@
 
 This set of flows and payload examples are for creating and retrieving a domestic standing order through a PISP:
 
-![Domestic Standing Order - Sequence Diagram](images/DomesticStandingOrder.png)
+![Domestic Standing Order - Sequence Diagram](./images/DomesticStandingOrder.png)
 
 <details>
   <summary>Diagram source</summary>

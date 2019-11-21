@@ -1,4 +1,4 @@
-# File Payments - v3.1.2
+# File Payments - v3.1.4
 
 1. [Overview](#overview)
 2. [Endpoints](#endpoints)
@@ -105,7 +105,7 @@ The file-payments - payment-details must have one of the following PaymentStatus
 
 The state model for the file-payments resource describes the initiation status only. I.e., not the subsequent execution of the file-payments.
 
-![ image2018-5-18_13-3-8.png ]( images/image2018-5-18_13-3-8.png )
+![ image2018-5-18_13-3-8.png ](./images/image2018-5-18_13-3-8.png )
 
 The definitions for the Status:
 
@@ -119,7 +119,7 @@ The definitions for the Status:
 
 If the payment-order requires multiple authorisations the Status of the multiple authorisations will be updated in the MultiAuthorisation object.
 
-![ image2018-6-29_16-36-34.png ]( images/image2018-6-29_16-36-34.png )
+![ image2018-6-29_16-36-34.png ](./images/image2018-6-29_16-36-34.png )
 
 The definitions for the Status:
 
@@ -147,11 +147,11 @@ The OBWriteFile2 object will be used for a call to:
 
 #### UML Diagram
 
-![OBWriteFile2]( images/OBWriteFile2.gif )
+![OBWriteFile2](./images/OBWriteFile2.gif )
 
-#### Notes 
+#### Notes
 
-The file-payment **request** object contains the: 
+The file-payment **request** object contains the:
 
 * ConsentId.
 * The full Initiation object from the file-payment-consent request.
@@ -176,11 +176,11 @@ The OBWriteFileResponse2 object will be used for a response to a call to:
 
 #### UML Diagram
 
-![OBWriteFileResponse2]( images/OBWriteFileResponse2.gif )
+![OBWriteFileResponse2](./images/OBWriteFileResponse2.gif )
 
-#### Notes 
+#### Notes
 
-The file-payment **response** object contains the: 
+The file-payment **response** object contains the:
 
 * FilePaymentId.
 * ConsentId.
@@ -213,7 +213,7 @@ The OBWritePaymentDetailsResponse1 object will be used for a response to a call 
 
 #### UML Diagram
 
-![OBWritePaymentDetailsResponse1]( images/OBWritePaymentDetailsResponse1.png )
+![OBWritePaymentDetailsResponse1](./images/OBWritePaymentDetailsResponse1.png )
 
 #### Data Dictionary
 
