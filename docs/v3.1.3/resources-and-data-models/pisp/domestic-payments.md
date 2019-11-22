@@ -231,7 +231,7 @@ Note, further usage examples are available [here](../../references/usage-example
 
 #### Request
 
-```text
+```
 POST /domestic-payments HTTP/1.1
 Authorization: Bearer Jhingapulaav
 x-idempotency-key: FRESNO.1317.GFX.22
@@ -290,7 +290,7 @@ Accept: application/json
 
 #### Response
 
-```text
+```
 HTTP/1.1 201 Created
 x-jws-signature: V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K
 x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d
@@ -334,7 +334,7 @@ Content-Type: application/json
 
 #### Request
 
-```text
+```
 GET /domestic-payments/58923-001 HTTP/1.1
 Authorization: Bearer 2YotnFZFEjr1zCsicMWpAA
 x-fapi-auth-date:  Sun, 10 Sep 2017 19:43:31 GMT
@@ -345,7 +345,7 @@ Accept: application/json
 
 #### Response
 
-```text
+```
 HTTP/1.1 200 OK
 x-jws-signature: V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K
 x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d

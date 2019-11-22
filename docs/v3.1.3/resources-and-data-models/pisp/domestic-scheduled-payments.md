@@ -222,7 +222,7 @@ The OBWritePaymentDetailsResponse1 object will be used for a response to a call 
 
 ##### POST /domestic-scheduled-payments Request
 
-```text
+```
 POST /domestic-scheduled-payments HTTP/1.1
 Authorization: Bearer 2YotnFZFEjr1zCsicMWpAA
 x-idempotency-key: FRESNO.1317.GFX.22
@@ -269,7 +269,7 @@ Accept: application/json
 
 ##### POST /domestic-scheduled-payments Response
 
-```text
+```
 HTTP/1.1 201 Created
 x-jws-signature: V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K
 x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d

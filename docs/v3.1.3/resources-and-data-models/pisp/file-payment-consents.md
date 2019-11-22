@@ -117,7 +117,7 @@ This section describes the OBFile2 class, which is reused as the Initiation obje
 
 ##### UML Diagram
 
-![OBFile2]( images/OBFile2.gif)
+![OBFile2](./images/OBFile2.gif)
 
 ##### Notes
 
@@ -161,7 +161,7 @@ The OBWriteFileConsent3 object will be used for the call to:
 
 #### UML Diagram
 
-![OBWriteFileConsent3]( images/OBWriteFileConsent3.gif)
+![OBWriteFileConsent3](./images/OBWriteFileConsent3.gif)
 
 #### Notes
 
@@ -194,7 +194,7 @@ The OBWriteFileConsentResponse3 object will be used for a response to a call to:
 
 #### UML Diagram
 
-![OBWriteFileConsentResponse3]( images/OBWriteFileConsentResponse3.gif)
+![OBWriteFileConsentResponse3](./images/OBWriteFileConsentResponse3.gif)
 
 #### Notes
 
