@@ -42,6 +42,10 @@ module.exports = [
     //                     path: '/v3.1.4/resources-and-data-models/aisp/direct-debits',
     //                 },
     //                 {
+    //                     title: 'Standing Orders',
+    //                     path: '/v3.1.4/resources-and-data-models/aisp/standing-orders',
+    //                 },
+    //                 {
     //                     title: 'Products',
     //                     path: '/v3.1.4/resources-and-data-models/aisp/Products',
     //                     collapsable: collapsable,
@@ -244,6 +248,10 @@ module.exports = [
                         path: '/v3.1.3/resources-and-data-models/aisp/direct-debits',
                     },
                     {
+                        title: 'Standing Orders',
+                        path: '/v3.1.3/resources-and-data-models/aisp/standing-orders',
+                    },
+                    {
                         title: 'Products',
                         path: '/v3.1.3/resources-and-data-models/aisp/Products',
                         collapsable: collapsable,
@@ -444,6 +452,10 @@ module.exports = [
                     {
                         title: 'Direct Debits',
                         path: '/v3.1.2/resources-and-data-models/aisp/direct-debits',
+                    },
+                    {
+                        title: 'Standing Orders',
+                        path: '/v3.1.2/resources-and-data-models/aisp/standing-orders',
                     },
                     {
                         title: 'Products',
