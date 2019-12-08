@@ -1,9 +1,37 @@
----
----
+# Namespaced Enumerations - v3.1.4 <!-- omit in toc --> 
 
-# Namespaced Enumerations - v3.1.4-draft4 <!-- omit in toc --> 
-
-[[toc]]
+1. [Overview](#overview)
+2. [Basics](#basics)
+   1. [Design Principles](#design-principles)
+   2. [Release Management](#release-management)
+3. [Common Namespaced Enumerations](#common-namespaced-enumerations)
+   1. [OBExternalAccountIdentification4Code](#obexternalaccountidentification4code)
+   2. [OBExternalFinancialInstitutionIdentification4Code](#obexternalfinancialinstitutionidentification4code)
+   3. [OBErrorResponseError1Code](#oberrorresponseerror1code)
+4. [Account and Transaction API Namespaced Enumerations](#account-and-transaction-api-namespaced-enumerations)
+   1. [OBExternalStatementAmountType1Code](#obexternalstatementamounttype1code)
+   2. [OBExternalStatementBenefitType1Code](#obexternalstatementbenefittype1code)
+   3. [OBExternalStatementDateTimeType1Code](#obexternalstatementdatetimetype1code)
+   4. [OBExternalStatementFeeType1Code](#obexternalstatementfeetype1code)
+   5. [OBExternalStatementInterestType1Code](#obexternalstatementinteresttype1code)
+   6. [OBExternalStatementRateType1Code](#obexternalstatementratetype1code)
+   7. [OBExternalStatementValueType1Code](#obexternalstatementvaluetype1code)
+   8. [OBExternalStatementFeeRateType1Code](#obexternalstatementfeeratetype1code)
+   9. [OBExternalStatementFeeFrequency1Code](#obexternalstatementfeefrequency1code)
+   10. [OBExternalStatementInterestRateType1Code](#obexternalstatementinterestratetype1code)
+   11. [OBExternalStatementInterestFrequency1Code](#obexternalstatementinterestfrequency1code)
+   12. [OBExternalLegalStructureType1Code](#obexternallegalstructuretype1code)
+   13. [OBExternalAccountRole1Code](#obexternalaccountrole1code)
+   14. [OBExternalDirectDebitFrequency1Code](#obexternaldirectdebitfrequency1code)
+5. [Payment Initiation API Namespaced Enumerations](#payment-initiation-api-namespaced-enumerations)
+   1. [OBExternalLocalInstrument1Code](#obexternallocalinstrument1code)
+   2. [OBExternalPaymentChargeType1Code](#obexternalpaymentchargetype1code)
+   3. [OBExternalFileType1Code](#obexternalfiletype1code)
+6. [Confirmation of Funds API Namespaced Enumerations](#confirmation-of-funds-api-namespaced-enumerations)
+7. [Event Notification API Namespaced Enumerations](#event-notification-api-namespaced-enumerations)
+   1. [OBEventType1Code](#obeventtype1code)
+   2. [OBExternalEventConsentAuthorizationRevokedReason1Code](#obexternaleventconsentauthorizationrevokedreason1code)
+   3. [OBExternalEventAccountAccessConsentLinkedAccountUpdateReason1Code](#obexternaleventaccountaccessconsentlinkedaccountupdatereason1code)
 
 ## Overview
 
@@ -63,7 +91,6 @@ This is the Data Type for Agent/SchemeName and used to identify the type of Iden
 | UK.OBIE.BICFI |Valid BICs for financial institutions are registered by the ISO 9362 Registration Authority in the BIC directory, and consist of eight (8) or eleven (11) contiguous characters. |
 | UK.OBIE.NCC.[ISO3166-aplha2-CountryCode] | Valid NCC (National Clearing Code) as an option for the accounts that don't have an IBAN, registered in the country identified by the 2 letter ISO-3166 Country code. For example, transfer to India may have Scheme Name as UK.OBIE.NCC.IN and Identification can be the IFSC code of the bank/branch in India. |
 
-
 ### OBErrorResponseError1Code
 
 This is Data Type gives a low level textual error code to help categorise an error response. The applicable HTTP response code is also given.
@@ -99,6 +126,7 @@ This is Data Type gives a low level textual error code to help categorise an err
 | UK.OBIE.Unsupported.LocalInstrument |400 |LocalInstrument is not supported by the ASPSP.<br><br>The path element should be populated with the path of the LocalInstrument.<br><br>The URL should be populated with a link to ASPSP documentation listing out the supported local instruments. |
 | UK.OBIE.Unsupported.Scheme |400 |Identification scheme is not supported. The path element should be populated with the path of the scheme. The URL should be populated with a link to ASPSP documentation listing out the supported schemes. |
 | UK.OBIE.Reauthenticate |403 |The ASPSP must use this error code in Error Response to indicate that re-authentication by the PSU is required to process the request. |
+| UK.OBIE.Rules.ResourceAlreadyExists |409 |The ASPSP must use this error code in Error Response, to indicate that a resource with same parameters already exists, or in a state that doesn't allow requested operation. |
 | UK.OBIE.UnexpectedError |5xx |An error code that can be used, when an unexpected error occurs.<br><br>The ASPSP must populate the message with a meaningful error description, without revealing sensitive information. |
 
 </details>

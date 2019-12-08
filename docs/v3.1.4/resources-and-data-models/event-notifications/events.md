@@ -1,9 +1,44 @@
----
----
+# Events - v3.1.4 <!-- omit in toc -->
 
-# Events - v3.1.4-draft4
-
-[[toc]]
+1. [Overview](#overview)
+2. [Endpoints](#endpoints)
+   1. [POST /events](#post-events)
+3. [Data Model](#data-model)
+   1. [Aggregated Polling - Request](#aggregated-polling---request)
+      1. [UML Diagram](#uml-diagram)
+      2. [Data Dictionary](#data-dictionary)
+   2. [Aggregated Polling - Response](#aggregated-polling---response)
+      1. [UML Diagram](#uml-diagram-1)
+      2. [Data Dictionary](#data-dictionary-1)
+   3. [OBEventNotification2](#obeventnotification2)
+      1. [UML Diagram](#uml-diagram-2)
+      2. [Notes](#notes)
+      3. [Data Dictionary](#data-dictionary-2)
+   4. [OBEventSubject1](#obeventsubject1)
+      1. [UML Diagram](#uml-diagram-3)
+      2. [Notes](#notes-1)
+      3. [Data Dictionary](#data-dictionary-3)
+   5. [OBEventResourceUpdate2](#obeventresourceupdate2)
+      1. [UML Diagram](#uml-diagram-4)
+      2. [Data Dictionary](#data-dictionary-4)
+   6. [OBEventConsentAuthorizationRevoked1](#obeventconsentauthorizationrevoked1)
+      1. [UML Diagram](#uml-diagram-5)
+      2. [Notes](#notes-2)
+      3. [Data Dictionary](#data-dictionary-5)
+   7. [OBEventAccountAccessConsentLinkedAccountUpdate1](#obeventaccountaccessconsentlinkedaccountupdate1)
+      1. [UML Diagram](#uml-diagram-6)
+      2. [Notes](#notes-3)
+      3. [Data Dictionary](#data-dictionary-6)
+4. [Usage Examples](#usage-examples)
+   1. [Poll Only](#poll-only)
+      1. [POST Events Request](#post-events-request)
+      2. [POST Events Response](#post-events-response)
+   2. [Acknowledge Only](#acknowledge-only)
+      1. [POST Events Request](#post-events-request-1)
+      2. [POST Events Response](#post-events-response-1)
+   3. [Poll and Acknowledge With Errors](#poll-and-acknowledge-with-errors)
+      1. [POST Events Request](#post-events-request-2)
+      2. [POST Events Response](#post-events-response-2)
 
 ## Overview
 
@@ -12,6 +47,7 @@ The Events resource is used by a TPP to retrieve multiple signed event notificat
 This resource description should be read in conjunction with a compatible Aggregated Polling Profile.
 
 ## Endpoints
+
 | Resource |HTTP Operation |Endpoint |Mandatory? |Scope |Grant Type |Message Signing |Idempotency Key |Request Object |Response Object |
 | --- |--- |--- |--- |--- |--- |--- |--- |--- |--- |
 | events |POST |POST /events |Optional |accounts fundsconfirmations |Client Credentials |N/A |No |OBEventPolling1 |OBEventPollingResponse1 |
@@ -193,7 +229,7 @@ Note for the sake of readability the SETs shown in examples are shorted.
 #### POST Events Request
 
 ```
-POST /event HTTP/1.1
+POST /events HTTP/1.1
 
 Authorization: Bearer 7b99f6c331e841dab811176e25d57ca7
 Content-Type: application/json
@@ -209,7 +245,7 @@ x-fapi-interaction-id: 1af4c0e6b5da49f6b1aebf439e87c199
 #### POST Events Response
 
 ```
-POST /event HTTP/1.1
+POST /events HTTP/1.1
 
 Content-Type: application/json
 x-fapi-interaction-id: 1af4c0e6b5da49f6b1aebf439e87c199
@@ -231,7 +267,7 @@ x-fapi-interaction-id: 1af4c0e6b5da49f6b1aebf439e87c199
 #### POST Events Request
 
 ```
-POST /event HTTP/1.1
+POST /events HTTP/1.1
 
 Authorization: Bearer 7b99f6c331e841dab811176e25d57ca7
 Content-Type: application/json
@@ -246,7 +282,7 @@ x-fapi-interaction-id: 295f6c6c7b2045b2a3e91e4f1c31d681
 #### POST Events Response
 
 ```
-POST /event HTTP/1.1
+POST /events HTTP/1.1
 
 Content-Type: application/json
 x-fapi-interaction-id: 295f6c6c7b2045b2a3e91e4f1c31d681
@@ -263,7 +299,7 @@ x-fapi-interaction-id: 295f6c6c7b2045b2a3e91e4f1c31d681
 #### POST Events Request
 
 ```
-POST /event HTTP/1.1
+POST /events HTTP/1.1
 
 Authorization: Bearer 7b99f6c331e841dab811176e25d57ca7
 Content-Type: application/json
@@ -287,7 +323,7 @@ x-fapi-interaction-id: 3fc0df586e45404abd5bbf1b23ce343d
 #### POST Events Response
 
 ```
-POST /event HTTP/1.1
+POST /events HTTP/1.1
 
 Content-Type: application/json
 x-fapi-interaction-id: 3fc0df586e45404abd5bbf1b23ce343d

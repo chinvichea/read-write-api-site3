@@ -1,9 +1,16 @@
----
----
+# Event Notification API Profile - v3.1.4 <!-- omit in toc -->
 
-# Event Notification API Profile - v3.1.4-draft4
-
-[[toc]]
+1. [Overview](#overview)
+   1. [Design Principles](#design-principles)
+      1. [Security Event Token Alignment](#security-event-token-alignment)
+      2. [Event Notification Message Signing](#event-notification-message-signing)
+      3. [SET Aggregation Alignment](#set-aggregation-alignment)
+2. [Basics](#basics)
+   1. [Overview](#overview-1)
+      1. [Steps](#steps)
+      2. [Sequence Diagram](#sequence-diagram)
+   2. [Event Types and Extensibility](#event-types-and-extensibility)
+   3. [Event-Notification Backwards Compatibility](#event-notification-backwards-compatibility)
 
 ## Overview
 
@@ -11,20 +18,21 @@ The Event Notification API Profile describes the flows and common functionality 
 
 The Event Notification Subscription API Profile and the Callback URL API Profile provide alternative mechanisms for TPPs to register for event notifications.
 
-- The Event Notification Subscription API allows TPPs to register to receive all or specific event types via the Real Time Event Notification API and/or the Aggregated Polling API.
+- The Event Notification Subscription API allows TPPs to register to receive all or specific event types via the Real Time Event Notification API and/or the Aggregated Polling API. 
 - The Callback URL API allows TPPs to register to receive a `urn:uk:org:openbanking:events:resource-update` event notification via the Real Time Event Notification API.
 
+Usage of the Event Notification Subscription API is recommended over the Callback URL API for notification registrations.
 Note, should an ASPSP choose to provide both APIs for event notification registrations, any registration made using the Event Notification Subscription API supersedes a registration made using the Callback URL API.
 
 This profile should be read in conjunction with the other API profiles which detail the circumstances under which an event notification may be delivered.
 
-Implementation of Event Notifications is **optional** for both ASPSPs and TPPs.
+Implementation of real-time push Notifications is **optional** for both ASPSPs and TPPs.
 
 ### Design Principles
 
 #### Security Event Token Alignment
 
-Event notifications are aligned with the Security Event Token standard, a proposed IETF standard for exchanging information about security events. See https://tools.ietf.org/html/rfc8417. An event notification is structured as a JWT, indicating an event has occurred through a set of claims.
+Event notifications are aligned with the Security Event Token standard, a proposed IETF standard for exchanging information about security events. See [https://tools.ietf.org/html/rfc8417](https://tools.ietf.org/html/rfc8417). An event notification is structured as a JWT, indicating an event has occurred through a set of claims.
 
 A resource-update event (`urn:uk:org:openbanking:events:resource-update`) is used to communicate that a specific resource has been updated. It contains identifiers for the resource and links to retrieve it.
 
@@ -36,7 +44,7 @@ Event Notifications are signed for non-repudiation using the approach defined in
 
 #### SET Aggregation Alignment
 
-Aggregated polling of Security Event Tokens is aligned with the draft "Poll-Based Security Event Token (SET) Delivery Using HTTP" standard (draft-ietf-secevent-http-poll-01) as defined here: https://datatracker.ietf.org/doc/draft-ietf-secevent-http-poll/.
+Aggregated polling of Security Event Tokens is aligned with the draft "Poll-Based Security Event Token (SET) Delivery Using HTTP" standard (draft-ietf-secevent-http-poll-01) as defined here: [https://datatracker.ietf.org/doc/draft-ietf-secevent-http-poll/](https://datatracker.ietf.org/doc/draft-ietf-secevent-http-poll/).
 
 draft-ietf-secevent-http-poll-01 imposes the following constraints on the underlying SETs:
 
