@@ -189,7 +189,7 @@ The applicability of signatures to individual requests and responses is document
 
 Message Encryption is an **optional** feature of the Open Banking APIs to facilitate additional protection of inflight data.
 
-The approach for message encryption is documented in [Basics / Message Encryption](#message-encryption-1).
+The approach for message encryption is documented in [Basics / Message Encryption](#message-encryption-2).
 
 Applicability to individual requests and responses is not defined in the standards. Application will be based on agreement between implementors of the standards.
 

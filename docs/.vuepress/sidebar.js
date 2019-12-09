@@ -208,7 +208,11 @@ module.exports = [
     //                 '/v3.1.4/references/namespaced-enumerations',
     //             ]
     //         },
-    //     ],
+    //         {
+    //             title: 'Version Control',
+    //             path: '/v3.1.4/version-control'
+    //         },
+    //     ],       
     // },
     // v3.1.3
     {
@@ -414,6 +418,11 @@ module.exports = [
                     '/v3.1.3/references/namespaced-enumerations',
                 ]
             },
+            {
+                title: 'Version Control',
+                path: '/v3.1.3/version-control'
+            },
+
         ],
     },
     // v3.1.2
@@ -622,6 +631,10 @@ module.exports = [
                     '/v3.1.2/references/domestic-payment-message-formats',
                     '/v3.1.2/references/namespaced-enumerations',
                 ]
+            },
+            {
+                title: 'Version Control',
+                path: '/v3.1.2/version-control'
             },
         ],
     },
