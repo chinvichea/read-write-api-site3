@@ -1,9 +1,27 @@
----
----
+# Transactions - v3.1.4
 
-# Transactions - v3.1.4-draft4
-
-[[toc]]
+1. [Overview](#overview)
+2. [Endpoints](#endpoints)
+   1. [GET /accounts/{AccountId}/transactions](#get-accountsaccountidtransactions)
+   2. [GET /transactions](#get-transactions)
+3. [Data Model](#data-model)
+   1. [Resource Definition](#resource-definition)
+   2. [UML Diagram](#uml-diagram)
+      1. [Notes](#notes)
+   3. [Filtering](#filtering)
+      1. [Filtering Examples](#filtering-examples)
+   4. [Permission Codes](#permission-codes)
+   5. [Data Dictionary](#data-dictionary)
+4. [Usage Examples](#usage-examples)
+   1. [Specific Account](#specific-account)
+      1. [Get Account Transactions Request](#get-account-transactions-request)
+      2. [Get Account Transactions Response](#get-account-transactions-response)
+   2. [Bulk](#bulk)
+      1. [Get Transactions Request](#get-transactions-request)
+      2. [Get Transactions Response](#get-transactions-response)
+   3. [No Access](#no-access)
+      1. [GET Account Transactions Request](#get-account-transactions-request)
+      2. [GET Account Transactions Response](#get-account-transactions-response)
 
 ## Overview
 
