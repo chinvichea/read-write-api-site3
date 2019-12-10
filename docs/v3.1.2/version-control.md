@@ -1,3 +1,7 @@
+---
+next: false
+---
+
 # Version control
 
 | Version | Date | Authors | Comments |

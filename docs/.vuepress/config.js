@@ -28,10 +28,20 @@ module.exports = {
         // https://vuepress.vuejs.org/theme/default-theme-config.html#smooth-scrolling
         smoothScroll: true,
         // https://vuepress.vuejs.org/theme/default-theme-config.html#last-updated
-        lastUpdated: 'Last Updated',
+        lastUpdated: false,
         // https://vuepress.vuejs.org/theme/default-theme-config.html#git-repository-and-edit-links
         // repo: 'OpenBankingUK/read-write-api-site3',
         // editLinks: true,
+
+        // // https://vuepress.vuejs.org/theme/default-theme-config.html#git-repository-and-edit-links
+        // // Disabling these for now. For more information, please see these issue reports:
+        // // * .
+        // // * .
+        // // * .
+        // // default value is true. Allows to hide next page links on all pages
+        // nextLinks: false,
+        // // default value is true. Allows to hide prev page links on all pages
+        // prevLinks: false,
     },
     markdown,
     extendMarkdown: (md) => {
