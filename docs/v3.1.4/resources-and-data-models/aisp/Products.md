@@ -12,7 +12,7 @@
    3. [Permission Codes](#permission-codes)
    4. [Data Dictionary](#data-dictionary)
       1. [Common Payload](#common-payload)
-      2. [PCA &amp; BCA Extensions](#pca-amp-bca-extensions)
+      2. [PCA &amp; BCA Extensions](#pca--bca-extensions)
 4. [Usage Examples](#usage-examples)
    1. [Specific Account](#specific-account)
       1. [Get Accounts Product Request](#get-accounts-product-request)
@@ -118,12 +118,11 @@ Data Dictionary for Common Payload between PCA, BCA and other product types.
 
 #### PCA & BCA Extensions
 
-[BCA Product Data Model v3.1.2](./BCA Product Data Model.md)
+[BCA Product Data Model v3.1.2](./bca-product-data-model.md)
 
-[PCA Product Data Model v3.1.2](./PCA Product Data Model.md)
+[PCA Product Data Model v3.1.2](./pca-product-data-model.md)
 
-[Other Product Data Model v3.1.2](./Other Product Data Model.md)
-
+[Other Product Data Model v3.1.2](./other-product-data-model.md)
 
 ## Usage Examples
 

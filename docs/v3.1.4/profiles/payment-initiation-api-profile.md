@@ -23,7 +23,7 @@
       3. [Payment-Order Resource](#payment-order-resource)
          1. [POST](#post-1)
          2. [GET](#get-2)
-3. [Security &amp; Access Control](#security-amp-access-control)
+3. [Security &amp; Access Control](#security--access-control)
    1. [Scopes](#scopes)
    2. [Grants Types](#grants-types)
    3. [Consent Authorisation](#consent-authorisation)

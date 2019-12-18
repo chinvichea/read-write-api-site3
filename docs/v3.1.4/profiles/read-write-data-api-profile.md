@@ -48,7 +48,7 @@
          2. [Step 2: Validate the JOSE Header and Certificate](#step-2-validate-the-jose-header-and-certificate)
          3. [Step 3: Verify the Signature](#step-3-verify-the-signature)
       6. [Sample JOSE Header](#sample-jose-header)
-   10. [Message Encryption](#message-encryption-1)
+   10. [Message Encryption](#message-encryption-)
       1. [Overview](#overview-2)
       2. [Message Signing and Encryption](#message-signing-and-encryption)
       3. [Key Stores](#key-stores-1)
@@ -57,8 +57,8 @@
    12. [Pagination](#pagination)
    13. [Archiving](#archiving)
    14. [Supplementary Data](#supplementary-data)
-3. [Security &amp; Access Control](#security-amp-access-control)
-   1. [Scopes &amp; Grant Types](#scopes-amp-grant-types)
+3. [Security &amp; Access Control](#security--access-control)
+   1. [Scopes &amp; Grant Types](#scopes--grant-types)
    2. [Length of Authorization Code, Access Token and Refresh Token](#length-of-authorization-code-access-token-and-refresh-token)
    3. [Consent Authorisation](#consent-authorisation)
       1. [Error Condition](#error-condition)
@@ -68,7 +68,7 @@
       1. [Grant Types for identifying the TPP](#grant-types-for-identifying-the-tpp)
          1. [Client Credentials Grant](#client-credentials-grant)
       2. [Grant Types for identifying the TPP and PSU](#grant-types-for-identifying-the-tpp-and-psu)
-         1. [Authorization Code Grant &amp; Hybrid Grant](#authorization-code-grant-amp-hybrid-grant)
+         1. [Authorization Code Grant &amp; Hybrid Grant](#authorization-code-grant--hybrid-grant)
          2. [id_token_hint](#id_token_hint)
          3. [jwt_bearer](#jwt_bearer)
       3. [CIBA](#ciba)
@@ -195,7 +195,7 @@ The applicability of signatures to individual requests and responses is document
 
 Message Encryption is an **optional** feature of the Open Banking APIs to facilitate additional protection of inflight data.
 
-The approach for message encryption is documented in [Basics / Message Encryption](#message-encryption-2).
+The approach for message encryption is documented in [Basics / Message Encryption](#message-encryption-1).
 
 Applicability to individual requests and responses is not defined in the standards. Application will be based on agreement between implementors of the standards.
 
