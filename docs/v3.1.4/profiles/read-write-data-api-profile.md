@@ -48,7 +48,7 @@
          2. [Step 2: Validate the JOSE Header and Certificate](#step-2-validate-the-jose-header-and-certificate)
          3. [Step 3: Verify the Signature](#step-3-verify-the-signature)
       6. [Sample JOSE Header](#sample-jose-header)
-   10. [Message Encryption](#message-encryption-)
+   10. [Message Encryption](#message-encryption-2)
       1. [Overview](#overview-2)
       2. [Message Signing and Encryption](#message-signing-and-encryption)
       3. [Key Stores](#key-stores-1)
@@ -195,7 +195,7 @@ The applicability of signatures to individual requests and responses is document
 
 Message Encryption is an **optional** feature of the Open Banking APIs to facilitate additional protection of inflight data.
 
-The approach for message encryption is documented in [Basics / Message Encryption](#message-encryption-1).
+The approach for message encryption is documented in [Basics / Message Encryption](#message-encryption-2).
 
 Applicability to individual requests and responses is not defined in the standards. Application will be based on agreement between implementors of the standards.
 
