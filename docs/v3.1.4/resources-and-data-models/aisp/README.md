@@ -1,4 +1,4 @@
-# AISP Resources and Data Models - v3.1.4
+# AISP Resources and Data Models - v3.1.4 <!-- omit in toc -->
 
 Resources accessed using the aisp PSD2 role are detailed here:
 
@@ -17,7 +17,6 @@ Resources accessed using the aisp PSD2 role are detailed here:
 * [Parties](Parties.md)
 * [Scheduled Payments](Scheduled%20Payments.md)
 * [Statements](Statements.md)
-
 
 ## Endpoints
 

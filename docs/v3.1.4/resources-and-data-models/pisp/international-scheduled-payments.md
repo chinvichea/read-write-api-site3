@@ -1,4 +1,4 @@
-# International Scheduled Payments - v3.1.4
+# International Scheduled Payments - v3.1.4 <!-- omit in toc -->
 
 1. [Overview](#overview)
 2. [Endpoints](#endpoints)
@@ -12,18 +12,18 @@
 		1. [Payment Order](#payment-order)
 			1. [Multiple Authorisation](#multiple-authorisation)
 3. [Data Model](#data-model)
-	1. [Reused Classes](#reused-classes)
+	5. [Reused Classes](#reused-classes)
 		1. [OBInternationalScheduled3](#obinternationalscheduled3)
 		2. [OBExchangeRate2](#obexchangerate2)
-	2. [International Scheduled Payment - Request](#international-scheduled-payment---request)
+	6. [International Scheduled Payment - Request](#international-scheduled-payment---request)
 		1. [UML Diagram](#uml-diagram)
 		2. [Notes](#notes)
 		3. [Data Dictionary](#data-dictionary)
-	3. [International Scheduled Payment - Response](#international-scheduled-payment---response)
+	7. [International Scheduled Payment - Response](#international-scheduled-payment---response)
 		1. [UML Diagram](#uml-diagram-1)
 		2. [Notes](#notes-1)
 		3. [Data Dictionary](#data-dictionary-1)
-	4. [International Schedule Payment Order - Payment Details - Response](#international-schedule-payment-order---payment-details---response)
+	8. [International Schedule Payment Order - Payment Details - Response](#international-schedule-payment-order---payment-details---response)
 		1. [UML Diagram](#uml-diagram-2)
 		2. [Data Dictionary](#data-dictionary-2)
 
@@ -52,7 +52,7 @@ Once the international-scheduled-payment-consent has been authorised by the PSU,
 
 #### Status
 
-An international-scheduled-payment can only be created if its corresponding international-scheduled-payment-consent resource has the status of "Authorised".
+An international-scheduled-payment can only be created if its corresponding international-scheduled-payment-consent resource has the status of "Authorised". 
 
 The international-scheduled-payment resource that is created successfully must have one of the following Status codes:
 
@@ -165,7 +165,7 @@ The OBWriteInternationalScheduled3 object will be used for a call to:
 
 #### Notes
 
-The international-scheduled-payment **request** object contains the:
+The international-scheduled-payment **request** object contains the: 
 
 * ConsentId.
 * The full Initiation and Risk objects from the international-scheduled-payment-consent request.
@@ -194,7 +194,7 @@ The OBWriteInternationalScheduledResponse5 object will be used for a response to
 
 #### Notes
 
-The international-scheduled-payment **response** object contains the:
+The international-scheduled-payment **response** object contains the: 
 
 * InternationalScheduledPaymentId.
 * ConsentId.

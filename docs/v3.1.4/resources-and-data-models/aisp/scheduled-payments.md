@@ -1,4 +1,4 @@
-# Scheduled Payments - v3.1.4
+# Scheduled Payments - v3.1.4 <!-- omit in toc -->
 
 1. [Overview](#overview)
 2. [Endpoints](#endpoints)
@@ -70,7 +70,7 @@ The resource differs depending on the permissions (ReadScheduledPaymentsBasic an
     * OBReadScheduledPayment3/Data/ScheduledPayment/CreditorAgent
     * OBReadScheduledPayment3/Data/ScheduledPayment/CreditorAccount
 * If the **ReadScheduledPaymentsDetail** is granted by the PSU:
-    * OBReadScheduledPayment3/Data/ScheduledPayment/CreditorAgent**may** be returned if applicable to the account and ASPSP (0..1)
+    * OBReadScheduledPayment3/Data/ScheduledPayment/CreditorAgent **may** be returned if applicable to the account and ASPSP (0..1)
     * OBReadScheduledPayment3/Data/ScheduledPayment/CreditorAccount **must** be returned (1..1)
 
 If the ReadPAN permission is granted by the PSU - the ASPSP may choose to populate the OBReadScheduledPayment3/Data/ScheduledPayment/CreditorAccount/Identification with the unmasked PAN (if the PAN is being populated in the response).

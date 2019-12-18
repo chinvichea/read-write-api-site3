@@ -1,8 +1,8 @@
-# Beneficiaries - v3.1.4
+# Beneficiaries - v3.1.4 <!-- omit in toc -->
 
 1. [Overview](#overview)
 2. [Endpoints](#endpoints)
-   1. [GET/accounts/{AccountId}/beneficiaries](#getaccountsaccountidbeneficiaries)
+   1. [GET /accounts/{AccountId}/beneficiaries](#get-accountsaccountidbeneficiaries)
    2. [GET /beneficiaries](#get-beneficiaries)
 3. [Data Model](#data-model)
    1. [Resource Definition](#resource-definition)
@@ -13,6 +13,7 @@
 4. [Usage Examples](#usage-examples)
    1. [Specific Account](#specific-account)
       1. [Get Account Beneficiaries Request](#get-account-beneficiaries-request)
+      2. [Get Account Beneficiaries Response](#get-account-beneficiaries-response)
    2. [Bulk](#bulk)
       1. [Get Beneficiaries Request](#get-beneficiaries-request)
       2. [Get Beneficiaries Response](#get-beneficiaries-response)

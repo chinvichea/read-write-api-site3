@@ -1,4 +1,4 @@
-# International Scheduled Payment Consents - v3.1.4
+# International Scheduled Payment Consents - v3.1.4 <!-- omit in toc -->
 
 1. [Overview](#overview)
 2. [Endpoints](#endpoints)
@@ -10,30 +10,30 @@
 	4. [State Model](#state-model)
 		1. [Payment Order Consent](#payment-order-consent)
 3. [Data Model](#data-model)
-	1. [Reused Classes](#reused-classes)
+	5. [Reused Classes](#reused-classes)
 		1. [OBInternationalScheduled3](#obinternationalscheduled3)
 			1. [UML Diagram](#uml-diagram)
 			2. [Notes](#notes)
 			3. [Data Dictionary](#data-dictionary)
 		2. [OBExchangeRate2](#obexchangerate2)
 			1. [Data Dictionary](#data-dictionary-1)
-	2. [International Scheduled Payment Consent - Request](#international-scheduled-payment-consent---request)
+	6. [International Scheduled Payment Consent - Request](#international-scheduled-payment-consent---request)
 		1. [UML Diagram](#uml-diagram-1)
 		2. [Notes](#notes-1)
 		3. [Data Dictionary](#data-dictionary-2)
-	3. [International Scheduled Payment Consent - Response](#international-scheduled-payment-consent---response)
+	7. [International Scheduled Payment Consent - Response](#international-scheduled-payment-consent---response)
 		1. [UML Diagram](#uml-diagram-2)
 		2. [Notes](#notes-2)
 		3. [Data Dictionary](#data-dictionary-3)
-	4. [International Scheduled Payment Consent Confirmation of Funds - Response](#international-scheduled-payment-consent-confirmation-of-funds---response)
+	8. [International Scheduled Payment Consent Confirmation of Funds - Response](#international-scheduled-payment-consent-confirmation-of-funds---response)
 		1. [UML Diagram](#uml-diagram-3)
 		2. [Notes](#notes-3)
 		3. [Data Dictionary](#data-dictionary-4)
 4. [Usage Examples](#usage-examples)
-	1. [POST /international-scheduled-payment-consents](#post-international-scheduled-payment-consents-1)
+	9. [POST /international-scheduled-payment-consents](#post-international-scheduled-payment-consents-1)
 		1. [Request](#request)
 		2. [Response](#response)
-	2. [GET /international-scheduled-payment-consents/{ConsentId}/funds-confirmation](#get-international-scheduled-payment-consentsconsentidfunds-confirmation-1)
+	10. [GET /international-scheduled-payment-consents/{ConsentId}/funds-confirmation](#get-international-scheduled-payment-consentsconsentidfunds-confirmation-1)
 		1. [Request](#request-1)
 		2. [Response](#response-1)
 
@@ -69,7 +69,7 @@ The default Status is "AwaitingAuthorisation" immediately after the internationa
 
 ### GET /international-scheduled-payment-consents/{ConsentId}
 
-A PISP can optionally retrieve a payment consent resource that they have created to check its status.
+A PISP can optionally retrieve a payment consent resource that they have created to check its status. 
 
 #### Status
 
@@ -128,7 +128,7 @@ This section describes the OBInternationalScheduled3 class which is reused as th
 
 ##### Notes
 
-For the OBInternationalScheduled3 Initiation object:
+For the OBInternationalScheduled3 Initiation object: 
 
 * All elements in the Initiation payload, that are specified by the PISP must not be changed via the ASPSP as this is part of formal consent from the PSU.
 * If the ASPSP is able to establish a problem with payload or any contextual error during the API call, the ASPSP must reject the international-scheduled-payment-consent consent request immediately.
@@ -145,7 +145,7 @@ For the OBInternationalScheduled3 Initiation object:
   * "UK.OBIE.PAN" - The Identification field **must** be populated with the full PAN. A PAN may be an instrument (e.g., a debit card) linked to a payment account, and may not be the only PAN linked to the payment account.
   * "UK.OBIE.Paym" - The Identification field **must** be populated with the Paym proxy value.
 * LocalInstrument is the requested payment scheme for execution. This is a free-text field.
-* InstructionPrioirty **may** be used by the ASPSP to determine the payment scheme for execution.
+* InstructionPrioirty **may** be used by the ASPSP to determine the payment scheme for execution. 
 * The InstructedAmount object **must** be populated with the desired Amount and Currency of transfer, regardless of the currency of the DebtorAccount. I.e., a PSU may wish to transfer 100EUR from a GBP DebtorAccount (the InstructedAmount will be 100EUR), or 100GBP in EUR (the InstructedAmount will be 100GBP).
 * The CurrencyOfTransfer **must** be used to specify the currency the funds will be transferred. I.e., a PSU may wish to transfer 100USD from a GBP DebtorAccount to a Rupee INR CreditorAccount in India.
 * The ChargeBearer field is used by the PISP to indicate the bearer of charges. An ASPSP must Reject the Initiation request if the requested charge allocation cannot be fulfilled.
@@ -155,7 +155,7 @@ For the OBInternationalScheduled3 Initiation object:
 The ExchangeRateInformation object must conform to these behaviours:
 
 * A PISP must specify the DebtorAccount currency in the UnitCurrency field if the PISP is requesting a specific RateType so the ASPSP can respond with an exchange rate quote prior to PSU authorisation.
-* A PISP may indicate an exchange rate request using the RateType with these enumerations:
+* A PISP may indicate an exchange rate request using the RateType with these enumerations: 
   * Actual.
   * Agreed.
   * Indicative.
@@ -269,9 +269,9 @@ The international-scheduled-payment-consent **request** contains these objects:
 
 Exchange rate behaviour:
 
-* An ASPSP **must** respond to an **Agreed** RateType request.
-* An ASPSP **may** respond to an **Actual** RateType request or **may** reject the request.
-* An ASPSP **may** respond to an **Indicative** RateType request or **may** reject the request.
+* An ASPSP **must** respond to an **Agreed** RateType request. 
+* An ASPSP **may** respond to an **Actual** RateType request or **may** reject the request. 
+* An ASPSP **may** respond to an **Indicative** RateType request or **may** reject the request. 
 * An ASPSP **must** reject the international-scheduled-payment-consent request if the specified Initiation/ExchangeRateInformation cannot be fulfilled.
 
 #### Data Dictionary
