@@ -181,7 +181,7 @@ This section describes the OBEventAccountAccessConsentLinkedAccountUpdate1 class
 
 #### Notes
 
-For the OBEventAccountAccessConsentLinkedAccountUpdate object:
+For the OBEventAccountAccessConsentLinkedAccountUpdate object: 
 
 - The http://openbanking.org.uk/rty claim **must** be populated with "account-access-consent".
 

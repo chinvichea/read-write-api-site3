@@ -1,4 +1,4 @@
-# Domestic Payment Usage Examples - v3.1.4
+# Domestic Payment Usage Examples - v3.1.4 <!-- omit in toc -->
 
 1. [Merchant Initiation via PISP](#merchant-initiation-via-pisp)
    1. [Sequence Diagram](#sequence-diagram)
@@ -704,7 +704,7 @@ Content-Type: application/json
 Accept: application/json
 ```
 
-```json
+```json 
 {
   "Data": {
     "ConsentId": "7290",
@@ -1242,7 +1242,7 @@ Content-Type: application/json
 
 ## Money Transfer
 
-Below in an example illustrating Money transfer from a card account to a bank account.
+Below in an example illustrating Money transfer from a card account to a bank account. 
 
 ### POST /domestic-payment-consents request
 
@@ -1298,6 +1298,7 @@ x-jws-signature: V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K
 x-fapi-interaction-id: 93bac548-d2de-4546-b106-880a5018460d
 Content-Type: application/json
 ```
+
 ```json
 {
     "Data": {

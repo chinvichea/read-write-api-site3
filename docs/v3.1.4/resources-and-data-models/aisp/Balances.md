@@ -1,4 +1,4 @@
-# Balances - v3.1.4
+# Balances - v3.1.4 <!-- omit in toc -->
 
 1. [Overview](#overview)
 2. [Endpoints](#endpoints)

@@ -1,4 +1,4 @@
-# Event Notification Subscription API Profile - v3.1.4
+# Event Notification Subscription API Profile - v3.1.4 <!-- omit in toc -->
 
 1. [Overview](#overview)
 2. [Basics](#basics)

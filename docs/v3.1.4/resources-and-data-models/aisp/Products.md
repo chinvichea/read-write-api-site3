@@ -1,4 +1,4 @@
-# Products - v3.1.4
+# Products - v3.1.4 <!-- omit in toc -->
 
 1. [Overview](#overview)
 2. [Endpoints](#endpoints)
@@ -12,7 +12,7 @@
    3. [Permission Codes](#permission-codes)
    4. [Data Dictionary](#data-dictionary)
       1. [Common Payload](#common-payload)
-      2. [PCA & BCA Extensions](#pca--bca-extensions)
+      2. [PCA &amp; BCA Extensions](#pca-amp-bca-extensions)
 4. [Usage Examples](#usage-examples)
    1. [Specific Account](#specific-account)
       1. [Get Accounts Product Request](#get-accounts-product-request)
@@ -161,8 +161,8 @@ Content-Type: application/json
         "ProductName": "321 Product",
         "PCA": {
          ....
-		}
-	  }
+		    }
+	    }
     ]
   },
   "Links": {
