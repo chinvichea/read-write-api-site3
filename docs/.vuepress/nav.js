@@ -17,4 +17,8 @@ module.exports = [
         text: 'Operational Guidelines',
         link: 'https://standards.openbanking.org.uk/operational-guidelines/introduction/latest/',
     },
+    {
+        text: 'FAQs',
+        link: 'https://openbankinguk.github.io/knowledge-base-pub/',
+    },
 ];
