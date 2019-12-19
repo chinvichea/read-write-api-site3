@@ -1,31 +1,9 @@
+---
+---
+
 # International Payments - v3.1.4 <!-- omit in toc -->
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [POST /international-payments](#post-international-payments)
-      1. [Status](#status)
-   2. [GET /international-payments/{InternationalPaymentId}](#get-international-paymentsinternationalpaymentid)
-      1. [Status](#status-1)
-   3. [GET /international-payments/{InternationalPaymentId}/payment-details](#get-international-paymentsinternationalpaymentidpayment-details)
-      1. [Status](#status-2)
-   4. [State Model](#state-model)
-      1. [Payment Order](#payment-order)
-         1. [Multiple Authorisation](#multiple-authorisation)
-3. [Data Model](#data-model)
-   1. [Reused Classes](#reused-classes)
-      1. [OBInternational3](#obinternational3)
-      2. [OBExchangeRate2](#obexchangerate2)
-   2. [International Payment - Request](#international-payment---request)
-      1. [UML Diagram](#uml-diagram)
-      2. [Notes](#notes)
-      3. [Data Dictionary](#data-dictionary)
-   3. [International Payment - Response](#international-payment---response)
-      1. [UML Diagram](#uml-diagram-1)
-      2. [Notes](#notes-1)
-      3. [Data Dictionary](#data-dictionary-1)
-   4. [International Payment Order - Payment Details - Response](#international-payment-order---payment-details---response)
-      1. [UML Diagram](#uml-diagram-2)
-      2. [Data Dictionary](#data-dictionary-2)
+[[toc]]
 
 ## Overview
 

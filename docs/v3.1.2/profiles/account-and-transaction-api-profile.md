@@ -283,27 +283,27 @@ The following combinations of permissions are not allowed, and the ASPSP **must*
 
 | Permissions |Endpoints |Business Logic |Data Cluster Description |
 | --- |--- |--- |--- |
-| ReadAccounts**Basic** |/accounts<br>/accounts/{AccountId} | |Ability to read basic account information |
-| ReadAccounts**Detail** |/accounts<br>/accounts/{AccountId} |Access to additional elements in the payload |Ability to read account identification details |
-| ReadBalances |/balances<br>/accounts/{AccountId}/balances | |Ability to read **all** balance information |
-| ReadBeneficiaries**Basic** |/beneficiaries<br>/accounts/{AccountId}/beneficiaries | |Ability to read basic beneficiary details |
-| ReadBeneficiaries**Detail** |/beneficiaries<br>/accounts/{AccountId}/beneficiaries |Access to additional elements in the payload |Ability to read account identification details for the beneficiary |
-| ReadDirectDebits |/direct-debits<br>/accounts/{AccountId}/direct-debits | |Ability to read **all** direct debit information |
-| ReadStandingOrders**Basic** |/standing-orders<br>/accounts/{AccountId}/standing-orders | |Ability to read basic standing order information |
-| ReadStandingOrders**Detail** |/standing-orders<br>/accounts/{AccountId}/standing-orders |Access to additional elements in the payload |Ability to read account identification details for beneficiary of the standing order |
-| ReadTransactions**Basic** |/transactions<br>/accounts/{AccountId}/transactions<br>/accounts/{AccountId}/statements/{StatementId}/transactions |Permissions must also include at least one of:<br><br><li>ReadTransactions**Credits**</li><li>ReadTransactions**Debits**</li> |Ability to read basic transaction information</li> |
-| ReadTransactions**Detail** |/transactions<br>/accounts/{AccountId}/transactions<br>/accounts/{AccountId}/statements/{StatementId}/transactions |Access to additional elements in the payload<br><br>Permissions must also include at least one of:<br><br><li>ReadTransactions**Credits**</li><li>ReadTransactions**Debits**</li> |Ability to read transaction data elements which may hold silent party details |
-| ReadTransactions**Credits** |/transactions<br>/accounts/{AccountId}/transactions<br>/accounts/{AccountId}/statements/{StatementId}/transactions |Access to credit transactions.<br><br>Permissions must also include one of:<br><br><li>ReadTransactions**Basic**</li><li>ReadTransactions**Detail**</li> |Ability to read **only** credit transactions |
-| ReadTransactions**Debits** |/transactions<br>/accounts/{AccountId}/transactions<br>/accounts/{AccountId}/statements/{StatementId}/transactions |Access to debit transactions.<br><br>Permissions must also include one of:<br><br><li>ReadTransactions**Basic**</li><li>ReadTransactions**Detail**</li> |Ability to read **only** debit transactions |
-| ReadStatements**Basic** |/statements<br>/accounts/{AccountId}/statements | |Ability to read basic statement details |
-| ReadStatements**Detail** |/statements<br>/accounts/{AccountId}/statements<br>/accounts/{AccountId}/statements/{StatementId}/file |Access to additional elements in the payload<br><br>Access to download the statement file (if the ASPSP makes this available). |Ability to read statement data elements which may leak other information about the account |
-| ReadProducts |/products<br>/accounts/{AccountId}/product | |Ability to read **all** product information relating to the account |
-| ReadOffers |/offers<br>/accounts/{AccountId}/offers | |Ability to read **all** offer information |
-| ReadParty |/accounts/{AccountId}/party<br>/accounts/{AccountId}/parties | |Ability to read party information on the account owner. |
+| ReadAccounts**Basic** |/accounts<BR/>/accounts/{AccountId} | |Ability to read basic account information |
+| ReadAccounts**Detail** |/accounts<BR/>/accounts/{AccountId} |Access to additional elements in the payload |Ability to read account identification details |
+| ReadBalances |/balances<BR/>/accounts/{AccountId}/balances | |Ability to read **all** balance information |
+| ReadBeneficiaries**Basic** |/beneficiaries<BR/>/accounts/{AccountId}/beneficiaries | |Ability to read basic beneficiary details |
+| ReadBeneficiaries**Detail** |/beneficiaries<BR/>/accounts/{AccountId}/beneficiaries |Access to additional elements in the payload |Ability to read account identification details for the beneficiary |
+| ReadDirectDebits |/direct-debits<BR/>/accounts/{AccountId}/direct-debits | |Ability to read **all** direct debit information |
+| ReadStandingOrders**Basic** |/standing-orders<BR/>/accounts/{AccountId}/standing-orders | |Ability to read basic standing order information |
+| ReadStandingOrders**Detail** |/standing-orders<BR/>/accounts/{AccountId}/standing-orders |Access to additional elements in the payload |Ability to read account identification details for beneficiary of the standing order |
+| ReadTransactions**Basic** |/transactions<BR/>/accounts/{AccountId}/transactions<BR/>/accounts/{AccountId}/statements/{StatementId}/transactions |Permissions must also include at least one of:<BR/><BR/><li>ReadTransactions**Credits**</li><li>ReadTransactions**Debits**</li> |Ability to read basic transaction information</li> |
+| ReadTransactions**Detail** |/transactions<BR/>/accounts/{AccountId}/transactions<BR/>/accounts/{AccountId}/statements/{StatementId}/transactions |Access to additional elements in the payload<BR/><BR/>Permissions must also include at least one of:<BR/><BR/><li>ReadTransactions**Credits**</li><li>ReadTransactions**Debits**</li> |Ability to read transaction data elements which may hold silent party details |
+| ReadTransactions**Credits** |/transactions<BR/>/accounts/{AccountId}/transactions<BR/>/accounts/{AccountId}/statements/{StatementId}/transactions |Access to credit transactions.<BR/><BR/>Permissions must also include one of:<BR/><BR/><li>ReadTransactions**Basic**</li><li>ReadTransactions**Detail**</li> |Ability to read **only** credit transactions |
+| ReadTransactions**Debits** |/transactions<BR/>/accounts/{AccountId}/transactions<BR/>/accounts/{AccountId}/statements/{StatementId}/transactions |Access to debit transactions.<BR/><BR/>Permissions must also include one of:<BR/><BR/><li>ReadTransactions**Basic**</li><li>ReadTransactions**Detail**</li> |Ability to read **only** debit transactions |
+| ReadStatements**Basic** |/statements<BR/>/accounts/{AccountId}/statements | |Ability to read basic statement details |
+| ReadStatements**Detail** |/statements<BR/>/accounts/{AccountId}/statements<BR/>/accounts/{AccountId}/statements/{StatementId}/file |Access to additional elements in the payload<BR/><BR/>Access to download the statement file (if the ASPSP makes this available). |Ability to read statement data elements which may leak other information about the account |
+| ReadProducts |/products<BR/>/accounts/{AccountId}/product | |Ability to read **all** product information relating to the account |
+| ReadOffers |/offers<BR/>/accounts/{AccountId}/offers | |Ability to read **all** offer information |
+| ReadParty |/accounts/{AccountId}/party<BR/>/accounts/{AccountId}/parties | |Ability to read party information on the account owner. |
 | ReadParty**PSU** |/party | |Ability to read party information on the PSU logged in. |
-| ReadScheduledPayments**Basic** |/scheduled-payments<br>/accounts/{AccountId}/scheduled-payments | |Ability to read basic statement details |
-| ReadScheduledPayments**Detail** |/scheduled-payments<br>/accounts/{AccountId}/scheduled-payments |Access to additional elements in the payload | |
-| ReadPAN |All API endpoints where PAN is available as a structured field |Request to access to PAN in the clear |Request to access **PAN** in the clear across the available endpoints.<br><br>If this permission code is not in the account-access-consent, the AISP will receive a masked PAN.<br><br>While an AISP may request to access PAN in the clear, an ASPSP may still respond with a masked PAN if:<br><br><li>The ASPSP does not display PAN in the clear in existing online channels</li><li>The ASPSP takes a legal view to respond with only the masked PAN</li> |
+| ReadScheduledPayments**Basic** |/scheduled-payments<BR/>/accounts/{AccountId}/scheduled-payments | |Ability to read basic statement details |
+| ReadScheduledPayments**Detail** |/scheduled-payments<BR/>/accounts/{AccountId}/scheduled-payments |Access to additional elements in the payload | |
+| ReadPAN |All API endpoints where PAN is available as a structured field |Request to access to PAN in the clear |Request to access **PAN** in the clear across the available endpoints.<BR/><BR/>If this permission code is not in the account-access-consent, the AISP will receive a masked PAN.<BR/><BR/>While an AISP may request to access PAN in the clear, an ASPSP may still respond with a masked PAN if:<BR/><BR/><li>The ASPSP does not display PAN in the clear in existing online channels</li><li>The ASPSP takes a legal view to respond with only the masked PAN</li> |
 
 ###### Detail Permissions
 

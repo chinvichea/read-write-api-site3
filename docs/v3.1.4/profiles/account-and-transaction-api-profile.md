@@ -1,45 +1,9 @@
+---
+---
+
 # Account and Transaction API Profile - v3.1.4
 
-   1. [Overview](#overview)
-      1. [Document Structure](#document-structure)
-      2. [Resources](#resources)
-   2. [Basics](#basics)
-      1. [Overview](#overview-1)
-         1. [Steps](#steps)
-         2. [Sequence Diagram](#sequence-diagram)
-      2. [Idempotency](#idempotency)
-      3. [Release Management](#release-management)
-         1. [Account Access Consent](#account-access-consent)
-            1. [POST](#post)
-            2. [GET](#get)
-            3. [DELETE](#delete)
-         2. [Account Information Resources](#account-information-resources)
-            1. [GET](#get-1)
-   3. [Security & Access Control](#security--access-control)
-      1. [Scopes](#scopes)
-      2. [Grants Types](#grants-types)
-      3. [Consent Authorisation](#consent-authorisation)
-         1. [Consent Elements](#consent-elements)
-            1. [Permissions](#permissions)
-               1. [Detail Permissions](#detail-permissions)
-               2. [Reversing Entries](#reversing-entries)
-            2. [Expiration Date Time](#expiration-date-time)
-            3. [Transaction To/From Date Time](#transaction-tofrom-date-time)
-         2. [Account Access Consent Status](#account-access-consent-status)
-         3. [Consent Re-authentication](#consent-re-authentication)
-      4. [Consent Revocation](#consent-revocation)
-      5. [Access Revocation](#access-revocation)
-      6. [Changes to Selected Account(s)](#changes-to-selected-accounts)
-      7. [Risk Scoring Information](#risk-scoring-information)
-   4. [Data Model](#data-model)
-      1. [Using Meta to identify Available Transaction Period](#using-meta-to-identify-available-transaction-period)
-      2. [Mapping to Schemes & Standards](#mapping-to-schemes--standards)
-      3. [Enumerations](#enumerations)
-         1. [Static Enumerations](#static-enumerations)
-         2. [ISO Enumerations](#iso-enumerations)
-         3. [Namespaced Enumerations](#namespaced-enumerations)
-   5. [Alternative Flows](#alternative-flows)
-      1. [Multi-Authorisation Consent for Corporate Accounts](#multi-authorisation-consent-for-corporate-accounts)
+[[toc]]
 
 ## Overview
 
@@ -66,7 +30,7 @@ This document consists of the following parts:
 
 ### Resources
 
-Each of the Account and Transaction API resources are documented in the  [*Resources and Data Models*  /  *AISP*](../resources%20and%20data%20models/aisp) area of the specification. Each resource is documented with:
+Each of the Account and Transaction API resources are documented in the  [*Resources and Data Models*  /  *AISP*](../resources-and-data-models/aisp) area of the specification. Each resource is documented with:
 
 - Endpoints
   - The API endpoints available for the resource.
@@ -124,7 +88,7 @@ Step 4: Request Data
 
 #### Sequence Diagram
 
-![](./images/AccountsOverviewwithCIBA.png)
+![AccountsOverviewwithCIBA.png](./images/AccountsOverviewwithCIBA.png)
 
 <details>
   <summary>Diagram source</summary>
@@ -203,6 +167,7 @@ ASPSP Resource Server -> AISP: HTTP 200 (OK), List of transactions
 option footer=bar
 
 ```
+
 </details>
 
 ### Idempotency
@@ -223,7 +188,6 @@ The account-access-consent resource is referred to as an account-request resourc
 
 - An AISP **must not** create a Consent on a newer version, and use it on a previous version
   - E.g., A ConsentId for an account-access-consent created in v3, must not be used to access v2 endpoints.
-
 
 ##### GET
 
@@ -320,25 +284,25 @@ The following combinations of permissions are not allowed, and the ASPSP **must*
 
 | Permissions |Endpoints |Business Logic |Data Cluster Description |
 | --- |--- |--- |--- |
-| ReadAccounts**Basic** |/accounts<br>/accounts/{AccountId} | |Ability to read basic account information |
-| ReadAccounts**Detail** |/accounts<br>/accounts/{AccountId} |Access to additional elements in the payload |Ability to read account identification details |
-| ReadBalances |/balances<br>/accounts/{AccountId}/balances | |Ability to read **all** balance information |
-| ReadBeneficiaries**Basic** |/beneficiaries<br>/accounts/{AccountId}/beneficiaries | |Ability to read basic beneficiary details |
-| ReadBeneficiaries**Detail** |/beneficiaries<br>/accounts/{AccountId}/beneficiaries |Access to additional elements in the payload |Ability to read account identification details for the beneficiary |
-| ReadDirectDebits |/direct-debits<br>/accounts/{AccountId}/direct-debits | |Ability to read **all** direct debit information |
-| ReadTransactions**Basic** |/transactions<br>/accounts/{AccountId}/transactions<br>/accounts/{AccountId}/statements/{StatementId}/transactions |Permissions must also include at least one of:<br><br><li>ReadTransactions**Credits**</li><li>ReadTransactions**Debits**</li> |Ability to read basic transaction information</li> |
-| ReadTransactions**Detail** |/transactions<br>/accounts/{AccountId}/transactions<br>/accounts/{AccountId}/statements/{StatementId}/transactions |Access to additional elements in the payload<br><br>Permissions must also include at least one of:<br><br><li>ReadTransactions**Credits**</li><li>ReadTransactions**Debits**</li> |Ability to read transaction data elements which may hold silent party details |
-| ReadTransactions**Credits** |/transactions<br>/accounts/{AccountId}/transactions<br>/accounts/{AccountId}/statements/{StatementId}/transactions |Access to credit transactions.<br><br>Permissions must also include one of:<br><br><li>ReadTransactions**Basic**</li><li>ReadTransactions**Detail**</li> |Ability to read **only** credit transactions |
-| ReadTransactions**Debits** |/transactions<br>/accounts/{AccountId}/transactions<br>/accounts/{AccountId}/statements/{StatementId}/transactions |Access to debit transactions.<br><br>Permissions must also include one of:<br><br><li>ReadTransactions**Basic**</li><li>ReadTransactions**Detail**</li> |Ability to read **only** debit transactions |
-| ReadStatements**Basic** |/statements<br>/accounts/{AccountId}/statements | |Ability to read basic statement details |
-| ReadStatements**Detail** |/statements<br>/accounts/{AccountId}/statements<br>/accounts/{AccountId}/statements/{StatementId}/file |Access to additional elements in the payload<br><br>Access to download the statement file (if the ASPSP makes this available). |Ability to read statement data elements which may leak other information about the account |
-| ReadProducts |/products<br>/accounts/{AccountId}/product | |Ability to read **all** product information relating to the account |
-| ReadOffers |/offers<br>/accounts/{AccountId}/offers | |Ability to read **all** offer information |
-| ReadParty |/accounts/{AccountId}/party<br>/accounts/{AccountId}/parties | |Ability to read party information on the account owner. |
+| ReadAccounts**Basic** |/accounts<BR/>/accounts/{AccountId} | |Ability to read basic account information |
+| ReadAccounts**Detail** |/accounts<BR/>/accounts/{AccountId} |Access to additional elements in the payload |Ability to read account identification details |
+| ReadBalances |/balances<BR/>/accounts/{AccountId}/balances | |Ability to read **all** balance information |
+| ReadBeneficiaries**Basic** |/beneficiaries<BR/>/accounts/{AccountId}/beneficiaries | |Ability to read basic beneficiary details |
+| ReadBeneficiaries**Detail** |/beneficiaries<BR/>/accounts/{AccountId}/beneficiaries |Access to additional elements in the payload |Ability to read account identification details for the beneficiary |
+| ReadDirectDebits |/direct-debits<BR/>/accounts/{AccountId}/direct-debits | |Ability to read **all** direct debit information |
+| ReadTransactions**Basic** |/transactions<BR/>/accounts/{AccountId}/transactions<BR/>/accounts/{AccountId}/statements/{StatementId}/transactions |Permissions must also include at least one of:<BR/><BR/><li>ReadTransactions**Credits**</li><li>ReadTransactions**Debits**</li> |Ability to read basic transaction information</li> |
+| ReadTransactions**Detail** |/transactions<BR/>/accounts/{AccountId}/transactions<BR/>/accounts/{AccountId}/statements/{StatementId}/transactions |Access to additional elements in the payload<BR/><BR/>Permissions must also include at least one of:<BR/><BR/><li>ReadTransactions**Credits**</li><li>ReadTransactions**Debits**</li> |Ability to read transaction data elements which may hold silent party details |
+| ReadTransactions**Credits** |/transactions<BR/>/accounts/{AccountId}/transactions<BR/>/accounts/{AccountId}/statements/{StatementId}/transactions |Access to credit transactions.<BR/><BR/>Permissions must also include one of:<BR/><BR/><li>ReadTransactions**Basic**</li><li>ReadTransactions**Detail**</li> |Ability to read **only** credit transactions |
+| ReadTransactions**Debits** |/transactions<BR/>/accounts/{AccountId}/transactions<BR/>/accounts/{AccountId}/statements/{StatementId}/transactions |Access to debit transactions.<BR/><BR/>Permissions must also include one of:<BR/><BR/><li>ReadTransactions**Basic**</li><li>ReadTransactions**Detail**</li> |Ability to read **only** debit transactions |
+| ReadStatements**Basic** |/statements<BR/>/accounts/{AccountId}/statements | |Ability to read basic statement details |
+| ReadStatements**Detail** |/statements<BR/>/accounts/{AccountId}/statements<BR/>/accounts/{AccountId}/statements/{StatementId}/file |Access to additional elements in the payload<BR/><BR/>Access to download the statement file (if the ASPSP makes this available). |Ability to read statement data elements which may leak other information about the account |
+| ReadProducts |/products<BR/>/accounts/{AccountId}/product | |Ability to read **all** product information relating to the account |
+| ReadOffers |/offers<BR/>/accounts/{AccountId}/offers | |Ability to read **all** offer information |
+| ReadParty |/accounts/{AccountId}/party<BR/>/accounts/{AccountId}/parties | |Ability to read party information on the account owner. |
 | ReadParty**PSU** |/party | |Ability to read party information on the PSU logged in. |
-| ReadScheduledPayments**Basic** |/scheduled-payments<br>/accounts/{AccountId}/scheduled-payments | |Ability to read basic statement details |
-| ReadScheduledPayments**Detail** |/scheduled-payments<br>/accounts/{AccountId}/scheduled-payments |Access to additional elements in the payload | |
-| ReadPAN |All API endpoints where PAN is available as a structured field |Request to access to PAN in the clear |Request to access **PAN** in the clear across the available endpoints.<br><br>If this permission code is not in the account-access-consent, the AISP will receive a masked PAN.<br><br>While an AISP may request to access PAN in the clear, an ASPSP may still respond with a masked PAN if:<br><br><li>The ASPSP does not display PAN in the clear in existing online channels</li><li>The ASPSP takes a legal view to respond with only the masked PAN</li><li> ASPSP should return last 4 digits unmasked, **or** </li><li>ASPSP should return at max first 6 and last 4 digits unmasked. e.g. 5555 **** **** 4444, **** **** **** 4444 etc</li>|
+| ReadScheduledPayments**Basic** |/scheduled-payments<BR/>/accounts/{AccountId}/scheduled-payments | |Ability to read basic statement details |
+| ReadScheduledPayments**Detail** |/scheduled-payments<BR/>/accounts/{AccountId}/scheduled-payments |Access to additional elements in the payload | |
+| ReadPAN |All API endpoints where PAN is available as a structured field |Request to access to PAN in the clear |Request to access **PAN** in the clear across the available endpoints.<BR/><BR/>If this permission code is not in the account-access-consent, the AISP will receive a masked PAN.<BR/><BR/>While an AISP may request to access PAN in the clear, an ASPSP may still respond with a masked PAN if:<BR/><BR/><li>The ASPSP does not display PAN in the clear in existing online channels</li><li>The ASPSP takes a legal view to respond with only the masked PAN</li><li> ASPSP should return last 4 digits unmasked, **or** </li><li>ASPSP should return at max first 6 and last 4 digits unmasked. e.g. 5555 **** **** 4444, **** **** **** 4444 etc</li>|
 
 ###### Detail Permissions
 
@@ -369,7 +333,7 @@ In addition the ReadStatementsDetail is required to access the statement file do
 
 Example behaviour of the Permissions for the ReadAccountsBasic and ReadAccountsDetail codes is as follows:
 
-![](./images/ReadAccounts.png)
+![ReadAccounts](./images/ReadAccounts.png)
 
 ###### Reversing Entries
 

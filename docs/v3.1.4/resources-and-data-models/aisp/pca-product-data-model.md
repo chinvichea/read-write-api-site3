@@ -1,47 +1,9 @@
+---
+---
+
 # PCA Product Data Model - v3.1.4 <!-- omit in toc -->
 
-1. [Overview](#overview)
-   1. [Fields to include in PCA Product](#fields-to-include-in-pca-product)
-   2. [Changes from the OpenData Model](#changes-from-the-opendata-model)
-      1. [No Eligibility and FeaturesAndBenefits](#no-eligibility-and-featuresandbenefits)
-      2. [Credit Interest Model](#credit-interest-model)
-      3. [Overdraft](#overdraft)
-      4. [OverdraftFeeCharges](#overdraftfeecharges)
-      5. [OtherFeeCharges](#otherfeecharges)
-2. [Data Model](#data-model)
-   1. [Data Payload](#data-payload)
-      1. [PCA](#pca)
-         1. [UML Class Diagram](#uml-class-diagram)
-         2. [Data Dictionary](#data-dictionary)
-   2. [Data Payload - Enumerations](#data-payload---enumerations)
-3. [Usage Examples](#usage-examples)
-   1. [Publish Open Data Standard PCA Product](#publish-open-data-standard-pca-product)
-      1. [Get Accounts Product Request](#get-accounts-product-request)
-      2. [Get Accounts Product Response](#get-accounts-product-response)
-   2. [Publish Open Data Standard PCA Product, along with new other fee charges](#publish-open-data-standard-pca-product-along-with-new-other-fee-charges)
-      1. [Get Accounts Product Request](#get-accounts-product-request-1)
-      2. [Get Accounts Product Response](#get-accounts-product-response-1)
-   3. [Publish Open Data Standard PCA Product along with Marketing State ID](#publish-open-data-standard-pca-product-along-with-marketing-state-id)
-      1. [Get Accounts Product Request](#get-accounts-product-request-2)
-      2. [Get Accounts Product Response](#get-accounts-product-response-2)
-   4. [Publish Back Book product along with MMC](#publish-back-book-product-along-with-mmc)
-      1. [Get Accounts Product Request](#get-accounts-product-request-3)
-      2. [Get Accounts Product Response](#get-accounts-product-response-3)
-   5. [Showing tiered interest rates (Example for back book prod)](#showing-tiered-interest-rates-example-for-back-book-prod)
-      1. [Get Accounts Product Request](#get-accounts-product-request-4)
-      2. [Get Accounts Product Response](#get-accounts-product-response-4)
-   6. [Showing whole interest rates](#showing-whole-interest-rates)
-      1. [Get Accounts Product Request](#get-accounts-product-request-5)
-      2. [Get Accounts Product Response](#get-accounts-product-response-5)
-   7. [Represent graduate overdraft limits](#represent-graduate-overdraft-limits)
-      1. [Get Accounts Product Request](#get-accounts-product-request-6)
-      2. [Get Accounts Product Response](#get-accounts-product-response-6)
-   8. [Represent overdrafts with periodic &amp; per item fees with caps](#represent-overdrafts-with-periodic-amp-per-item-fees-with-caps)
-      1. [Get Accounts Product Request](#get-accounts-product-request-7)
-      2. [Get Accounts Product Response](#get-accounts-product-response-7)
-   9. [Represent overdrafts with periodic &amp; per item fees with caps, another example](#represent-overdrafts-with-periodic-amp-per-item-fees-with-caps-another-example)
-      1. [Get Accounts Product Request](#get-accounts-product-request-8)
-      2. [Get Accounts Product Response](#get-accounts-product-response-8)
+[[toc]]
 
 ## Overview
 
@@ -64,8 +26,8 @@ Further analysis required:-
 | PCA (We'll rename this "Product" and merge PCA and CoreProduct attributes) |<ul><li>Name</li> <li>Open Data Product ID (Mandatory, if product info is available on Open Data PCA API) </li><li>ProductType ("PCA") </li><li>MonthlyMaximumCharge (Mandatory for "front book" products)</li></ul> |
 | CoreProduct |**None** - Will be merged in to new "Product" section. |
 | PCAMarketingState |**None** - Sections will only include current state information, so this section is not required |
-| CreditInterest |<ul><li>TierBandSet fields (excluding credit interest eligibility). </li><li>All TierBand fields <br>**Note:** Only current state credit interest information is required.</li></ul> |
-| Overdraft |<ul><li> All TierBandSet fields (including OverdraftFeesAndCharges) </li><li> All TierBand fields (including OverdraftFeesAndCharges). <br>**Note:** Only current state information is required.</li></ul> |
+| CreditInterest |<ul><li>TierBandSet fields (excluding credit interest eligibility). </li><li>All TierBand fields <BR/>**Note:** Only current state credit interest information is required.</li></ul> |
+| Overdraft |<ul><li> All TierBandSet fields (including OverdraftFeesAndCharges) </li><li> All TierBand fields (including OverdraftFeesAndCharges). <BR/>**Note:** Only current state information is required.</li></ul> |
 | Eligibility |**None** - Eligibility criteria met when PCA was sold unlikely to be reliable. |
 | FeaturesAndBenefits |**None** - The value of a particular feature and benefit to an accountholder is dependent on their use of that benefit and whether they met eligibility criteria. Certain benefits may be provided by external suppliers making it difficult to provide real time info. Relevant general features &amp; benefits info can be obtained from Open Data API for "front book" products. |
 | OtherFeesAndCharges |<ul><li> Periodic Fee (i.e. the service charge)</li></ul> |

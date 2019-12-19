@@ -1,25 +1,9 @@
+---
+---
+
 # Other Product Data Model - v3.1.4 <!-- omit in toc -->
 
-1. [Overview](#overview)
-   1. [Fields to include in Other Product](#fields-to-include-in-other-product)
-   2. [Data Model](#data-model)
-      1. [CreditInterest Model](#creditinterest-model)
-      2. [Overdraft](#overdraft)
-      3. [OverdraftFeeCharges](#overdraftfeecharges)
-      4. [LoanInterest](#loaninterest)
-      5. [Repayment](#repayment)
-      6. [OtherFeesCharges](#otherfeescharges)
-      7. [SupplementaryData](#supplementarydata)
-   3. [Data Payload](#data-payload)
-   4. [Data Dictionary](#data-dictionary)
-   5. [Data Payload - Enumerations](#data-payload---enumerations)
-2. [Usage Examples](#usage-examples)
-   1. [Publish Other Product Type](#publish-other-product-type)
-      1. [Get Accounts Product Request](#get-accounts-product-request)
-      2. [Get Accounts Product Response](#get-accounts-product-response)
-   2. [Publish Other Product Type along with Other Fee and Charges](#publish-other-product-type-along-with-other-fee-and-charges)
-      1. [Get Accounts Product Request](#get-accounts-product-request-1)
-      2. [Get Accounts Product Response](#get-accounts-product-response-1)
+[[toc]]
 
 ## Overview
 
@@ -39,7 +23,7 @@ Further analysis required:-
 | --- |--- |
 | ProductDetails |<ul><li>Name</li><li>Segmeent </li><li>Notes to capture other details</li></ul> |
 | CreditInterest |<ul><li>TierBandSet fields (excluding credit interest eligibility). </li><li>All TierBand fields</li></ul> |
-| LoanInterest |<ul><li>TierBandSet fields. </li><li>All TierBand fields</li></ui> |
+| LoanInterest |<ul><li>TierBandSet fields. </li><li>All TierBand fields</li></ul> |
 | Repayment |<ul><li>Repayment Charges </li><li>Repayment holiday</li></ul> |
 | OtherFeesAndCharges |<ul><li>Other fee charges such as servicing</li></ul> |
 | SupplementaryData |Any other feature of the product which cant be published using above functionality. |

@@ -1,28 +1,9 @@
+---
+---
+
 # Callback URL - v3.1.4 <!-- omit in toc -->
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-	1. [POST /callback-urls](#post-callback-urls)
-	2. [GET /callback-urls](#get-callback-urls)
-	3. [PUT /callback-urls/{CallbackUrlId}](#put-callback-urlscallbackurlid)
-	4. [DELETE /callback-urls/{CallbackUrlId}](#delete-callback-urlscallbackurlid)
-3. [Data Model](#data-model)
-	1. [Callback Url - Request](#callback-url---request)
-		1. [UML Diagram](#uml-diagram)
-		2. [Data Dictionary](#data-dictionary)
-	2. [Callback Url - Response](#callback-url---response)
-		1. [UML](#uml)
-		2. [Data Dictionary](#data-dictionary-1)
-	3. [Callback Urls - Response](#callback-urls---response)
-		1. [UML](#uml-1)
-		2. [Data Dictionary](#data-dictionary-2)
-4. [Usage Examples](#usage-examples)
-	1. [Create Callback Url](#create-callback-url)
-		1. [POST Callback Url Request](#post-callback-url-request)
-		2. [POST Callback Url Response](#post-callback-url-response)
-	2. [Get Callback Urls](#get-callback-urls)
-		1. [GET Callback Url Request](#get-callback-url-request)
-		2. [GET Callback Url Response](#get-callback-url-response)
+[[toc]]
 
 ## Overview
 
@@ -36,10 +17,10 @@ A TPP will set up and maintain its call back details (URL and version number) us
 
 | Resource |HTTP Operation |Endpoint |Mandatory ? |Scope |Grant Type |Message Signing |Idempotency Key |Request Object |Response Object |
 | --- |--- |--- |--- |--- |--- |--- |--- |--- |--- |
-| callback-url |POST |POST /callback-urls |Optional |accounts<br>payments<br>fundsconfirmations |Client Credentials |Signed Request<br><br>Signed Response |No |OBCallbackUrl1 |OBCallbackUrlResponse1 |
-| callback-url |GET |GET /callback-urls |Mandatory (if resource POST implemented) |accounts<br>payments<br>fundsconfirmations |Client Credentials |Signed Response |No |n/a |OBCallbackUrlsResponse1 |
-| callback-url |PUT |PUT /callback-urls/{CallbackUrlId} | Conditional (See [Note 1](#note-1))  |accounts<br>payments<br>fundsconfirmations |Client Credentials |Signed Request<br><br>Signed Response |No |OBCallbackUrlResponse1 |OBCallbackUrlResponse1 |
-| callback-url |DELETE |DELETE /callback-urls/{CallbackUrlId} | Conditional (See [Note 1](#note-1))  |accounts<br>payments<br>fundsconfirmations |Client Credentials |n/a |No |n/a |n/a |
+| callback-url |POST |POST /callback-urls |Optional |accounts<BR/>payments<BR/>fundsconfirmations |Client Credentials |Signed Request<BR/><BR/>Signed Response |No |OBCallbackUrl1 |OBCallbackUrlResponse1 |
+| callback-url |GET |GET /callback-urls |Mandatory (if resource POST implemented) |accounts<BR/>payments<BR/>fundsconfirmations |Client Credentials |Signed Response |No |n/a |OBCallbackUrlsResponse1 |
+| callback-url |PUT |PUT /callback-urls/{CallbackUrlId} | Conditional (See [Note 1](#note-1))  |accounts<BR/>payments<BR/>fundsconfirmations |Client Credentials |Signed Request<BR/><BR/>Signed Response |No |OBCallbackUrlResponse1 |OBCallbackUrlResponse1 |
+| callback-url |DELETE |DELETE /callback-urls/{CallbackUrlId} | Conditional (See [Note 1](#note-1))  |accounts<BR/>payments<BR/>fundsconfirmations |Client Credentials |n/a |No |n/a |n/a |
 
 ### Note 1 <!-- omit in toc -->
 

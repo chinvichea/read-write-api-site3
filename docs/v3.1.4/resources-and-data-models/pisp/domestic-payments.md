@@ -1,37 +1,9 @@
+---
+---
+
 # Domestic Payments - v3.1.4 <!-- omit in toc -->
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [POST /domestic-payments](#post-domestic-payments)
-      1. [Status](#status)
-   2. [GET /domestic-payments/{DomesticPaymentId}](#get-domestic-paymentsdomesticpaymentid)
-      1. [Status](#status-1)
-   3. [GET /domestic-payments/{DomesticPaymentId}/payment-details](#get-domestic-paymentsdomesticpaymentidpayment-details)
-      1. [Status](#status-2)
-   4. [State Model](#state-model)
-      1. [Payment Order](#payment-order)
-         1. [Multiple Authorisation](#multiple-authorisation)
-3. [Data Model](#data-model)
-   1. [Reused Classes](#reused-classes)
-      1. [OBDomestic2](#obdomestic2)
-   2. [Domestic Payment - Request](#domestic-payment---request)
-      1. [UML Diagram](#uml-diagram)
-      2. [Notes](#notes)
-      3. [Data Dictionary](#data-dictionary)
-   3. [Domestic Payment - Response](#domestic-payment---response)
-      1. [UML Diagram](#uml-diagram-1)
-      2. [Notes](#notes-1)
-      3. [Data Dictionary](#data-dictionary-1)
-   4. [Domestic Payment Order - Payment Details - Response](#domestic-payment-order---payment-details---response)
-      1. [UML Diagram](#uml-diagram-2)
-      2. [Data Dictionary](#data-dictionary-2)
-4. [Usage Examples](#usage-examples)
-   1. [POST /domestic-payments](#post-domestic-payments-1)
-      1. [Request](#request)
-      2. [Response](#response)
-   2. [GET /domestic-payments/{DomesticPaymentId}](#get-domestic-paymentsdomesticpaymentid-1)
-      1. [Request](#request-1)
-      2. [Response](#response-1)
+[[toc]]
 
 ## Overview
 
@@ -255,7 +227,7 @@ The OBWritePaymentDetailsResponse1 object will be used for a response to a call 
 
 ## Usage Examples
 
-Note, further usage examples are available [here](../../references/usage%20examples/README.md).
+Note, further usage examples are available [here](../../references/usage-examples/README.md).
 
 ### POST /domestic-payments
 

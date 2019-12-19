@@ -1,77 +1,9 @@
+---
+---
+
 # Payment Initiation API Profile - v3.1.4 <!-- omit in toc -->
 
-1. [Overview](#overview)
-   1. [Document Overview](#document-overview)
-   2. [Resources](#resources)
-   3. [Design Principles](#design-principles)
-      1. [Scheme Agnostic](#scheme-agnostic)
-      2. [Status Codes](#status-codes)
-2. [Basics](#basics)
-   1. [Overview](#overview-1)
-      1. [Steps](#steps)
-      2. [Sequence Diagram](#sequence-diagram)
-   2. [Payment Restrictions](#payment-restrictions)
-      1. [CutOffDateTime Behaviour](#cutoffdatetime-behaviour)
-         1. [Reject the Payment-Order](#reject-the-payment-order)
-         2. [Accept the Payment-Order](#accept-the-payment-order)
-   3. [Release Management](#release-management)
-      1. [Payment-Order Consent](#payment-order-consent)
-         1. [POST](#post)
-         2. [GET](#get)
-      2. [Payment-Order Consent (Confirm Funds)](#payment-order-consent-confirm-funds)
-         1. [GET](#get-1)
-      3. [Payment-Order Resource](#payment-order-resource)
-         1. [POST](#post-1)
-         2. [GET](#get-2)
-3. [Security &amp; Access Control](#security--access-control)
-   1. [Scopes](#scopes)
-   2. [Grants Types](#grants-types)
-   3. [Consent Authorisation](#consent-authorisation)
-      1. [Multiple Authorisation](#multiple-authorisation)
-      2. [Error Condition](#error-condition)
-      3. [Consent Revocation](#consent-revocation)
-      4. [Changes to Selected Account](#changes-to-selected-account)
-      5. [Consent Re-authentication](#consent-re-authentication)
-   4. [Risk Scoring Information](#risk-scoring-information)
-4. [Data Model](#data-model)
-   1. [Reused Classes](#reused-classes)
-      1. [OBRisk1](#obrisk1)
-         1. [UML Diagram](#uml-diagram)
-         2. [Data Dictionary](#data-dictionary)
-      2. [OBCharge2](#obcharge2)
-         1. [UML Diagram](#uml-diagram-1)
-         2. [Data Dictionary](#data-dictionary-1)
-      3. [OBAuthorisation1](#obauthorisation1)
-         1. [UML Diagram](#uml-diagram-2)
-         2. [Data Dictionary](#data-dictionary-2)
-      4. [OBMultiAuthorisation1](#obmultiauthorisation1)
-         1. [UML Diagram](#uml-diagram-3)
-         2. [Data Dictionary](#data-dictionary-3)
-      5. [OBDomesticRefundAccount1](#obdomesticrefundaccount1)
-         1. [UML Diagram](#uml-diagram-4)
-         2. [Data Dictionary](#data-dictionary-4)
-      6. [OBInternationalRefundAccount1](#obinternationalrefundaccount1)
-         1. [UML Diagram](#uml-diagram-5)
-         2. [Data Dictionary](#data-dictionary-5)
-      7. [OBWritePaymentDetails1](#obwritepaymentdetails1)
-         1. [UML Diagram](#uml-diagram-6)
-         2. [Data Dictionary](#data-dictionary-6)
-      8. [OBSCASupportData1](#obscasupportdata1)
-         1. [UML Diagram](#uml-diagram-7)
-         2. [Data Dictionary](#data-dictionary-7)
-   2. [Identifier Fields](#identifier-fields)
-      1. [Merchant Flow](#merchant-flow)
-      2. [Party to Party Flow](#party-to-party-flow)
-   3. [Enumerations](#enumerations)
-      1. [Static Enumerations](#static-enumerations)
-      2. [ISO Enumerations](#iso-enumerations)
-      3. [Namespaced Enumerations](#namespaced-enumerations)
-5. [Alternative and Error Flows](#alternative-and-error-flows)
-   1. [Idempotent Payment Order Consent](#idempotent-payment-order-consent)
-   2. [Idempotent Payment Order](#idempotent-payment-order)
-   3. [Multi-Auth Payment Order Consent](#multi-auth-payment-order-consent)
-   4. [Reject the Payment Order Consent Creation After CutOffDateTime](#reject-the-payment-order-consent-creation-after-cutoffdatetime)
-   5. [Reject the Payment Order Creation After CutOffDateTime](#reject-the-payment-order-creation-after-cutoffdatetime)
+[[toc]]
 
 ## Overview
 
@@ -532,7 +464,7 @@ This section describes the Risk1 class which is reused in the payment-order cons
 | Name |Occurrence |XPath |EnhancedDefinition |Class |Codes |Pattern |
 | --- |--- |--- |--- |--- |--- |--- |
 | OBRisk1 | |OBRisk1 |The Risk section is sent by the initiating party to the ASPSP. It is used to specify additional details for risk scoring for Payments. |OBRisk1 | | |
-| PaymentContextCode |0..1 |OBRisk1/PaymentContextCode |Specifies the payment context |OBExternalPaymentContext1Code |BillPayment<br>EcommerceGoods<br>EcommerceServices<br>Other PartyToParty | |
+| PaymentContextCode |0..1 |OBRisk1/PaymentContextCode |Specifies the payment context |OBExternalPaymentContext1Code |BillPayment<BR/>EcommerceGoods<BR/>EcommerceServices<BR/>Other PartyToParty | |
 | MerchantCategoryCode |0..1 |OBRisk1/MerchantCategoryCode |Category code conform to ISO 18245, related to the type of services or goods the merchant provides for the transaction. |Min3Max4Text | | |
 | MerchantCustomerIdentification |0..1 |OBRisk1/MerchantCustomerIdentification |The unique customer identifier of the PSU with the merchant. |Max70Text | | |
 | DeliveryAddress |0..1 |OBRisk1/DeliveryAddress |Information that locates and identifies a specific address, as defined by postal services or in free format text. |PostalAddress18 | | |
@@ -557,7 +489,7 @@ This section describes the OBCharge2 class - which is reused in the response pay
 | Name |Occurrence |XPath |EnhancedDefinition |Class |Codes |Pattern |
 | --- |--- |--- |--- |--- |--- |--- |
 | OBCharge2 | |OBCharge2 |Set of elements used to provide details of a charge for the payment initiation. |OBCharge2 | | |
-| ChargeBearer |1..1 |OBCharge2/ChargeBearer |Specifies which party/parties will bear the charges associated with the processing of the payment transaction. |OBChargeBearerType1Code |BorneByCreditor<br>BorneByDebtor<br>FollowingServiceLevel<br>Shared | |
+| ChargeBearer |1..1 |OBCharge2/ChargeBearer |Specifies which party/parties will bear the charges associated with the processing of the payment transaction. |OBChargeBearerType1Code |BorneByCreditor<BR/>BorneByDebtor<BR/>FollowingServiceLevel<BR/>Shared | |
 | Type |1..1 |OBCharge2/Type |Charge type, in a coded form. |OBExternalPaymentChargeType1Code | | |
 | Amount |1..1 |OBCharge2/Amount |Amount of money associated with the charge type. |OBActiveOrHistoricCurrencyAndAmount | | |
 | Amount |1..1 |OBCharge2/Amount/Amount |A number of monetary units specified in an active currency where the unit of currency is explicit and compliant with ISO 4217. |OBActiveCurrencyAndAmount_SimpleType | |^\d{1,13}\.\d{1,5}$ |
@@ -576,7 +508,7 @@ This section describes the OBAuthorisation1 class which is used in the payment-o
 | Name |Occurrence |XPath |EnhancedDefinition |Class |Codes |Pattern |
 | --- |--- |--- |--- |--- |--- |--- |
 | OBAuthorisation1 | |OBAuthorisation1 |The authorisation type request from the TPP. |OBAuthorisation1 | | |
-| AuthorisationType |1..1 |OBAuthorisation1/AuthorisationType |Type of authorisation flow requested. |OBExternalAuthorisation1Code |Any<br>Single | |
+| AuthorisationType |1..1 |OBAuthorisation1/AuthorisationType |Type of authorisation flow requested. |OBExternalAuthorisation1Code |Any<BR/>Single | |
 | CompletionDateTime |0..1 |OBAuthorisation1/CompletionDateTime |Date and time at which the requested authorisation flow must be completed. |ISODateTime | | |
 
 #### OBMultiAuthorisation1
@@ -592,7 +524,7 @@ This section describes the OBMultiAuthorisation1 class which used in the respons
 | Name |Occurrence |XPath |EnhancedDefinition |Class |Codes |Pattern |
 | --- |--- |--- |--- |--- |--- |--- |
 | OBMultiAuthorisation1 | |OBMultiAuthorisation1 |The multiple authorisation flow response from the ASPSP. |OBMultiAuthorisation1 | | |
-| Status |1..1 |OBMultiAuthorisation1/Status |Specifies the status of the authorisation flow in code form. |OBExternalStatus2Code |Authorised<br>AwaitingFurtherAuthorisation<br>Rejected | |
+| Status |1..1 |OBMultiAuthorisation1/Status |Specifies the status of the authorisation flow in code form. |OBExternalStatus2Code |Authorised<BR/>AwaitingFurtherAuthorisation<BR/>Rejected | |
 | NumberRequired |0..1 |OBMultiAuthorisation1/NumberRequired |Number of authorisations required for payment order (total required at the start of the multi authorisation journey). |Number | | |
 | NumberReceived |0..1 |OBMultiAuthorisation1/NumberReceived |Number of authorisations received. |Number | | |
 | LastUpdateDateTime |0..1 |OBMultiAuthorisation1/LastUpdateDateTime |Last date and time at the authorisation flow was updated. |ISODateTime | | |
@@ -680,12 +612,12 @@ This section describes the OBWritePaymentDetails1 class which used in the respon
 | --- |--- |--- |--- |--- |--- |--- |
 | OBWritePaymentDetails1 |1..1 |OBWritePaymentDetails1 |Payment status details. |OBWritePaymentDetails1 | | |
 | PaymentTransactionId |1..1 |OBWritePaymentDetails1/PaymentTransactionId |Unique identifier for the transaction within an servicing institution. This identifier is both unique and immutable. |Max210Text | | |
-| Status |1..1 |OBWritePaymentDetails1/Status |Status of a transfer, as assigned by the transaction administrator. |OBTransactionIndividualExtendedISOStatus1Code |Accepted<br>AcceptedCancellationRequest<br>AcceptedCreditSettlementCompleted<br>AcceptedCustomerProfile<br>AcceptedFundsChecked<br>AcceptedSettlementCompleted<br>AcceptedSettlementInProcess<br>AcceptedTechnicalValidation<br>AcceptedWithChange<br>AcceptedWithoutPosting<br>Cancelled<br>NoCancellationProcess<br>PartiallyAcceptedCancellationRequest<br>PartiallyAcceptedTechnicalCorrect<br>PaymentCancelled<br>Pending<br>PendingCancellationRequest<br>Received<br>Rejected<br>RejectedCancellationRequest | |
+| Status |1..1 |OBWritePaymentDetails1/Status |Status of a transfer, as assigned by the transaction administrator. |OBTransactionIndividualExtendedISOStatus1Code |Accepted<BR/>AcceptedCancellationRequest<BR/>AcceptedCreditSettlementCompleted<BR/>AcceptedCustomerProfile<BR/>AcceptedFundsChecked<BR/>AcceptedSettlementCompleted<BR/>AcceptedSettlementInProcess<BR/>AcceptedTechnicalValidation<BR/>AcceptedWithChange<BR/>AcceptedWithoutPosting<BR/>Cancelled<BR/>NoCancellationProcess<BR/>PartiallyAcceptedCancellationRequest<BR/>PartiallyAcceptedTechnicalCorrect<BR/>PaymentCancelled<BR/>Pending<BR/>PendingCancellationRequest<BR/>Received<BR/>Rejected<BR/>RejectedCancellationRequest | |
 | StatusUpdateDateTime |1..1 |OBWritePaymentDetails1/StatusUpdateDateTime |Date and time at which the status was assigned to the transfer. |ISODateTime | | |
 | StatusDetail |0..1 |OBWritePaymentDetails1/StatusDetail |Payment status details as per underlying Payment Rail. |OBPaymentStatusDetail1 | | |
-| LocalInstrument |0..1 |OBWritePaymentDetails1/StatusDetail/LocalInstrument |User community specific instrument.<br><br>Usage: This element is used to specify a local instrument, local clearing option and/or further qualify the service or service level. |OBExternalLocalInstrument1Code | | |
+| LocalInstrument |0..1 |OBWritePaymentDetails1/StatusDetail/LocalInstrument |User community specific instrument.<BR/><BR/>Usage: This element is used to specify a local instrument, local clearing option and/or further qualify the service or service level. |OBExternalLocalInstrument1Code | | |
 | Status |1..1 |OBWritePaymentDetails1/StatusDetail/Status |Status of a transfer, as assigned by the transaction administrator. |Max128Text | | |
-| StatusReason |0..1 |OBWritePaymentDetails1/StatusDetail/StatusReason |Reason Code provided for the status of a transfer. |OBTransactionIndividualStatusReason1Code |Cancelled<br>PendingFailingSettlement<br>PendingSettlement<br>Proprietary<br>ProprietaryRejection<br>Suspended<br>Unmatched | |
+| StatusReason |0..1 |OBWritePaymentDetails1/StatusDetail/StatusReason |Reason Code provided for the status of a transfer. |OBTransactionIndividualStatusReason1Code |Cancelled<BR/>PendingFailingSettlement<BR/>PendingSettlement<BR/>Proprietary<BR/>ProprietaryRejection<BR/>Suspended<BR/>Unmatched | |
 | StatusReasonDescription |0..1 |OBWritePaymentDetails1/StatusDetail/StatusReasonDescription |Reason provided for the status of a transfer. |Max256Text | | |
 
 #### OBSCASupportData1
@@ -701,9 +633,9 @@ This section describes the OBSCASupportData1 class, which is used across all  _p
 | Name |Occurrence |XPath |EnhancedDefinition |Class |Codes |Pattern |
 | --- |--- |--- |--- |--- |--- |--- |
 | OBSCASupportData1 | |SCASupportData |Supporting Data provided by TPP, when requesting SCA Exemption. |OBSCASupportData1 | | |
-| RequestedSCAExemptionType |0..1 |SCASupportData/RequestedSCAExemptionType |This field allows a PISP to request specific SCA Exemption for a Payment Initiation |OBExternalSCAExemptionType1Code |BillPayment<br>ContactlessTravel<br>EcommerceGoods<br>EcommerceServices<br>Kiosk<br>Parking<br>PartyToParty | |
-| AppliedAuthenticationApproach |0..1 |SCASupportData/AppliedAuthenticationApproach |Specifies a character string with a maximum length of 40 characters.<br><br>Usage: This field indicates whether the PSU was subject to SCA performed by the TPP |OBExternalAppliedAuthenticationApproach1Code |CA<br>SCA | |
-| ReferencePaymentOrderId |0..1 |SCASupportData/ReferencePaymentOrderId |Specifies a character string with a maximum length of 140 characters.<br><br>Usage: If the payment is recurring, then the transaction identifier of the previous payment occurrence so that the ASPSP can verify that the PISP, amount and the payee are the same as the previous occurrence. |Max128Text | | |
+| RequestedSCAExemptionType |0..1 |SCASupportData/RequestedSCAExemptionType |This field allows a PISP to request specific SCA Exemption for a Payment Initiation |OBExternalSCAExemptionType1Code |BillPayment<BR/>ContactlessTravel<BR/>EcommerceGoods<BR/>EcommerceServices<BR/>Kiosk<BR/>Parking<BR/>PartyToParty | |
+| AppliedAuthenticationApproach |0..1 |SCASupportData/AppliedAuthenticationApproach |Specifies a character string with a maximum length of 40 characters.<BR/><BR/>Usage: This field indicates whether the PSU was subject to SCA performed by the TPP |OBExternalAppliedAuthenticationApproach1Code |CA<BR/>SCA | |
+| ReferencePaymentOrderId |0..1 |SCASupportData/ReferencePaymentOrderId |Specifies a character string with a maximum length of 140 characters.<BR/><BR/>Usage: If the payment is recurring, then the transaction identifier of the previous payment occurrence so that the ASPSP can verify that the PISP, amount and the payee are the same as the previous occurrence. |Max128Text | | |
 
 ### Identifier Fields
 
@@ -714,10 +646,10 @@ The standard definitions for the elements in the API payloads are described in t
 | Generated |Identifier |Business Description |
 | --- |--- |--- |
 | Merchant/PISP Sent in API Payload |EndToEndIdentification |The EndToEndIdentification reference is a reference that can be populated by the debtor (or merchant in the ecommerce space). This reference is important to the debtor (could be an internal reference Id against the transaction), it Is NOT the reference information that will be primarily populated on the statement of the creditor (beneficiary). |
-| Merchant/PISP Sent in API Payload |InstructionIdentification |The PISP generates the InstructionIdentification which is a unique transaction Id and passes it to the ASPSP (this is mandatory), but this does not have to go any further in the payment flow. The flow of this identifier needs to align with payment scheme rules.<br><br>The expectation is that this is unique indefinitely across all time periods. The PISP can ensure this is indefinitely unique by including a date or date time element to the field, or by inserting a unique Id. |
+| Merchant/PISP Sent in API Payload |InstructionIdentification |The PISP generates the InstructionIdentification which is a unique transaction Id and passes it to the ASPSP (this is mandatory), but this does not have to go any further in the payment flow. The flow of this identifier needs to align with payment scheme rules.<BR/><BR/>The expectation is that this is unique indefinitely across all time periods. The PISP can ensure this is indefinitely unique by including a date or date time element to the field, or by inserting a unique Id. |
 | Merchant/PISP Sent in API Payload |RemittanceInformation |The RemittanceInformation is the reference information that the creditor (or beneficiary) will need to reconcile (e.g. Invoice 123). |
 | ASPSP / API System |ConsentId |A unique identification as assigned by the ASPSP to uniquely identify the payment-order consent resource. |
-| ASPSP / API System |Payment Order Id |Anique identification as assigned by the ASPSP to uniquely identify the payment-order resource.<br><br><li>DomesticPaymentId</li><li>DomesticScheduledPaymentId</li><li>DomesticStandingOrderId</li><li>InternationalPaymentId</li><li>InternationalScheduledPaymentId</li> |
+| ASPSP / API System |Payment Order Id |Anique identification as assigned by the ASPSP to uniquely identify the payment-order resource.<BR/><BR/><li>DomesticPaymentId</li><li>DomesticScheduledPaymentId</li><li>DomesticStandingOrderId</li><li>InternationalPaymentId</li><li>InternationalScheduledPaymentId</li> |
 | ASPSP / Payment Scheme |Scheme Payment ID |This is generated by the ASPSP to uniquely identify a payment through a processing scheme. In the case of FPS, this is the FPID. |
 
 The tables below identify the actor that initially creates each of the message identifiers and their transmission and visibility to other actors.
@@ -765,7 +697,7 @@ This section gives the definitions for enumerations used in the Payment APIs.
 | OBExternalPaymentContext1Code |EcommerceServices |The context of the payment initiation is for services via an ecommerce channel. |
 | OBExternalPaymentContext1Code |PartyToParty |The context of the payment initiation is a party to party payment. |
 | OBExternalPaymentContext1Code |Other |The context of the payment initiation is of an other type. |
-| OBTransactionIndividualStatus1Code |AcceptedSettlementCompleted |Settlement on the debtor's account has been completed.<br><br>Usage : this can be used by the first agent to report to the debtor that the transaction has been completed. Warning : this status is provided for transaction status reasons, not for financial information. It can only be used after bilateral agreement.<br><br>PISPs **must not** use this status as confirmation that settlement is complete on the creditor's account. |
+| OBTransactionIndividualStatus1Code |AcceptedSettlementCompleted |Settlement on the debtor's account has been completed.<BR/><BR/>Usage : this can be used by the first agent to report to the debtor that the transaction has been completed. Warning : this status is provided for transaction status reasons, not for financial information. It can only be used after bilateral agreement.<BR/><BR/>PISPs **must not** use this status as confirmation that settlement is complete on the creditor's account. |
 | OBTransactionIndividualStatus1Code |AcceptedSettlementInProcess |All preceding checks such as technical validation and customer profile were successful and therefore the payment initiation has been accepted for execution. |
 | OBTransactionIndividualStatus1Code |Pending |Payment initiation or individual transaction included in the payment initiation is pending. Further checks and status update will be performed. |
 | OBTransactionIndividualStatus1Code |Rejected |Payment initiation or individual transaction included in the payment initiation has been rejected. |
@@ -810,7 +742,7 @@ This section gives the definitions for enumerations used in the Payment APIs.
 | OBTransactionIndividualExtendedISOStatus1Code |AcceptedCreditSettlementCompleted |Settlement on the creditor's account has been completed. |
 | OBTransactionIndividualExtendedISOStatus1Code |AcceptedCustomerProfile |Preceding check of technical validation was successful. Customer profile check was also successful. |
 | OBTransactionIndividualExtendedISOStatus1Code |AcceptedFundsChecked |Preceding check of technical validation and customer profile was successful and an automatic funds check was positive. |
-| OBTransactionIndividualExtendedISOStatus1Code |AcceptedSettlementCompleted |Settlement on the debtor's account has been completed.<br><br>Usage : this can be used by the first agent to report to the debtor that the transaction has been completed.<br><br>Warning : this status is provided for transaction status reasons, not for financial information. It can only be used after bilateral agreement |
+| OBTransactionIndividualExtendedISOStatus1Code |AcceptedSettlementCompleted |Settlement on the debtor's account has been completed.<BR/><BR/>Usage : this can be used by the first agent to report to the debtor that the transaction has been completed.<BR/><BR/>Warning : this status is provided for transaction status reasons, not for financial information. It can only be used after bilateral agreement |
 | OBTransactionIndividualExtendedISOStatus1Code |AcceptedSettlementInProcess |All preceding checks such as technical validation and customer profile were successful and therefore the payment initiation has been accepted for execution. |
 | OBTransactionIndividualExtendedISOStatus1Code |AcceptedTechnicalValidation |Authentication and syntactical and semantical validation are successful |
 | OBTransactionIndividualExtendedISOStatus1Code |AcceptedWithChange |Instruction is accepted but a change will be made, such as date or remittance not sent. |

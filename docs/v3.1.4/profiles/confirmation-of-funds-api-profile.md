@@ -1,28 +1,9 @@
+---
+---
+
 # Confirmation of Funds API Profile - v3.1.4 <!-- omit in toc -->
 
-1. [Overview](#overview)
-   1. [Document Structure](#document-structure)
-   2. [Resources](#resources)
-2. [Basics](#basics)
-   1. [Overview](#overview-1)
-      1. [Steps](#steps)
-      2. [Sequence Diagram](#sequence-diagram)
-   2. [Idempotency](#idempotency)
-   3. [Release Management](#release-management)
-      1. [Funds Confirmation Consent](#funds-confirmation-consent)
-         1. [POST](#post)
-         2. [GET](#get)
-         3. [DELETE](#delete)
-      2. [Funds Confirmation Resource](#funds-confirmation-resource)
-         1. [POST](#post-1)
-3. [Security & Access Control](#security--access-control)
-   1. [Scopes](#scopes)
-   2. [Grants Types](#grants-types)
-   3. [Consent Authorisation](#consent-authorisation)
-      1. [Consent Elements](#consent-elements)
-      2. [Funds Confirmation Consent Status](#funds-confirmation-consent-status)
-      3. [Consent Re-authentication](#consent-re-authentication)
-   4. [Consent Revocation](#consent-revocation)
+[[toc]]
 
 ## Overview
 

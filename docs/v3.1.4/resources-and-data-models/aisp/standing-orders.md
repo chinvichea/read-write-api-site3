@@ -1,23 +1,9 @@
+---
+---
+
 # Standing Orders - v3.1.4 <!-- omit in toc -->
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [GET /accounts/{AccountId}/standing-orders](#get-accountsaccountidstanding-orders)
-   2. [GET /standing-orders](#get-standing-orders)
-3. [Data Model](#data-model)
-   1. [Resource Definition](#resource-definition)
-   2. [UML Diagram](#uml-diagram)
-   3. [Notes](#notes)
-   4. [Frequency Examples](#frequency-examples)
-   5. [Permission Codes](#permission-codes)
-   6. [Data Dictionary](#data-dictionary)
-4. [Usage Examples](#usage-examples)
-   1. [Specific Account](#specific-account)
-      1. [Get Accounts Standing Orders Request](#get-accounts-standing-orders-request)
-      2. [Get Accounts Standing Orders Response](#get-accounts-standing-orders-response)
-   2. [Bulk](#bulk)
-      1. [Get Standing Orders Request](#get-standing-orders-request)
-      2. [Get Standing Orders Response](#get-standing-orders-response)
+[[toc]]
 
 ## Overview
 
@@ -87,9 +73,10 @@ An account (AccountId) may have no standing orders set up, or may have multiple 
 The resource differs depending on the permissions (ReadStandingOrdersBasic and ReadStandingOrdersDetail) used to access resource. In the event the resource is accessed with both ReadStandingOrdersBasic and ReadStandingOrdersDetail, the most detailed level (ReadStandingOrdersDetail) must be used.
 
 * These objects **must not** be returned **without** the **ReadStandingOrdersDetail** permission:
+* 
     * OBReadStandingOrder6/Data/StandingOrder/CreditorAgent
     * OBReadStandingOrder6/Data/StandingOrder/CreditorAccount
-* If the **ReadStandingOrdersDetail** is granted by the PSU:     
+* If the **ReadStandingOrdersDetail** is granted by the PSU:
     * OBReadStandingOrder6/Data/StandingOrder/CreditorAgent **may** be returned if applicable to the account and ASPSP (0..1)
     * OBReadStandingOrder6/Data/StandingOrder/CreditorAccount **must** be returned (1..1)
 
@@ -104,7 +91,7 @@ If the ReadPAN permission is granted by the PSU, the ASPSP may choose to populat
 | StandingOrder |0..n |OBReadStandingOrder6/Data/StandingOrder | |OBStandingOrder5 | | |
 | AccountId |1..1 |OBReadStandingOrder6/Data/StandingOrder/AccountId |A unique and immutable identifier used to identify the account resource. This identifier has no meaning to the account owner. |Max40Text | | |
 | StandingOrderId |0..1 |OBReadStandingOrder6/Data/StandingOrder/StandingOrderId |A unique and immutable identifier used to identify the standing order resource. This identifier has no meaning to the account owner. |Max40Text | | |
-| Frequency |1..1 |OBReadStandingOrder6/Data/StandingOrder/Frequency |Individual Definitions: <br>NotKnown - Not known <br>EvryDay - Every day<br> EvryWorkgDay - Every working day<br> IntrvlDay - An interval specified in number of calendar days (02 to 31)<br> IntrvlWkDay - An interval specified in weeks (01 to 09), and the day within the week (01 to 07)<br> WkInMnthDay - A monthly interval, specifying the week of the month (01 to 05) and day within the week (01 to 07)<br> IntrvlMnthDay - An interval specified in months (between 01 to 06, 12, 24), specifying the day within the month (-05 to -01, 01 to 31)<br> QtrDay - Quarterly (either ENGLISH, SCOTTISH, or RECEIVED)<br> ENGLISH = Paid on the 25th March, 24th June, 29th September and 25th December.<br> SCOTTISH = Paid on the 2nd February, 15th May, 1st August and 11th November.<br> RECEIVED = Paid on the 20th March, 19th June, 24th September and 20th December.  <br><br><br>Individual Patterns: <br>NotKnown (ScheduleCode)<br>EvryDay (ScheduleCode)<br> EvryWorkgDay (ScheduleCode)<br> IntrvlDay:NoOfDay (ScheduleCode + NoOfDay)<br> IntrvlWkDay:IntervalInWeeks:DayInWeek (ScheduleCode + IntervalInWeeks + DayInWeek)<br> WkInMnthDay:WeekInMonth:DayInWeek (ScheduleCode + WeekInMonth + DayInWeek)<br> IntrvlMnthDay:IntervalInMonths:DayInMonth (ScheduleCode + IntervalInMonths + DayInMonth)<br> QtrDay: + either (ENGLISH, SCOTTISH or RECEIVED) ScheduleCode + QuarterDay<br><br> The regular expression for this element combines five smaller versions for each permitted pattern. To aid legibility - the components are presented individually here:<br>NotKnown <br>EvryDay<br> EvryWorkgDay<br> IntrvlDay:((0[2-9])\|([1-2][0-9])\|3[0-1])<br> IntrvlWkDay:0[1-9]:0[1-7]<br> WkInMnthDay:0[1-5]:0[1-7]<br> IntrvlMnthDay:(0[1-6]\|12\|24):(-0[1-5]\|0[1-9]\|[12][0-9]\|3[01])<br> QtrDay:(ENGLISH\|SCOTTISH\|RECEIVED)<br> Full Regular Expression:<BR> ```^(NotKnown)$|^(EvryDay)$|^(EvryWorkgDay)$|^(IntrvlDay:((0[2-9])|([1-2][0-9])|3[0-1]))$|^(IntrvlWkDay:0[1-9]:0[1-7])$|^(WkInMnthDay:0[1-5]:0[1-7])$|^(IntrvlMnthDay:(0[1-6]|12|24):(-0[1-5]|0[1-9]|[12][0-9]|3[01]))$|^(QtrDay:(ENGLISH|SCOTTISH|RECEIVED))$``` |Max35Text | |```^(NotKnown)$|^(EvryDay)$|^(EvryWorkgDay)$|^(IntrvlWkDay:0[1-9]:0[1-7])$|^(WkInMnthDay:0[1-5]:0[1-7])$|^(IntrvlMnthDay:(0[1-6]|12|24):(-0[1-5]|0[1-9]|[12][0-9]|3[01]))$|^(QtrDay:(ENGLISH|SCOTTISH|RECEIVED))$``` |
+| Frequency |1..1 |OBReadStandingOrder6/Data/StandingOrder/Frequency |Individual Definitions: <br/>NotKnown - Not known <br/>EvryDay - Every day<br/> EvryWorkgDay - Every working day<br/> IntrvlDay - An interval specified in number of calendar days (02 to 31)<br/> IntrvlWkDay - An interval specified in weeks (01 to 09), and the day within the week (01 to 07)<br/> WkInMnthDay - A monthly interval, specifying the week of the month (01 to 05) and day within the week (01 to 07)<br/> IntrvlMnthDay - An interval specified in months (between 01 to 06, 12, 24), specifying the day within the month (-05 to -01, 01 to 31)<br/> QtrDay - Quarterly (either ENGLISH, SCOTTISH, or RECEIVED)<br/> ENGLISH = Paid on the 25th March, 24th June, 29th September and 25th December.<br/> SCOTTISH = Paid on the 2nd February, 15th May, 1st August and 11th November.<br/> RECEIVED = Paid on the 20th March, 19th June, 24th September and 20th December.  <br/><br/><br/>Individual Patterns: <br/>NotKnown (ScheduleCode)<br/>EvryDay (ScheduleCode)<br/> EvryWorkgDay (ScheduleCode)<br/> IntrvlDay:NoOfDay (ScheduleCode + NoOfDay)<br/> IntrvlWkDay:IntervalInWeeks:DayInWeek (ScheduleCode + IntervalInWeeks + DayInWeek)<br/> WkInMnthDay:WeekInMonth:DayInWeek (ScheduleCode + WeekInMonth + DayInWeek)<br/> IntrvlMnthDay:IntervalInMonths:DayInMonth (ScheduleCode + IntervalInMonths + DayInMonth)<br/> QtrDay: + either (ENGLISH, SCOTTISH or RECEIVED) ScheduleCode + QuarterDay<br/><br/> The regular expression for this element combines five smaller versions for each permitted pattern. To aid legibility - the components are presented individually here:<br/>NotKnown <br/>EvryDay<br/> EvryWorkgDay<br/> IntrvlDay:`((0[2-9])\|([1-2][0-9])\|3[0-1])`<br/> IntrvlWkDay:`0[1-9]:0[1-7]`<br/> WkInMnthDay:`0[1-5]:0[1-7]`<br/> IntrvlMnthDay:`(0[1-6]\|12\|24):(-0[1-5]\|0[1-9]\|[12][0-9]\|3[01])`<br/> QtrDay:`(ENGLISH\|SCOTTISH\|RECEIVED)`<br/> Full Regular Expression:<br/> ```^(NotKnown)$|^(EvryDay)$|^(EvryWorkgDay)$|^(IntrvlDay:((0[2-9])|([1-2][0-9])|3[0-1]))$|^(IntrvlWkDay:0[1-9]:0[1-7])$|^(WkInMnthDay:0[1-5]:0[1-7])$|^(IntrvlMnthDay:(0[1-6]|12|24):(-0[1-5]|0[1-9]|[12][0-9]|3[01]))$|^(QtrDay:(ENGLISH|SCOTTISH|RECEIVED))$``` |Max35Text | |```^(NotKnown)$|^(EvryDay)$|^(EvryWorkgDay)$|^(IntrvlWkDay:0[1-9]:0[1-7])$|^(WkInMnthDay:0[1-5]:0[1-7])$|^(IntrvlMnthDay:(0[1-6]|12|24):(-0[1-5]|0[1-9]|[12][0-9]|3[01]))$|^(QtrDay:(ENGLISH|SCOTTISH|RECEIVED))$``` |
 | Reference |0..1 |OBReadStandingOrder6/Data/StandingOrder/Reference |Unique reference, as assigned by the creditor, to unambiguously refer to the payment transaction. Usage: If available, the initiating party should provide this reference in the structured remittance information, to enable reconciliation by the creditor upon receipt of the amount of money. If the business context requires the use of a creditor reference or a payment remit identification, and only one identifier can be passed through the end-to-end chain, the creditor's reference or payment remittance identification should be quoted in the end-to-end transaction identification. |Max35Text | | |
 | FirstPaymentDateTime |0..1 |OBReadStandingOrder6/Data/StandingOrder/FirstPaymentDateTime |The date on which the first payment for a Standing Order schedule will be made. |ISODateTime | | |
 | NextPaymentDateTime |0..1 |OBReadStandingOrder6/Data/StandingOrder/NextPaymentDateTime |The date on which the next payment for a Standing Order schedule will be made. |ISODateTime | | |

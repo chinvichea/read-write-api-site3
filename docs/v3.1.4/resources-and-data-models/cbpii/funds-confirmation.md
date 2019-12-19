@@ -1,23 +1,9 @@
+---
+---
+
 # Funds Confirmation - v3.1.4 <!-- omit in toc -->
 
-1. [Overview](#overview)
-2. [Endpoints](#endpoints)
-   1. [POST /funds-confirmations](#post-funds-confirmations)
-3. [Data Model](#data-model)
-   1. [Funds Confirmation - Request](#funds-confirmation---request)
-      1. [UML Diagram](#uml-diagram)
-      2. [Data Dictionary](#data-dictionary)
-   2. [Funds Confirmation - Response](#funds-confirmation---response)
-      1. [UML Diagram](#uml-diagram-1)
-      2. [Data Dictionary](#data-dictionary-1)
-4. [Usage Examples](#usage-examples)
-   1. [Funds Confirmation](#funds-confirmation)
-      1. [Example with all permitted fields](#example-with-all-permitted-fields)
-         1. [Request](#request)
-         2. [Response](#response)
-      2. [Example with a USD account](#example-with-a-usd-account)
-         1. [Request](#request-1)
-         2. [Response](#response-1)
+[[toc]]
 
 ## Overview
 
@@ -26,6 +12,7 @@ The Funds Confirmation resource is used by an CBPII to request to confirm funds 
 This resource description should be read in conjunction with a compatible Confirmation of Funds API Profile.
 
 ## Endpoints
+
 | Resource |HTTP Operation |Endpoint |Mandatory ? |Scope |Grant Type |Message Signing |Idempotency Key |Request Object |Response Object |
 | --- |--- |--- |--- |--- |--- |--- |--- |--- |--- |
 | funds-confirmation |POST |POST /funds-confirmations |Mandatory |fundsconfirmations |Authorization Code |No |No |OBFundsConfirmation1 |OBFundsConfirmationResponse1 |
