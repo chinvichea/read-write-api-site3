@@ -1,3 +1,6 @@
+---
+---
+
 # References
 
 [[toc]]
@@ -7,7 +10,8 @@
 
 ## Usage Examples
 
-- [Domestic Payments](./usage-examples/Domestic%20Payment%20Usage%20Examples.md)
-- [Domestic Standing Orders](./usage-examples/Domestic%20standing%20Order%20Usage%20Examples.md)
+- [Domestic Payments](./usage-examples/domestic-payments-usage-examples.md)
+- [Domestic Standing Orders](./usage-examples/domestic-standing-order-usage-examples.md)
 - [International Payments](./usage-examples/international-payment-usage-examples.md)
 - [International Scheduled Payments](./usage-examples/international-scheduled-payment-usage-examples.md)
+- [File Payments](./usage-examples/file-payments-usage-examples.md)
